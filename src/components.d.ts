@@ -5,57 +5,57 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Size } from "./components/types";
+import { Shape } from "./components/avatar/avatar";
+export { Size } from "./components/types";
+export { Shape } from "./components/avatar/avatar";
 export namespace Components {
-    interface MyComponent {
+    interface DidroomAvatar {
         /**
-          * The first name
+          * Specifies the name to be shown.
          */
-        "first": string;
+        "name"?: string;
+        "shape"?: Shape;
+        "size"?: Size;
         /**
-          * The last name
+          * Specifies the `src` to an image to load.
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "src"?: string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDidroomAvatarElement extends Components.DidroomAvatar, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDidroomAvatarElement: {
+        prototype: HTMLDidroomAvatarElement;
+        new (): HTMLDidroomAvatarElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "didroom-avatar": HTMLDidroomAvatarElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface DidroomAvatar {
         /**
-          * The first name
+          * Specifies the name to be shown.
          */
-        "first"?: string;
+        "name"?: string;
+        "shape"?: Shape;
+        "size"?: Size;
         /**
-          * The last name
+          * Specifies the `src` to an image to load.
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "src"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "didroom-avatar": DidroomAvatar;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "didroom-avatar": LocalJSX.DidroomAvatar & JSXBase.HTMLAttributes<HTMLDidroomAvatarElement>;
         }
     }
 }
