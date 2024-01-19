@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ForkbombEu/didroom-components/compare/v1.0.0...v1.1.0) (2024-01-19)
+
+
+### Features
+
+* **Avatar:** Add toc and autodocs to preview somponent ([0146870](https://github.com/ForkbombEu/didroom-components/commit/01468709bcf519b44982faf8f0135a33f2222c95))
+
 ## 1.0.0 (2024-01-18)
 
 
