@@ -1,9 +1,23 @@
 import { Meta, StoryObj } from "@storybook/html";
 import type { Components } from "../../components.js";
+import readme from './readme.md';
 
 const meta = {
-  title: 'Atoms/Avatar',
+  title: 'Design System/Atoms/Avatar',
   render: (args) => `<didroom-avatar name="${args.name}" src="${args.src}" size="${args.size}" shape="${args.shape}"></didroom-avatar>`,
+  argTypes: {
+    size: {
+      description: 'The size of the avatar',
+      defaultValue: 'm',
+      default: 'm',
+      options: ['xs', 's', 'm', 'l', 'xl'],
+      control: { type: 'select' },
+    },
+    shape: {
+      options: ['round', 'square'],
+      control: { type: 'radio' },
+    }
+  },
 } satisfies Meta<Components.DidroomAvatar>
 
 export default meta;
@@ -17,6 +31,7 @@ export const Rounded: Story = {
     shape: 'round'
   },
   parameters: {
+    notes: readme,
     design: {
       type: "figma",
       url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/@storybook/addon-designs-sample",

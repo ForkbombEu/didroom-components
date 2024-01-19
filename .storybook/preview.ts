@@ -11,8 +11,12 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+        select: /size/i,
       },
     },
+    docs: {
+      toc: true,
+    }
   },
   decorators: [
   withThemeByClassName<HtmlRenderer>({

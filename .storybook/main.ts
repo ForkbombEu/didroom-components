@@ -12,7 +12,11 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: '@storybook/html-vite',
-    options: {},
+    options: { },
+  },
+  async viteFinal(config, options) {
+    config.assetsInclude =  ['**/*.md']
+    return config;
   },
   docs: {
     autodocs: true,
