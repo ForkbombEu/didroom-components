@@ -32,11 +32,10 @@ jobs:
         - uses: pnpm/action-setup@v2
           with:
             version: 8
-        - run: pnpm install
-        - run: pnpm run build
-        - run: pnpm run build-storybook
         - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.2
           with:
+            install_command: pnpm install
+            build_command: pnpm run build && pnpm run build-storybook
             path: storybook-static
 
     release-please:
