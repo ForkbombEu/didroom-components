@@ -42,7 +42,6 @@
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
-    "@storybook/addon-notes": "^5.3.21",
     "@storybook/addon-themes": "^7.6.10",
     "@storybook/blocks": "^7.6.10",
     "@storybook/html": "^7.6.10",

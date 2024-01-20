@@ -15,19 +15,12 @@ export const config: Config = {
       type: 'dist-custom-elements',
     },
     {
-      type: 'docs-readme',
-    },
-    {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
   ],
   testing: {
-    browserHeadless: "new",
+    browserHeadless: 'new',
   },
-  plugins: [
-    sass(),
-    tailwind(),
-    tailwindHMR(),
-  ],
+  plugins: [sass(), tailwind(), tailwindHMR()],
 };

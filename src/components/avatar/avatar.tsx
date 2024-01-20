@@ -1,7 +1,5 @@
 import { Component, Host, Prop, State, h } from '@stencil/core';
-import { Size } from '../types';
-
-export type Shape = 'round' | 'square';
+import { Shape, Size } from '../types';
 
 @Component({
   tag: 'didroom-avatar',
@@ -9,16 +7,10 @@ export type Shape = 'round' | 'square';
   shadow: true,
 })
 export class Avatar {
-  /** Specifies the `src` to an image to load. */
   @Prop({ reflect: true }) src?: string;
-
-  /** Specifies the name to be shown. */
   @Prop({ reflect: true }) name?: string;
-
   @Prop({ reflect: true }) size?: Size = 'm';
-
   @Prop({ reflect: true }) shape?: Shape = 'round';
-
   @State() error: boolean = false;
 
   render() {

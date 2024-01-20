@@ -5,21 +5,13 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Size } from "./components/types";
-import { Shape } from "./components/avatar/avatar";
-export { Size } from "./components/types";
-export { Shape } from "./components/avatar/avatar";
+import { Shape, Size } from "./components/types";
+export { Shape, Size } from "./components/types";
 export namespace Components {
     interface DidroomAvatar {
-        /**
-          * Specifies the name to be shown.
-         */
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
-        /**
-          * Specifies the `src` to an image to load.
-         */
         "src"?: string;
     }
 }
@@ -36,15 +28,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DidroomAvatar {
-        /**
-          * Specifies the name to be shown.
-         */
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
-        /**
-          * Specifies the `src` to an image to load.
-         */
         "src"?: string;
     }
     interface IntrinsicElements {

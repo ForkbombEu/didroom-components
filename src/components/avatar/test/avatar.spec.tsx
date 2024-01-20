@@ -33,4 +33,20 @@ describe('didroom-avatar', () => {
     </didroom-avatar>
     `);
   });
+
+  it('renders with shape and icon', async () => {
+    const { root } = await newSpecPage({
+      components: [Avatar],
+      html: `<didroom-avatar shape="square" name=""></didroom-avatar>`,
+    });
+    expect(root).toEqualHtml(`
+    <didroom-avatar aria-label="" name="" role="figure" shape="square" size="m">
+       <mock:shadow-root>
+         <svg class="absolute text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+           <path clip-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" fill-rule="evenodd"></path>
+         </svg>
+       </mock:shadow-root>
+    </didroom-avatar>
+    `);
+  });
 });
