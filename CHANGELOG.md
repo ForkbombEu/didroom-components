@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ForkbombEu/didroom-components/compare/v1.1.0...v1.2.0) (2024-01-21)
+
+
+### Features
+
+* Add color swatches ([7d82397](https://github.com/ForkbombEu/didroom-components/commit/7d8239746b3f9a5ea02dd77a1ea00b4e7aa368f8))
+
 ## [1.1.0](https://github.com/ForkbombEu/didroom-components/compare/v1.0.0...v1.1.0) (2024-01-19)
 
 
