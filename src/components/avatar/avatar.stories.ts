@@ -19,7 +19,6 @@ export const Rounded: Story = {
     src: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
     name: 'Mickey Mouse',
     size: 'xl',
-    shape: 'round',
   },
   parameters: {
     design: {

@@ -1,10 +1,11 @@
 import { Config } from '@stencil/core';
-import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 import { sass } from '@stencil/sass';
+import {postcss} from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   namespace: 'didroom-components',
-  globalStyle: 'src/global/global.scss',
+  globalStyle: 'src/global/global.css',
   globalScript: 'src/global/app.ts',
   outputTargets: [
     {
@@ -12,7 +13,7 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
-      type: 'dist-custom-elements',
+      type: 'docs-readme',
     },
     {
       type: 'www',
@@ -22,5 +23,14 @@ export const config: Config = {
   testing: {
     browserHeadless: 'new',
   },
-  plugins: [sass(), tailwind(), tailwindHMR()],
+  plugins: [
+    sass(),
+    postcss({
+      plugins: [
+        require("postcss-import"),
+        require("tailwindcss")("./tailwind.config.ts"),
+        autoprefixer()
+      ]
+    })
+  ],
 };
