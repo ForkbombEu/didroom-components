@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/ForkbombEu/didroom-components/compare/v1.2.0...v1.2.1) (2024-01-22)
+
+
+### Bug Fixes
+
+* **avatar:** inverted dark/light mode ([7241023](https://github.com/ForkbombEu/didroom-components/commit/7241023f6ef58cd332fe0852695a7610c01289b2))
+
 ## [1.2.0](https://github.com/ForkbombEu/didroom-components/compare/v1.1.0...v1.2.0) (2024-01-21)
 
 
