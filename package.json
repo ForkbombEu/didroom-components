@@ -21,13 +21,12 @@
   "scripts": {
     "clean": "rm -rf .stencil/ dist/ loader www",
     "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "build-storybook": "storybook build --docs -s dist",
     "dev": "NODE_ENV=development npm-run-all -p dev:*",
-    "dev:watch": "stencil build --watch",
+    "dev:start": "stencil build --watch --serve",
     "dev:storybook": "storybook dev -p 6006 -s dist"
   },
   "dependencies": {

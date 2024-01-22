@@ -3,12 +3,22 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 <Meta title="Colors" />
 
 <ColorPalette>
-  <ColorItem title="--tab" subtitle="Used for the tab" colors={{ Dark: '#223360', Light: '#BDC2CF' }} />
-  <ColorItem title="--bg" subtitle="Used for the background of the pages" colors={{ Dark: '#4E5C80', Light: '#E9EBEF' }} />
-  <ColorItem title="--primary" subtitle="Used for the primary color" colors={{ Dark: '#223360', Light: '#BDC2CF' }} />
-  <ColorItem title="--on-primary" subtitle="Used for the on primary color" colors={{ Dark: '#F7FAFF', Light: '#2D2D2D' }} />
-  <ColorItem title="--on-primary-2" subtitle="Used for the on primary - 2 color" colors={{ Dark: '#B0B0B9', Light: '#68686F' }} />
-  <ColorItem title="--accent" subtitle="Used for the accent color" colors={{ Dark: '#DBD7CB', Light: '#223360' }} />
-  <ColorItem title="--on-accent" subtitle="Used for the on accent color" colors={{ Dark: '#223360', Light: '#DBD7CB' }} />
-  <ColorItem title="--status-bar" subtitle="Used for the status bar color" colors={{ Dark: '#FFFFFF', Light: '#000000' }} />
+  <ColorItem title="--tab" subtitle="Used for the tab" colors={{ Light: '#BDC2CF', Dark: '#223360' }} />
+  <ColorItem title="--surface" subtitle="Used for the background of the pages" colors={{ Light: '#E9EBEF', Dark: '#4E5C80' }} />
+  <ColorItem title="--primary" subtitle="Used for the primary color" colors={{ Light: '#BDC2CF', Dark: '#223360' }} />
+  <ColorItem title="--on-primary" subtitle="Used for the on primary color" colors={{ Light: '#2D2D2D', Dark: '#F7FAFF' }} />
+  <ColorItem title="--on-primary-2" subtitle="Used for the on primary - 2 color" colors={{ Light: '#68686F', Dark: '#B0B0B9' }} />
+  <ColorItem title="--accent" subtitle="Used for the accent color" colors={{ Light: '#223360', Dark: '#DBD7CB' }} />
+  <ColorItem title="--on-accent" subtitle="Used for the on accent color" colors={{ Light: '#DBD7CB', Dark: '#223360' }} />
+  <ColorItem title="--status-bar" subtitle="Used for the status bar color" colors={{ Light: '#000000', Dark: '#FFFFFF' }} />
+</ColorPalette>
+<ColorPalette>
+  <ColorItem title="--inverted-tab" subtitle="Inverted color for the tab" colors={{ Light: '#223360', Dark: '#BDC2CF' }} />
+  <ColorItem title="--inverted-surface" subtitle="Inverted color for the background" colors={{ Light: '#4E5C80', Dark: '#E9EBEF' }} />
+  <ColorItem title="--inverted-primary" subtitle="Inverted color for the primary" colors={{ Light: '#223360', Dark: '#BDC2CF' }} />
+  <ColorItem title="--inverted-on-primary" subtitle="Inverted color for on primary" colors={{ Light: '#F7FAFF', Dark: '#2D2D2D' }} />
+  <ColorItem title="--inverted-on-primary-2" subtitle="Inverted color for on primary - 2" colors={{ Light: '#B0B0B9', Dark: '#68686F' }} />
+  <ColorItem title="--inverted-accent" subtitle="Inverted color for the accent" colors={{ Light: '#DBD7CB', Dark: '#223360' }} />
+  <ColorItem title="--inverted-on-accent" subtitle="Inverted color for on accent" colors={{ Dark: '#DBD7CB', Light: '#223360' }} />
+  <ColorItem title="--inverted-status-bar" subtitle="Inverted color for the status bar" colors={{ Dark: '#000000', Light: '#FFFFFF' }} />
 </ColorPalette>
