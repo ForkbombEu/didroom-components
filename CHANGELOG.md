@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/ForkbombEu/didroom-components/compare/v1.2.3...v1.2.4) (2024-01-22)
+
+
+### Bug Fixes
+
+* metadata packages update ([b88b45d](https://github.com/ForkbombEu/didroom-components/commit/b88b45de5eb50fdbcd4fcc8fb13c6da1eeee0ce3))
+
 ## [1.2.3](https://github.com/ForkbombEu/didroom-components/compare/v1.2.2...v1.2.3) (2024-01-22)
 
 
