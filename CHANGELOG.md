@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/ForkbombEu/didroom-components/compare/v1.2.1...v1.2.2) (2024-01-22)
+
+
+### Bug Fixes
+
+* Add correct licensing ([c22e1bb](https://github.com/ForkbombEu/didroom-components/commit/c22e1bbd7bcd3b435f275a66579250ee14ee98fa))
+
 ## [1.2.1](https://github.com/ForkbombEu/didroom-components/compare/v1.2.0...v1.2.1) (2024-01-22)
 
 
