@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/ForkbombEu/didroom-components/compare/v1.2.2...v1.2.3) (2024-01-22)
+
+
+### Bug Fixes
+
+* correct attribution and correct pnpm version ([63b6802](https://github.com/ForkbombEu/didroom-components/commit/63b6802edf23385cc4bcfcfdda69efe31bf8eb0c))
+
 ## [1.2.2](https://github.com/ForkbombEu/didroom-components/compare/v1.2.1...v1.2.2) (2024-01-22)
 
 
