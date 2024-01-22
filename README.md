@@ -53,9 +53,9 @@ Standard web components with efficient one-way data binding, an asynchronous ren
 ***
 ## 😍 Acknowledgements
 
-Copyleft 🄯 2023 by [Forkbomb](https://www.forkbomb.eu) BV, Amsterdam
+Copyleft 🄯 2024 by [Forkbomb](https://www.forkbomb.eu) BV, Amsterdam
 
-Designed, written and maintained by Puria Nafisi Azizi, Andrea D'Intino, Alberto Lerda with contributions of Matteo Cristino.
+Designed by Micol Salomone and Ayse Mete coded by Puria Nafisi Azizi
 
 **[🔝 back to top](#toc)**
 
@@ -77,7 +77,7 @@ Please first take a look at the our [Contributor License Agreement](CONTRIBUTING
 ***
 ## 💼 License
     Didroom standalone microservices
-    Copyleft 🄯 2023 Forkbomb BV, Amsterdam
+    Copyleft 🄯 2024 Forkbomb BV, Amsterdam
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
