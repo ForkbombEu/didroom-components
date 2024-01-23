@@ -30,6 +30,27 @@ Standard web components with efficient one-way data binding, an asynchronous ren
 ***
 ## 🎮 Quick start
 
+It's super easy starting template as follows:
+
+```html
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@didroom/components/dist/didroom-components/didroom-components.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@didroom/components/dist/didroom-components/didroom-components.css"/>
+  </head>
+
+  <body style="padding: 20px">
+    <didroom-avatar size="xl" src="https://api.dicebear.com/7.x/open-peeps/svg" />
+  </body>
+</html>
+
+```
+
+for the list of all the components docs:
+
 [CLICK HERE TO START USING ME](https://forkbombeu.github.io/didroom-components/)
 
 ***
