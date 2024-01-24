@@ -2,7 +2,7 @@ import { Component, Host, Prop, State, h } from '@stencil/core';
 import { Shape, Size } from '../types';
 
 @Component({
-  tag: 'didroom-avatar',
+  tag: 'd-avatar',
   styleUrl: 'avatar.css',
   shadow: true,
 })

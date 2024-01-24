@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/html";
-import type { Components } from "../../components.js";
+import { Meta, StoryObj } from '@storybook/html';
+import type { Components } from '../../components.js';
 import { ShapeArgTypes, SizeArgTypes } from '../types.js';
 
 const meta = {
@@ -9,10 +9,10 @@ const meta = {
     size: SizeArgTypes,
     shape: ShapeArgTypes,
   },
-} satisfies Meta<Components.DidroomAvatar>;
+} satisfies Meta<Components.DAvatar>;
 
 export default meta;
-type Story = StoryObj<Components.DidroomAvatar>;
+type Story = StoryObj<Components.DAvatar>;
 
 export const Rounded: Story = {
   args: {

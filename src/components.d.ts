@@ -8,40 +8,63 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Shape, Size } from "./components/types";
 export { Shape, Size } from "./components/types";
 export namespace Components {
-    interface DidroomAvatar {
+    interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DCredentialService {
+        "description"?: string;
+        "href"?: string;
+        "issuer": string;
+        "logoSrc"?: string;
+        "name": string;
     }
 }
 declare global {
-    interface HTMLDidroomAvatarElement extends Components.DidroomAvatar, HTMLStencilElement {
+    interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
     }
-    var HTMLDidroomAvatarElement: {
-        prototype: HTMLDidroomAvatarElement;
-        new (): HTMLDidroomAvatarElement;
+    var HTMLDAvatarElement: {
+        prototype: HTMLDAvatarElement;
+        new (): HTMLDAvatarElement;
+    };
+    interface HTMLDCredentialServiceElement extends Components.DCredentialService, HTMLStencilElement {
+    }
+    var HTMLDCredentialServiceElement: {
+        prototype: HTMLDCredentialServiceElement;
+        new (): HTMLDCredentialServiceElement;
     };
     interface HTMLElementTagNameMap {
-        "didroom-avatar": HTMLDidroomAvatarElement;
+        "d-avatar": HTMLDAvatarElement;
+        "d-credential-service": HTMLDCredentialServiceElement;
     }
 }
 declare namespace LocalJSX {
-    interface DidroomAvatar {
+    interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
     }
+    interface DCredentialService {
+        "description"?: string;
+        "href"?: string;
+        "issuer"?: string;
+        "logoSrc"?: string;
+        "name"?: string;
+    }
     interface IntrinsicElements {
-        "didroom-avatar": DidroomAvatar;
+        "d-avatar": DAvatar;
+        "d-credential-service": DCredentialService;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "didroom-avatar": LocalJSX.DidroomAvatar & JSXBase.HTMLAttributes<HTMLDidroomAvatarElement>;
+            "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
         }
     }
 }
