@@ -1,0 +1,59 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "d-avatar",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "shape",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-credential-service",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

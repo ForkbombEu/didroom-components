@@ -1,6 +1,6 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-import {postcss} from '@stencil/postcss';
+import { postcss } from '@stencil/postcss';
 import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
@@ -16,6 +16,10 @@ export const config: Config = {
       type: 'docs-readme',
     },
     {
+      type: 'docs-vscode',
+      file: 'vscode-data.json',
+    },
+    {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
@@ -26,11 +30,7 @@ export const config: Config = {
   plugins: [
     sass(),
     postcss({
-      plugins: [
-        require("postcss-import"),
-        require("tailwindcss")("./tailwind.config.ts"),
-        autoprefixer()
-      ]
-    })
+      plugins: [require('postcss-import'), require('tailwindcss')('./tailwind.config.ts'), autoprefixer()],
+    }),
   ],
 };
