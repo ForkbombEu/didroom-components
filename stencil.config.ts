@@ -1,7 +1,16 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-import { postcss } from '@stencil/postcss';
-import autoprefixer from 'autoprefixer';
+import tailwind, { PluginConfigOpts, setPluginConfigurationDefaults, tailwindGlobal, tailwindHMR } from 'stencil-tailwind-plugin';
+import tailwindConf from './tailwind.config';
+
+const opts = {
+  debug: false,
+  stripComments: true,
+  tailwindCssPath: './src/global/global.css',
+  tailwindConf,
+};
+
+setPluginConfigurationDefaults(opts);
 
 export const config: Config = {
   namespace: 'didroom-components',
@@ -27,10 +36,5 @@ export const config: Config = {
   testing: {
     browserHeadless: 'new',
   },
-  plugins: [
-    sass(),
-    postcss({
-      plugins: [require('postcss-import'), require('tailwindcss')('./tailwind.config.ts'), autoprefixer()],
-    }),
-  ],
+  plugins: [sass(), tailwindGlobal(), tailwind(), tailwindHMR()],
 };

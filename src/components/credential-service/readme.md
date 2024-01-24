@@ -21,14 +21,11 @@
 ### Depends on
 
 - [d-avatar](../avatar)
-- ion-button
 
 ### Graph
 ```mermaid
 graph TD;
   d-credential-service --> d-avatar
-  d-credential-service --> ion-button
-  ion-button --> ion-ripple-effect
   style d-credential-service fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

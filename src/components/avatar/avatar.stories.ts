@@ -4,7 +4,7 @@ import { ShapeArgTypes, SizeArgTypes } from '../types.js';
 
 const meta = {
   title: 'Design System/Atoms/Avatar',
-  render: args => `<didroom-avatar name="${args.name}" src="${args.src}" size="${args.size}" shape="${args.shape}"></didroom-avatar>`,
+  render: args => `<d-avatar name="${args.name}" src="${args.src}" size="${args.size}" shape="${args.shape}"></d-avatar>`,
   argTypes: {
     size: SizeArgTypes,
     shape: ShapeArgTypes,

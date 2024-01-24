@@ -20,9 +20,6 @@ export class DCredentialService {
           <span class="name">{this.name}</span>
           <span class="issuer">{this.issuer}</span>
           <span class="description">{this.description}</span>
-          <ion-button fill="clear" size="small" color="primary">
-            dokodk
-          </ion-button>
         </div>
       </div>
     );
