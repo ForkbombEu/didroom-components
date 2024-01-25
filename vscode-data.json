@@ -54,6 +54,14 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "d-tabs",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
     }
   ]
 }

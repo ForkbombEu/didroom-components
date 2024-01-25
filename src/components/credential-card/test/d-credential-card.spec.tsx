@@ -10,7 +10,29 @@ describe('d-credential-card', () => {
     expect(page.root).toEqualHtml(`
       <d-credential-card>
         <mock:shadow-root>
-          <slot></slot>
+          <div class="between">
+            <div class="info">
+              <div class="heading">
+                <d-avatar></d-avatar>
+                <span class="name"></span>
+              </div>
+              <span class="description"></span>
+            </div>
+          </div>
+          <div class="between">
+            <div class="labeled-text">
+              <span class="label">
+                Issued by
+              </span>
+              <span></span>
+            </div>
+            <div class="items-end labeled-text">
+              <span class="label">
+                Exp
+              </span>
+              <span></span>
+            </div>
+          </div>
         </mock:shadow-root>
       </d-credential-card>
     `);

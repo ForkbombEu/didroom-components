@@ -14,6 +14,14 @@ export namespace Components {
         "size"?: Size;
         "src"?: string;
     }
+    interface DCredentialCard {
+        "description"?: string;
+        "expirationDate"?: string;
+        "issuer": string;
+        "logoSrc"?: string;
+        "name": string;
+        "verified"?: boolean;
+    }
     interface DCredentialService {
         "description"?: string;
         "href"?: string;
@@ -29,6 +37,12 @@ declare global {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
     };
+    interface HTMLDCredentialCardElement extends Components.DCredentialCard, HTMLStencilElement {
+    }
+    var HTMLDCredentialCardElement: {
+        prototype: HTMLDCredentialCardElement;
+        new (): HTMLDCredentialCardElement;
+    };
     interface HTMLDCredentialServiceElement extends Components.DCredentialService, HTMLStencilElement {
     }
     var HTMLDCredentialServiceElement: {
@@ -37,6 +51,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
+        "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-service": HTMLDCredentialServiceElement;
     }
 }
@@ -47,6 +62,14 @@ declare namespace LocalJSX {
         "size"?: Size;
         "src"?: string;
     }
+    interface DCredentialCard {
+        "description"?: string;
+        "expirationDate"?: string;
+        "issuer"?: string;
+        "logoSrc"?: string;
+        "name"?: string;
+        "verified"?: boolean;
+    }
     interface DCredentialService {
         "description"?: string;
         "href"?: string;
@@ -56,6 +79,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "d-avatar": DAvatar;
+        "d-credential-card": DCredentialCard;
         "d-credential-service": DCredentialService;
     }
 }
@@ -64,6 +88,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
         }
     }

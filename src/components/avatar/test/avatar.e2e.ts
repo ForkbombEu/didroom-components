@@ -1,20 +1,20 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('didroom-avatar', () => {
+describe('d-avatar', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<didroom-avatar></didroom-avatar>');
+    await page.setContent('<d-avatar></d-avatar>');
 
-    const element = await page.find('didroom-avatar');
+    const element = await page.find('d-avatar');
     expect(element).toHaveClass('hydrated');
   });
 
   it('renders changes to the name data', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<didroom-avatar name="mickey mouse"></didroom-avatar>');
-    const component = await page.find('didroom-avatar');
-    const element = await page.find('didroom-avatar >>> span');
+    await page.setContent('<d-avatar name="mickey mouse"></d-avatar>');
+    const component = await page.find('d-avatar');
+    const element = await page.find('d-avatar >>> span');
     expect(element.textContent).toEqual(`mm`);
 
     component.setProperty('name', 'duffy duck');
