@@ -4,6 +4,9 @@ export default {
   content: ['./src/**/*.{ts,tsx,html}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Montserrat Variable"', 'sans-serif'],
+      },
       colors: {
         'tab': 'var(--tab)',
         'surface': 'var(--surface)',

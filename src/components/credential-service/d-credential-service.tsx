@@ -15,7 +15,7 @@ export class DCredentialService {
   render() {
     const content = (
       <div>
-        <d-avatar name={this.name} src={this.logoSrc}></d-avatar>
+        <d-avatar name={this.name} src={this.logoSrc} size="l"></d-avatar>
         <div class="info">
           <span class="name">{this.name}</span>
           <span class="issuer">{this.issuer}</span>
