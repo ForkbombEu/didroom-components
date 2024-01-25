@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Montserrat Variable"', 'sans-serif'],
+        sans: ['"Syne Variable"', 'sans-serif'],
       },
       colors: {
         'tab': 'var(--tab)',
