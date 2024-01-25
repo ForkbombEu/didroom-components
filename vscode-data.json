@@ -27,6 +27,39 @@
       ]
     },
     {
+      "name": "d-credential-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "expiration-date",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "verified",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-credential-service",
       "description": {
         "kind": "markdown",
