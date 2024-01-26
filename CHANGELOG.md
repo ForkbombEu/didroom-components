@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ForkbombEu/didroom-components/compare/v1.3.0...v1.4.0) (2024-01-26)
+
+
+### Features
+
+* New colors and typographic family ([#27](https://github.com/ForkbombEu/didroom-components/issues/27)) ([13f82ec](https://github.com/ForkbombEu/didroom-components/commit/13f82ec6d93bd6a230bc4be88e36167956d52e6c))
+
 ## [1.3.0](https://github.com/ForkbombEu/didroom-components/compare/v1.2.4...v1.3.0) (2024-01-25)
 
 
