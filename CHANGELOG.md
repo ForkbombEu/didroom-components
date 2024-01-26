@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/ForkbombEu/didroom-components/compare/v1.2.4...v1.3.0) (2024-01-25)
+
+
+### Features
+
+* add the credential-service components (WIP the a.styling) and refactor the d-avatar ([ff1f0a4](https://github.com/ForkbombEu/didroom-components/commit/ff1f0a421f12519e1dae50a68b37d00d6467de68))
+* credential card ([#26](https://github.com/ForkbombEu/didroom-components/issues/26)) ([1200fd0](https://github.com/ForkbombEu/didroom-components/commit/1200fd0a95e680464aef8a36b15c34718174afab))
+
+
+### Bug Fixes
+
+* correct load of tailwind modules after postcss ([c021677](https://github.com/ForkbombEu/didroom-components/commit/c021677282f0c3c05c86b5f892c87400df42b862))
+* dark and light variables ([b971b1d](https://github.com/ForkbombEu/didroom-components/commit/b971b1d31b27f6a70e7a220bf780f48966bf1a4e))
+* remove inverted colors ([2061f33](https://github.com/ForkbombEu/didroom-components/commit/2061f33acfd37bfd2b628bb1d2fedd3355e74511))
+
 ## [1.2.4](https://github.com/ForkbombEu/didroom-components/compare/v1.2.3...v1.2.4) (2024-01-22)
 
 
