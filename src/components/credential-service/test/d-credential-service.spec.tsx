@@ -11,11 +11,11 @@ describe('d-credential-service', () => {
       <d-credential-service>
         <mock:shadow-root>
           <div>
-            <d-avatar></d-avatar>
-            <div class="info">
+            <d-avatar size="l"></d-avatar>
+            <div class="grow">
               <span class="name"></span>
-              <span class="issuer"></span>
               <span class="description"></span>
+              <span class="issuer"></span>
             </div>
           </div>
         </mock:shadow-root>

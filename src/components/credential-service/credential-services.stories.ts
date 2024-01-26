@@ -12,7 +12,7 @@ type Story = StoryObj<Components.DCredentialService>;
 export const Default: Story = {
   args: {
     name: 'Over 18',
-    description: 'This credential proves that you are over 18 years old',
+    description: 'Age Validation',
     issuer: 'Italian Government',
   },
   parameters: {

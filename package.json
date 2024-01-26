@@ -55,6 +55,8 @@
     "jest-cli": "^29.7.0",
     "npm-run-all": "^4.1.5",
     "postcss-import": "^16.0.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "puppeteer": "21.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
