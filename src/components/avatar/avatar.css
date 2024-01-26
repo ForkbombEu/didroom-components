@@ -1,5 +1,9 @@
 :host {
-  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-accent rounded-full text-on-accent;
+  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-accent rounded-full;
+}
+
+:host span {
+  @apply text-on-accent
 }
 
 :host([size="xs"]) svg,
