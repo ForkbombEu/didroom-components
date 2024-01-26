@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/ForkbombEu/didroom-components/compare/v1.4.0...v1.4.1) (2024-01-26)
+
+
+### Bug Fixes
+
+* fix online documentation paths ([d1d5bf6](https://github.com/ForkbombEu/didroom-components/commit/d1d5bf6a0c287238dd25c5b42bac79374d732f47))
+
 ## [1.4.0](https://github.com/ForkbombEu/didroom-components/compare/v1.3.0...v1.4.0) (2024-01-26)
 
 
