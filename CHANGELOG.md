@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/ForkbombEu/didroom-components/compare/v1.4.1...v1.5.0) (2024-01-26)
+
+
+### Features
+
+* exporting the types and bundle components ([72b65b4](https://github.com/ForkbombEu/didroom-components/commit/72b65b4fab1873ada3edb2d5da8283050084140a))
+
+
+### Bug Fixes
+
+* upgrade dependencies and fix the lockfile ([3ab712f](https://github.com/ForkbombEu/didroom-components/commit/3ab712f00d75a4338f63ea57c16e7ab008111f8e))
+
 ## [1.4.1](https://github.com/ForkbombEu/didroom-components/compare/v1.4.0...v1.4.1) (2024-01-26)
 
 
