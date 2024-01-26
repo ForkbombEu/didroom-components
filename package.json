@@ -30,13 +30,13 @@
     "dev:storybook": "storybook dev -p 6006 -s dist"
   },
   "dependencies": {
-    "@stencil/core": "^4.7.0",
-    "storybook": "^7.6.10"
+    "@stencil/core": "^4.7.0"
   },
   "devDependencies": {
     "@ionic/core": "^7.6.5",
     "@stencil/postcss": "^2.1.0",
     "@stencil/sass": "^3.0.8",
+    "storybook": "^7.6.10",
     "@storybook/addon-a11y": "^7.6.10",
     "@storybook/addon-designs": "^7.0.9",
     "@storybook/addon-docs": "^7.6.10",
