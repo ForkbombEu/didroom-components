@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/ForkbombEu/didroom-components/compare/v1.5.0...v1.5.1) (2024-01-27)
+
+
+### Bug Fixes
+
+* remove the useless rollup-plugin-copy in place of the native ([eb106ad](https://github.com/ForkbombEu/didroom-components/commit/eb106ad4c8e206e8ae5c2b2fa70f557c17cdf90e))
+* truncate long lines of the credential-service ([71cf6a0](https://github.com/ForkbombEu/didroom-components/commit/71cf6a081887e509511f2b3af71ebdd424f67e28))
+
 ## [1.5.0](https://github.com/ForkbombEu/didroom-components/compare/v1.4.1...v1.5.0) (2024-01-26)
 
 
