@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Gantari Variable"', 'sans-serif'],
-        icon: ['"Material Symbols Rounded"', 'sans-serif],
+        icon: ['"Material Symbols Rounded"'],
       },
       colors: {
         'surface': 'var(--surface)',

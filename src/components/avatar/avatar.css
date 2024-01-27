@@ -1,41 +1,41 @@
 :host {
-  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-accent rounded-full;
+  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-accent rounded-full shrink-0;
 }
 
 :host span {
-  @apply text-on-accent
+  @apply text-on-accent;
 }
 
-:host([size="xs"]) svg,
-:host([size="xs"]) {
+:host([size='xs']) svg,
+:host([size='xs']) {
   @apply h-6 w-6 text-xs;
 }
 
-:host([size="s"]) svg,
-:host([size="s"]) {
+:host([size='s']) svg,
+:host([size='s']) {
   @apply h-8 w-8 text-sm;
 }
 
-:host([size="m"]) svg,
-:host([size="m"]) {
+:host([size='m']) svg,
+:host([size='m']) {
   @apply h-10 w-10;
 }
 
-:host([size="l"]) svg,
-:host([size="l"]) {
+:host([size='l']) svg,
+:host([size='l']) {
   @apply h-20 w-20 text-lg;
 }
 
-:host([size="xl"]) svg,
-:host([size="xl"]) {
+:host([size='xl']) svg,
+:host([size='xl']) {
   @apply h-36 w-36 text-xl;
 }
 
-:host([shape="round"]) {
+:host([shape='round']) {
   @apply rounded-full;
 }
 
-:host([shape="square"]) {
+:host([shape='square']) {
   @apply rounded-lg;
 }
 

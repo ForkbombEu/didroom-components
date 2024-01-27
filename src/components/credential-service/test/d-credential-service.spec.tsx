@@ -12,7 +12,7 @@ describe('d-credential-service', () => {
         <mock:shadow-root>
           <div>
             <d-avatar size="l"></d-avatar>
-            <div class="grow">
+            <div class="grow truncate">
               <span class="name"></span>
               <span class="description"></span>
               <span class="issuer"></span>

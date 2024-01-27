@@ -1,5 +1,4 @@
 import { Component, Host, Prop, h } from '@stencil/core';
-import 'material-symbols';
 
 @Component({
   tag: 'd-credential-service',
@@ -16,7 +15,7 @@ export class DCredentialService {
   render() {
     const content = (
       <div>
-        <d-avatar class="shrink-0" name={this.name} src={this.logoSrc} size="l"></d-avatar>
+        <d-avatar name={this.name} src={this.logoSrc} size="l"></d-avatar>
         <div class="grow truncate">
           <span class="name">{this.name}</span>
           <span class="description">{this.description}</span>
