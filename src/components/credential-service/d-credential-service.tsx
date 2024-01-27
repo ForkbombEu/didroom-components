@@ -1,4 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
+import 'material-symbols';
 
 @Component({
   tag: 'd-credential-service',
@@ -6,17 +7,17 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class DCredentialService {
-  @Prop({ reflect: true }) name: string;
-  @Prop({ reflect: true }) issuer: string;
-  @Prop({ reflect: true }) logoSrc?: string;
-  @Prop({ reflect: true }) description?: string;
-  @Prop({ reflect: true }) href?: string;
+  @Prop() name: string;
+  @Prop() issuer: string;
+  @Prop() logoSrc?: string;
+  @Prop() description?: string;
+  @Prop() href?: string;
 
   render() {
     const content = (
       <div>
-        <d-avatar name={this.name} src={this.logoSrc} size="l"></d-avatar>
-        <div class="grow">
+        <d-avatar class="shrink-0" name={this.name} src={this.logoSrc} size="l"></d-avatar>
+        <div class="grow truncate">
           <span class="name">{this.name}</span>
           <span class="description">{this.description}</span>
           <span class="issuer">{this.issuer}</span>
