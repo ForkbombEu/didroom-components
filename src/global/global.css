@@ -39,15 +39,17 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    --surface: #1f2433;
-    --primary: #253151;
-    --accent: #dfddd7;
-    --on-accent: #223360;
-    --on: #f7faff;
-    --on-alt: #c0c0ca;
-    --success: #4ecb71;
-    --warning: #ff9601;
-    --error: #ff443b;
+    :root {
+      --surface: #1f2433;
+      --primary: #253151;
+      --accent: #dfddd7;
+      --on-accent: #223360;
+      --on: #f7faff;
+      --on-alt: #c0c0ca;
+      --success: #4ecb71;
+      --warning: #ff9601;
+      --error: #ff443b;
+    }
   }
 }
 
