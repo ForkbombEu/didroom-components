@@ -10,7 +10,7 @@ export class DCredentialService {
   @Prop() issuer: string;
   @Prop() logoSrc?: string;
   @Prop() description?: string;
-  @Prop() href?: string;
+  @Prop({ reflect: true }) href?: string;
 
   render() {
     const content = (

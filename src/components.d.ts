@@ -5,14 +5,19 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Shape, Size } from "./components/types";
-export { Shape, Size } from "./components/types";
+import { Color, Shape, Size } from "./components/types";
+export { Color, Shape, Size } from "./components/types";
 export namespace Components {
     interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DButton {
+        "color"?: Color;
+        "disabled"?: boolean;
+        "href"?: string;
     }
     interface DCredentialCard {
         "description"?: string;
@@ -37,6 +42,12 @@ declare global {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
     };
+    interface HTMLDButtonElement extends Components.DButton, HTMLStencilElement {
+    }
+    var HTMLDButtonElement: {
+        prototype: HTMLDButtonElement;
+        new (): HTMLDButtonElement;
+    };
     interface HTMLDCredentialCardElement extends Components.DCredentialCard, HTMLStencilElement {
     }
     var HTMLDCredentialCardElement: {
@@ -51,6 +62,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
+        "d-button": HTMLDButtonElement;
         "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-service": HTMLDCredentialServiceElement;
     }
@@ -61,6 +73,11 @@ declare namespace LocalJSX {
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DButton {
+        "color"?: Color;
+        "disabled"?: boolean;
+        "href"?: string;
     }
     interface DCredentialCard {
         "description"?: string;
@@ -79,6 +96,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "d-avatar": DAvatar;
+        "d-button": DButton;
         "d-credential-card": DCredentialCard;
         "d-credential-service": DCredentialService;
     }
@@ -88,6 +106,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
         }

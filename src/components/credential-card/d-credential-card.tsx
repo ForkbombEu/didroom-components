@@ -32,15 +32,15 @@ const verifiedUser = (
   tag: 'd-credential-card',
   styleUrl: 'd-credential-card.css',
   shadow: true,
-  assetsDirs: ['assets']
+  assetsDirs: ['assets'],
 })
 export class DCredentialCard {
-  @Prop({ reflect: true }) name: string;
-  @Prop({ reflect: true }) issuer: string;
-  @Prop({ reflect: true }) logoSrc?: string;
-  @Prop({ reflect: true }) description?: string;
-  @Prop({ reflect: true }) expirationDate?: string;
-  @Prop({ reflect: true }) verified?: boolean = false;
+  @Prop() name: string;
+  @Prop() issuer: string;
+  @Prop() logoSrc?: string;
+  @Prop() verified?: boolean = false;
+  @Prop() description?: string;
+  @Prop() expirationDate?: string;
 
   render() {
     // const imageSrc = getAssetPath(`./assets/Rectangle.png`);
