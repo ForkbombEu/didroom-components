@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.1](https://github.com/ForkbombEu/didroom-components/compare/v1.6.0...v1.6.1) (2024-01-28)
+
+
+### Bug Fixes
+
+* broken refactoring ([1fb8a34](https://github.com/ForkbombEu/didroom-components/commit/1fb8a34e7cec4aaf4a561227fa7ac14775d2b0eb))
+* dark mode not shown without class ([#35](https://github.com/ForkbombEu/didroom-components/issues/35)) ([c20f2b5](https://github.com/ForkbombEu/didroom-components/commit/c20f2b56e302758806774911f1c738b3b2e22f3a))
+
 ## [1.6.0](https://github.com/ForkbombEu/didroom-components/compare/v1.5.1...v1.6.0) (2024-01-28)
 
 
