@@ -39,6 +39,7 @@ export namespace Components {
         "size": Size;
     }
     interface DText {
+        "color": Color;
         "size": Size;
     }
 }
@@ -120,6 +121,7 @@ declare namespace LocalJSX {
         "size"?: Size;
     }
     interface DText {
+        "color"?: Color;
         "size"?: Size;
     }
     interface IntrinsicElements {

@@ -8,11 +8,9 @@ describe('d-text', () => {
       html: `<d-text></d-text>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-text>
+      <d-text color="primary" size="m">
         <mock:shadow-root>
-          <span class="m">
             <slot></slot>
-          </span>
         </mock:shadow-root>
       </d-text>
     `);

@@ -17,3 +17,11 @@
 :host([size='xs']) {
   @apply text-xs not-italic font-normal leading-4;
 }
+
+:host([color='accent']) {
+  @apply text-on-accent;
+}
+
+:host([color='primary']) {
+  @apply text-on;
+}

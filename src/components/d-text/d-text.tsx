@@ -1,5 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
-import { Size } from '../types';
+import { Color, Size } from '../types';
 
 @Component({
   tag: 'd-text',
@@ -8,10 +8,11 @@ import { Size } from '../types';
 })
 export class DText {
   @Prop() size: Size = 'm';
+  @Prop() color: Color = 'primary';
 
   render() {
     return (
-      <Host size={this.size}>
+      <Host size={this.size} color={this.color}>
         <slot></slot>
       </Host>
     );

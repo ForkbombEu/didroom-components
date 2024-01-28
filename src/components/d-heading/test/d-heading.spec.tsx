@@ -8,11 +8,9 @@ describe('d-heading', () => {
       html: `<d-heading></d-heading>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-heading>
+      <d-heading color="primary" size="m">
         <mock:shadow-root>
-          <h3 class="m">
-            <slot></slot>
-          </h3>
+          <slot></slot>
         </mock:shadow-root>
       </d-heading>
     `);
