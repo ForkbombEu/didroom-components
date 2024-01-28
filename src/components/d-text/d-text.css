@@ -1,0 +1,19 @@
+:host([size='xl']) {
+  @apply text-xl not-italic font-normal leading-7;
+}
+
+:host([size='l']) {
+  @apply text-lg not-italic font-normal leading-[26px];
+}
+
+:host([size='m']) {
+  @apply text-base not-italic font-normal leading-5;
+}
+
+:host([size='s']) {
+  @apply text-sm not-italic font-normal leading-5;
+}
+
+:host([size='xs']) {
+  @apply text-xs not-italic font-normal leading-4;
+}
