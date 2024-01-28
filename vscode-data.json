@@ -81,6 +81,35 @@
       ]
     },
     {
+      "name": "d-credential-offer",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "long-description",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-credential-service",
       "description": {
         "kind": "markdown",
@@ -110,6 +139,23 @@
       ]
     },
     {
+      "name": "d-definition",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "definition",
+          "description": ""
+        },
+        {
+          "name": "title",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-heading",
       "description": {
         "kind": "markdown",
@@ -133,6 +179,10 @@
         "value": ""
       },
       "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
         {
           "name": "size",
           "description": ""

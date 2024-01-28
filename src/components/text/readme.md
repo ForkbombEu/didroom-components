@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default |
-| -------- | --------- | ----------- | -------- | ------- |
-| `size`   | `size`    |             | `string` | `'m'`   |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `color`  | `color`   |             | `string` | `'primary'` |
+| `size`   | `size`    |             | `string` | `'m'`       |
 
 
 ----------------------------------------------

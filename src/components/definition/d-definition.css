@@ -1,0 +1,10 @@
+:host {
+  @apply flex gap-2
+}
+.title {
+  @apply text-on text-[10px] not-italic font-medium leading-[150%] tracking-[-0.5px];
+}
+
+.definition {
+  @apply text-on-alt text-[10px] not-italic font-normal leading-[150%] tracking-[-0.5px];
+}
