@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/ForkbombEu/didroom-components/compare/v1.5.1...v1.6.0) (2024-01-28)
+
+
+### Features
+
+* **button:** New shiny component is in da houz ([#32](https://github.com/ForkbombEu/didroom-components/issues/32)) ([ebe149c](https://github.com/ForkbombEu/didroom-components/commit/ebe149c56121b942d684a881c2c4b3367522e86a))
+* **typography:** d-heading and d-text in da houze ([#33](https://github.com/ForkbombEu/didroom-components/issues/33)) ([86352cc](https://github.com/ForkbombEu/didroom-components/commit/86352cc70465eb54fe2267bacb6c9dfd83daeabc))
+
 ## [1.5.1](https://github.com/ForkbombEu/didroom-components/compare/v1.5.0...v1.5.1) (2024-01-27)
 
 
