@@ -68,3 +68,7 @@
 * {
   @apply text-on;
 }
+
+body {
+  @apply bg-surface;
+}

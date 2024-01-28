@@ -7,10 +7,11 @@ import { Shape, Size } from '../types';
   shadow: true,
 })
 export class Avatar {
+  @Prop() name?: string;
+  @Prop() size?: Size = 'm';
+  @Prop() shape?: Shape = 'round';
   @Prop({ reflect: true }) src?: string;
-  @Prop({ reflect: true }) name?: string;
-  @Prop({ reflect: true }) size?: Size = 'm';
-  @Prop({ reflect: true }) shape?: Shape = 'round';
+
   @State() error: boolean = false;
 
   render() {

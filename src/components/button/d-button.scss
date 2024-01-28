@@ -1,0 +1,31 @@
+:host > a,
+:host > button {
+  @apply flex w-full justify-center items-center shrink-0 rounded px-0 py-2 text-center text-base not-italic font-semibold leading-8 tracking-[0.16px] uppercase;
+}
+
+:host([disabled]:not([disabled='false'])) > a,
+:host([disabled]:not([disabled='false'])) > button {
+  pointer-events: none;
+  cursor: not-allowed;
+  &.accent {
+    @apply opacity-30 text-opacity-30;
+  }
+
+  &.primary {
+    @apply opacity-60 text-opacity-60;
+  }
+}
+
+.accent {
+  @apply bg-accent text-on-accent;
+  &:active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), var(--accent);
+  }
+}
+
+.primary {
+  @apply bg-primary text-on;
+  &:active {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), var(--primary);
+  }
+}

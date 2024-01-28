@@ -23,7 +23,7 @@ export const Rounded: Story = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/@storybook/addon-designs-sample',
+      url: 'https://www.figma.com/file/pdwfO3dMKtaCAQakht0JE6/DIDRoom-%2B-Signroom---WF-and-GUI---Dyne.org?type=design&node-id=2005-930&mode=dev',
     },
   },
 };
