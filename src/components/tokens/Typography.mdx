@@ -1,0 +1,58 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: 'Gantari Variable',
+  },
+  weight: {
+    regular: '400',
+    semibold: '600',
+  },
+  size: {
+    xs: 12,
+    s: 14,
+    m: 16,
+    l: 18,
+    xl: 20,
+    h: {
+      xs: 26,
+      s: 32,
+      m: 40,
+      l: 48,
+      xl: 56,
+    },
+  },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+export const SampleHeading = 'Heading';
+
+# Typography
+
+## Headings
+
+**Font:** Gantari
+
+**Weights:** 600(semibold)
+
+<Typeset
+  fontSizes={[Number(typography.size.h.xs), Number(typography.size.h.s), Number(typography.size.h.m), Number(typography.size.h.l), Number(typography.size.h.xl)]}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleHeading}
+  fontFamily={typography.type.primary}
+/>
+
+## Regular text
+
+**Font:** Gantari
+
+**Weights:** 400(regular)
+
+<Typeset
+  fontSizes={[Number(typography.size.xs), Number(typography.size.s), Number(typography.size.m), Number(typography.size.l), Number(typography.size.xl)]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
