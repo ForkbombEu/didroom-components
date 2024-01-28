@@ -65,10 +65,6 @@
   direction: ltr;
 }
 
-* {
-  @apply text-on;
-}
-
 body {
   @apply bg-surface;
 }

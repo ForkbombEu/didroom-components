@@ -13,7 +13,7 @@ export const ShapeArgTypes = {
 };
 export type Shape = (typeof ShapeOptions)[number];
 
-const ColorOptions = 'primary accent'.split(' ');
+const ColorOptions = 'primary accent success warning error'.split(' ');
 export const ColorArgTypes = {
   options: ColorOptions,
   description: 'Color of the button',

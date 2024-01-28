@@ -34,6 +34,13 @@ export namespace Components {
         "logoSrc"?: string;
         "name": string;
     }
+    interface DHeading {
+        "color": Color;
+        "size": Size;
+    }
+    interface DText {
+        "size": Size;
+    }
 }
 declare global {
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
@@ -60,11 +67,25 @@ declare global {
         prototype: HTMLDCredentialServiceElement;
         new (): HTMLDCredentialServiceElement;
     };
+    interface HTMLDHeadingElement extends Components.DHeading, HTMLStencilElement {
+    }
+    var HTMLDHeadingElement: {
+        prototype: HTMLDHeadingElement;
+        new (): HTMLDHeadingElement;
+    };
+    interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
+    }
+    var HTMLDTextElement: {
+        prototype: HTMLDTextElement;
+        new (): HTMLDTextElement;
+    };
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
         "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-service": HTMLDCredentialServiceElement;
+        "d-heading": HTMLDHeadingElement;
+        "d-text": HTMLDTextElement;
     }
 }
 declare namespace LocalJSX {
@@ -94,11 +115,20 @@ declare namespace LocalJSX {
         "logoSrc"?: string;
         "name"?: string;
     }
+    interface DHeading {
+        "color"?: Color;
+        "size"?: Size;
+    }
+    interface DText {
+        "size"?: Size;
+    }
     interface IntrinsicElements {
         "d-avatar": DAvatar;
         "d-button": DButton;
         "d-credential-card": DCredentialCard;
         "d-credential-service": DCredentialService;
+        "d-heading": DHeading;
+        "d-text": DText;
     }
 }
 export { LocalJSX as JSX };
@@ -109,6 +139,8 @@ declare module "@stencil/core" {
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
+            "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
         }
     }
 }
