@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ForkbombEu/didroom-components/compare/v1.6.1...v1.7.0) (2024-01-31)
+
+
+### Features
+
+* credential details card ([#37](https://github.com/ForkbombEu/didroom-components/issues/37)) ([52831a0](https://github.com/ForkbombEu/didroom-components/commit/52831a0bc556e4a34e6661ba8dcaecea1fe63dde))
+
 ## [1.6.1](https://github.com/ForkbombEu/didroom-components/compare/v1.6.0...v1.6.1) (2024-01-28)
 
 
