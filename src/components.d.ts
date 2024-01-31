@@ -27,6 +27,14 @@ export namespace Components {
         "name": string;
         "verified"?: boolean;
     }
+    interface DCredentialDetail {
+        "description": string;
+        "href"?: string;
+        "issuer": string;
+        "logoSrc"?: string;
+        "longDescription"?: string;
+        "name": string;
+    }
     interface DCredentialService {
         "description"?: string;
         "href"?: string;
@@ -62,6 +70,12 @@ declare global {
         prototype: HTMLDCredentialCardElement;
         new (): HTMLDCredentialCardElement;
     };
+    interface HTMLDCredentialDetailElement extends Components.DCredentialDetail, HTMLStencilElement {
+    }
+    var HTMLDCredentialDetailElement: {
+        prototype: HTMLDCredentialDetailElement;
+        new (): HTMLDCredentialDetailElement;
+    };
     interface HTMLDCredentialServiceElement extends Components.DCredentialService, HTMLStencilElement {
     }
     var HTMLDCredentialServiceElement: {
@@ -84,6 +98,7 @@ declare global {
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
         "d-credential-card": HTMLDCredentialCardElement;
+        "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-heading": HTMLDHeadingElement;
         "d-text": HTMLDTextElement;
@@ -109,6 +124,14 @@ declare namespace LocalJSX {
         "name"?: string;
         "verified"?: boolean;
     }
+    interface DCredentialDetail {
+        "description"?: string;
+        "href"?: string;
+        "issuer"?: string;
+        "logoSrc"?: string;
+        "longDescription"?: string;
+        "name"?: string;
+    }
     interface DCredentialService {
         "description"?: string;
         "href"?: string;
@@ -128,6 +151,7 @@ declare namespace LocalJSX {
         "d-avatar": DAvatar;
         "d-button": DButton;
         "d-credential-card": DCredentialCard;
+        "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-heading": DHeading;
         "d-text": DText;
@@ -140,6 +164,7 @@ declare module "@stencil/core" {
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
+            "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;

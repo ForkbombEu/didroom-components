@@ -81,6 +81,39 @@
       ]
     },
     {
+      "name": "d-credential-detail",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "long-description",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-credential-service",
       "description": {
         "kind": "markdown",
@@ -133,6 +166,10 @@
         "value": ""
       },
       "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
         {
           "name": "size",
           "description": ""
