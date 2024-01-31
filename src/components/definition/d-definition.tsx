@@ -10,10 +10,15 @@ export class DDefinition {
   @Prop({ reflect: true }) definition: string;
 
   render() {
+    
+
     return (
       <Host>
-        <dt class="title">{this.title}</dt>
-        <dd class="definition">{this.definition}</dd>
+        <div>
+          <dt class="title">{this.title}</dt>
+          <dd class="definition">{this.definition}</dd>
+        </div>
+        <slot></slot>
       </Host>
     );
   }

@@ -1,10 +1,13 @@
 :host {
-  @apply flex gap-2
+  @apply flex justify-between w-full h-[45px] border-b-on-alt border-b-2 border-solid;
+}
+:host > div {
+  @apply flex flex-col;
 }
 .title {
-  @apply text-on text-[10px] not-italic font-medium leading-[150%] tracking-[-0.5px];
+  @apply text-on-alt text-xs not-italic font-normal leading-[150%] tracking-[-0.5px];
 }
 
 .definition {
-  @apply text-on-alt text-[10px] not-italic font-normal leading-[150%] tracking-[-0.5px];
+  @apply text-on not-italic text-xs font-medium leading-[150%] tracking-[-0.5px];
 }
