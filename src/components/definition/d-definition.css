@@ -1,8 +1,8 @@
 :host {
-  @apply flex justify-between w-full h-[45px] border-b-on-alt border-b-2 border-solid;
+  @apply flex justify-between w-full border-b-on-alt border-b border-solid;
 }
 :host > div {
-  @apply flex flex-col;
+  @apply flex flex-col w-full h-11;
 }
 .title {
   @apply text-on-alt text-xs not-italic font-normal leading-[150%] tracking-[-0.5px];

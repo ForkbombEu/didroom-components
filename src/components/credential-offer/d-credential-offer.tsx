@@ -27,7 +27,10 @@ export class DCredentialOffer {
           </div>
           <dl class="list">
             <slot/>
-            <d-definition title="issuer" definition="Italian Governament"/>
+            <d-definition title="Holder name" definition="Karla John" hidable/>
+            <d-definition title="Holder DID" definition="VxRbAYUkAnsJtVsu9F4grJOW88sios45w" hidable/>
+            <d-definition title="issuer" definition="Italian Governament" />
+            <d-definition title="issuer DID" definition="DxNbADPkQnsJuTsu7E4orFYT175sios3Ku" hidable/>
           </dl>
         </div>
       </Host>
