@@ -26,6 +26,7 @@ export class DCredentialDetail {
             <span class="short-description">{this.description}</span>
             <div class="details">
               <span class="long-description">{longDescription}</span>
+              <span class="issuer">{this.issuer}</span>
             </div>
           </div>
           <div class="w-full">

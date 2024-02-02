@@ -10,7 +10,10 @@ describe('d-definition', () => {
     expect(page.root).toEqualHtml(`
       <d-definition>
         <mock:shadow-root>
-          <slot></slot>
+          <div>
+           <dt class="title"></dt>
+           <dd class="definition"></dd>
+         </div>
         </mock:shadow-root>
       </d-definition>
     `);
