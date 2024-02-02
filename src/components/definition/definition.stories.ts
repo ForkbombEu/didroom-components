@@ -7,9 +7,22 @@ const meta = {
     `<d-definition 
     title="${args.title}" 
     definition="${args.definition}"
-    hidable={${args.hidable}}
+    ${args.hidable && 'hidable'}
     >
-    </d-definition>`,
+    </d-definition>
+    <d-definition 
+    title="${args.title}" 
+    definition="${args.definition}"
+    ${args.hidable && 'hidable'}
+    >
+    </d-definition>
+    <d-definition 
+    title="${args.title}" 
+    definition="${args.definition}"
+    ${args.hidable && 'hidable'}
+    >
+    </d-definition>
+    `,
 } satisfies Meta<DDefinition>;
 
 export default meta;

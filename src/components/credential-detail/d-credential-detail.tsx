@@ -10,10 +10,11 @@ export class DCredentialDetail {
   @Prop({ reflect: true }) description: string;
   @Prop({ reflect: true }) issuer: string;
   @Prop({ reflect: true }) longDescription?: string;
-  @Prop({ reflect: true }) href?: string;
   @Prop({ reflect: true }) logoSrc?: string;
 
+
   render() {
+    const longDescription = this.longDescription ? this.longDescription : '';
     return (
       <Host>
         <div class="frame">
@@ -24,14 +25,11 @@ export class DCredentialDetail {
           <div class="info">
             <span class="short-description">{this.description}</span>
             <div class="details">
-              <span class="long-description">{this.longDescription}</span>
+              <span class="long-description">{longDescription}</span>
             </div>
           </div>
           <div class="w-full">
             <slot></slot>
-            <d-button color="accent" href={this.href}>
-              generate qr
-            </d-button>
           </div>
         </div>
       </Host>
