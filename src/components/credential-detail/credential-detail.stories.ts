@@ -51,11 +51,11 @@ export const WithList: Story = {
       'Service description (optional). Lorem ipsum dolor sit amet consectetur. Leo ultricies pellentesque morbi in eu metus commodo felis. Pellentesque facilisis a auctor enim lectus. Nulla dolor cras viverra massa.',
   },
   parameters: {
-    slot: `<dl><d-definition title="Holder name" definition="Karla John" hidable></d-definition>
+    slot: `<d-definition title="Holder name" definition="Karla John" hidable></d-definition>
     <d-definition title="Holder DID" definition="VxRbAYUkAnsJtVsu9F4grJOW88sios45w" hidable></d-definition>
           <d-definition title="issuer" definition="Italian Governament" ></d-definition>
           <d-definition title="issuer DID" definition="DxNbADPkQnsJuTsu7E4orFYT175sios3Ku" hidable></d-definition>
-          </dl>`,
+          `,
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/pdwfO3dMKtaCAQakht0JE6/DIDRoom-%2B-Signroom---WF-and-GUI---Dyne.org?type=design&node-id=2005-930&mode=design&t=uW8kvn2nKPMvUzX7-0',

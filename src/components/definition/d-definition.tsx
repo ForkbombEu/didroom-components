@@ -39,10 +39,12 @@ export class DDefinition {
     return (
       <Host>
         <div>
-          <dt class="title">{this.title}</dt>
-          <dd class="definition">{!this.hide ? this.definition : '**********'}</dd>
+          <dl>
+            <dt class="title">{this.title}</dt>
+            <dd class="definition">{!this.hide ? this.definition : '**********'}</dd>
+          </dl>
+          {this.hidable && <button onClick={onClick}>{this.hide ? visibilityOn : visibilityOff}</button>}
         </div>
-        {this.hidable && <button onClick={onClick}>{this.hide ? visibilityOn : visibilityOff}</button>}
       </Host>
     );
   }

@@ -1,7 +1,7 @@
-:host {
+:host > div {
   @apply flex justify-between w-full border-b-on-alt border-b border-solid;
 }
-:host > div {
+:host > dl {
   @apply flex flex-col w-full h-11;
 }
 .title {
