@@ -11,9 +11,11 @@ describe('d-definition', () => {
       <d-definition>
         <mock:shadow-root>
           <div>
-           <dt class="title"></dt>
-           <dd class="definition"></dd>
-         </div>
+           <dl>
+             <dt class="title"></dt>
+             <dd class="definition"></dd>
+           </dl>
+          </div>
         </mock:shadow-root>
       </d-definition>
     `);
