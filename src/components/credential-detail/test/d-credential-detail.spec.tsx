@@ -10,19 +10,20 @@ describe('d-credential-detail', () => {
     expect(page.root).toEqualHtml(`
       <d-credential-detail>
         <mock:shadow-root>
-         <div>
-           <div class="heading">
-             <d-avatar></d-avatar>
-             <span class="name"></span>
+         <div class="frame">
+            <div class="heading">
+              <d-avatar></d-avatar>
+              <span class="name"></span>
+            </div>
+           <div class="info">
+             <span class="short-description"></span>
+             <div class="details">
+               <span class="long-description"></span>
+               <span class="issuer"></span>
+             </div>
            </div>
-           <span class="description"></span>
-           <span class="long-description"></span>
-           <span class="issuer"></span>
            <div class="w-full">
-           <slot></slot>
-             <d-button color="accent">
-               generate qr
-             </d-button>
+             <slot></slot>
            </div>
          </div>
         </mock:shadow-root>

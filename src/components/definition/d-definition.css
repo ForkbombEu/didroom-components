@@ -1,0 +1,13 @@
+:host > div {
+  @apply flex justify-between w-full border-b-on-alt border-b border-solid;
+}
+:host > dl {
+  @apply flex flex-col w-full h-11;
+}
+.title {
+  @apply text-on-alt text-xs not-italic font-normal leading-[150%] tracking-[-0.5px];
+}
+
+.definition {
+  @apply text-on not-italic text-xs font-medium leading-[150%] tracking-[-0.5px];
+}
