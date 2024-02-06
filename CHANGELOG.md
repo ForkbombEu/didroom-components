@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/ForkbombEu/didroom-components/compare/v1.7.0...v1.8.0) (2024-02-06)
+
+
+### Features
+
+* credential-offer and definitions ([#44](https://github.com/ForkbombEu/didroom-components/issues/44)) ([d51a614](https://github.com/ForkbombEu/didroom-components/commit/d51a6144eb20173207fe16c24243ac5332abf9dc))
+
 ## [1.7.0](https://github.com/ForkbombEu/didroom-components/compare/v1.6.1...v1.7.0) (2024-01-31)
 
 
