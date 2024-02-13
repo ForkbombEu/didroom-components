@@ -50,6 +50,8 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DLogo {
+    }
     interface DText {
         "color": Color;
         "size": Size;
@@ -98,6 +100,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDLogoElement extends Components.DLogo, HTMLStencilElement {
+    }
+    var HTMLDLogoElement: {
+        prototype: HTMLDLogoElement;
+        new (): HTMLDLogoElement;
+    };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
     var HTMLDTextElement: {
@@ -112,6 +120,7 @@ declare global {
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
         "d-heading": HTMLDHeadingElement;
+        "d-logo": HTMLDLogoElement;
         "d-text": HTMLDTextElement;
     }
 }
@@ -158,6 +167,8 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DLogo {
+    }
     interface DText {
         "color"?: Color;
         "size"?: Size;
@@ -170,6 +181,7 @@ declare namespace LocalJSX {
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
         "d-heading": DHeading;
+        "d-logo": DLogo;
         "d-text": DText;
     }
 }
@@ -184,6 +196,7 @@ declare module "@stencil/core" {
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
         }
     }
