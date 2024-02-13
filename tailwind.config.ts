@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Gantari Variable"', 'sans-serif'],
+        sans: ['"Bungee Shade"', 'sans-serif'],
         icon: ['"Material Symbols Rounded"'],
       },
       colors: {
