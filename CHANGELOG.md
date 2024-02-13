@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/ForkbombEu/didroom-components/compare/v1.8.0...v1.9.0) (2024-02-13)
+
+
+### Features
+
+* logo ([#46](https://github.com/ForkbombEu/didroom-components/issues/46)) ([87f32da](https://github.com/ForkbombEu/didroom-components/commit/87f32da6d4e6bf6c0c34bc929a0bc7a76d1a7d99))
+
 ## [1.8.0](https://github.com/ForkbombEu/didroom-components/compare/v1.7.0...v1.8.0) (2024-02-06)
 
 
