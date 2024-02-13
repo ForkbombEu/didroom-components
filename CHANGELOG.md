@@ -1,5 +1,43 @@
 # Changelog
 
+## 1.0.0 (2024-02-13)
+
+
+### Features
+
+* Add change theme docs ([0203880](https://github.com/ForkbombEu/monochrome-components/commit/0203880aab34139c9b00a7bd96612a9aa6be66d3))
+* Add color swatches ([7d82397](https://github.com/ForkbombEu/monochrome-components/commit/7d8239746b3f9a5ea02dd77a1ea00b4e7aa368f8))
+* Add logo ([ec13ac8](https://github.com/ForkbombEu/monochrome-components/commit/ec13ac8c1d782324ab182b0a85f31bb65ee72b28))
+* add the credential-service components (WIP the a.styling) and refactor the d-avatar ([ff1f0a4](https://github.com/ForkbombEu/monochrome-components/commit/ff1f0a421f12519e1dae50a68b37d00d6467de68))
+* **Avatar:** Add toc and autodocs to preview somponent ([0146870](https://github.com/ForkbombEu/monochrome-components/commit/01468709bcf519b44982faf8f0135a33f2222c95))
+* **button:** New shiny component is in da houz ([#32](https://github.com/ForkbombEu/monochrome-components/issues/32)) ([ebe149c](https://github.com/ForkbombEu/monochrome-components/commit/ebe149c56121b942d684a881c2c4b3367522e86a))
+* credential card ([#26](https://github.com/ForkbombEu/monochrome-components/issues/26)) ([1200fd0](https://github.com/ForkbombEu/monochrome-components/commit/1200fd0a95e680464aef8a36b15c34718174afab))
+* credential details card ([#37](https://github.com/ForkbombEu/monochrome-components/issues/37)) ([52831a0](https://github.com/ForkbombEu/monochrome-components/commit/52831a0bc556e4a34e6661ba8dcaecea1fe63dde))
+* credential-offer and definitions ([#44](https://github.com/ForkbombEu/monochrome-components/issues/44)) ([d51a614](https://github.com/ForkbombEu/monochrome-components/commit/d51a6144eb20173207fe16c24243ac5332abf9dc))
+* exporting the types and bundle components ([72b65b4](https://github.com/ForkbombEu/monochrome-components/commit/72b65b4fab1873ada3edb2d5da8283050084140a))
+* monochrom yellow colors and font ([3d4c71b](https://github.com/ForkbombEu/monochrome-components/commit/3d4c71bff2230b0dd735665eeac42478507a24d5))
+* New colors and typographic family ([#27](https://github.com/ForkbombEu/monochrome-components/issues/27)) ([13f82ec](https://github.com/ForkbombEu/monochrome-components/commit/13f82ec6d93bd6a230bc4be88e36167956d52e6c))
+* publish storybook from actions ([e4b0b96](https://github.com/ForkbombEu/monochrome-components/commit/e4b0b9602f14dff63ba01fdcfcc36c2b095aeb4f))
+* **typography:** d-heading and d-text in da houze ([#33](https://github.com/ForkbombEu/monochrome-components/issues/33)) ([86352cc](https://github.com/ForkbombEu/monochrome-components/commit/86352cc70465eb54fe2267bacb6c9dfd83daeabc))
+
+
+### Bug Fixes
+
+* Add correct licensing ([c22e1bb](https://github.com/ForkbombEu/monochrome-components/commit/c22e1bbd7bcd3b435f275a66579250ee14ee98fa))
+* **avatar:** inverted dark/light mode ([7241023](https://github.com/ForkbombEu/monochrome-components/commit/7241023f6ef58cd332fe0852695a7610c01289b2))
+* broken refactoring ([1fb8a34](https://github.com/ForkbombEu/monochrome-components/commit/1fb8a34e7cec4aaf4a561227fa7ac14775d2b0eb))
+* correct attribution and correct pnpm version ([63b6802](https://github.com/ForkbombEu/monochrome-components/commit/63b6802edf23385cc4bcfcfdda69efe31bf8eb0c))
+* correct load of tailwind modules after postcss ([c021677](https://github.com/ForkbombEu/monochrome-components/commit/c021677282f0c3c05c86b5f892c87400df42b862))
+* dark and light variables ([b971b1d](https://github.com/ForkbombEu/monochrome-components/commit/b971b1d31b27f6a70e7a220bf780f48966bf1a4e))
+* dark mode not shown without class ([#35](https://github.com/ForkbombEu/monochrome-components/issues/35)) ([c20f2b5](https://github.com/ForkbombEu/monochrome-components/commit/c20f2b56e302758806774911f1c738b3b2e22f3a))
+* fix online documentation paths ([d1d5bf6](https://github.com/ForkbombEu/monochrome-components/commit/d1d5bf6a0c287238dd25c5b42bac79374d732f47))
+* Fixed tests ([f886421](https://github.com/ForkbombEu/monochrome-components/commit/f886421973a9cf227ee09e8ae04647c56adcd46b))
+* metadata packages update ([b88b45d](https://github.com/ForkbombEu/monochrome-components/commit/b88b45de5eb50fdbcd4fcc8fb13c6da1eeee0ce3))
+* remove inverted colors ([2061f33](https://github.com/ForkbombEu/monochrome-components/commit/2061f33acfd37bfd2b628bb1d2fedd3355e74511))
+* remove the useless rollup-plugin-copy in place of the native ([eb106ad](https://github.com/ForkbombEu/monochrome-components/commit/eb106ad4c8e206e8ae5c2b2fa70f557c17cdf90e))
+* truncate long lines of the credential-service ([71cf6a0](https://github.com/ForkbombEu/monochrome-components/commit/71cf6a081887e509511f2b3af71ebdd424f67e28))
+* upgrade dependencies and fix the lockfile ([3ab712f](https://github.com/ForkbombEu/monochrome-components/commit/3ab712f00d75a4338f63ea57c16e7ab008111f8e))
+
 ## [1.8.0](https://github.com/ForkbombEu/didroom-components/compare/v1.7.0...v1.8.0) (2024-02-06)
 
 
