@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/ForkbombEu/didroom-components/compare/v1.10.0...v1.10.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* button type submit ([#50](https://github.com/ForkbombEu/didroom-components/issues/50)) ([b0b8c81](https://github.com/ForkbombEu/didroom-components/commit/b0b8c813dbccbe37ff4c08395372fbf84fa30186))
+
 ## [1.10.0](https://github.com/ForkbombEu/didroom-components/compare/v1.9.0...v1.10.0) (2024-02-15)
 
 
