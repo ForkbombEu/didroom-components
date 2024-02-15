@@ -34,9 +34,46 @@ export class DButton implements ComponentInterface {
   @Event() dFocus!: EventEmitter<void>;
   @Event() dBlur!: EventEmitter<void>;
 
-
   private get hasIconOnly() {
     return !!this.el.querySelector('[slot="icon-only"]');
+  }
+
+  private findForm(): HTMLFormElement | null {
+    const { form } = this;
+    if (form instanceof HTMLFormElement) {
+      return form;
+    }
+    if (typeof form === 'string') {
+      const el: HTMLElement | null = document.getElementById(form);
+      if (el) {
+        if (el instanceof HTMLFormElement) {
+          return el;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    }
+    if (form !== undefined) {
+      return null;
+    }
+    return this.el.closest('form');
+  }
+
+  private renderHiddenButton() {
+    const formEl = (this.formEl = this.findForm());
+    if (formEl) {
+      const { formButtonEl } = this;
+      if (formButtonEl !== null && formEl.contains(formButtonEl)) {
+        return;
+      }
+      const newFormButtonEl = (this.formButtonEl = document.createElement('button'));
+      newFormButtonEl.type = this.type;
+      newFormButtonEl.style.display = 'none';
+      newFormButtonEl.disabled = this.disabled;
+      formEl.appendChild(newFormButtonEl);
+    }
   }
 
   private submitForm(ev: Event) {
@@ -48,7 +85,7 @@ export class DButton implements ComponentInterface {
 
   private handleClick = (ev: Event) => {
     const { el } = this;
-     if (hasShadowDom(el)) {
+    if (hasShadowDom(el)) {
       this.submitForm(ev);
     }
   };
@@ -63,10 +100,13 @@ export class DButton implements ComponentInterface {
 
   render() {
     const { buttonType, type, disabled, size, href, color, expand, hasIconOnly } = this;
-    const finalSize = size === undefined ? 'small' : size;
+    const finalSize = size === undefined ? 'default' : size;
     const TagType = href === undefined ? 'button' : ('a' as any);
     const attrs = TagType === 'button' ? { type } : { href };
 
+    {
+      type !== 'button' && this.renderHiddenButton();
+    }
     return (
       <Host
         onClick={this.handleClick}
