@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/ForkbombEu/didroom-components/compare/v1.9.0...v1.10.0) (2024-02-15)
+
+
+### Features
+
+* add some props to button and refactor code ([31b094a](https://github.com/ForkbombEu/didroom-components/commit/31b094a9228287b4721b02265f71f3a25db24c47))
+* new button system with onclick and typology ([#48](https://github.com/ForkbombEu/didroom-components/issues/48)) ([31b094a](https://github.com/ForkbombEu/didroom-components/commit/31b094a9228287b4721b02265f71f3a25db24c47))
+
 ## [1.9.0](https://github.com/ForkbombEu/didroom-components/compare/v1.8.0...v1.9.0) (2024-02-13)
 
 
