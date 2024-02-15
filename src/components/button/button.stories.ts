@@ -4,7 +4,9 @@ import { ColorArgTypes } from '../types.js';
 
 const meta = {
   title: 'Design System/Atoms/Button',
-  render: args => `<d-button color=${args.color} disabled=${args.disabled}>BUTTON</d-button>`,
+  render: (args, story) => `<d-button color=${args.color} disabled=${args.disabled} ${args.href ? `href=${args.href}` : ''} size=${args.size} ${args.expand ? 'expand' : ''}>
+  ${Boolean(story.parameters.slot) ? `<div slot="${story.parameters.slot.position}">${story.parameters.slot.icon}</div>` : ''}
+  ${Boolean(story.parameters.slot?.position == 'icon-only') ? '' : 'BUTTON'}</d-button>`,
   argTypes: {
     disabled: { control: 'boolean', description: 'Disable the button' },
     color: ColorArgTypes,
@@ -17,7 +19,6 @@ type Story = StoryObj<Components.DButton>;
 export const Default: Story = {
   args: {
     color: 'primary',
-    href: '#',
     disabled: false,
   },
   parameters: {
@@ -39,8 +40,7 @@ export const Accent: Story = {
     ...Default.args,
     color: 'accent',
   },
-};
-export const AccentDisabled: Story = {
+};export const AccentDisabled: Story = {
   args: {
     ...Default.args,
     color: 'accent',
@@ -54,9 +54,65 @@ export const PrimaryDisabled: Story = {
     disabled: true,
   },
 };
+export const Expand: Story = {
+  args: {
+    ...Default.args,
+    expand: true,
+  },
+};
+export const IconBefore: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    slot: {
+      position: 'start',
+      icon: '🚀',
+    },
+  },
+};
+
+export const IconAfter: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    slot: {
+      position: 'end',
+      icon: '🚀',
+    },
+  },
+};
+export const IconOnly: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    slot: {
+      position: 'icon-only',
+      icon: '🚀',
+    },
+  },
+};
+
+
 export const Link: Story = {
   args: {
     ...Default.args,
     href: '/',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    ...Default.args,
+    size: 'small',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    ...Default.args,
+    size: 'large',
   },
 };

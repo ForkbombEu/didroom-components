@@ -15,9 +15,14 @@ export namespace Components {
         "src"?: string;
     }
     interface DButton {
+        "buttonType": string;
         "color"?: Color;
-        "disabled"?: boolean;
-        "href"?: string;
+        "disabled": boolean;
+        "expand"?: boolean;
+        "form"?: string | HTMLFormElement;
+        "href": string | undefined;
+        "size"?: 'small' | 'default' | 'large';
+        "type": 'submit' | 'reset' | 'button';
     }
     interface DCredentialCard {
         "description"?: string;
@@ -57,6 +62,10 @@ export namespace Components {
         "size": Size;
     }
 }
+export interface DButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDButtonElement;
+}
 declare global {
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
     }
@@ -64,7 +73,19 @@ declare global {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
     };
+    interface HTMLDButtonElementEventMap {
+        "dFocus": void;
+        "dBlur": void;
+    }
     interface HTMLDButtonElement extends Components.DButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDButtonElementEventMap>(type: K, listener: (this: HTMLDButtonElement, ev: DButtonCustomEvent<HTMLDButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDButtonElementEventMap>(type: K, listener: (this: HTMLDButtonElement, ev: DButtonCustomEvent<HTMLDButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDButtonElement: {
         prototype: HTMLDButtonElement;
@@ -132,9 +153,16 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface DButton {
+        "buttonType"?: string;
         "color"?: Color;
         "disabled"?: boolean;
-        "href"?: string;
+        "expand"?: boolean;
+        "form"?: string | HTMLFormElement;
+        "href"?: string | undefined;
+        "onDBlur"?: (event: DButtonCustomEvent<void>) => void;
+        "onDFocus"?: (event: DButtonCustomEvent<void>) => void;
+        "size"?: 'small' | 'default' | 'large';
+        "type"?: 'submit' | 'reset' | 'button';
     }
     interface DCredentialCard {
         "description"?: string;
