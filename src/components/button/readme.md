@@ -7,11 +7,24 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default     |
-| ---------- | ---------- | ----------- | --------- | ----------- |
-| `color`    | `color`    |             | `string`  | `'primary'` |
-| `disabled` | `disabled` |             | `boolean` | `false`     |
-| `href`     | `href`     |             | `string`  | `undefined` |
+| Property     | Attribute     | Description | Type                              | Default     |
+| ------------ | ------------- | ----------- | --------------------------------- | ----------- |
+| `buttonType` | `button-type` |             | `string`                          | `'button'`  |
+| `color`      | `color`       |             | `string`                          | `'primary'` |
+| `disabled`   | `disabled`    |             | `boolean`                         | `false`     |
+| `expand`     | `expand`      |             | `boolean`                         | `undefined` |
+| `form`       | `form`        |             | `HTMLFormElement \| string`       | `undefined` |
+| `href`       | `href`        |             | `string`                          | `undefined` |
+| `size`       | `size`        |             | `"default" \| "large" \| "small"` | `undefined` |
+| `type`       | `type`        |             | `"button" \| "reset" \| "submit"` | `'button'`  |
+
+
+## Events
+
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `dBlur`  |             | `CustomEvent<void>` |
+| `dFocus` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------

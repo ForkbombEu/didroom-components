@@ -1,10 +1,18 @@
 :host > a,
 :host > button {
-  @apply flex w-full justify-center items-center shrink-0 rounded px-0 py-2 text-center text-base not-italic font-semibold leading-8 tracking-[0.16px] uppercase;
+  @apply flex w-fit justify-center items-center shrink-0 rounded px-4 py-2 text-center text-base not-italic font-semibold leading-8 tracking-[0.16px] uppercase;
+}
+:host(.button-block) {
+  @apply block;
+}
+:host(.button-block) .button-native {
+  @apply mx-0 w-full clear-both;
+
+  contain: content;
 }
 
-:host([disabled]:not([disabled='false'])) > a,
-:host([disabled]:not([disabled='false'])) > button {
+:host(.button-disabled) > a,
+:host(.button-disabled) > button {
   pointer-events: none;
   cursor: not-allowed;
   &.accent {
@@ -15,8 +23,8 @@
     @apply opacity-60 text-opacity-60;
   }
 }
-
-.accent {
+:host(.accent) > a,
+:host(.accent) > button {
   @apply bg-accent text-on-accent;
   * {
     @apply text-on-accent;
@@ -26,7 +34,8 @@
   }
 }
 
-.primary {
+:host(.primary) > a,
+:host(.primary) > button {
   @apply bg-primary text-on;
   * {
     @apply text-on;
@@ -34,4 +43,43 @@
   &:active {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), var(--primary);
   }
+}
+
+.button-inner {
+  @apply flex flex-row flex-shrink-0 items-center justify-center w-full h-full z-10;
+}
+
+::slotted([slot='start']),
+::slotted([slot='end']) {
+  @apply shrink-0;
+}
+
+::slotted([slot='start']) {
+  // @include margin(0, .3em, 0, -.3em);
+  @apply mr-1 -ml-1 my-0;
+}
+
+::slotted([slot='end']) {
+  // @include margin(0, -.2em, 0, .3em);
+  @apply ml-1 -mr-1 my-0;
+}
+
+::slotted([slot='icon-only']) {
+  // font-size: 1.8em;
+  @apply text-2xl;
+}
+
+:host(.button-large) > button,
+:host(.button-large) > a {
+  @apply px-5 py-4 text-lg min-h-7;
+}
+
+:host(.button-small) > button,
+:host(.button-small) > a {
+  @apply px-2 py-1 text-sm min-h-2;
+}
+
+:host(.button-has-icon-only) > button,
+:host(.button-has-icon-only) > a {
+  @apply px-3;
 }
