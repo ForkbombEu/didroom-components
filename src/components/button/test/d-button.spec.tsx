@@ -8,7 +8,7 @@ describe('d-button', () => {
       html: `<d-button></d-button>`,
     });
     expect(page.root).toEqualHtml(`
-     <d-button class="button button-small primary" color="primary">
+     <d-button class="button button-default primary" color="primary">
        <mock:shadow-root>
          <button class="button-native primary" part="native" type="button">
            <span class="button-inner">
