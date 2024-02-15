@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/ForkbombEu/didroom-components/compare/v1.10.1...v1.10.2) (2024-02-15)
+
+
+### Bug Fixes
+
+* buttons margins ([2bd286f](https://github.com/ForkbombEu/didroom-components/commit/2bd286fc4224ad943d78babc4f48da7f049f365b))
+
 ## [1.10.1](https://github.com/ForkbombEu/didroom-components/compare/v1.10.0...v1.10.1) (2024-02-15)
 
 
