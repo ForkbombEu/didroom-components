@@ -24,6 +24,8 @@
     --success: #279b48;
     --warning: #e58600;
     --error: #ee342b;
+    --sans-font-family: "Gantari Variable", 'sans-serif';
+    --icon-font-family: "Material Symbols Rounded";
   }
 
   .dark {
