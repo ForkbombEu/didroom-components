@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, getAssetPath, h } from '@stencil/core';
 
 const verifiedUser = (
   <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,9 +43,10 @@ export class DCredentialCard {
   @Prop() expirationDate?: string;
 
   render() {
-    // const imageSrc = getAssetPath(`./assets/Rectangle.png`);
+    const imageSrc = getAssetPath('./assets/rect-dark.png');
+    console.log('imageSrc', imageSrc);
     return (
-      <Host>
+      <Host style={{ 'background-image': `url(${imageSrc})` }}>
         <div class="between">
           <div class="info">
             <div class="heading">
