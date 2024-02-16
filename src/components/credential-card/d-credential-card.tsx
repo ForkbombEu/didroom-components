@@ -44,7 +44,6 @@ export class DCredentialCard {
 
   render() {
     const imageSrc = getAssetPath('./assets/rect-dark.png');
-    console.log('imageSrc', imageSrc);
     return (
       <Host style={{ 'background-image': `url(${imageSrc})` }}>
         <div class="between">
