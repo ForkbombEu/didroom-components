@@ -30,6 +30,13 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      copy: [
+        {
+          src: '**/*.{jpg,png}',
+          dest: 'dist/didroom-components/assets',
+          warn: true,
+        }
+      ],
       generateTypeDeclarations: true,
     },
     {
