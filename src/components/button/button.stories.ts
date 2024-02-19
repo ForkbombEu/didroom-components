@@ -4,7 +4,7 @@ import { ColorArgTypes } from '../types.js';
 
 const meta = {
   title: 'Design System/Atoms/Button',
-  render: (args, story) => `<d-button color=${args.color} disabled=${args.disabled} ${args.href ? `href=${args.href}` : ''} size=${args.size} ${args.expand ? 'expand' : ''}>
+  render: (args, story) => `<d-button color=${args.color} clear=${args.clear ? "true" : "false"} disabled=${args.disabled} ${args.href ? `href=${args.href}` : ''} size=${args.size} ${args.expand ? 'expand' : ''}>
   ${Boolean(story.parameters.slot) ? `<div slot="${story.parameters.slot.position}">${story.parameters.slot.icon}</div>` : ''}
   ${Boolean(story.parameters.slot?.position == 'icon-only') ? '' : 'BUTTON'}</d-button>`,
   argTypes: {
@@ -40,7 +40,21 @@ export const Accent: Story = {
     ...Default.args,
     color: 'accent',
   },
-};export const AccentDisabled: Story = {
+};
+export const clear: Story = {
+  args: {
+    ...Default.args,
+    clear: true,
+  },
+};
+export const clearAccent: Story = {
+  args: {
+    ...Default.args,
+    clear: true,
+    color: 'accent',
+  },
+};
+export const AccentDisabled: Story = {
   args: {
     ...Default.args,
     color: 'accent',
@@ -51,6 +65,13 @@ export const PrimaryDisabled: Story = {
   args: {
     ...Default.args,
     color: 'primary',
+    disabled: true,
+  },
+};
+export const ClearDisabled: Story = {
+  args: {
+    ...Default.args,
+    clear: true,
     disabled: true,
   },
 };
@@ -86,6 +107,18 @@ export const IconAfter: Story = {
 export const IconOnly: Story = {
   args: {
     ...Default.args,
+  },
+  parameters: {
+    slot: {
+      position: 'icon-only',
+      icon: '🚀',
+    },
+  },
+};
+export const clearWithIconOnly: Story = {
+  args: {
+    ...Default.args,
+    clear: true,
   },
   parameters: {
     slot: {

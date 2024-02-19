@@ -27,6 +27,7 @@ export class DButton implements ComponentInterface {
     }
   }
   @Prop({ reflect: true }) expand?: boolean;
+  @Prop({ reflect: true }) clear?: boolean;
   @Prop() href: string | undefined;
   @Prop({ reflect: true }) size?: 'small' | 'default' | 'large';
   @Prop() type: 'submit' | 'reset' | 'button' = 'button';
@@ -114,10 +115,11 @@ export class DButton implements ComponentInterface {
         class={{
           [color]: true,
           [buttonType]: true,
-          ['button-block']: expand,
+          'button-block': expand,
           [`${buttonType}-${finalSize}`]: finalSize !== undefined,
           'button-has-icon-only': hasIconOnly,
           'button-disabled': disabled,
+          'button-clear': this.clear,
         }}
       >
         <TagType {...attrs} class={`button-native ${color}`} part="native" disabled={disabled} onFocus={this.onFocus} onBlur={this.onBlur}>
