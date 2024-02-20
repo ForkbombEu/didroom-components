@@ -8,7 +8,7 @@ describe('d-credential-card', () => {
       html: `<d-credential-card></d-credential-card>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-credential-card style="background-image: url(/assets/rect-dark.png);">
+      <d-credential-card>
         <mock:shadow-root>
           <div class="between">
             <div class="info">
