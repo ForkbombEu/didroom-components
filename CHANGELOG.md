@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.11.0](https://github.com/ForkbombEu/didroom-components/compare/v1.10.2...v1.11.0) (2024-02-20)
+
+
+### Features
+
+* add clear button ([#56](https://github.com/ForkbombEu/didroom-components/issues/56)) ([e96371d](https://github.com/ForkbombEu/didroom-components/commit/e96371d5fa3d606aad2fe5b6525cf506631abbf9))
+
+
+### Bug Fixes
+
+* apply background pattern to card ([#53](https://github.com/ForkbombEu/didroom-components/issues/53)) ([8c0dc50](https://github.com/ForkbombEu/didroom-components/commit/8c0dc507aeee61d2db37b6813d30f3a8cc1d7454))
+* card background for both dark and light mode ([#57](https://github.com/ForkbombEu/didroom-components/issues/57)) ([4ec07fd](https://github.com/ForkbombEu/didroom-components/commit/4ec07fd77ab43df48acec9542cec3957f4814df7))
+* use css variables for setting fonts ([#54](https://github.com/ForkbombEu/didroom-components/issues/54)) ([3ffa248](https://github.com/ForkbombEu/didroom-components/commit/3ffa2488ae46124db0994ed7ada85edf3a576749))
+
 ## [1.10.2](https://github.com/ForkbombEu/didroom-components/compare/v1.10.1...v1.10.2) (2024-02-15)
 
 
