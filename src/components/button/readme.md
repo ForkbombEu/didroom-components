@@ -10,6 +10,7 @@
 | Property     | Attribute     | Description | Type                              | Default     |
 | ------------ | ------------- | ----------- | --------------------------------- | ----------- |
 | `buttonType` | `button-type` |             | `string`                          | `'button'`  |
+| `clear`      | `clear`       |             | `boolean`                         | `undefined` |
 | `color`      | `color`       |             | `string`                          | `'primary'` |
 | `disabled`   | `disabled`    |             | `boolean`                         | `false`     |
 | `expand`     | `expand`      |             | `boolean`                         | `undefined` |

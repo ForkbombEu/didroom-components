@@ -25,6 +25,9 @@
   &.primary {
     @apply opacity-60 text-opacity-60;
   }
+  &.clear {
+    @apply text-opacity-80;
+  }
 }
 :host(.accent) > a,
 :host(.accent) > button {
@@ -45,6 +48,25 @@
   }
   &:active {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), var(--primary);
+  }
+}
+
+:host(.button-clear) > a,
+:host(.button-clear) > button {
+  @apply bg-transparent;
+  * {
+    color: inherit;
+  }
+  &:active {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.681) 0%, rgba(255, 255, 255, 0.799) 100%), var(--surface);
+    @apply backdrop-blur-lg
+  }
+  &.primary {
+    @apply text-primary;
+  }
+
+  &.accent {
+    @apply text-accent;
   }
 }
 
