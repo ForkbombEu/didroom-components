@@ -28,6 +28,19 @@
 | `dFocus` |             | `CustomEvent<void>` |
 
 
+## Dependencies
+
+### Used by
+
+ - [d-input](../input)
+
+### Graph
+```mermaid
+graph TD;
+  d-input --> d-button
+  style d-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

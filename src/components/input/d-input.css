@@ -1,0 +1,22 @@
+:host {
+  @apply flex flex-col items-start gap-2;
+}
+
+.input {
+  --background: var(--input-background);
+  --highlight-color-focused: var(--accent);
+  --highlight-color-invalid: var(--error);
+  --highlight-color-valid: var(--success);
+}
+
+.label {
+  @apply text-on;
+}
+
+.error-text {
+  @apply text-error leading-3;
+}
+
+.helper-text {
+  @apply text-on;
+}
