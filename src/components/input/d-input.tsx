@@ -33,10 +33,13 @@ export class DInput {
           {this.label}
         </d-text>
         <ion-input
-          class="input"
+          class={{
+            'input': true,
+            'ion-invalid': Boolean(this.errorText),
+            'ion-touched': this.value.length > 0,
+          }}
           type={this.type}
           name={this.name}
-          errorText={this.errorText}
           fill="outline"
           placeholder={this.placeholder}
           autofocus={this.autoFocus}
