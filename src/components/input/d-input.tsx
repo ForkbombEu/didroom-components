@@ -36,7 +36,7 @@ export class DInput {
           class={{
             'input': true,
             'ion-invalid': Boolean(this.errorText),
-            'ion-touched': this.value.length > 0,
+            'ion-touched': this.value && this.value.length > 0,
           }}
           type={this.type}
           name={this.name}
