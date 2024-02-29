@@ -17,42 +17,54 @@
   :root {
     --surface: #e9ebef;
     --primary: #d2d7e5;
+    --primary-text: #2d2d2d;
+    --secondary-text: #5d5d65;
     --accent: #223360;
     --on-accent: #dfddd7;
-    --on: #2d2d2d;
-    --on-alt: #5d5d65;
     --success: #279b48;
+    --highlight: #c9cedc;
     --warning: #e58600;
     --error: #ee342b;
+    --statusbar: #000000;
+    --stroke: #afafaf;
+    --accent-tr1: #2233604c;
     --sans-font-family: 'Gantari Variable', 'sans-serif';
     --icon-font-family: 'Material Symbols Rounded';
     --background-card-url: url('/dist/didroom-components/assets/rect.png');
   }
 
   .dark {
-    --surface: #1f2433;
-    --primary: #253151;
+    --surface: #253151;
+    --primary: #36415c;
+    --primary-text: #f7faff;
+    --secondary-text: #c0c0ca;
     --accent: #dfddd7;
-    --on-accent: #223360;
-    --on: #f7faff;
-    --on-alt: #c0c0ca;
+    --on-accent: #36415c;
     --success: #4ecb71;
+    --highlight: #54607f;
     --warning: #ff9601;
-    --error: #ff443b;
+    --error: #ff6681;
+    --statusbar: #ffffff;
+    --stroke: #444e69;
+    --accent-tr1: #b6b5b24c;
     --background-card-url: url('/dist/didroom-components/assets/rect-dark.png');
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --surface: #1f2433;
-      --primary: #253151;
+      --surface: #253151;
+      --primary: #36415c;
+      --primary-text: #f7faff;
+      --secondary-text: #c0c0ca;
       --accent: #dfddd7;
-      --on-accent: #223360;
-      --on: #f7faff;
-      --on-alt: #c0c0ca;
+      --on-accent: #36415c;
       --success: #4ecb71;
+      --highlight: #54607f;
       --warning: #ff9601;
-      --error: #ff443b;
+      --error: #ff6681;
+      --statusbar: #ffffff;
+      --stroke: #444e69;
+      --accent-tr1: #b6b5b24c;
       --background-card-url: url('/dist/didroom-components/assets/rect-dark.png');
     }
   }
