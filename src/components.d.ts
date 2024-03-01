@@ -56,6 +56,18 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DInput {
+        "autoFocus": boolean;
+        "clearButton": boolean;
+        "errorText": string;
+        "helperText": string;
+        "label": string;
+        "name": string;
+        "personIcon": boolean;
+        "placeholder": string;
+        "type": 'text' | 'password' | 'email' | 'number';
+        "value": string;
+    }
     interface DLogo {
     }
     interface DText {
@@ -66,6 +78,10 @@ export namespace Components {
 export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
+}
+export interface DInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDInputElement;
 }
 declare global {
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
@@ -122,6 +138,24 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDInputElementEventMap {
+        "dInput": string;
+        "dChange": string;
+    }
+    interface HTMLDInputElement extends Components.DInput, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDInputElementEventMap>(type: K, listener: (this: HTMLDInputElement, ev: DInputCustomEvent<HTMLDInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDInputElementEventMap>(type: K, listener: (this: HTMLDInputElement, ev: DInputCustomEvent<HTMLDInputElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLDInputElement: {
+        prototype: HTMLDInputElement;
+        new (): HTMLDInputElement;
+    };
     interface HTMLDLogoElement extends Components.DLogo, HTMLStencilElement {
     }
     var HTMLDLogoElement: {
@@ -142,6 +176,7 @@ declare global {
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
         "d-heading": HTMLDHeadingElement;
+        "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-text": HTMLDTextElement;
     }
@@ -197,6 +232,20 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DInput {
+        "autoFocus"?: boolean;
+        "clearButton"?: boolean;
+        "errorText"?: string;
+        "helperText"?: string;
+        "label"?: string;
+        "name"?: string;
+        "onDChange"?: (event: DInputCustomEvent<string>) => void;
+        "onDInput"?: (event: DInputCustomEvent<string>) => void;
+        "personIcon"?: boolean;
+        "placeholder"?: string;
+        "type"?: 'text' | 'password' | 'email' | 'number';
+        "value"?: string;
+    }
     interface DLogo {
     }
     interface DText {
@@ -211,6 +260,7 @@ declare namespace LocalJSX {
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
         "d-heading": DHeading;
+        "d-input": DInput;
         "d-logo": DLogo;
         "d-text": DText;
     }
@@ -226,6 +276,7 @@ declare module "@stencil/core" {
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
         }

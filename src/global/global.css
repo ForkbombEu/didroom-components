@@ -27,6 +27,7 @@
     --sans-font-family: 'Gantari Variable', 'sans-serif';
     --icon-font-family: 'Material Symbols Rounded';
     --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect.png');
+    --input-background: #F9FAFB;
   }
 
   .dark {
@@ -40,6 +41,7 @@
     --warning: #ff9601;
     --error: #ff443b;
     --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
+    --input-background: #374151;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -54,6 +56,8 @@
       --warning: #ff9601;
       --error: #ff443b;
       --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
+      --background-card-url: url('/dist/didroom-components/assets/rect-dark.png');
+      --input-background: #374151;
     }
   }
 }
