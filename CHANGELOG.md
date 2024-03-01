@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/ForkbombEu/didroom-components/compare/v1.11.0...v1.12.0) (2024-03-01)
+
+
+### Features
+
+* add input component ([#58](https://github.com/ForkbombEu/didroom-components/issues/58)) ([d72bd95](https://github.com/ForkbombEu/didroom-components/commit/d72bd959bc7c13d216e9c24ea41f3c8a9a5824a0))
+
+
+### Bug Fixes
+
+* credential card background ([#59](https://github.com/ForkbombEu/didroom-components/issues/59)) ([4a020f3](https://github.com/ForkbombEu/didroom-components/commit/4a020f388f3a38a964fb7edb669182b0229b3b07))
+
 ## [1.11.0](https://github.com/ForkbombEu/didroom-components/compare/v1.10.2...v1.11.0) (2024-02-20)
 
 
