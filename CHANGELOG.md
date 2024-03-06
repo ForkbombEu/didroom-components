@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/ForkbombEu/didroom-components/compare/v1.12.0...v1.12.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* missing background color in credential card ([beaeefb](https://github.com/ForkbombEu/didroom-components/commit/beaeefbf725cfd93fa6cecd9bbedf0a09edfcf5c))
+
 ## [1.12.0](https://github.com/ForkbombEu/didroom-components/compare/v1.11.0...v1.12.0) (2024-03-01)
 
 
