@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.2](https://github.com/ForkbombEu/didroom-components/compare/v1.12.1...v1.12.2) (2024-03-13)
+
+
+### Bug Fixes
+
+* update the new color palette ([4e7830e](https://github.com/ForkbombEu/didroom-components/commit/4e7830ee2f97911dff1f9d8d1769a06edf347c8b))
+
 ## [1.12.1](https://github.com/ForkbombEu/didroom-components/compare/v1.12.0...v1.12.1) (2024-03-06)
 
 
