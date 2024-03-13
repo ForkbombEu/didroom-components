@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.3](https://github.com/ForkbombEu/didroom-components/compare/v1.12.2...v1.12.3) (2024-03-13)
+
+
+### Bug Fixes
+
+* update input colors ([#64](https://github.com/ForkbombEu/didroom-components/issues/64)) ([4e09f44](https://github.com/ForkbombEu/didroom-components/commit/4e09f4489e74f452e5f50a5b803e9eabd7ddf46f))
+
 ## [1.12.2](https://github.com/ForkbombEu/didroom-components/compare/v1.12.1...v1.12.2) (2024-03-13)
 
 
