@@ -41,6 +41,12 @@ export const Accent: Story = {
     color: 'accent',
   },
 };
+export const Outline: Story = {
+  args: {
+    ...Default.args,
+    color: 'outline',
+  },
+};
 export const clear: Story = {
   args: {
     ...Default.args,
