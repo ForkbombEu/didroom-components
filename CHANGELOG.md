@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/ForkbombEu/didroom-components/compare/v1.12.3...v1.13.0) (2024-03-13)
+
+
+### Features
+
+* Add outline style to buttons ([72da2df](https://github.com/ForkbombEu/didroom-components/commit/72da2dfe1fe0e33ca8bce32a530b4509b010e1c1))
+
 ## [1.12.3](https://github.com/ForkbombEu/didroom-components/compare/v1.12.2...v1.12.3) (2024-03-13)
 
 
