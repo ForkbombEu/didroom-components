@@ -3,7 +3,10 @@
 }
 
 .input {
-  --background: var(--input-background);
+  --background: var(--highlight);
+  --border-color: var(--stroke);
+  --color: var(--on);
+  --placeholder-color: var(--on-alt);
   --highlight-color-focused: var(--accent);
   --highlight-color-invalid: var(--error);
   --highlight-color-valid: var(--success);
