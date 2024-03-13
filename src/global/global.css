@@ -21,6 +21,8 @@
     --on-accent: #dfddd7;
     --on: #2d2d2d;
     --on-alt: #5d5d65;
+    --stroke: #bbc0cd;
+    --highlight: #c9cedc;
     --success: #279b48;
     --warning: #e58600;
     --error: #ee342b;
@@ -31,12 +33,14 @@
   }
 
   .dark {
-    --surface: #1f2433;
-    --primary: #253151;
+    --surface: #253151;
+    --primary: #36415C;
     --accent: #dfddd7;
-    --on-accent: #223360;
+    --on-accent: #36415C;
     --on: #f7faff;
     --on-alt: #c0c0ca;
+    --stroke: #444E69;
+    --highlight: #546080;
     --success: #4ecb71;
     --warning: #ff9601;
     --error: #ff443b;
@@ -46,18 +50,19 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --surface: #1f2433;
-      --primary: #253151;
-      --accent: #dfddd7;
-      --on-accent: #223360;
-      --on: #f7faff;
-      --on-alt: #c0c0ca;
-      --success: #4ecb71;
-      --warning: #ff9601;
-      --error: #ff443b;
-      --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
-      --background-card-url: url('/dist/didroom-components/assets/rect-dark.png');
-      --input-background: #374151;
+    --surface: #253151;
+    --primary: #36415C;
+    --accent: #dfddd7;
+    --on-accent: #36415C;
+    --on: #f7faff;
+    --on-alt: #c0c0ca;
+    --stroke: #444E69;
+    --highlight: #546080;
+    --success: #4ecb71;
+    --warning: #ff9601;
+    --error: #ff443b;
+    --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
+    --input-background: #374151;
     }
   }
 }
