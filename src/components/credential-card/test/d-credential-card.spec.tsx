@@ -14,7 +14,7 @@ describe('d-credential-card', () => {
             <div class="info">
               <div class="heading">
                 <d-avatar></d-avatar>
-                <span class="name"></span>
+                <d-heading class="line-clamp-2 name"></d-heading>
               </div>
               <span class="description"></span>
             </div>
