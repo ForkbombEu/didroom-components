@@ -16,15 +16,17 @@ export class DCredentialService {
     const content = (
       <div>
         <d-avatar name={this.name} src={this.logoSrc} size="l"></d-avatar>
-        <div class="grow truncate">
-          <span class="name">{this.name}</span>
-          <span class="description">{this.description}</span>
-          <span class="issuer">{this.issuer}</span>
+        <div class="flex flex-col grow">
+          <d-text size="l">{this.name}</d-text>
+          <d-text size="s">{this.description}</d-text>
+          <d-text size="xs">{this.issuer}</d-text>
         </div>
         {this.href && (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-            <path d="M3 12L21 12M21 12L12.5 20.5M21 12L12.5 3.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <div class="shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path d="M3 12L21 12M21 12L12.5 20.5M21 12L12.5 3.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
         )}
       </div>
     );
