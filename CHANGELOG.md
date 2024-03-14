@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.1](https://github.com/ForkbombEu/didroom-components/compare/v1.13.0...v1.13.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* credential service minicard ([0ad6762](https://github.com/ForkbombEu/didroom-components/commit/0ad6762116535a87190abf2d5f02a6bf08532496))
+* credential-card title clamps ([1ad1841](https://github.com/ForkbombEu/didroom-components/commit/1ad1841fcfa6e368432cc132057e9a786e852dcd))
+
 ## [1.13.0](https://github.com/ForkbombEu/didroom-components/compare/v1.12.3...v1.13.0) (2024-03-13)
 
 
