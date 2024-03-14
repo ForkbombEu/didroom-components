@@ -53,6 +53,7 @@ export class Avatar {
       return this.name
         .trim()
         .split(' ')
+        .slice(0, 2)
         .map(name => name.substring(0, 1))
         .join('');
     }

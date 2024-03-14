@@ -13,6 +13,19 @@
 | `size`   | `size`    |             | `string` | `'m'`       |
 
 
+## Dependencies
+
+### Used by
+
+ - [d-credential-card](../credential-card)
+
+### Graph
+```mermaid
+graph TD;
+  d-credential-card --> d-heading
+  style d-heading fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

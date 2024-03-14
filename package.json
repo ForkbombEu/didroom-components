@@ -30,7 +30,8 @@
     "dev:storybook": "storybook dev -p 6006 -s dist"
   },
   "dependencies": {
-    "@stencil/core": "^4.11.0"
+    "@stencil/core": "^4.11.0",
+    "@tailwindcss/line-clamp": "^0.4.4"
   },
   "devDependencies": {
     "@ionic/core": "^7.6.6",

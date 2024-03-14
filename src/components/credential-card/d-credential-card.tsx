@@ -49,7 +49,7 @@ export class DCredentialCard {
           <div class="info">
             <div class="heading">
               <d-avatar name={this.name} src={this.logoSrc}></d-avatar>
-              <span class="name">{this.name}</span>
+              <d-heading class="name line-clamp-2">{this.name}</d-heading>
             </div>
             <span class="description">{this.description}</span>
           </div>

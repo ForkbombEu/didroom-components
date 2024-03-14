@@ -54,6 +54,7 @@
 :host(.outline) > a,
 :host(.outline) > button {
   outline-width: 2px;
+  @apply text-on;
 }
 
 :host(.button-clear) > a,

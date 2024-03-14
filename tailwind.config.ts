@@ -23,4 +23,5 @@ export default {
       },
     },
   },
+  plugins: [require('@tailwindcss/line-clamp')],
 } satisfies Config;
