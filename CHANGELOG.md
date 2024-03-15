@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/ForkbombEu/didroom-components/compare/v1.13.1...v1.14.0) (2024-03-15)
+
+
+### Features
+
+* new logo (symbol + logotype) ([#68](https://github.com/ForkbombEu/didroom-components/issues/68)) ([7d6bffd](https://github.com/ForkbombEu/didroom-components/commit/7d6bffd28d863d73e21f7145cc338700615f43f9))
+
 ## [1.13.1](https://github.com/ForkbombEu/didroom-components/compare/v1.13.0...v1.13.1) (2024-03-14)
 
 
