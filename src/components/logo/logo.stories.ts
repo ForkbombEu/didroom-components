@@ -1,14 +1,14 @@
-import { DLogo } from './d-logo';
+import type { Components } from '../../components.js';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
   title: 'Design System/Atoms/Logo',
   render: () =>
     `<d-logo></d-logo>`,
-} satisfies Meta<DLogo>;
+} satisfies Meta<Components.DLogo>;
 
 export default meta;
-type Story = StoryObj<DLogo>;
+type Story = StoryObj<Components.DLogo>;
 
 export const Default: Story = {
   parameters: {

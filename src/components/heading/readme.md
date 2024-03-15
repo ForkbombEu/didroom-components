@@ -18,11 +18,13 @@
 ### Used by
 
  - [d-credential-card](../credential-card)
+ - [d-logo](../logo)
 
 ### Graph
 ```mermaid
 graph TD;
   d-credential-card --> d-heading
+  d-logo --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
