@@ -1,6 +1,6 @@
 {
   "name": "@didroom/components",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "description": "Didroom web components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
