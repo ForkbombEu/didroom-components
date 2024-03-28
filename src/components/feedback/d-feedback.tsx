@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h, Event, State } from '@stencil/core';
+import { Component, Host, Prop, h, State } from '@stencil/core';
 import type { EventEmitter } from '@stencil/core';
 
 const successIcon = (
@@ -44,40 +44,55 @@ const errorIcon = (
 );
 
 @Component({
-  tag: 'd-toast',
-  styleUrl: 'd-toast.css',
+  tag: 'd-feedback',
+  styleUrl: 'd-feedback.css',
   shadow: true,
 })
-export class DToast {
+export class DFeedback {
   @Prop() type: 'success' | 'error' = 'success';
-  @Prop() feedback: string;
+  @Prop() feedback: string = '';
   @Prop() message: string | undefined = undefined;
-  @Event() close!: EventEmitter<void>;
+  @State() close!: EventEmitter<void>;
   @State() hide: boolean = true;
 
   private onClose = () => {
-    this.close.emit();
+    this.feedback = '';
   };
 
   render() {
     const onClick = () => (this.hide = !this.hide);
     return (
-      <Host class={this.type}>
-        <div class="main">
-          <div class="title">
-            <div class="w-6 h-6">{this.type === 'success' ? successIcon : errorIcon}</div>
-            <d-text>{this.feedback}</d-text>
+      <Host>
+        <div
+          class={{
+            'flex flex-col gap-3  bg-primary p-4 rounded-md !border-[3px] !border-solid': this.feedback !== '',
+            'border-success': this.type === 'success',
+            'border-error': this.type === 'error',
+            'hidden': this.feedback === '',
+          }}
+        >
+          <div class="flex justify-between items-center self-stretch w-full">
+            <div class="flex gap-2 items-center self-stretch">
+              <div class="w-6 h-6">{this.type === 'success' ? successIcon : errorIcon}</div>
+              <d-text>{this.feedback}</d-text>
+            </div>
+            <button onClick={this.onClose}>
+              <div class="w-5 h-5">{closeIcon}</div>
+            </button>
           </div>
-          <button onClick={this.onClose}>
-            <div class="w-5 h-5">{closeIcon}</div>
-          </button>
+          {this.message && (
+            <div class="flex flex-col gap-2 items-start">
+              {!this.hide && (
+                <d-text size="s" class="text-on-alt">
+                  {this.message}
+                </d-text>
+              )}
+              <button onClick={onClick} class="text-on text-base font-bold leading-5 underline">
+                {this.hide ? 'See more' : 'Show less'}
+              </button>
+            </div>
+          )}
         </div>
-        {this.message && (
-          <div class="message">
-            {!this.hide && <d-text size='s'>{this.message}</d-text>}
-            <button onClick={onClick}>{this.hide ? 'See more' : 'Show less'}</button>
-          </div>
-        )}
       </Host>
     );
   }

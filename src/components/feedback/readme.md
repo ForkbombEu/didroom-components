@@ -9,16 +9,9 @@
 
 | Property   | Attribute  | Description | Type                   | Default     |
 | ---------- | ---------- | ----------- | ---------------------- | ----------- |
-| `feedback` | `feedback` |             | `string`               | `undefined` |
+| `feedback` | `feedback` |             | `string`               | `''`        |
 | `message`  | `message`  |             | `string`               | `undefined` |
 | `type`     | `type`     |             | `"error" \| "success"` | `'success'` |
-
-
-## Events
-
-| Event   | Description | Type                |
-| ------- | ----------- | ------------------- |
-| `close` |             | `CustomEvent<void>` |
 
 
 ## Dependencies
@@ -30,8 +23,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  d-toast --> d-text
-  style d-toast fill:#f9f,stroke:#333,stroke-width:4px
+  d-feedback --> d-text
+  style d-feedback fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

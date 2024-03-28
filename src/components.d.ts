@@ -52,6 +52,11 @@ export namespace Components {
         "hidable": boolean;
         "title": string;
     }
+    interface DFeedback {
+        "feedback": string;
+        "message": string | undefined;
+        "type": 'success' | 'error';
+    }
     interface DHeading {
         "color": Color;
         "size": Size;
@@ -74,11 +79,6 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
-    interface DToast {
-        "feedback": string;
-        "message": string | undefined;
-        "type": 'success' | 'error';
-    }
 }
 export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -87,10 +87,6 @@ export interface DButtonCustomEvent<T> extends CustomEvent<T> {
 export interface DInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDInputElement;
-}
-export interface DToastCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLDToastElement;
 }
 declare global {
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
@@ -141,6 +137,12 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDFeedbackElement extends Components.DFeedback, HTMLStencilElement {
+    }
+    var HTMLDFeedbackElement: {
+        prototype: HTMLDFeedbackElement;
+        new (): HTMLDFeedbackElement;
+    };
     interface HTMLDHeadingElement extends Components.DHeading, HTMLStencilElement {
     }
     var HTMLDHeadingElement: {
@@ -177,23 +179,6 @@ declare global {
         prototype: HTMLDTextElement;
         new (): HTMLDTextElement;
     };
-    interface HTMLDToastElementEventMap {
-        "close": void;
-    }
-    interface HTMLDToastElement extends Components.DToast, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLDToastElementEventMap>(type: K, listener: (this: HTMLDToastElement, ev: DToastCustomEvent<HTMLDToastElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLDToastElementEventMap>(type: K, listener: (this: HTMLDToastElement, ev: DToastCustomEvent<HTMLDToastElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-    }
-    var HTMLDToastElement: {
-        prototype: HTMLDToastElement;
-        new (): HTMLDToastElement;
-    };
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
@@ -201,11 +186,11 @@ declare global {
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
+        "d-feedback": HTMLDFeedbackElement;
         "d-heading": HTMLDHeadingElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-text": HTMLDTextElement;
-        "d-toast": HTMLDToastElement;
     }
 }
 declare namespace LocalJSX {
@@ -255,6 +240,11 @@ declare namespace LocalJSX {
         "hidable"?: boolean;
         "title"?: string;
     }
+    interface DFeedback {
+        "feedback"?: string;
+        "message"?: string | undefined;
+        "type"?: 'success' | 'error';
+    }
     interface DHeading {
         "color"?: Color;
         "size"?: Size;
@@ -279,12 +269,6 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
-    interface DToast {
-        "feedback"?: string;
-        "message"?: string | undefined;
-        "onClose"?: (event: DToastCustomEvent<void>) => void;
-        "type"?: 'success' | 'error';
-    }
     interface IntrinsicElements {
         "d-avatar": DAvatar;
         "d-button": DButton;
@@ -292,11 +276,11 @@ declare namespace LocalJSX {
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
+        "d-feedback": DFeedback;
         "d-heading": DHeading;
         "d-input": DInput;
         "d-logo": DLogo;
         "d-text": DText;
-        "d-toast": DToast;
     }
 }
 export { LocalJSX as JSX };
@@ -309,11 +293,11 @@ declare module "@stencil/core" {
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
+            "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
-            "d-toast": LocalJSX.DToast & JSXBase.HTMLAttributes<HTMLDToastElement>;
         }
     }
 }

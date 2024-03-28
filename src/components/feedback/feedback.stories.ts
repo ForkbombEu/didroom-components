@@ -1,18 +1,18 @@
-import { DToast } from './d-toast';
+import { DFeedback } from './d-feedback';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Toast',
+  title: 'Design System/Molecule/Feedback',
   render: args =>
-    `<d-toast 
+    `<d-feedback 
     feedback="${args.feedback}"
     type="${args.type}"
     ${args.message && `message="${args.message}"`} 
-    </d-toast>`,
-} satisfies Meta<DToast>;
+    </d-feedback>`,
+} satisfies Meta<DFeedback>;
 
 export default meta;
-type Story = StoryObj<DToast>;
+type Story = StoryObj<DFeedback>;
 
 export const Default: Story = {
   args: {
@@ -27,26 +27,31 @@ export const Default: Story = {
   },
 };
 
+export const Void: Story = {
+  args: {
+    feedback: '',
+  },
+};
+
 export const Error: Story = {
   args: {
     feedback: '404 - Not Found',
     type: 'error',
-  }
+  },
 };
 
 export const SuccessWithMessage: Story = {
   args: {
     ...Default.args,
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
-  }
+    message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
+  },
 };
 
 export const ErrorWithMessage: Story = {
   args: {
     ...Error.args,
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
-  }
+    message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
+  },
 };
-
-
-

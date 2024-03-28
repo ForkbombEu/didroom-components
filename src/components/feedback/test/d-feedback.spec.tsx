@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { DToast } from '../d-toast';
+import { DFeedback } from '../d-feedback';
 
-describe('d-toast', () => {
+describe('d-feedback', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [DToast],
-      html: `<d-toast></d-toast>`,
+      components: [DFeedback],
+      html: `<d-feedback></d-feedback>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-toast>
+      <d-feedback>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </d-toast>
+      </d-feedback>
     `);
   });
 });

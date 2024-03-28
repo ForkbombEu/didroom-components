@@ -17,14 +17,14 @@
 
 ### Used by
 
+ - [d-feedback](../feedback)
  - [d-input](../input)
- - [d-toast](../toast)
 
 ### Graph
 ```mermaid
 graph TD;
+  d-feedback --> d-text
   d-input --> d-text
-  d-toast --> d-text
   style d-text fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
