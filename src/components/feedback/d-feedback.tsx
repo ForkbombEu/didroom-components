@@ -1,5 +1,4 @@
-import { Component, Host, Prop, h, State } from '@stencil/core';
-import type { EventEmitter } from '@stencil/core';
+import { Component, Host, Prop, h, State, EventEmitter, Event } from '@stencil/core';
 
 const successIcon = (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -52,11 +51,12 @@ export class DFeedback {
   @Prop() type: 'success' | 'error' = 'success';
   @Prop() feedback: string = '';
   @Prop() message: string | undefined = undefined;
-  @State() close!: EventEmitter<void>;
+  @Event() close!: EventEmitter<void>;
   @State() hide: boolean = true;
 
   private onClose = () => {
     this.feedback = '';
+    this.close.emit();
   };
 
   render() {

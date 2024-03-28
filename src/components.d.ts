@@ -84,6 +84,10 @@ export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
 }
+export interface DFeedbackCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDFeedbackElement;
+}
 export interface DInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDInputElement;
@@ -137,7 +141,18 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDFeedbackElementEventMap {
+        "close": void;
+    }
     interface HTMLDFeedbackElement extends Components.DFeedback, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDFeedbackElementEventMap>(type: K, listener: (this: HTMLDFeedbackElement, ev: DFeedbackCustomEvent<HTMLDFeedbackElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDFeedbackElementEventMap>(type: K, listener: (this: HTMLDFeedbackElement, ev: DFeedbackCustomEvent<HTMLDFeedbackElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDFeedbackElement: {
         prototype: HTMLDFeedbackElement;
@@ -243,6 +258,7 @@ declare namespace LocalJSX {
     interface DFeedback {
         "feedback"?: string;
         "message"?: string | undefined;
+        "onClose"?: (event: DFeedbackCustomEvent<void>) => void;
         "type"?: 'success' | 'error';
     }
     interface DHeading {
