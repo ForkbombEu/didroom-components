@@ -14,6 +14,13 @@
 | `type`     | `type`     |             | `"error" \| "success"` | `'success'` |
 
 
+## Events
+
+| Event   | Description | Type                |
+| ------- | ----------- | ------------------- |
+| `close` |             | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Depends on
