@@ -47,6 +47,12 @@ export const clear: Story = {
     clear: true,
   },
 };
+export const outline: Story = {
+  args: {
+    ...Default.args,
+    // outline: true,
+  },
+};
 export const clearAccent: Story = {
   args: {
     ...Default.args,

@@ -1,0 +1,19 @@
+:host {
+  @apply flex flex-col gap-3  bg-primary p-4 rounded-md !border-4 !border-solid;
+}
+:host(.error) {
+  @apply !border-error;
+}
+:host(.success) {
+  @apply !border-success;
+}
+.main {
+  @apply flex justify-between items-center self-stretch w-full;
+}
+.title {
+  @apply flex gap-2 items-center self-stretch;
+}
+
+.message {
+  @apply flex flex-col gap-2 items-start;
+}
