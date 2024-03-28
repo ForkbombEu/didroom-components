@@ -16,7 +16,7 @@ export class DButton implements ComponentInterface {
   private formEl: HTMLFormElement | null = null;
 
   @Element() el!: HTMLElement;
-  @Prop({ reflect: true }) color?: Color = 'primary';
+  @Prop({ reflect: true }) color?: Color | 'outline' = 'primary';
   @Prop({ mutable: true }) buttonType = 'button';
   @Prop({ reflect: true }) disabled = false;
   @Watch('disabled')

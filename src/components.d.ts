@@ -17,7 +17,7 @@ export namespace Components {
     interface DButton {
         "buttonType": string;
         "clear"?: boolean;
-        "color"?: Color;
+        "color"?: Color | 'outline';
         "disabled": boolean;
         "expand"?: boolean;
         "form"?: string | HTMLFormElement;
@@ -218,7 +218,7 @@ declare namespace LocalJSX {
     interface DButton {
         "buttonType"?: string;
         "clear"?: boolean;
-        "color"?: Color;
+        "color"?: Color | 'outline';
         "disabled"?: boolean;
         "expand"?: boolean;
         "form"?: string | HTMLFormElement;

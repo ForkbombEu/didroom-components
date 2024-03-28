@@ -8,8 +8,8 @@ import { Shape, Size } from '../types';
 })
 export class Avatar {
   @Prop() name?: string;
-  @Prop() size?: Size = 'm';
-  @Prop() shape?: Shape = 'round';
+  @Prop({ reflect: true }) size?: Size = 'm';
+  @Prop({ reflect: true }) shape?: Shape = 'round';
   @Prop({ reflect: true }) src?: string;
 
   @State() error: boolean = false;
@@ -53,6 +53,7 @@ export class Avatar {
       return this.name
         .trim()
         .split(' ')
+        .slice(0, 2)
         .map(name => name.substring(0, 1))
         .join('');
     }

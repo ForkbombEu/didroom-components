@@ -22,11 +22,13 @@
 ### Depends on
 
 - [d-avatar](../avatar)
+- [d-heading](../heading)
 
 ### Graph
 ```mermaid
 graph TD;
   d-credential-card --> d-avatar
+  d-credential-card --> d-heading
   style d-credential-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

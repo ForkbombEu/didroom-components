@@ -1,0 +1,314 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "d-avatar",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "shape",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "button-type",
+          "description": ""
+        },
+        {
+          "name": "clear",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "expand",
+          "description": ""
+        },
+        {
+          "name": "form",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "large"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "reset"
+            },
+            {
+              "name": "submit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "d-credential-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "expiration-date",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "verified",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-credential-detail",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "long-description",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-credential-service",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "issuer",
+          "description": ""
+        },
+        {
+          "name": "logo-src",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-definition",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "definition",
+          "description": ""
+        },
+        {
+          "name": "hidable",
+          "description": ""
+        },
+        {
+          "name": "title",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-heading",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-input",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "auto-focus",
+          "description": ""
+        },
+        {
+          "name": "clear-button",
+          "description": ""
+        },
+        {
+          "name": "error-text",
+          "description": ""
+        },
+        {
+          "name": "helper-text",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "person-icon",
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "email"
+            },
+            {
+              "name": "number"
+            },
+            {
+              "name": "password"
+            },
+            {
+              "name": "text"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-logo",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "d-text",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
