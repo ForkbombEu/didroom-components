@@ -28,6 +28,7 @@ const verifiedUser = (
   </svg>
 );
 
+
 @Component({
   tag: 'd-credential-card',
   styleUrl: 'd-credential-card.css',
