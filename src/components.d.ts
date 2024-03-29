@@ -79,6 +79,8 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DidroomLogo {
+    }
 }
 export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -194,6 +196,12 @@ declare global {
         prototype: HTMLDTextElement;
         new (): HTMLDTextElement;
     };
+    interface HTMLDidroomLogoElement extends Components.DidroomLogo, HTMLStencilElement {
+    }
+    var HTMLDidroomLogoElement: {
+        prototype: HTMLDidroomLogoElement;
+        new (): HTMLDidroomLogoElement;
+    };
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
@@ -206,6 +214,7 @@ declare global {
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-text": HTMLDTextElement;
+        "didroom-logo": HTMLDidroomLogoElement;
     }
 }
 declare namespace LocalJSX {
@@ -285,6 +294,8 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DidroomLogo {
+    }
     interface IntrinsicElements {
         "d-avatar": DAvatar;
         "d-button": DButton;
@@ -297,6 +308,7 @@ declare namespace LocalJSX {
         "d-input": DInput;
         "d-logo": DLogo;
         "d-text": DText;
+        "didroom-logo": DidroomLogo;
     }
 }
 export { LocalJSX as JSX };
@@ -314,6 +326,7 @@ declare module "@stencil/core" {
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
+            "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }
     }
 }
