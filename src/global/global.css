@@ -14,14 +14,14 @@
 
 @layer base {
   :root {
-    --surface: #ccc;
-    --primary: #ff0;
-    --accent: #ff0;
-    --on-accent: #000;
-    --on: #000;
-    --on-alt: #000;
-    --stroke: #000;
-    --highlight: 0f0;
+    --surface: #e9ebef;
+    --primary: #d2d7e5;
+    --accent: #223360;
+    --on-accent: #dfddd7;
+    --on: #2d2d2d;
+    --on-alt: #5d5d65;
+    --stroke: #bbc0cd;
+    --highlight: #c9cedc;
     --success: #279b48;
     --warning: #e58600;
     --error: #ee342b;
@@ -32,14 +32,14 @@
   }
 
   .dark {
-    --surface: #333;
-    --primary: #fc0;
-    --accent: #fc0;
-    --on-accent: #000;
-    --on: #000;
-    --on-alt: #000;
-    --stroke: #000;
-    --highlight: #0f0;   
+    --surface: #253151;
+    --primary: #36415C;
+    --accent: #dfddd7;
+    --on-accent: #36415C;
+    --on: #f7faff;
+    --on-alt: #c0c0ca;
+    --stroke: #444E69;
+    --highlight: #546080;
     --success: #4ecb71;
     --warning: #ff9601;
     --error: #ff443b;
@@ -49,14 +49,14 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-    --surface: #333;
-    --primary: #fc0;
-    --accent: #fc0;
-    --on-accent: #000;
-    --on: #000;
-    --on-alt: #000;
-    --stroke: #000;
-    --highlight: #0f0;   
+    --surface: #253151;
+    --primary: #36415C;
+    --accent: #dfddd7;
+    --on-accent: #36415C;
+    --on: #f7faff;
+    --on-alt: #c0c0ca;
+    --stroke: #444E69;
+    --highlight: #546080;
     --success: #4ecb71;
     --warning: #ff9601;
     --error: #ff443b;
