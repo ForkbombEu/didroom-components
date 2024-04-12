@@ -20,6 +20,7 @@ Standard web components with efficient one-way data binding, an asynchronous ren
 ### 🚩 Table of Contents
 
 - [🎮 Quick start](#-quick-start)
+- [💄 Whitlable](#-whitelable)
 - [🚑 Community & support](#-community--support)
 - [😍 Acknowledgements](#-acknowledgements)
 - [👤 Contributing](#-contributing)
@@ -52,6 +53,11 @@ It's super easy starting template as follows:
 for the list of all the components docs:
 
 [CLICK HERE TO START USING ME](https://forkbombeu.github.io/didroom-components/)
+
+***
+## 💄 Whitelable
+
+please refer to [./docs/CHANGE_THEME.md](./docs/CHANGE_THEME.md)
 
 ***
 ## 🚑 Community & support
