@@ -1,6 +1,6 @@
 {
   "name": "@didroom/monochrome",
-  "version": "1.15.1",
+  "version": "1.15.2",
   "description": "Didroom web components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
