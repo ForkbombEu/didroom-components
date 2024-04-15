@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.3](https://github.com/ForkbombEu/didroom-components/compare/v1.15.2...v1.15.3) (2024-04-15)
+
+
+### Bug Fixes
+
+* node module package name ([2c03bf3](https://github.com/ForkbombEu/didroom-components/commit/2c03bf39ca8045415f615a21948c6293c85606bb))
+
 ## [1.15.2](https://github.com/ForkbombEu/didroom-components/compare/v1.15.1...v1.15.2) (2024-04-12)
 
 
