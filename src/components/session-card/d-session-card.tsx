@@ -63,7 +63,7 @@ export class DSessionCard {
 
     return (
       <Host>
-        <div class="flex flex-col items-center align-middle gap-4 w-52">
+        <div class="flex flex-col items-center align-middle gap-8 w-52">
           <span class={{ 'text-success': this.success, 'text-error': !this.success }}>{this.success ? successIcon : failureIcon}</span>
           <d-heading size="xs" class="text-on">
             {this.success ? 'Verified.' : 'Failure.'}
