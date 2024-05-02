@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event   | Description | Type                |
-| ------- | ----------- | ------------------- |
-| `close` |             | `CustomEvent<void>` |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `dClose` |             | `CustomEvent<void>` |
 
 
 ## Dependencies

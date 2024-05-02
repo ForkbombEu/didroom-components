@@ -75,6 +75,11 @@ export namespace Components {
     }
     interface DLogo {
     }
+    interface DSessionCard {
+        "date": string;
+        "sid": string;
+        "success": boolean;
+    }
     interface DText {
         "color": Color;
         "size": Size;
@@ -144,7 +149,7 @@ declare global {
         new (): HTMLDDefinitionElement;
     };
     interface HTMLDFeedbackElementEventMap {
-        "close": void;
+        "dClose": void;
     }
     interface HTMLDFeedbackElement extends Components.DFeedback, HTMLStencilElement {
         addEventListener<K extends keyof HTMLDFeedbackElementEventMap>(type: K, listener: (this: HTMLDFeedbackElement, ev: DFeedbackCustomEvent<HTMLDFeedbackElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
@@ -190,6 +195,12 @@ declare global {
         prototype: HTMLDLogoElement;
         new (): HTMLDLogoElement;
     };
+    interface HTMLDSessionCardElement extends Components.DSessionCard, HTMLStencilElement {
+    }
+    var HTMLDSessionCardElement: {
+        prototype: HTMLDSessionCardElement;
+        new (): HTMLDSessionCardElement;
+    };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
     var HTMLDTextElement: {
@@ -213,6 +224,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
+        "d-session-card": HTMLDSessionCardElement;
         "d-text": HTMLDTextElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -267,7 +279,7 @@ declare namespace LocalJSX {
     interface DFeedback {
         "feedback"?: string;
         "message"?: string | undefined;
-        "onClose"?: (event: DFeedbackCustomEvent<void>) => void;
+        "onDClose"?: (event: DFeedbackCustomEvent<void>) => void;
         "type"?: 'success' | 'error';
     }
     interface DHeading {
@@ -290,6 +302,11 @@ declare namespace LocalJSX {
     }
     interface DLogo {
     }
+    interface DSessionCard {
+        "date"?: string;
+        "sid"?: string;
+        "success"?: boolean;
+    }
     interface DText {
         "color"?: Color;
         "size"?: Size;
@@ -307,6 +324,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-input": DInput;
         "d-logo": DLogo;
+        "d-session-card": DSessionCard;
         "d-text": DText;
         "didroom-logo": DidroomLogo;
     }
@@ -325,6 +343,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
+            "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }

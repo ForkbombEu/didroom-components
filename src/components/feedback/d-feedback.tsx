@@ -51,12 +51,12 @@ export class DFeedback {
   @Prop() type: 'success' | 'error' = 'success';
   @Prop() feedback: string = '';
   @Prop() message: string | undefined = undefined;
-  @Event() close!: EventEmitter<void>;
+  @Event() dClose!: EventEmitter<void>;
   @State() hide: boolean = true;
 
   private onClose = () => {
+    this.dClose.emit();
     this.feedback = '';
-    this.close.emit();
   };
 
   render() {
