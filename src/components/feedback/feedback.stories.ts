@@ -7,12 +7,8 @@ const meta = {
     `<d-feedback 
     feedback="${args.feedback}"
     type="${args.type}"
-    ${args.message && `message="${args.message}"  on:dClose="log_console()"`} 
-    </d-feedback><script>
-            function log_console() {
-                console.log("colse");
-            }
-        </script>`,
+    ${args.message && `message="${args.message}"`} 
+    </d-feedback>`,
 } satisfies Meta<DFeedback>;
 
 export default meta;
