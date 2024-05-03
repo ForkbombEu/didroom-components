@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/ForkbombEu/didroom-components/compare/v1.15.3...v1.16.0) (2024-05-03)
+
+
+### Features
+
+* session card for feedbacks ([#76](https://github.com/ForkbombEu/didroom-components/issues/76)) ([c0cda6b](https://github.com/ForkbombEu/didroom-components/commit/c0cda6b983bd4aca8042a0cc7ef34fce3ea7a2cd))
+
 ## [1.15.3](https://github.com/ForkbombEu/didroom-components/compare/v1.15.2...v1.15.3) (2024-04-15)
 
 
