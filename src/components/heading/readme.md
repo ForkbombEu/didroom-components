@@ -19,12 +19,14 @@
 
  - [d-credential-card](../credential-card)
  - [d-logo](../logo)
+ - [d-session-card](../session-card)
 
 ### Graph
 ```mermaid
 graph TD;
   d-credential-card --> d-heading
   d-logo --> d-heading
+  d-session-card --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
