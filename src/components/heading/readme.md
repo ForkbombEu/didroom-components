@@ -18,6 +18,7 @@
 ### Used by
 
  - [d-credential-card](../credential-card)
+ - [d-header](../header)
  - [d-logo](../logo)
  - [d-session-card](../session-card)
 
@@ -25,6 +26,7 @@
 ```mermaid
 graph TD;
   d-credential-card --> d-heading
+  d-header --> d-heading
   d-logo --> d-heading
   d-session-card --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px
