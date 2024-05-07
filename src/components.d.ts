@@ -61,6 +61,9 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DInfoLed {
+        "type": 'success' | 'warning' | 'error';
+    }
     interface DInput {
         "autoFocus": boolean;
         "clearButton": boolean;
@@ -171,6 +174,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDInfoLedElement extends Components.DInfoLed, HTMLStencilElement {
+    }
+    var HTMLDInfoLedElement: {
+        prototype: HTMLDInfoLedElement;
+        new (): HTMLDInfoLedElement;
+    };
     interface HTMLDInputElementEventMap {
         "dInput": string;
         "dChange": string;
@@ -222,6 +231,7 @@ declare global {
         "d-definition": HTMLDDefinitionElement;
         "d-feedback": HTMLDFeedbackElement;
         "d-heading": HTMLDHeadingElement;
+        "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-session-card": HTMLDSessionCardElement;
@@ -286,6 +296,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DInfoLed {
+        "type"?: 'success' | 'warning' | 'error';
+    }
     interface DInput {
         "autoFocus"?: boolean;
         "clearButton"?: boolean;
@@ -322,6 +335,7 @@ declare namespace LocalJSX {
         "d-definition": DDefinition;
         "d-feedback": DFeedback;
         "d-heading": DHeading;
+        "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-logo": DLogo;
         "d-session-card": DSessionCard;
@@ -341,6 +355,7 @@ declare module "@stencil/core" {
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
