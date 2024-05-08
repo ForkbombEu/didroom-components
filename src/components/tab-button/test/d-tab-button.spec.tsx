@@ -17,7 +17,7 @@ describe('d-tab-button', () => {
              </g>
            </svg>
            <ion-label>
-             <d-text class="[font-family:Montserrat] capitalize font-medium leading-[normal] text-center text-on-alt text-xs" size="s">
+             <d-text class="capitalize font-medium leading-[normal] text-center text-on-alt text-xs" size="s">
                <slot></slot>
              </d-text>
            </ion-label>
