@@ -21,6 +21,7 @@
  - [d-feedback](../feedback)
  - [d-input](../input)
  - [d-session-card](../session-card)
+ - [d-tab-button](../tab-button)
 
 ### Graph
 ```mermaid
@@ -29,6 +30,7 @@ graph TD;
   d-feedback --> d-text
   d-input --> d-text
   d-session-card --> d-text
+  d-tab-button --> d-text
   style d-text fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
