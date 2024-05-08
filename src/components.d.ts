@@ -65,6 +65,9 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DInfoLed {
+        "type": 'success' | 'warning' | 'error';
+    }
     interface DInput {
         "autoFocus": boolean;
         "clearButton": boolean;
@@ -83,6 +86,10 @@ export namespace Components {
         "date": string;
         "sid": string;
         "success": boolean;
+    }
+    interface DTabButton {
+        "active": boolean;
+        "tab": 'home' | 'profile' | 'activity' | 'wallet';
     }
     interface DText {
         "color": Color;
@@ -181,6 +188,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDInfoLedElement extends Components.DInfoLed, HTMLStencilElement {
+    }
+    var HTMLDInfoLedElement: {
+        prototype: HTMLDInfoLedElement;
+        new (): HTMLDInfoLedElement;
+    };
     interface HTMLDInputElementEventMap {
         "dInput": string;
         "dChange": string;
@@ -211,6 +224,12 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDTabButtonElement extends Components.DTabButton, HTMLStencilElement {
+    }
+    var HTMLDTabButtonElement: {
+        prototype: HTMLDTabButtonElement;
+        new (): HTMLDTabButtonElement;
+    };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
     var HTMLDTextElement: {
@@ -233,9 +252,11 @@ declare global {
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
+        "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-session-card": HTMLDSessionCardElement;
+        "d-tab-button": HTMLDTabButtonElement;
         "d-text": HTMLDTextElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -301,6 +322,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DInfoLed {
+        "type"?: 'success' | 'warning' | 'error';
+    }
     interface DInput {
         "autoFocus"?: boolean;
         "clearButton"?: boolean;
@@ -322,6 +346,10 @@ declare namespace LocalJSX {
         "sid"?: string;
         "success"?: boolean;
     }
+    interface DTabButton {
+        "active"?: boolean;
+        "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
+    }
     interface DText {
         "color"?: Color;
         "size"?: Size;
@@ -338,9 +366,11 @@ declare namespace LocalJSX {
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
+        "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-logo": DLogo;
         "d-session-card": DSessionCard;
+        "d-tab-button": DTabButton;
         "d-text": DText;
         "didroom-logo": DidroomLogo;
     }
@@ -358,9 +388,11 @@ declare module "@stencil/core" {
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
+            "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }
