@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/ForkbombEu/didroom-components/compare/v1.17.1...v1.18.0) (2024-05-08)
+
+
+### Features
+
+* header component ([#78](https://github.com/ForkbombEu/didroom-components/issues/78)) ([8c5a159](https://github.com/ForkbombEu/didroom-components/commit/8c5a159cd6d548d8c1f09d4e89e6d004924a188c))
+
 ## [1.17.1](https://github.com/ForkbombEu/didroom-components/compare/v1.17.0...v1.17.1) (2024-05-08)
 
 
