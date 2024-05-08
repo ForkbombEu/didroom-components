@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.17.0](https://github.com/ForkbombEu/didroom-components/compare/v1.16.0...v1.17.0) (2024-05-08)
+
+
+### Features
+
+* info led ([#79](https://github.com/ForkbombEu/didroom-components/issues/79)) ([8ae022e](https://github.com/ForkbombEu/didroom-components/commit/8ae022e2256f4ca0e9f15f3ce4d172b77767ae7a))
+* tab button ([#80](https://github.com/ForkbombEu/didroom-components/issues/80)) ([ec38901](https://github.com/ForkbombEu/didroom-components/commit/ec38901c7d6c503817fb6970fe0111968e4fffaf))
+
 ## [1.16.0](https://github.com/ForkbombEu/didroom-components/compare/v1.15.3...v1.16.0) (2024-05-03)
 
 
