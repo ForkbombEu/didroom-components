@@ -182,7 +182,7 @@ export class DTabButton {
           <ion-label>
             <d-text
               size="s"
-              class={{ 'text-center [font-family:Montserrat] text-xs font-medium leading-[normal] capitalize': true, 'text-on-alt': !this.active, 'text-on': this.active }}
+              class={{ 'text-center text-xs font-medium leading-[normal] capitalize': true, 'text-on-alt': !this.active, 'text-on': this.active }}
             >
               <slot></slot>
             </d-text>
