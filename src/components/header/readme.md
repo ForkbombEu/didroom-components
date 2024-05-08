@@ -21,7 +21,6 @@
 - ion-toolbar
 - ion-buttons
 - ion-button
-- ion-icon
 - ion-title
 - ion-modal
 - [d-heading](../heading)
@@ -34,7 +33,6 @@ graph TD;
   d-header --> ion-toolbar
   d-header --> ion-buttons
   d-header --> ion-button
-  d-header --> ion-icon
   d-header --> ion-title
   d-header --> ion-modal
   d-header --> d-heading

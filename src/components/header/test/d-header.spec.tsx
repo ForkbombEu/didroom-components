@@ -13,7 +13,9 @@ describe('d-header', () => {
          <div>
            <ion-header class="shadow-none" translucent="">
              <ion-toolbar>
-               <ion-title class="text-center"></ion-title>
+               <ion-title class="text-center">
+                 <slot></slot>
+               </ion-title>
              </ion-toolbar>
            </ion-header>
            <ion-modal>
@@ -32,11 +34,11 @@ describe('d-header', () => {
                </ion-toolbar>
              </ion-header>
              <ion-content class="ion-padding">
-               <slot></slot>
+               <slot name="settings"></slot>
              </ion-content>
            </ion-modal>
          </div>
-        </mock:shadow-root>
+       </mock:shadow-root>
       </d-header>
     `);
   });
