@@ -10,7 +10,7 @@ describe('d-info-led', () => {
     expect(page.root).toEqualHtml(`
       <d-info-led>
         <mock:shadow-root>
-          <slot></slot>
+          <div class="bg-success border border-solid border-success h-[5px] rounded-full shrink-0 w-[5px]"></div>
         </mock:shadow-root>
       </d-info-led>
     `);
