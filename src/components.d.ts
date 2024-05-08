@@ -57,6 +57,10 @@ export namespace Components {
         "message": string | undefined;
         "type": 'success' | 'error';
     }
+    interface DHeader {
+        "backButton": boolean;
+        "settings": boolean;
+    }
     interface DHeading {
         "color": Color;
         "size": Size;
@@ -172,6 +176,12 @@ declare global {
         prototype: HTMLDFeedbackElement;
         new (): HTMLDFeedbackElement;
     };
+    interface HTMLDHeaderElement extends Components.DHeader, HTMLStencilElement {
+    }
+    var HTMLDHeaderElement: {
+        prototype: HTMLDHeaderElement;
+        new (): HTMLDHeaderElement;
+    };
     interface HTMLDHeadingElement extends Components.DHeading, HTMLStencilElement {
     }
     var HTMLDHeadingElement: {
@@ -240,6 +250,7 @@ declare global {
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
         "d-feedback": HTMLDFeedbackElement;
+        "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
@@ -303,6 +314,10 @@ declare namespace LocalJSX {
         "onDClose"?: (event: DFeedbackCustomEvent<void>) => void;
         "type"?: 'success' | 'error';
     }
+    interface DHeader {
+        "backButton"?: boolean;
+        "settings"?: boolean;
+    }
     interface DHeading {
         "color"?: Color;
         "size"?: Size;
@@ -349,6 +364,7 @@ declare namespace LocalJSX {
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
         "d-feedback": DFeedback;
+        "d-header": DHeader;
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
@@ -370,6 +386,7 @@ declare module "@stencil/core" {
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
+            "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
