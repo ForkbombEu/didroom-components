@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.1](https://github.com/ForkbombEu/didroom-components/compare/v1.17.0...v1.17.1) (2024-05-08)
+
+
+### Bug Fixes
+
+* add gantari to preview, fix tab font ([#82](https://github.com/ForkbombEu/didroom-components/issues/82)) ([1075433](https://github.com/ForkbombEu/didroom-components/commit/10754330cc783bffa370b0e855aef2fd963b22f0))
+
 ## [1.17.0](https://github.com/ForkbombEu/didroom-components/compare/v1.16.0...v1.17.0) (2024-05-08)
 
 
