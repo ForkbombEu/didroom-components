@@ -83,6 +83,10 @@ export namespace Components {
         "sid": string;
         "success": boolean;
     }
+    interface DTabButton {
+        "active": boolean;
+        "tab": 'home' | 'profile' | 'activity' | 'wallet';
+    }
     interface DText {
         "color": Color;
         "size": Size;
@@ -210,6 +214,12 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDTabButtonElement extends Components.DTabButton, HTMLStencilElement {
+    }
+    var HTMLDTabButtonElement: {
+        prototype: HTMLDTabButtonElement;
+        new (): HTMLDTabButtonElement;
+    };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
     var HTMLDTextElement: {
@@ -235,6 +245,7 @@ declare global {
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-session-card": HTMLDSessionCardElement;
+        "d-tab-button": HTMLDTabButtonElement;
         "d-text": HTMLDTextElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -320,6 +331,10 @@ declare namespace LocalJSX {
         "sid"?: string;
         "success"?: boolean;
     }
+    interface DTabButton {
+        "active"?: boolean;
+        "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
+    }
     interface DText {
         "color"?: Color;
         "size"?: Size;
@@ -339,6 +354,7 @@ declare namespace LocalJSX {
         "d-input": DInput;
         "d-logo": DLogo;
         "d-session-card": DSessionCard;
+        "d-tab-button": DTabButton;
         "d-text": DText;
         "didroom-logo": DidroomLogo;
     }
@@ -359,6 +375,7 @@ declare module "@stencil/core" {
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
+            "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }
