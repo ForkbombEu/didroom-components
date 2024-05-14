@@ -25,6 +25,8 @@ export namespace Components {
         "size"?: 'small' | 'default' | 'large';
         "type": 'submit' | 'reset' | 'button';
     }
+    interface DButtonsGroup {
+    }
     interface DCredentialCard {
         "description"?: string;
         "expirationDate"?: string;
@@ -134,6 +136,12 @@ declare global {
     var HTMLDButtonElement: {
         prototype: HTMLDButtonElement;
         new (): HTMLDButtonElement;
+    };
+    interface HTMLDButtonsGroupElement extends Components.DButtonsGroup, HTMLStencilElement {
+    }
+    var HTMLDButtonsGroupElement: {
+        prototype: HTMLDButtonsGroupElement;
+        new (): HTMLDButtonsGroupElement;
     };
     interface HTMLDCredentialCardElement extends Components.DCredentialCard, HTMLStencilElement {
     }
@@ -245,6 +253,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
+        "d-buttons-group": HTMLDButtonsGroupElement;
         "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
@@ -280,6 +289,8 @@ declare namespace LocalJSX {
         "onDFocus"?: (event: DButtonCustomEvent<void>) => void;
         "size"?: 'small' | 'default' | 'large';
         "type"?: 'submit' | 'reset' | 'button';
+    }
+    interface DButtonsGroup {
     }
     interface DCredentialCard {
         "description"?: string;
@@ -359,6 +370,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "d-avatar": DAvatar;
         "d-button": DButton;
+        "d-buttons-group": DButtonsGroup;
         "d-credential-card": DCredentialCard;
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
@@ -381,6 +393,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
+            "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
