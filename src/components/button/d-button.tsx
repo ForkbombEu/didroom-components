@@ -115,8 +115,8 @@ export class DButton implements ComponentInterface {
         onClick={this.handleClick}
         aria-disabled={disabled ? 'true' : null}
         class={{
-          [color]: true && !inButtonsGroup,
-          'accent': inButtonsGroup,
+          [color]: true,
+          'accent': inButtonsGroup || color === 'accent',
           [buttonType]: true,
           'button-block': expand || inButtonsGroup,
           [`${buttonType}-${finalSize}`]: finalSize !== undefined,
@@ -127,7 +127,7 @@ export class DButton implements ComponentInterface {
       >
         <TagType
           {...attrs}
-          class={{ 'button-native': true, [color]: true && !inButtonsGroup, 'accent': inButtonsGroup, 'uppercase': !inButtonsGroup }}
+          class={{ 'button-native': true, [color]: true, 'accent': inButtonsGroup || color === 'accent', 'uppercase': !inButtonsGroup }}
           part="native"
           disabled={disabled}
           onFocus={this.onFocus}
