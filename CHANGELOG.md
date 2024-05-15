@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/ForkbombEu/didroom-components/compare/v1.18.0...v1.19.0) (2024-05-15)
+
+
+### Features
+
+* d-buttons-group ([#85](https://github.com/ForkbombEu/didroom-components/issues/85)) ([dbd0004](https://github.com/ForkbombEu/didroom-components/commit/dbd0004570ac3c213e3ec8104cf6fbabf939d2b7))
+
 ## [1.18.0](https://github.com/ForkbombEu/didroom-components/compare/v1.17.1...v1.18.0) (2024-05-08)
 
 
