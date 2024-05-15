@@ -1,0 +1,9 @@
+:host {
+  @apply flex flex-col items-start border border-stroke bg-primary rounded-lg border-solid;
+}
+::slotted(d-button) {
+  @apply w-full m-0;
+}
+::slotted(d-button:not(:last-child)) {
+  @apply !border-b !border-stroke !border-solid;
+}

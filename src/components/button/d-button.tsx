@@ -36,7 +36,7 @@ export class DButton implements ComponentInterface {
   @Event() dBlur!: EventEmitter<void>;
 
   private get hasIconOnly() {
-    return !!this.el.querySelector('[slot="icon-only"]');
+    return !!this.el.querySelector("[slot='icon-only']");
   }
 
   private findForm(): HTMLFormElement | null {
@@ -108,22 +108,32 @@ export class DButton implements ComponentInterface {
     {
       type !== 'button' && this.renderHiddenButton();
     }
+
+    const inButtonsGroup = this.el.closest('d-buttons-group') !== null;
     return (
       <Host
         onClick={this.handleClick}
         aria-disabled={disabled ? 'true' : null}
         class={{
           [color]: true,
+          'accent': inButtonsGroup || color === 'accent',
           [buttonType]: true,
-          'button-block': expand,
+          'button-block': expand || inButtonsGroup,
           [`${buttonType}-${finalSize}`]: finalSize !== undefined,
           'button-has-icon-only': hasIconOnly,
           'button-disabled': disabled,
-          'button-clear': this.clear,
+          'button-clear': this.clear || inButtonsGroup,
         }}
       >
-        <TagType {...attrs} class={`button-native ${color}`} part="native" disabled={disabled} onFocus={this.onFocus} onBlur={this.onBlur}>
-          <span class="button-inner">
+        <TagType
+          {...attrs}
+          class={{ 'button-native': true, [color]: true, 'accent': inButtonsGroup || color === 'accent', 'uppercase': !inButtonsGroup }}
+          part="native"
+          disabled={disabled}
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
+        >
+          <span class={{ 'button-inner': true, 'justify-start': inButtonsGroup, 'justify-center': !inButtonsGroup }}>
             <slot name="icon-only"></slot>
             <slot name="start"></slot>
             <slot></slot>
