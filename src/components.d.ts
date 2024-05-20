@@ -75,6 +75,7 @@ export namespace Components {
         "clearButton": boolean;
         "errorText": string;
         "helperText": string;
+        "hidable": boolean;
         "label": string;
         "name": string;
         "personIcon": boolean;
@@ -341,6 +342,7 @@ declare namespace LocalJSX {
         "clearButton"?: boolean;
         "errorText"?: string;
         "helperText"?: string;
+        "hidable"?: boolean;
         "label"?: string;
         "name"?: string;
         "onDChange"?: (event: DInputCustomEvent<string>) => void;

@@ -13,6 +13,7 @@
 | `clearButton` | `clear-button` |             | `boolean`                                     | `undefined` |
 | `errorText`   | `error-text`   |             | `string`                                      | `undefined` |
 | `helperText`  | `helper-text`  |             | `string`                                      | `undefined` |
+| `hidable`     | `hidable`      |             | `boolean`                                     | `undefined` |
 | `label`       | `label`        |             | `string`                                      | `undefined` |
 | `name`        | `name`         |             | `string`                                      | `undefined` |
 | `personIcon`  | `person-icon`  |             | `boolean`                                     | `undefined` |
