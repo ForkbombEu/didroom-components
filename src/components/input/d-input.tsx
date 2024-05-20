@@ -95,7 +95,7 @@ export class DInput {
             </d-button>
           )}
           {this.hidable && (
-            <d-button slot="end" clear onClick={this.changePasswordVisibility}>
+            <d-button slot="end" clear onClick={this.changePasswordVisibility} aria-checked={this.type !== 'password' ? 'true' : 'false'} aria-label="show password" role="switch">
               {this.type === 'password' ? showIcon : hideIcon}
             </d-button>
           )}
