@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/ForkbombEu/didroom-components/compare/v1.19.0...v1.20.0) (2024-05-22)
+
+
+### Features
+
+* show/hide toggle for password input ([#89](https://github.com/ForkbombEu/didroom-components/issues/89)) ([1e9e523](https://github.com/ForkbombEu/didroom-components/commit/1e9e523794635663d6a7af700a4ad806b2097a42))
+
 ## [1.19.0](https://github.com/ForkbombEu/didroom-components/compare/v1.18.0...v1.19.0) (2024-05-15)
 
 
