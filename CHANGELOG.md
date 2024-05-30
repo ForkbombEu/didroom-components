@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.1](https://github.com/ForkbombEu/didroom-components/compare/v1.20.0...v1.20.1) (2024-05-30)
+
+
+### Bug Fixes
+
+* toogle hide/show color ([#91](https://github.com/ForkbombEu/didroom-components/issues/91)) ([7f34a9a](https://github.com/ForkbombEu/didroom-components/commit/7f34a9a545b2dfbcf32f1d109fde02562d748289))
+
 ## [1.20.0](https://github.com/ForkbombEu/didroom-components/compare/v1.19.0...v1.20.0) (2024-05-22)
 
 
