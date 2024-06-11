@@ -6,7 +6,9 @@ const meta = {
   render: args =>
     `<d-tab-button 
     tab="${args.tab}"
-    active="${args.active}">
+    active="${args.active}"
+    ${args.hasAlert ? 'has-alert' : ''}
+    >
     ${args.tab}
     </d-tab-button>`,
 } satisfies Meta<DTabButton>;
@@ -34,6 +36,20 @@ export const HomeActive: Story = {
   },
 };
 
+export const HomeWithAlert: Story = {
+  args: {
+    ...Home.args,
+    hasAlert: true,
+  },
+};
+
+export const HomeActiveWithAlert: Story = {
+  args: {
+    ...HomeWithAlert.args,
+    active: true,
+  },
+};
+
 export const Wallet: Story = {
   args: {
     tab: 'wallet',
@@ -44,6 +60,20 @@ export const Wallet: Story = {
 export const WalletActive: Story = {
   args: {
     ...Wallet.args,
+    active: true,
+  },
+};
+
+export const WalletWithAlert: Story = {
+  args: {
+    ...Wallet.args,
+    hasAlert: true,
+  },
+};
+
+export const WalletActiveWithAlert: Story = {
+  args: {
+    ...WalletWithAlert.args,
     active: true,
   },
 };
@@ -62,6 +92,20 @@ export const ProfileActive: Story = {
   },
 };
 
+export const ProfileWithAlert: Story = {
+  args: {
+    ...Profile.args,
+    hasAlert: true,
+  },
+};
+
+export const ProfileActiveWithAlert: Story = {
+  args: {
+    ...ProfileWithAlert.args,
+    active: true,
+  },
+};
+
 export const Activity: Story = {
   args: {
     tab: 'activity',
@@ -72,6 +116,20 @@ export const Activity: Story = {
 export const ActivityActive: Story = {
   args: {
     ...Activity.args,
+    active: true,
+  },
+};
+
+export const ActivityWithAlert: Story = {
+  args: {
+    ...Activity.args,
+    hasAlert: true,
+  },
+};
+
+export const ActivityActiveWithAlert: Story = {
+  args: {
+    ...ActivityWithAlert.args,
     active: true,
   },
 };
