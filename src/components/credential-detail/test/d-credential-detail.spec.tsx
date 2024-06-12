@@ -12,7 +12,6 @@ describe('d-credential-detail', () => {
         <mock:shadow-root>
          <div class="frame">
             <div class="heading">
-              <d-avatar></d-avatar>
               <span class="name"></span>
             </div>
            <div class="info">

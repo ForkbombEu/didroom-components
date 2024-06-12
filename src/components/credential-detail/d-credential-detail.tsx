@@ -10,7 +10,6 @@ export class DCredentialDetail {
   @Prop({ reflect: true }) description: string;
   @Prop({ reflect: true }) issuer: string;
   @Prop({ reflect: true }) longDescription?: string;
-  @Prop({ reflect: true }) logoSrc?: string;
 
 
   render() {
@@ -19,7 +18,6 @@ export class DCredentialDetail {
       <Host>
         <div class="frame">
           <div class="heading">
-            <d-avatar name={this.name} src={this.logoSrc}></d-avatar>
             <span class="name">{this.name}</span>
           </div>
           <div class="info">
