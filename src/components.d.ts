@@ -92,6 +92,7 @@ export namespace Components {
     }
     interface DTabButton {
         "active": boolean;
+        "hasAlert": boolean;
         "tab": 'home' | 'profile' | 'activity' | 'wallet';
     }
     interface DText {
@@ -361,6 +362,7 @@ declare namespace LocalJSX {
     }
     interface DTabButton {
         "active"?: boolean;
+        "hasAlert"?: boolean;
         "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
     }
     interface DText {
