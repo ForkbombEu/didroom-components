@@ -38,7 +38,6 @@ export namespace Components {
     interface DCredentialDetail {
         "description": string;
         "issuer": string;
-        "logoSrc"?: string;
         "longDescription"?: string;
         "name": string;
     }
@@ -305,7 +304,6 @@ declare namespace LocalJSX {
     interface DCredentialDetail {
         "description"?: string;
         "issuer"?: string;
-        "logoSrc"?: string;
         "longDescription"?: string;
         "name"?: string;
     }
