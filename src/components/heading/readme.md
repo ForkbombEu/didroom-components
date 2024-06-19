@@ -20,6 +20,7 @@
  - [d-credential-card](../credential-card)
  - [d-header](../header)
  - [d-logo](../logo)
+ - [d-page-description](../page-description)
  - [d-session-card](../session-card)
 
 ### Graph
@@ -28,6 +29,7 @@ graph TD;
   d-credential-card --> d-heading
   d-header --> d-heading
   d-logo --> d-heading
+  d-page-description --> d-heading
   d-session-card --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px
 ```
