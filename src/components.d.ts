@@ -9,6 +9,12 @@ import { Color, Shape, Size } from "./components/types";
 export { Color, Shape, Size } from "./components/types";
 export namespace Components {
     interface DActivityCard {
+        "date": string;
+        "description": string;
+        "logo": string;
+        "message": string;
+        "name": string;
+        "type": 'error' | 'warning' | 'success';
     }
     interface DAvatar {
         "name"?: string;
@@ -282,6 +288,12 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DActivityCard {
+        "date"?: string;
+        "description"?: string;
+        "logo"?: string;
+        "message"?: string;
+        "name"?: string;
+        "type"?: 'error' | 'warning' | 'success';
     }
     interface DAvatar {
         "name"?: string;

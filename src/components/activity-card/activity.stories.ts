@@ -1,57 +1,36 @@
-import { DFeedback } from './d-feedback';
+import { DActivityCard } from './d-activity-card';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Feedback',
+  title: 'Design System/Molecule/Activity',
   render: args =>
-    `<d-feedback 
-    feedback="${args.feedback}"
-    type="${args.type}"
-    ${args.message && `message="${args.message}"`} 
-    </d-feedback>`,
-} satisfies Meta<DFeedback>;
+    `<d-activity-card
+      name="${args.name}" 
+      logo="${args.logo}" 
+      description="${args.description}" 
+      date="${args.date}" 
+      type="${args.type}" 
+    ${args.message && `message="${args.message}"`}>
+      <d-button size="small" color="accent">
+        action 1
+      </d-button>
+      <d-button size="small" color="primary">
+        action 2
+      </d-button> 
+    </d-activity-card>`,
+} satisfies Meta<DActivityCard>;
 
 export default meta;
-type Story = StoryObj<DFeedback>;
+type Story = StoryObj<DActivityCard>;
 
 export const Default: Story = {
   args: {
-    feedback: 'Credential Issued succesfully',
-    type: 'success',
-  },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/pdwfO3dMKtaCAQakht0JE6/DIDRoom-%2B-Signroom---WF-and-GUI---Dyne.org?node-id=3449%3A48602&mode=dev',
-    },
-  },
-};
-
-export const Void: Story = {
-  args: {
-    feedback: '',
-  },
-};
-
-export const Error: Story = {
-  args: {
-    feedback: '404 - Not Found',
+    name: 'Proof of humanity is expired',
+    // placeholder logo
+    logo: 'https://via.placeholder.com/150',
+    message: 'Proof of humanity is expired',
+    description: 'Your proof of humanity has expired. Please renew it if you need it.',
+    date: '1 day ago',
     type: 'error',
-  },
-};
-
-export const SuccessWithMessage: Story = {
-  args: {
-    ...Default.args,
-    message:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
-  },
-};
-
-export const ErrorWithMessage: Story = {
-  args: {
-    ...Error.args,
-    message:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
   },
 };

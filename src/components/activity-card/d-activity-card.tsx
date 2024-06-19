@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Host, Prop, Event, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'd-activity-card',
@@ -6,30 +6,30 @@ import { Component, EventEmitter, Host, Prop, Event, h } from '@stencil/core';
   shadow: true,
 })
 export class DActivityCard {
-  @Prop({ reflect: true }) id: string;
   @Prop({ reflect: true }) name: string;
   @Prop({ reflect: true }) logo: string;
-  @Prop({ reflect: true }) credentialSrc: string;
-
-  @Event() dCancelActivity!: EventEmitter<string>;
+  @Prop({ reflect: true }) message: string;
+  @Prop({ reflect: true }) description: string;
+  @Prop({ reflect: true }) date: string;
+  @Prop({ reflect: true }) type: 'error' | 'warning' | 'success';
 
   render() {
-    const cancelActivity = (value: string) => {
-      this.dCancelActivity.emit(value);
-    };
     return (
       <Host>
-        <div class="itens-start border-strocke flex gap-4 border-b py-2">
+        <div class="items-start border-stroke flex gap-4 border-b py-2 w-fit">
           <d-avatar src={this.logo} name={this.name} shape="square" />
-          <div class="flex justify-end gap-2.5">
-            <slot />
-            <d-button size="small" color="accent" onClick={async () => await cancelActivity(this.id)}>
-              remove
-            </d-button>
-            <d-button size="small" color="primary" href={this.credentialSrc}>
-              show me!
-            </d-button>
-            <slot name='actions'></slot>
+          <div class="flex flex-col gap-2">
+            <h2>{this.message}</h2>
+            <d-text size="s" class="text-on-alt">
+              {this.description}
+            </d-text>
+            <div class="flex items-center gap-2.5">
+              <d-info-led type={this.type} />
+              <d-text size="xs">{this.date}</d-text>
+            </div>
+            <div class="flex justify-end gap-2.5">
+              <slot></slot>
+            </div>
           </div>
         </div>
       </Host>

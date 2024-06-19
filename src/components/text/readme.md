@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [d-activity-card](../activity-card)
  - [d-credential-service](../credential-service)
  - [d-feedback](../feedback)
  - [d-input](../input)
@@ -26,6 +27,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  d-activity-card --> d-text
   d-credential-service --> d-text
   d-feedback --> d-text
   d-input --> d-text
