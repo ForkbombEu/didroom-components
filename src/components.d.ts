@@ -46,7 +46,6 @@ export namespace Components {
     interface DCredentialDetail {
         "description": string;
         "issuer": string;
-        "logoSrc"?: string;
         "longDescription"?: string;
         "name": string;
     }
@@ -93,6 +92,10 @@ export namespace Components {
     }
     interface DLogo {
     }
+    interface DPageDescription {
+        "description"?: string;
+        "title": string;
+    }
     interface DSessionCard {
         "date": string;
         "sid": string;
@@ -100,6 +103,7 @@ export namespace Components {
     }
     interface DTabButton {
         "active": boolean;
+        "hasAlert": boolean;
         "tab": 'home' | 'profile' | 'activity' | 'wallet';
     }
     interface DText {
@@ -241,6 +245,12 @@ declare global {
         prototype: HTMLDLogoElement;
         new (): HTMLDLogoElement;
     };
+    interface HTMLDPageDescriptionElement extends Components.DPageDescription, HTMLStencilElement {
+    }
+    var HTMLDPageDescriptionElement: {
+        prototype: HTMLDPageDescriptionElement;
+        new (): HTMLDPageDescriptionElement;
+    };
     interface HTMLDSessionCardElement extends Components.DSessionCard, HTMLStencilElement {
     }
     var HTMLDSessionCardElement: {
@@ -280,6 +290,7 @@ declare global {
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
+        "d-page-description": HTMLDPageDescriptionElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-tab-button": HTMLDTabButtonElement;
         "d-text": HTMLDTextElement;
@@ -327,7 +338,6 @@ declare namespace LocalJSX {
     interface DCredentialDetail {
         "description"?: string;
         "issuer"?: string;
-        "logoSrc"?: string;
         "longDescription"?: string;
         "name"?: string;
     }
@@ -377,6 +387,10 @@ declare namespace LocalJSX {
     }
     interface DLogo {
     }
+    interface DPageDescription {
+        "description"?: string;
+        "title"?: string;
+    }
     interface DSessionCard {
         "date"?: string;
         "sid"?: string;
@@ -384,6 +398,7 @@ declare namespace LocalJSX {
     }
     interface DTabButton {
         "active"?: boolean;
+        "hasAlert"?: boolean;
         "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
     }
     interface DText {
@@ -407,6 +422,7 @@ declare namespace LocalJSX {
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-logo": DLogo;
+        "d-page-description": DPageDescription;
         "d-session-card": DSessionCard;
         "d-tab-button": DTabButton;
         "d-text": DText;
@@ -431,6 +447,7 @@ declare module "@stencil/core" {
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
+            "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;

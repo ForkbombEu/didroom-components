@@ -21,7 +21,6 @@
 
  - [d-activity-card](../activity-card)
  - [d-credential-card](../credential-card)
- - [d-credential-detail](../credential-detail)
  - [d-credential-service](../credential-service)
 
 ### Graph
@@ -29,7 +28,6 @@
 graph TD;
   d-activity-card --> d-avatar
   d-credential-card --> d-avatar
-  d-credential-detail --> d-avatar
   d-credential-service --> d-avatar
   style d-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```

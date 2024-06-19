@@ -8,6 +8,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class DTabButton {
   @Prop() tab: 'home' | 'profile' | 'activity' | 'wallet';
   @Prop() active: boolean = false;
+  @Prop() hasAlert: boolean = false;
 
   render() {
     const homeSvg = (
@@ -118,40 +119,37 @@ export class DTabButton {
     );
 
     const activitySvg = (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16.3335 19.8337V21.0003C16.3335 22.289 15.2888 23.3337 14.0002 23.3337C12.7115 23.3337 11.6668 22.289 11.6668 21.0003V19.8337M14.0002 4.66699C17.2218 4.66699 19.8335 7.27866 19.8335 10.5003V16.3337H20.4168C21.3833 16.3337 22.1668 17.1172 22.1668 18.0837C22.1668 19.0502 21.3833 19.8337 20.4168 19.8337H7.5835C6.617 19.8337 5.8335 19.0502 5.8335 18.0837C5.8335 17.1172 6.617 16.3337 7.5835 16.3337H8.16683V10.5003C8.16683 7.27866 10.7785 4.66699 14.0002 4.66699Z"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M19.2502 11.0003C21.1371 11.0003 22.6668 9.47063 22.6668 7.58366C22.6668 5.69669 21.1371 4.16699 19.2502 4.16699C17.3632 4.16699 15.8335 5.69669 15.8335 7.58366C15.8335 9.47063 17.3632 11.0003 19.2502 11.0003Z"
-          fill="#FF9601"
-          stroke="currentColor"
-        />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Icon / outline / notification">
+          <path
+            id="union-1"
+            d="M14 17V18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18V17M12 4C14.7614 4 17 6.23858 17 9V14H17.5C18.3284 14 19 14.6716 19 15.5C19 16.3284 18.3284 17 17.5 17H6.5C5.67157 17 5 16.3284 5 15.5C5 14.6716 5.67157 14 6.5 14H7V9C7 6.23858 9.23858 4 12 4Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
       </svg>
     );
 
     const activitySvgFilled = (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M8.16683 10.5003V16.3337H7.5835C6.617 16.3337 5.8335 17.1172 5.8335 18.0837C5.8335 19.0502 6.617 19.8337 7.5835 19.8337H20.4168C21.3833 19.8337 22.1668 19.0502 22.1668 18.0837C22.1668 17.1172 21.3833 16.3337 20.4168 16.3337H19.8335V10.5003C19.8335 7.27866 17.2218 4.66699 14.0002 4.66699C10.7785 4.66699 8.16683 7.27866 8.16683 10.5003Z"
-          fill="currentColor"
-        />
-        <path
-          d="M16.3335 19.8337V21.0003C16.3335 22.289 15.2888 23.3337 14.0002 23.3337C12.7115 23.3337 11.6668 22.289 11.6668 21.0003V19.8337M14.0002 4.66699C17.2218 4.66699 19.8335 7.27866 19.8335 10.5003V16.3337H20.4168C21.3833 16.3337 22.1668 17.1172 22.1668 18.0837C22.1668 19.0502 21.3833 19.8337 20.4168 19.8337H7.5835C6.617 19.8337 5.8335 19.0502 5.8335 18.0837C5.8335 17.1172 6.617 16.3337 7.5835 16.3337H8.16683V10.5003C8.16683 7.27866 10.7785 4.66699 14.0002 4.66699Z"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M19.2502 11.0003C21.1371 11.0003 22.6668 9.47063 22.6668 7.58366C22.6668 5.69669 21.1371 4.16699 19.2502 4.16699C17.3632 4.16699 15.8335 5.69669 15.8335 7.58366C15.8335 9.47063 17.3632 11.0003 19.2502 11.0003Z"
-          fill="#FF9601"
-          stroke="currentColor"
-        />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Icon / fill / notification">
+          <g id="union-1">
+            <path
+              d="M7 9V14H6.5C5.67157 14 5 14.6716 5 15.5C5 16.3284 5.67157 17 6.5 17H17.5C18.3284 17 19 16.3284 19 15.5C19 14.6716 18.3284 14 17.5 14H17V9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9Z"
+              fill="currentColor"
+            />
+            <path
+              d="M14 17V18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18V17M12 4C14.7614 4 17 6.23858 17 9V14H17.5C18.3284 14 19 14.6716 19 15.5C19 16.3284 18.3284 17 17.5 17H6.5C5.67157 17 5 16.3284 5 15.5C5 14.6716 5.67157 14 6.5 14H7V9C7 6.23858 9.23858 4 12 4Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </g>
       </svg>
     );
 
@@ -178,12 +176,16 @@ export class DTabButton {
             'text-on': this.active,
           }}
         >
-          {svg()}
+          <div class="relative w-fit">
+            {this.hasAlert && (
+              <div class="absolute right-1 top-1">
+                <d-info-led type="warning" class={{ 'border rounded-full': true }}></d-info-led>
+              </div>
+            )}
+            {svg()}
+          </div>
           <ion-label>
-            <d-text
-              size="s"
-              class={{ 'text-center text-xs font-medium leading-[normal] capitalize': true, 'text-on-alt': !this.active, 'text-on': this.active }}
-            >
+            <d-text size="s" class={{ 'text-center text-xs font-medium leading-[normal] capitalize': true, 'text-on-alt': !this.active, 'text-on': this.active }}>
               <slot></slot>
             </d-text>
           </ion-label>

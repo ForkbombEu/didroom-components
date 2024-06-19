@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.21.0](https://github.com/ForkbombEu/didroom-components/compare/v1.20.1...v1.21.0) (2024-06-12)
+
+
+### Features
+
+* add alert to tab buttons ([#95](https://github.com/ForkbombEu/didroom-components/issues/95)) ([81af665](https://github.com/ForkbombEu/didroom-components/commit/81af6656ca07a062527193c7db736bd9172eeb7f))
+
+
+### Bug Fixes
+
+* remove logo from credential details card ([#97](https://github.com/ForkbombEu/didroom-components/issues/97)) ([1bebbbd](https://github.com/ForkbombEu/didroom-components/commit/1bebbbd78f4be1ec11ae22e71c58a56e20e54f14))
+
 ## [1.20.1](https://github.com/ForkbombEu/didroom-components/compare/v1.20.0...v1.20.1) (2024-05-30)
 
 
