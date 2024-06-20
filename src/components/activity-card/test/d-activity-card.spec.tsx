@@ -10,7 +10,20 @@ describe('d-activity-card', () => {
     expect(page.root).toEqualHtml(`
       <d-activity-card>
         <mock:shadow-root>
-          <slot></slot>
+          <div class="border-b border-stroke flex gap-4 items-start py-2 w-fit">
+            <d-avatar shape="square"></d-avatar>
+            <div class="flex flex-col gap-2">
+              <h2></h2>
+              <d-text class="text-on-alt" size="s"></d-text>
+              <div class="flex gap-2.5 items-center">
+                <d-info-led></d-info-led>
+                <d-text size="xs"></d-text>
+              </div>
+              <div class="flex gap-2.5 justify-end">
+                <slot></slot>
+              </div>
+            </div>
+         </div>
         </mock:shadow-root>
       </d-activity-card>
     `);

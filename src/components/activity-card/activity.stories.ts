@@ -26,7 +26,6 @@ type Story = StoryObj<DActivityCard>;
 export const Default: Story = {
   args: {
     name: 'Proof of humanity is expired',
-    // placeholder logo
     logo: 'https://via.placeholder.com/150',
     message: 'Proof of humanity is expired',
     description: 'Your proof of humanity has expired. Please renew it if you need it.',
