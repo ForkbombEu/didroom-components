@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/ForkbombEu/didroom-components/compare/v1.21.0...v1.22.0) (2024-06-19)
+
+
+### Features
+
+* add page description component (title and subtitle) ([#99](https://github.com/ForkbombEu/didroom-components/issues/99)) ([feae57a](https://github.com/ForkbombEu/didroom-components/commit/feae57acf36c2c7aa80321216df6e29de86cabd6))
+
 ## [1.21.0](https://github.com/ForkbombEu/didroom-components/compare/v1.20.1...v1.21.0) (2024-06-12)
 
 
