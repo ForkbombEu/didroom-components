@@ -7,15 +7,15 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                | Default     |
-| --------------- | ---------------- | ----------- | ----------------------------------- | ----------- |
-| `credentialSrc` | `credential-src` |             | `string`                            | `undefined` |
-| `date`          | `date`           |             | `string`                            | `undefined` |
-| `description`   | `description`    |             | `string`                            | `undefined` |
-| `logo`          | `logo`           |             | `string`                            | `undefined` |
-| `message`       | `message`        |             | `string`                            | `undefined` |
-| `name`          | `name`           |             | `string`                            | `undefined` |
-| `type`          | `type`           |             | `"error" \| "success" \| "warning"` | `undefined` |
+| Property      | Attribute     | Description | Type                                | Default     |
+| ------------- | ------------- | ----------- | ----------------------------------- | ----------- |
+| `date`        | `date`        |             | `string`                            | `undefined` |
+| `description` | `description` |             | `string`                            | `undefined` |
+| `logo`        | `logo`        |             | `string`                            | `undefined` |
+| `message`     | `message`     |             | `string`                            | `undefined` |
+| `name`        | `name`        |             | `string`                            | `undefined` |
+| `read`        | `read`        |             | `boolean`                           | `false`     |
+| `type`        | `type`        |             | `"error" \| "success" \| "warning"` | `undefined` |
 
 
 ## Dependencies

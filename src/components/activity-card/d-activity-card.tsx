@@ -12,11 +12,12 @@ export class DActivityCard {
   @Prop({ reflect: true }) description: string;
   @Prop({ reflect: true }) date: string;
   @Prop({ reflect: true }) type: 'error' | 'warning' | 'success';
+  @Prop({ reflect: true }) read: boolean = false;
 
   render() {
     return (
       <Host>
-        <div class="items-start border-stroke flex gap-4 border-b py-2 w-fit">
+        <div class={{ 'items-start border-stroke flex gap-4 border-b p-2 w-fit rounded-lg': true, 'bg-primary': this.read }}>
           <d-avatar src={this.logo} name={this.name} shape="square" />
           <div class="flex flex-col gap-2">
             <h2>{this.message}</h2>
