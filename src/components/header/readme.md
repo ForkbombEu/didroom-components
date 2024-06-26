@@ -22,8 +22,8 @@
 - ion-buttons
 - ion-button
 - ion-title
-- ion-modal
-- [d-heading](../heading)
+- ion-menu-toggle
+- ion-menu
 - ion-content
 
 ### Graph
@@ -34,11 +34,11 @@ graph TD;
   d-header --> ion-buttons
   d-header --> ion-button
   d-header --> ion-title
-  d-header --> ion-modal
-  d-header --> d-heading
+  d-header --> ion-menu-toggle
+  d-header --> ion-menu
   d-header --> ion-content
   ion-button --> ion-ripple-effect
-  ion-modal --> ion-backdrop
+  ion-menu --> ion-backdrop
   style d-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
