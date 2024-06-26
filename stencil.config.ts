@@ -32,7 +32,7 @@ export const config: Config = {
       type: 'dist-custom-elements',
       copy: [
         {
-          src: '**/*.{jpg,png}',
+          src: '**/*.{jpg,png,lottie}',
           dest: 'dist/didroom-components/assets',
           warn: true,
         }

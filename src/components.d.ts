@@ -90,6 +90,8 @@ export namespace Components {
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
+    interface DLoading {
+    }
     interface DLogo {
     }
     interface DPageDescription {
@@ -239,6 +241,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
+    }
+    var HTMLDLoadingElement: {
+        prototype: HTMLDLoadingElement;
+        new (): HTMLDLoadingElement;
+    };
     interface HTMLDLogoElement extends Components.DLogo, HTMLStencilElement {
     }
     var HTMLDLogoElement: {
@@ -289,6 +297,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-page-description": HTMLDPageDescriptionElement;
         "d-session-card": HTMLDSessionCardElement;
@@ -385,6 +394,8 @@ declare namespace LocalJSX {
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
     }
+    interface DLoading {
+    }
     interface DLogo {
     }
     interface DPageDescription {
@@ -421,6 +432,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-loading": DLoading;
         "d-logo": DLogo;
         "d-page-description": DPageDescription;
         "d-session-card": DSessionCard;
@@ -446,6 +458,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;

@@ -70,6 +70,10 @@
   direction: ltr;
 }
 
+ion-button.primary {
+  --background: #fff;
+}
+
 body {
   @apply bg-surface;
 }
