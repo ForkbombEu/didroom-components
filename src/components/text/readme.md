@@ -19,6 +19,7 @@
 
  - [d-activity-card](../activity-card)
  - [d-credential-service](../credential-service)
+ - [d-empty-state](../empty-state)
  - [d-feedback](../feedback)
  - [d-input](../input)
  - [d-page-description](../page-description)
@@ -30,6 +31,7 @@
 graph TD;
   d-activity-card --> d-text
   d-credential-service --> d-text
+  d-empty-state --> d-text
   d-feedback --> d-text
   d-input --> d-text
   d-page-description --> d-text

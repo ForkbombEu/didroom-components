@@ -61,6 +61,12 @@ export namespace Components {
         "hidable": boolean;
         "title": string;
     }
+    interface DEmptyState {
+        "buttonText": string | undefined;
+        "heading": string;
+        "href": string | undefined;
+        "text": string;
+    }
     interface DFeedback {
         "feedback": string;
         "message": string | undefined;
@@ -189,6 +195,12 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
+    }
+    var HTMLDEmptyStateElement: {
+        prototype: HTMLDEmptyStateElement;
+        new (): HTMLDEmptyStateElement;
+    };
     interface HTMLDFeedbackElementEventMap {
         "dClose": void;
     }
@@ -293,6 +305,7 @@ declare global {
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
+        "d-empty-state": HTMLDEmptyStateElement;
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
@@ -363,6 +376,12 @@ declare namespace LocalJSX {
         "hidable"?: boolean;
         "title"?: string;
     }
+    interface DEmptyState {
+        "buttonText"?: string | undefined;
+        "heading"?: string;
+        "href"?: string | undefined;
+        "text"?: string;
+    }
     interface DFeedback {
         "feedback"?: string;
         "message"?: string | undefined;
@@ -429,6 +448,7 @@ declare namespace LocalJSX {
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
+        "d-empty-state": DEmptyState;
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
@@ -455,6 +475,7 @@ declare module "@stencil/core" {
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
+            "d-empty-state": LocalJSX.DEmptyState & JSXBase.HTMLAttributes<HTMLDEmptyStateElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
