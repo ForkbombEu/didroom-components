@@ -96,6 +96,9 @@ export namespace Components {
         "description"?: string;
         "title": string;
     }
+    interface DScanButton {
+        "href": string;
+    }
     interface DSessionCard {
         "date": string;
         "sid": string;
@@ -251,6 +254,12 @@ declare global {
         prototype: HTMLDPageDescriptionElement;
         new (): HTMLDPageDescriptionElement;
     };
+    interface HTMLDScanButtonElement extends Components.DScanButton, HTMLStencilElement {
+    }
+    var HTMLDScanButtonElement: {
+        prototype: HTMLDScanButtonElement;
+        new (): HTMLDScanButtonElement;
+    };
     interface HTMLDSessionCardElement extends Components.DSessionCard, HTMLStencilElement {
     }
     var HTMLDSessionCardElement: {
@@ -291,6 +300,7 @@ declare global {
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-page-description": HTMLDPageDescriptionElement;
+        "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-tab-button": HTMLDTabButtonElement;
         "d-text": HTMLDTextElement;
@@ -391,6 +401,9 @@ declare namespace LocalJSX {
         "description"?: string;
         "title"?: string;
     }
+    interface DScanButton {
+        "href"?: string;
+    }
     interface DSessionCard {
         "date"?: string;
         "sid"?: string;
@@ -423,6 +436,7 @@ declare namespace LocalJSX {
         "d-input": DInput;
         "d-logo": DLogo;
         "d-page-description": DPageDescription;
+        "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
         "d-tab-button": DTabButton;
         "d-text": DText;
@@ -448,6 +462,7 @@ declare module "@stencil/core" {
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
+            "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
