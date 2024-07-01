@@ -17,18 +17,25 @@
     --error: #ee342b;
     --sans-font-family: 'Gantari Variable', 'sans-serif';
     --icon-font-family: 'Material Symbols Rounded';
+    --ion-default-font: var(--sans-font-family);
+	  --ion-font-family: var(--sans-font-family);
     --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect.png');
-    --input-background: #F9FAFB;
+    --input-background: #f9fafb;
+    --ion-background-color: var(--surface);
+    --ion-text-color: var(--on);
+    --ion-tab-bar-background: var(--surface);
+    --ion-tab-bar-color-selected: var(--on);
+    --ion-tab-bar-color: var(--on-alt);
   }
 
   .dark {
     --surface: #253151;
-    --primary: #36415C;
+    --primary: #36415c;
     --accent: #dfddd7;
-    --on-accent: #36415C;
+    --on-accent: #36415c;
     --on: #f7faff;
     --on-alt: #c0c0ca;
-    --stroke: #444E69;
+    --stroke: #444e69;
     --highlight: #546080;
     --success: #4ecb71;
     --warning: #ff9601;
@@ -39,19 +46,19 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-    --surface: #253151;
-    --primary: #36415C;
-    --accent: #dfddd7;
-    --on-accent: #36415C;
-    --on: #f7faff;
-    --on-alt: #c0c0ca;
-    --stroke: #444E69;
-    --highlight: #546080;
-    --success: #4ecb71;
-    --warning: #ff9601;
-    --error: #ff443b;
-    --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
-    --input-background: #fff;
+      --surface: #253151;
+      --primary: #36415c;
+      --accent: #dfddd7;
+      --on-accent: #36415c;
+      --on: #f7faff;
+      --on-alt: #c0c0ca;
+      --stroke: #444e69;
+      --highlight: #546080;
+      --success: #4ecb71;
+      --warning: #ff9601;
+      --error: #ff443b;
+      --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
+      --input-background: #fff;
     }
   }
 }

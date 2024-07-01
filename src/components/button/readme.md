@@ -34,12 +34,14 @@
 
  - [d-empty-state](../empty-state)
  - [d-input](../input)
+ - [d-scan-button](../scan-button)
 
 ### Graph
 ```mermaid
 graph TD;
   d-empty-state --> d-button
   d-input --> d-button
+  d-scan-button --> d-button
   style d-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

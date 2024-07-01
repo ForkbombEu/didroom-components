@@ -3,7 +3,12 @@ import type { Components } from '../../components.js';
 
 const meta = {
   title: 'Design System/Molecule/Header',
-  render: args => `<d-header back-button='${args.backButton}'  settings='${args.settings}'>title</d-header>`,
+  render: args =>
+    `<d-header back-button='${args.backButton}'  settings='${args.settings}'>
+      title
+      <div slot="settings">settings content</div>
+    </d-header>
+    <ion-content id="main-content"/>`,
 } satisfies Meta<Components.DHeader>;
 
 export default meta;
@@ -12,7 +17,7 @@ type Story = StoryObj<Components.DHeader>;
 export const Default: Story = {
   args: {
     backButton: false,
-    settings: false
+    settings: false,
   },
   parameters: {
     design: {
@@ -25,13 +30,13 @@ export const Default: Story = {
 export const BackButton: Story = {
   args: {
     backButton: true,
-    settings: false
-  }
+    settings: false,
+  },
 };
 
 export const Settings: Story = {
   args: {
     backButton: false,
-    settings: true
-  }
+    settings: true,
+  },
 };
