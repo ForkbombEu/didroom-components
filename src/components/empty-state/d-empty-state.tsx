@@ -18,9 +18,9 @@ export class DEmptyState {
           <div>
             <slot />
           </div>
-          <div class="flex flex-col gap-1">
-            <d-heading size="s">{this.heading}</d-heading>
-            <d-text size="l" class="">
+          <div class="flex flex-col gap-1 items-center">
+            <d-heading size="s" class="text-center">{this.heading}</d-heading>
+            <d-text size="l" class="text-center">
               {this.text}
             </d-text>
           </div>
