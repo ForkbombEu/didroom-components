@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.23.0](https://github.com/ForkbombEu/didroom-components/compare/v1.22.0...v1.23.0) (2024-07-01)
+
+
+### Features
+
+* empty state component ([#107](https://github.com/ForkbombEu/didroom-components/issues/107)) ([8887bc2](https://github.com/ForkbombEu/didroom-components/commit/8887bc203571f9230523f6db851872d75860487f))
+* scan button component ([#106](https://github.com/ForkbombEu/didroom-components/issues/106)) ([200983b](https://github.com/ForkbombEu/didroom-components/commit/200983b252284dc8f5c98b431ecc473edc68b3dd))
+
+
+### Bug Fixes
+
+* activity card tests ([#102](https://github.com/ForkbombEu/didroom-components/issues/102)) ([f6e3106](https://github.com/ForkbombEu/didroom-components/commit/f6e3106baca89bd32e0eae657e4e99fad08793e7))
+* header with drawer menu ([#105](https://github.com/ForkbombEu/didroom-components/issues/105)) ([a3f16d3](https://github.com/ForkbombEu/didroom-components/commit/a3f16d349f47601c34d896c9f4a74648753c8fbd))
+
 ## [1.22.0](https://github.com/ForkbombEu/didroom-components/compare/v1.21.0...v1.22.0) (2024-06-19)
 
 
