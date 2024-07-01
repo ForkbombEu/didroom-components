@@ -8,6 +8,7 @@ import { Component, Host, Prop, State, h } from '@stencil/core';
 export class DHeader {
   @Prop() backButton: boolean = false;
   @Prop() settings: boolean = false;
+  @Prop() settingsTitle: string = 'Settings';
   @Prop() backFunction: () => void = window.history.back;
   @State() isSettingsOpen: boolean = false;
 
@@ -72,7 +73,7 @@ export class DHeader {
           <ion-menu content-id="main-content">
             <ion-header>
               <ion-toolbar>
-                <ion-title>Settings</ion-title>
+                <ion-title>{this.settingsTitle}</ion-title>
               </ion-toolbar>
             </ion-header>
             <ion-content>
