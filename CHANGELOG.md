@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.24.0](https://github.com/ForkbombEu/didroom-components/compare/v1.23.0...v1.24.0) (2024-07-03)
+
+
+### Features
+
+* tab page layout ([#110](https://github.com/ForkbombEu/didroom-components/issues/110)) ([4d64c85](https://github.com/ForkbombEu/didroom-components/commit/4d64c85c567a640e34cb42ae3b0349732553a686))
+
+
+### Bug Fixes
+
+* center empty state text ([#108](https://github.com/ForkbombEu/didroom-components/issues/108)) ([f65f8e3](https://github.com/ForkbombEu/didroom-components/commit/f65f8e38746563faac533da60e251051cc4c5ca0))
+* header should knows which back method invoke ([#109](https://github.com/ForkbombEu/didroom-components/issues/109)) ([e470ee7](https://github.com/ForkbombEu/didroom-components/commit/e470ee773aab8bb5a03b24ea99aa221dc6eab11d))
+
 ## [1.23.0](https://github.com/ForkbombEu/didroom-components/compare/v1.22.0...v1.23.0) (2024-07-01)
 
 
