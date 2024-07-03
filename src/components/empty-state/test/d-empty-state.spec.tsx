@@ -14,11 +14,11 @@ describe('d-empty-state', () => {
            <div>
              <slot></slot>
            </div>
-           <div class="flex flex-col gap-1">
-             <d-heading size="s"></d-heading>
-             <d-text size="l"></d-text>
-           </div>
-         </div>
+           <div class="flex flex-col gap-1 items-center">
+             <d-heading class="text-center" size="s"></d-heading>
+             <d-text class="text-center" size="l"></d-text>
+            </div>
+          </div>
         </mock:shadow-root>
       </d-empty-state>
     `);

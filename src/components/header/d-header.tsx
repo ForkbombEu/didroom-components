@@ -8,10 +8,11 @@ import { Component, Host, Prop, State, h } from '@stencil/core';
 export class DHeader {
   @Prop() backButton: boolean = false;
   @Prop() settings: boolean = false;
+  @Prop() settingsTitle: string = 'Settings';
+  @Prop() backFunction: () => void = window.history.back;
   @State() isSettingsOpen: boolean = false;
 
   render() {
-    
     const arrowBack = (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Icon/outline/arrow-back">
@@ -48,7 +49,7 @@ export class DHeader {
             <ion-toolbar>
               {this.backButton && (
                 <ion-buttons slot="start">
-                  <ion-button onClick={() => window.history.back()} aria-hidden>
+                  <ion-button onClick={this.backFunction} aria-hidden>
                     <div class="w-6 h-6 text-on" slot="icon-only">
                       {arrowBack}
                     </div>
@@ -72,11 +73,13 @@ export class DHeader {
           <ion-menu content-id="main-content">
             <ion-header>
               <ion-toolbar>
-                <ion-title>Settings</ion-title>
+                <ion-title>{this.settingsTitle}</ion-title>
               </ion-toolbar>
             </ion-header>
-            <ion-content class="ion-padding">
-              <slot name="settings"></slot>
+            <ion-content>
+              <div class="px-4 py-2">
+                <slot name="settings"></slot>
+              </div>
             </ion-content>
           </ion-menu>
         </div>
