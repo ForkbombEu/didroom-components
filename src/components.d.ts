@@ -116,6 +116,13 @@ export namespace Components {
         "hasAlert": boolean;
         "tab": 'home' | 'profile' | 'activity' | 'wallet';
     }
+    interface DTabPage {
+        "scanButtonHref": string | undefined;
+        "scanButtonText": string | undefined;
+        "settings": boolean;
+        "tab": string;
+        "title": string;
+    }
     interface DText {
         "color": Color;
         "size": Size;
@@ -285,6 +292,12 @@ declare global {
         prototype: HTMLDTabButtonElement;
         new (): HTMLDTabButtonElement;
     };
+    interface HTMLDTabPageElement extends Components.DTabPage, HTMLStencilElement {
+    }
+    var HTMLDTabPageElement: {
+        prototype: HTMLDTabPageElement;
+        new (): HTMLDTabPageElement;
+    };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
     var HTMLDTextElement: {
@@ -317,6 +330,7 @@ declare global {
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-tab-button": HTMLDTabButtonElement;
+        "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -435,6 +449,13 @@ declare namespace LocalJSX {
         "hasAlert"?: boolean;
         "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
     }
+    interface DTabPage {
+        "scanButtonHref"?: string | undefined;
+        "scanButtonText"?: string | undefined;
+        "settings"?: boolean;
+        "tab"?: string;
+        "title"?: string;
+    }
     interface DText {
         "color"?: Color;
         "size"?: Size;
@@ -461,6 +482,7 @@ declare namespace LocalJSX {
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
         "d-tab-button": DTabButton;
+        "d-tab-page": DTabPage;
         "d-text": DText;
         "didroom-logo": DidroomLogo;
     }
@@ -488,6 +510,7 @@ declare module "@stencil/core" {
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
+            "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }

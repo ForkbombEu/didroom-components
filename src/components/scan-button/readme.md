@@ -14,6 +14,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [d-tab-page](../tab-page)
+
 ### Depends on
 
 - [d-button](../button)
@@ -22,6 +26,7 @@
 ```mermaid
 graph TD;
   d-scan-button --> d-button
+  d-tab-page --> d-scan-button
   style d-scan-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

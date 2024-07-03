@@ -16,6 +16,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [d-tab-page](../tab-page)
+
 ### Depends on
 
 - ion-header
@@ -40,6 +44,7 @@ graph TD;
   d-header --> ion-content
   ion-button --> ion-ripple-effect
   ion-menu --> ion-backdrop
+  d-tab-page --> d-header
   style d-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
