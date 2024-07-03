@@ -74,6 +74,7 @@ export namespace Components {
     }
     interface DHeader {
         "backButton": boolean;
+        "backFunction": () => void;
         "settings": boolean;
     }
     interface DHeading {
@@ -390,6 +391,7 @@ declare namespace LocalJSX {
     }
     interface DHeader {
         "backButton"?: boolean;
+        "backFunction"?: () => void;
         "settings"?: boolean;
     }
     interface DHeading {

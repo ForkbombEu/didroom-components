@@ -26,8 +26,10 @@ describe('d-header', () => {
                  </ion-title>
                </ion-toolbar>
              </ion-header>
-             <ion-content class="ion-padding">
-               <slot name="settings"></slot>
+             <ion-content>
+               <div class="px-4 py-2">
+                 <slot name="settings"></slot>
+               </div>
              </ion-content>
            </ion-menu>
          </div>

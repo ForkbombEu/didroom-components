@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type      | Default |
-| ------------ | ------------- | ----------- | --------- | ------- |
-| `backButton` | `back-button` |             | `boolean` | `false` |
-| `settings`   | `settings`    |             | `boolean` | `false` |
+| Property       | Attribute     | Description | Type         | Default               |
+| -------------- | ------------- | ----------- | ------------ | --------------------- |
+| `backButton`   | `back-button` |             | `boolean`    | `false`               |
+| `backFunction` | --            |             | `() => void` | `window.history.back` |
+| `settings`     | `settings`    |             | `boolean`    | `false`               |
 
 
 ## Dependencies
