@@ -76,6 +76,7 @@ export namespace Components {
         "backButton": boolean;
         "backFunction": () => void;
         "settings": boolean;
+        "settingsTitle": string;
     }
     interface DHeading {
         "color": Color;
@@ -407,6 +408,7 @@ declare namespace LocalJSX {
         "backButton"?: boolean;
         "backFunction"?: () => void;
         "settings"?: boolean;
+        "settingsTitle"?: string;
     }
     interface DHeading {
         "color"?: Color;
