@@ -9,12 +9,12 @@ describe('d-tab-page', () => {
     });
     expect(page.root).toEqualHtml(`
       <d-tab-page>
-        <ion-tab>
+        <div class="ion-page">
           <d-header></d-header>
           <ion-content class="ion-padding" fullscreen="" id="main-content">
             <div class="pb-24"></div>
           </ion-content>
-        </ion-tab>
+        </div>
       </d-tab-page>
     `);
   });
