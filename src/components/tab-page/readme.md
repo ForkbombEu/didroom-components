@@ -20,7 +20,6 @@
 
 ### Depends on
 
-- ion-tab
 - [d-header](../header)
 - ion-content
 - [d-scan-button](../scan-button)
@@ -28,7 +27,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  d-tab-page --> ion-tab
   d-tab-page --> d-header
   d-tab-page --> ion-content
   d-tab-page --> d-scan-button

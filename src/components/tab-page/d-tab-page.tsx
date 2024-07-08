@@ -15,7 +15,7 @@ export class DTabPage {
   render() {
     return (
       <Host>
-        <ion-tab tab={this.tab} id={this.tab}>
+        <div class="ion-page">
           <d-header backButton={false} settings={this.settings}>
             {this.title}
             <slot name="settings" slot="settings"></slot>
@@ -25,7 +25,7 @@ export class DTabPage {
             {this.scanButtonText && <d-scan-button href={this.scanButtonHref}>{this.scanButtonText}</d-scan-button>}
             <div class="pb-24" />
           </ion-content>
-        </ion-tab>
+        </div>
       </Host>
     );
   }
