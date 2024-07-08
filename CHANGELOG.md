@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.1](https://github.com/ForkbombEu/didroom-components/compare/v1.24.0...v1.24.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* hidden tabs ([#112](https://github.com/ForkbombEu/didroom-components/issues/112)) ([d40eb8e](https://github.com/ForkbombEu/didroom-components/commit/d40eb8ef2b0e7ccb56ef0ed36ee3adbb6485ae2b))
+
 ## [1.24.0](https://github.com/ForkbombEu/didroom-components/compare/v1.23.0...v1.24.0) (2024-07-03)
 
 
