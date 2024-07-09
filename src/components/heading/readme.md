@@ -18,7 +18,7 @@
 ### Used by
 
  - [d-credential-card](../credential-card)
- - [d-header](../header)
+ - [d-empty-state](../empty-state)
  - [d-logo](../logo)
  - [d-page-description](../page-description)
  - [d-session-card](../session-card)
@@ -27,7 +27,7 @@
 ```mermaid
 graph TD;
   d-credential-card --> d-heading
-  d-header --> d-heading
+  d-empty-state --> d-heading
   d-logo --> d-heading
   d-page-description --> d-heading
   d-session-card --> d-heading

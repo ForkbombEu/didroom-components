@@ -62,6 +62,12 @@ export namespace Components {
         "hidable": boolean;
         "title": string;
     }
+    interface DEmptyState {
+        "buttonText": string | undefined;
+        "heading": string;
+        "href": string | undefined;
+        "text": string;
+    }
     interface DFeedback {
         "feedback": string;
         "message": string | undefined;
@@ -69,7 +75,9 @@ export namespace Components {
     }
     interface DHeader {
         "backButton": boolean;
+        "backFunction": () => void;
         "settings": boolean;
+        "settingsTitle": string;
     }
     interface DHeading {
         "color": Color;
@@ -97,6 +105,9 @@ export namespace Components {
         "description"?: string;
         "title": string;
     }
+    interface DScanButton {
+        "href": string;
+    }
     interface DSessionCard {
         "date": string;
         "sid": string;
@@ -106,6 +117,13 @@ export namespace Components {
         "active": boolean;
         "hasAlert": boolean;
         "tab": 'home' | 'profile' | 'activity' | 'wallet';
+    }
+    interface DTabPage {
+        "scanButtonHref": string | undefined;
+        "scanButtonText": string | undefined;
+        "settings": boolean;
+        "tab": string;
+        "title": string;
     }
     interface DText {
         "color": Color;
@@ -187,6 +205,12 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
+    }
+    var HTMLDEmptyStateElement: {
+        prototype: HTMLDEmptyStateElement;
+        new (): HTMLDEmptyStateElement;
+    };
     interface HTMLDFeedbackElementEventMap {
         "dClose": void;
     }
@@ -252,6 +276,12 @@ declare global {
         prototype: HTMLDPageDescriptionElement;
         new (): HTMLDPageDescriptionElement;
     };
+    interface HTMLDScanButtonElement extends Components.DScanButton, HTMLStencilElement {
+    }
+    var HTMLDScanButtonElement: {
+        prototype: HTMLDScanButtonElement;
+        new (): HTMLDScanButtonElement;
+    };
     interface HTMLDSessionCardElement extends Components.DSessionCard, HTMLStencilElement {
     }
     var HTMLDSessionCardElement: {
@@ -263,6 +293,12 @@ declare global {
     var HTMLDTabButtonElement: {
         prototype: HTMLDTabButtonElement;
         new (): HTMLDTabButtonElement;
+    };
+    interface HTMLDTabPageElement extends Components.DTabPage, HTMLStencilElement {
+    }
+    var HTMLDTabPageElement: {
+        prototype: HTMLDTabPageElement;
+        new (): HTMLDTabPageElement;
     };
     interface HTMLDTextElement extends Components.DText, HTMLStencilElement {
     }
@@ -285,6 +321,7 @@ declare global {
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
+        "d-empty-state": HTMLDEmptyStateElement;
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
@@ -292,8 +329,10 @@ declare global {
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
         "d-page-description": HTMLDPageDescriptionElement;
+        "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-tab-button": HTMLDTabButtonElement;
+        "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -355,6 +394,12 @@ declare namespace LocalJSX {
         "hidable"?: boolean;
         "title"?: string;
     }
+    interface DEmptyState {
+        "buttonText"?: string | undefined;
+        "heading"?: string;
+        "href"?: string | undefined;
+        "text"?: string;
+    }
     interface DFeedback {
         "feedback"?: string;
         "message"?: string | undefined;
@@ -363,7 +408,9 @@ declare namespace LocalJSX {
     }
     interface DHeader {
         "backButton"?: boolean;
+        "backFunction"?: () => void;
         "settings"?: boolean;
+        "settingsTitle"?: string;
     }
     interface DHeading {
         "color"?: Color;
@@ -393,6 +440,9 @@ declare namespace LocalJSX {
         "description"?: string;
         "title"?: string;
     }
+    interface DScanButton {
+        "href"?: string;
+    }
     interface DSessionCard {
         "date"?: string;
         "sid"?: string;
@@ -402,6 +452,13 @@ declare namespace LocalJSX {
         "active"?: boolean;
         "hasAlert"?: boolean;
         "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
+    }
+    interface DTabPage {
+        "scanButtonHref"?: string | undefined;
+        "scanButtonText"?: string | undefined;
+        "settings"?: boolean;
+        "tab"?: string;
+        "title"?: string;
     }
     interface DText {
         "color"?: Color;
@@ -418,6 +475,7 @@ declare namespace LocalJSX {
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
+        "d-empty-state": DEmptyState;
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
@@ -425,8 +483,10 @@ declare namespace LocalJSX {
         "d-input": DInput;
         "d-logo": DLogo;
         "d-page-description": DPageDescription;
+        "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
         "d-tab-button": DTabButton;
+        "d-tab-page": DTabPage;
         "d-text": DText;
         "didroom-logo": DidroomLogo;
     }
@@ -443,6 +503,7 @@ declare module "@stencil/core" {
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
+            "d-empty-state": LocalJSX.DEmptyState & JSXBase.HTMLAttributes<HTMLDEmptyStateElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
@@ -450,8 +511,10 @@ declare module "@stencil/core" {
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
+            "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
+            "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }

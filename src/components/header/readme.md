@@ -7,13 +7,19 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type      | Default |
-| ------------ | ------------- | ----------- | --------- | ------- |
-| `backButton` | `back-button` |             | `boolean` | `false` |
-| `settings`   | `settings`    |             | `boolean` | `false` |
+| Property        | Attribute        | Description | Type         | Default               |
+| --------------- | ---------------- | ----------- | ------------ | --------------------- |
+| `backButton`    | `back-button`    |             | `boolean`    | `false`               |
+| `backFunction`  | --               |             | `() => void` | `window.history.back` |
+| `settings`      | `settings`       |             | `boolean`    | `false`               |
+| `settingsTitle` | `settings-title` |             | `string`     | `'Settings'`          |
 
 
 ## Dependencies
+
+### Used by
+
+ - [d-tab-page](../tab-page)
 
 ### Depends on
 
@@ -22,8 +28,8 @@
 - ion-buttons
 - ion-button
 - ion-title
-- ion-modal
-- [d-heading](../heading)
+- ion-menu-toggle
+- ion-menu
 - ion-content
 
 ### Graph
@@ -34,11 +40,12 @@ graph TD;
   d-header --> ion-buttons
   d-header --> ion-button
   d-header --> ion-title
-  d-header --> ion-modal
-  d-header --> d-heading
+  d-header --> ion-menu-toggle
+  d-header --> ion-menu
   d-header --> ion-content
   ion-button --> ion-ripple-effect
-  ion-modal --> ion-backdrop
+  ion-menu --> ion-backdrop
+  d-tab-page --> d-header
   style d-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
