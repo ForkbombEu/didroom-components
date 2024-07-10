@@ -1,6 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
-	import { parse } from 'did-resolver';
-
+import { parse } from 'did-resolver';
 
 @Component({
   tag: 'd-did-box',
@@ -11,6 +10,9 @@ export class DDidBox {
   @Prop() did: string;
 
   render() {
+    if (!this.did) {
+      return;
+    }
     const { method, id: fullId } = parse(this.did)!;
     const [submethod, id] = fullId.split(':');
     return (
@@ -45,5 +47,4 @@ export class DDidBox {
       </Host>
     );
   }
-
 }

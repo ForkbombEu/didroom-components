@@ -9,9 +9,7 @@ describe('d-did-box', () => {
     });
     expect(page.root).toEqualHtml(`
       <d-did-box>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <mock:shadow-root></mock:shadow-root>
       </d-did-box>
     `);
   });

@@ -103,6 +103,10 @@ export namespace Components {
     }
     interface DLogo {
     }
+    interface DOrganizations {
+        "empty": boolean;
+        "heading": string;
+    }
     interface DPageDescription {
         "description"?: string;
         "title": string;
@@ -278,6 +282,12 @@ declare global {
         prototype: HTMLDLogoElement;
         new (): HTMLDLogoElement;
     };
+    interface HTMLDOrganizationsElement extends Components.DOrganizations, HTMLStencilElement {
+    }
+    var HTMLDOrganizationsElement: {
+        prototype: HTMLDOrganizationsElement;
+        new (): HTMLDOrganizationsElement;
+    };
     interface HTMLDPageDescriptionElement extends Components.DPageDescription, HTMLStencilElement {
     }
     var HTMLDPageDescriptionElement: {
@@ -337,6 +347,7 @@ declare global {
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
+        "d-organizations": HTMLDOrganizationsElement;
         "d-page-description": HTMLDPageDescriptionElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
@@ -447,6 +458,10 @@ declare namespace LocalJSX {
     }
     interface DLogo {
     }
+    interface DOrganizations {
+        "empty"?: boolean;
+        "heading"?: string;
+    }
     interface DPageDescription {
         "description"?: string;
         "title"?: string;
@@ -494,6 +509,7 @@ declare namespace LocalJSX {
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-logo": DLogo;
+        "d-organizations": DOrganizations;
         "d-page-description": DPageDescription;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
@@ -523,6 +539,7 @@ declare module "@stencil/core" {
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
+            "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;

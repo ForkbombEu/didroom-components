@@ -2,7 +2,7 @@ import { DDidBox } from './d-did-box';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/DidBox',
+  title: 'Design System/Atoms/DidBox',
   render: args =>
     `<d-did-box 
     did="${args.did}" 
