@@ -61,6 +61,9 @@ export namespace Components {
         "hidable": boolean;
         "title": string;
     }
+    interface DDidBox {
+        "did": string;
+    }
     interface DEmptyState {
         "buttonText": string | undefined;
         "heading": string;
@@ -204,6 +207,12 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDDidBoxElement extends Components.DDidBox, HTMLStencilElement {
+    }
+    var HTMLDDidBoxElement: {
+        prototype: HTMLDDidBoxElement;
+        new (): HTMLDDidBoxElement;
+    };
     interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
     }
     var HTMLDEmptyStateElement: {
@@ -320,6 +329,7 @@ declare global {
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
+        "d-did-box": HTMLDDidBoxElement;
         "d-empty-state": HTMLDEmptyStateElement;
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
@@ -391,6 +401,9 @@ declare namespace LocalJSX {
         "definition"?: string;
         "hidable"?: boolean;
         "title"?: string;
+    }
+    interface DDidBox {
+        "did"?: string;
     }
     interface DEmptyState {
         "buttonText"?: string | undefined;
@@ -473,6 +486,7 @@ declare namespace LocalJSX {
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
+        "d-did-box": DDidBox;
         "d-empty-state": DEmptyState;
         "d-feedback": DFeedback;
         "d-header": DHeader;
@@ -501,6 +515,7 @@ declare module "@stencil/core" {
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
+            "d-did-box": LocalJSX.DDidBox & JSXBase.HTMLAttributes<HTMLDDidBoxElement>;
             "d-empty-state": LocalJSX.DEmptyState & JSXBase.HTMLAttributes<HTMLDEmptyStateElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;

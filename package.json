@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@stencil/core": "^4.11.0",
-    "@tailwindcss/line-clamp": "^0.4.4"
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "did-resolver": "^4.1.0"
   },
   "devDependencies": {
     "@ionic/core": "^7.6.6",
