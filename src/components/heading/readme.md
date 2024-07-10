@@ -20,6 +20,7 @@
  - [d-credential-card](../credential-card)
  - [d-empty-state](../empty-state)
  - [d-logo](../logo)
+ - [d-organizations](../d-organizations)
  - [d-page-description](../page-description)
  - [d-session-card](../session-card)
 
@@ -29,6 +30,7 @@ graph TD;
   d-credential-card --> d-heading
   d-empty-state --> d-heading
   d-logo --> d-heading
+  d-organizations --> d-heading
   d-page-description --> d-heading
   d-session-card --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px

@@ -61,6 +61,9 @@ export namespace Components {
         "hidable": boolean;
         "title": string;
     }
+    interface DDidBox {
+        "did": string;
+    }
     interface DEmptyState {
         "buttonText": string | undefined;
         "heading": string;
@@ -99,6 +102,10 @@ export namespace Components {
         "value": string;
     }
     interface DLogo {
+    }
+    interface DOrganizations {
+        "empty": boolean;
+        "heading": string;
     }
     interface DPageDescription {
         "description"?: string;
@@ -204,6 +211,12 @@ declare global {
         prototype: HTMLDDefinitionElement;
         new (): HTMLDDefinitionElement;
     };
+    interface HTMLDDidBoxElement extends Components.DDidBox, HTMLStencilElement {
+    }
+    var HTMLDDidBoxElement: {
+        prototype: HTMLDDidBoxElement;
+        new (): HTMLDDidBoxElement;
+    };
     interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
     }
     var HTMLDEmptyStateElement: {
@@ -269,6 +282,12 @@ declare global {
         prototype: HTMLDLogoElement;
         new (): HTMLDLogoElement;
     };
+    interface HTMLDOrganizationsElement extends Components.DOrganizations, HTMLStencilElement {
+    }
+    var HTMLDOrganizationsElement: {
+        prototype: HTMLDOrganizationsElement;
+        new (): HTMLDOrganizationsElement;
+    };
     interface HTMLDPageDescriptionElement extends Components.DPageDescription, HTMLStencilElement {
     }
     var HTMLDPageDescriptionElement: {
@@ -320,6 +339,7 @@ declare global {
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
         "d-definition": HTMLDDefinitionElement;
+        "d-did-box": HTMLDDidBoxElement;
         "d-empty-state": HTMLDEmptyStateElement;
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
@@ -327,6 +347,7 @@ declare global {
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-logo": HTMLDLogoElement;
+        "d-organizations": HTMLDOrganizationsElement;
         "d-page-description": HTMLDPageDescriptionElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
@@ -392,6 +413,9 @@ declare namespace LocalJSX {
         "hidable"?: boolean;
         "title"?: string;
     }
+    interface DDidBox {
+        "did"?: string;
+    }
     interface DEmptyState {
         "buttonText"?: string | undefined;
         "heading"?: string;
@@ -434,6 +458,10 @@ declare namespace LocalJSX {
     }
     interface DLogo {
     }
+    interface DOrganizations {
+        "empty"?: boolean;
+        "heading"?: string;
+    }
     interface DPageDescription {
         "description"?: string;
         "title"?: string;
@@ -473,6 +501,7 @@ declare namespace LocalJSX {
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
         "d-definition": DDefinition;
+        "d-did-box": DDidBox;
         "d-empty-state": DEmptyState;
         "d-feedback": DFeedback;
         "d-header": DHeader;
@@ -480,6 +509,7 @@ declare namespace LocalJSX {
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-logo": DLogo;
+        "d-organizations": DOrganizations;
         "d-page-description": DPageDescription;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
@@ -501,6 +531,7 @@ declare module "@stencil/core" {
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
             "d-definition": LocalJSX.DDefinition & JSXBase.HTMLAttributes<HTMLDDefinitionElement>;
+            "d-did-box": LocalJSX.DDidBox & JSXBase.HTMLAttributes<HTMLDDidBoxElement>;
             "d-empty-state": LocalJSX.DEmptyState & JSXBase.HTMLAttributes<HTMLDEmptyStateElement>;
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
@@ -508,6 +539,7 @@ declare module "@stencil/core" {
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
+            "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
