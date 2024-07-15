@@ -15,7 +15,6 @@ export namespace Components {
         "message": string;
         "name": string;
         "read": boolean;
-        "type": 'error' | 'warning' | 'success';
     }
     interface DAvatar {
         "name"?: string;
@@ -366,7 +365,6 @@ declare namespace LocalJSX {
         "message"?: string;
         "name"?: string;
         "read"?: boolean;
-        "type"?: 'error' | 'warning' | 'success';
     }
     interface DAvatar {
         "name"?: string;

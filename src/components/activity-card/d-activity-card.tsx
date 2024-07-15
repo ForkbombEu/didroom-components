@@ -11,13 +11,12 @@ export class DActivityCard {
   @Prop({ reflect: true }) message: string;
   @Prop({ reflect: true }) description: string;
   @Prop({ reflect: true }) date: string;
-  @Prop({ reflect: true }) type: 'error' | 'warning' | 'success';
   @Prop({ reflect: true }) read: boolean = false;
 
   render() {
     return (
       <Host>
-        <div class={{ 'items-start border-stroke flex gap-4 border-b p-2 w-fit rounded-lg': true, 'bg-primary': this.read }}>
+        <div class="items-start border-stroke flex gap-4 border-b p-2 w-fit rounded-lg">
           <d-avatar src={this.logo} name={this.name} shape="square" />
           <div class="flex flex-col gap-2">
             <h2>{this.message}</h2>
@@ -25,7 +24,7 @@ export class DActivityCard {
               {this.description}
             </d-text>
             <div class="flex items-center gap-2.5">
-              <d-info-led type={this.type} />
+              {!this.read && <d-info-led type="warning" />}
               <d-text size="xs">{this.date}</d-text>
             </div>
             <div class="flex justify-end gap-2.5">

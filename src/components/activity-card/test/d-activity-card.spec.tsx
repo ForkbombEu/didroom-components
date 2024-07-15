@@ -16,7 +16,7 @@ describe('d-activity-card', () => {
               <h2></h2>
               <d-text class="text-on-alt" size="s"></d-text>
               <div class="flex gap-2.5 items-center">
-                <d-info-led></d-info-led>
+                <d-info-led type="warning"></d-info-led>
                 <d-text size="xs"></d-text>
               </div>
               <div class="flex gap-2.5 justify-end">

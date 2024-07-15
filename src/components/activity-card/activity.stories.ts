@@ -9,7 +9,6 @@ const meta = {
       logo="${args.logo}" 
       description="${args.description}" 
       date="${args.date}" 
-      type="${args.type}" 
     ${args.message && `message="${args.message}"`}
     ${args.read && `read="${args.read}"`}
     >
@@ -32,7 +31,6 @@ export const Default: Story = {
     message: 'Proof of humanity is expired',
     description: 'Your proof of humanity has expired. Please renew it if you need it.',
     date: '1 day ago',
-    type: 'error',
   },
 };
 
@@ -43,7 +41,6 @@ export const Read: Story = {
     message: 'Proof of humanity is expired',
     description: 'Your proof of humanity has expired. Please renew it if you need it.',
     date: '1 day ago',
-    type: 'error',
     read: true,
   },
 };
