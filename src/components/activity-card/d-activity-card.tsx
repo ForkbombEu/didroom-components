@@ -16,7 +16,7 @@ export class DActivityCard {
   render() {
     return (
       <Host>
-        <div class="items-start border-stroke flex gap-4 border-b p-2 w-fit rounded-lg">
+        <div class="items-start border-stroke flex gap-4 border-b p-2 rounded-lg w-full max-w-screen-sm">
           <d-avatar src={this.logo} name={this.name} shape="square" />
           <div class="flex flex-col gap-2">
             <h2>{this.message}</h2>
