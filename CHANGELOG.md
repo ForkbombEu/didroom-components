@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/ForkbombEu/didroom-components/compare/v1.24.1...v1.25.0) (2024-07-10)
+
+
+### Features
+
+* add did-box and organizations components for profile page ([#114](https://github.com/ForkbombEu/didroom-components/issues/114)) ([b71cd09](https://github.com/ForkbombEu/didroom-components/commit/b71cd097d22f792d920d1f8d5664763237994461))
+
 ## [1.24.1](https://github.com/ForkbombEu/didroom-components/compare/v1.24.0...v1.24.1) (2024-07-08)
 
 
