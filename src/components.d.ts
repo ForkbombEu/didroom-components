@@ -150,6 +150,10 @@ export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
 }
+export interface DEmptyStateCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDEmptyStateElement;
+}
 export interface DFeedbackCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDFeedbackElement;
@@ -231,7 +235,18 @@ declare global {
         prototype: HTMLDDidBoxElement;
         new (): HTMLDDidBoxElement;
     };
+    interface HTMLDEmptyStateElementEventMap {
+        "buttonClick": void;
+    }
     interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDEmptyStateElementEventMap>(type: K, listener: (this: HTMLDEmptyStateElement, ev: DEmptyStateCustomEvent<HTMLDEmptyStateElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDEmptyStateElementEventMap>(type: K, listener: (this: HTMLDEmptyStateElement, ev: DEmptyStateCustomEvent<HTMLDEmptyStateElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDEmptyStateElement: {
         prototype: HTMLDEmptyStateElement;
@@ -446,6 +461,7 @@ declare namespace LocalJSX {
         "buttonText"?: string | undefined;
         "heading"?: string;
         "href"?: string | undefined;
+        "onButtonClick"?: (event: DEmptyStateCustomEvent<void>) => void;
         "text"?: string;
     }
     interface DFeedback {
