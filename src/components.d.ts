@@ -101,6 +101,10 @@ export namespace Components {
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
+    interface DLoading {
+        "loading": boolean;
+        "message": string;
+    }
     interface DLogo {
     }
     interface DOrganizations {
@@ -276,6 +280,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
+    }
+    var HTMLDLoadingElement: {
+        prototype: HTMLDLoadingElement;
+        new (): HTMLDLoadingElement;
+    };
     interface HTMLDLogoElement extends Components.DLogo, HTMLStencilElement {
     }
     var HTMLDLogoElement: {
@@ -346,6 +356,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
         "d-page-description": HTMLDPageDescriptionElement;
@@ -456,6 +467,10 @@ declare namespace LocalJSX {
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
     }
+    interface DLoading {
+        "loading"?: boolean;
+        "message"?: string;
+    }
     interface DLogo {
     }
     interface DOrganizations {
@@ -508,6 +523,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
         "d-page-description": DPageDescription;
@@ -538,6 +554,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
