@@ -16,6 +16,10 @@ export namespace Components {
         "name": string;
         "type": 'error' | 'warning' | 'success';
     }
+    interface DAppDetails {
+        "developedBy": string;
+        "version": string;
+    }
     interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
@@ -160,6 +164,12 @@ declare global {
     var HTMLDActivityCardElement: {
         prototype: HTMLDActivityCardElement;
         new (): HTMLDActivityCardElement;
+    };
+    interface HTMLDAppDetailsElement extends Components.DAppDetails, HTMLStencilElement {
+    }
+    var HTMLDAppDetailsElement: {
+        prototype: HTMLDAppDetailsElement;
+        new (): HTMLDAppDetailsElement;
     };
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
     }
@@ -342,6 +352,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "d-activity-card": HTMLDActivityCardElement;
+        "d-app-details": HTMLDAppDetailsElement;
         "d-avatar": HTMLDAvatarElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
@@ -376,6 +387,10 @@ declare namespace LocalJSX {
         "message"?: string;
         "name"?: string;
         "type"?: 'error' | 'warning' | 'success';
+    }
+    interface DAppDetails {
+        "developedBy"?: string;
+        "version"?: string;
     }
     interface DAvatar {
         "name"?: string;
@@ -509,6 +524,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "d-activity-card": DActivityCard;
+        "d-app-details": DAppDetails;
         "d-avatar": DAvatar;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
@@ -540,6 +556,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "d-activity-card": LocalJSX.DActivityCard & JSXBase.HTMLAttributes<HTMLDActivityCardElement>;
+            "d-app-details": LocalJSX.DAppDetails & JSXBase.HTMLAttributes<HTMLDAppDetailsElement>;
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
