@@ -15,6 +15,13 @@
 | `text`       | `text`        |             | `string` | `undefined` |
 
 
+## Events
+
+| Event         | Description | Type                |
+| ------------- | ----------- | ------------------- |
+| `buttonClick` |             | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Depends on
