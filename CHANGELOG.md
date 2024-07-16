@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.26.0](https://github.com/ForkbombEu/didroom-components/compare/v1.25.0...v1.26.0) (2024-07-16)
+
+
+### Features
+
+* add loading page component ([#117](https://github.com/ForkbombEu/didroom-components/issues/117)) ([f8847e8](https://github.com/ForkbombEu/didroom-components/commit/f8847e8c7880e226fcca0b7ff4446e455d04e00a))
+* app details ([#116](https://github.com/ForkbombEu/didroom-components/issues/116)) ([3f55893](https://github.com/ForkbombEu/didroom-components/commit/3f558939096ebb503b2c1cc9efc451b45a901d2e))
+
 ## [1.25.0](https://github.com/ForkbombEu/didroom-components/compare/v1.24.1...v1.25.0) (2024-07-10)
 
 
