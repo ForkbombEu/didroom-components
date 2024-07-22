@@ -10,24 +10,24 @@ export class DCredentialService {
   @Prop() issuer: string;
   @Prop() logoSrc?: string;
   @Prop() description?: string;
+  @Prop() issuerLabel?: string = 'Issuer';
   @Prop({ reflect: true }) href?: string;
 
   render() {
     const content = (
-      <div>
-        <d-avatar name={this.name} src={this.logoSrc} size="l"></d-avatar>
-        <div class="flex flex-col grow">
-          <d-text size="l">{this.name}</d-text>
-          <d-text size="s">{this.description}</d-text>
-          <d-text size="xs">{this.issuer}</d-text>
-        </div>
-        {this.href && (
-          <div class="shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-              <path d="M3 12L21 12M21 12L12.5 20.5M21 12L12.5 3.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+      <div class="w-full rounded-lg p-5 flex flex-col bg-primary no-underline gap-3">
+        <d-text size="xl" class="font-medium">{this.name}</d-text>
+        <div class="flex gap-5 items-start">
+          <d-avatar name={this.name} src={this.logoSrc} size="l" shape="square"></d-avatar>
+          <div class="flex flex-col grow">
+            <d-text size="s" class="line-clamp-4">
+              {this.description}
+            </d-text>
           </div>
-        )}
+        </div>
+        <d-text size="s" class="font-semibold">
+          {this.issuerLabel}: {this.issuer}
+        </d-text>
       </div>
     );
 
