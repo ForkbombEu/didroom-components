@@ -64,7 +64,7 @@ export class DCredentialCard {
             <span>{this.issuer}</span>
           </div>
           <div class="labeled-text items-end">
-            <span class="label">{this.expirationLabel}</span>
+            <span>{this.expirationLabel}</span>
             <span>{this.expirationDate}</span>
           </div>
         </div>
