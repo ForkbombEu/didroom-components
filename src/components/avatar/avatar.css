@@ -23,7 +23,7 @@
 
 :host([size='l']) svg,
 :host([size='l']) {
-  @apply h-20 w-20 text-lg;
+  @apply h-[60px] w-[60px] text-lg;
 }
 
 :host([size='xl']) svg,
