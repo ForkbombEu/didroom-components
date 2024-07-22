@@ -65,7 +65,7 @@ export class DFeedback {
       <Host>
         <div
           class={{
-            'flex flex-col gap-3  bg-primary p-4 rounded-md !border-[3px] !border-solid': this.feedback !== '',
+            'flex flex-col gap-3  bg-primary p-4 rounded-md !border-[3px] !border-solid mb-4': this.feedback !== '',
             'border-success': this.type === 'success',
             'border-error': this.type === 'error',
             'hidden': this.feedback === '',
