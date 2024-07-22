@@ -57,7 +57,7 @@ export namespace Components {
         "description"?: string;
         "href"?: string;
         "issuer": string;
-        "issuerLabel"?: string;
+        "issuerLabel": string;
         "logoSrc"?: string;
         "name": string;
     }

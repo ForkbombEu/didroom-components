@@ -10,24 +10,26 @@ export class DCredentialService {
   @Prop() issuer: string;
   @Prop() logoSrc?: string;
   @Prop() description?: string;
-  @Prop() issuerLabel?: string = 'Issuer';
+  @Prop() issuerLabel: string = 'Issuer_L';
   @Prop({ reflect: true }) href?: string;
 
   render() {
     const content = (
-      <div class="w-full rounded-lg p-5 flex flex-col bg-primary no-underline gap-3">
-        <d-text size="xl" class="font-medium">{this.name}</d-text>
-        <div class="flex gap-5 items-start">
+      <div class="w-full rounded-lg p-5 flex gap-3 bg-primary no-underline items-center">
+        <div class="flex flex-grow items-start gap-3">
           <d-avatar name={this.name} src={this.logoSrc} size="l" shape="square"></d-avatar>
-          <div class="flex flex-col grow">
-            <d-text size="s" class="line-clamp-4">
-              {this.description}
-            </d-text>
+          <div class="h-full min-h-[60px] flex flex-col grow justify-between">
+            <d-text size="l">{this.name}</d-text>
+            <d-text class="!text-on-alt">{this.issuerLabel}: {this.issuer}</d-text>
           </div>
         </div>
-        <d-text size="s" class="font-semibold">
-          {this.issuerLabel}: {this.issuer}
-        </d-text>
+        {this.href && (
+          <div class="shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-6 h-6 fill-current stroke-on">
+              <path d="M3 12L21 12M21 12L12.5 20.5M21 12L12.5 3.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        )}
       </div>
     );
 
