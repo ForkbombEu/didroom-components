@@ -8,11 +8,11 @@ describe('d-page-description', () => {
       html: `<d-page-description></d-page-description>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-page-description>
+    <d-page-description class="pb-4">
         <mock:shadow-root>
-          <d-heading size="s"></d-heading>
-          <d-text size="l">
-            <p></p>
+          <d-heading class="font-semibold" size="xs"></d-heading>
+          <d-text size="m">
+              <p></p>
           </d-text>
         </mock:shadow-root>
       </d-page-description>
