@@ -7,7 +7,6 @@ const meta = {
     `<d-credential-card 
     name="${args.name}" 
     issuer="${args.issuer}" 
-    description="${args.description}" 
     expiration-date="${args.expirationDate}" 
     issued-by-label="${args.issuedByLabel}"
     expiration-label="${args.expirationLabel}"
@@ -21,7 +20,6 @@ type Story = StoryObj<DCredentialCard>;
 export const Default: Story = {
   args: {
     name: 'Over 18',
-    description: 'This credential proves that you are over 18 years old',
     issuer: 'Italian Government',
     issuedByLabel: 'issued by',
     expirationLabel: 'exp',

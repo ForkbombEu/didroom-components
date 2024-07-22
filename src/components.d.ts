@@ -42,7 +42,6 @@ export namespace Components {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
         "expirationLabel": string;
         "issuedByLabel": string;
@@ -443,7 +442,6 @@ declare namespace LocalJSX {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
         "expirationLabel"?: string;
         "issuedByLabel"?: string;

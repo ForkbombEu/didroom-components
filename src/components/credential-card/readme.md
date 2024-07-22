@@ -9,7 +9,6 @@
 
 | Property          | Attribute          | Description | Type      | Default     |
 | ----------------- | ------------------ | ----------- | --------- | ----------- |
-| `description`     | `description`      |             | `string`  | `undefined` |
 | `expirationDate`  | `expiration-date`  |             | `string`  | `undefined` |
 | `expirationLabel` | `expiration-label` |             | `string`  | `undefined` |
 | `issuedByLabel`   | `issued-by-label`  |             | `string`  | `undefined` |
@@ -23,14 +22,14 @@
 
 ### Depends on
 
-- [d-heading](../heading)
 - [d-avatar](../avatar)
+- [d-text](../text)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-credential-card --> d-heading
   d-credential-card --> d-avatar
+  d-credential-card --> d-text
   style d-credential-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

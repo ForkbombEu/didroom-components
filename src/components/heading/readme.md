@@ -17,7 +17,6 @@
 
 ### Used by
 
- - [d-credential-card](../credential-card)
  - [d-empty-state](../empty-state)
  - [d-loading](../d-loading)
  - [d-logo](../logo)
@@ -28,7 +27,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  d-credential-card --> d-heading
   d-empty-state --> d-heading
   d-loading --> d-heading
   d-logo --> d-heading
