@@ -42,27 +42,29 @@ export class DCredentialCard {
   @Prop() verified?: boolean = false;
   @Prop() description?: string;
   @Prop() expirationDate?: string;
+  @Prop() issuedByLabel: string;
+  @Prop() expirationLabel: string;
 
   render() {
     return (
       <Host>
         <div class="between">
-          <div class="info">
-            <div class="heading">
-              <d-avatar name={this.name} src={this.logoSrc}></d-avatar>
-              <d-heading class="name line-clamp-2">{this.name}</d-heading>
+          <div class="inline-flex flex-col gap-3 min-h-32">
+            <d-heading class="name line-clamp-2">{this.name}</d-heading>
+            <div class="flex gap-5 items-start">
+              <d-avatar name={this.name} src={this.logoSrc} size="l" shape="square"></d-avatar>
+              <span class="flex text-xl not-italic font-medium leading-[20.5px] tracking-[-0.5px]">{this.description}</span>
             </div>
-            <span class="description">{this.description}</span>
           </div>
           {this.verified && verifiedUser}
         </div>
         <div class="between">
           <div class="labeled-text">
-            <span class="label">Issued by</span>
+            <span class="label">{this.issuedByLabel}</span>
             <span>{this.issuer}</span>
           </div>
           <div class="labeled-text items-end">
-            <span class="label">Exp</span>
+            <span class="label">{this.expirationLabel}</span>
             <span>{this.expirationDate}</span>
           </div>
         </div>

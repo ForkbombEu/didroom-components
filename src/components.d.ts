@@ -42,6 +42,8 @@ export namespace Components {
     interface DCredentialCard {
         "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel": string;
+        "issuedByLabel": string;
         "issuer": string;
         "logoSrc"?: string;
         "name": string;
@@ -431,6 +433,8 @@ declare namespace LocalJSX {
     interface DCredentialCard {
         "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel"?: string;
+        "issuedByLabel"?: string;
         "issuer"?: string;
         "logoSrc"?: string;
         "name"?: string;
