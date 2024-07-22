@@ -11,6 +11,8 @@ const meta = {
     issued-by-label="${args.issuedByLabel}"
     expiration-label="${args.expirationLabel}"
     verified="${args.verified}">
+    <d-badge>address</d-badge>
+    <d-badge>email</d-badge>
     </d-credential-card>`,
 } satisfies Meta<DCredentialCard>;
 

@@ -44,36 +44,41 @@ export class DCredentialCard {
   @Prop() expirationLabel: string;
 
   //random background
-  private getRandomBg = ()=> {
+  private getRandomBg = () => {
     const bg = ['bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7', 'bg8'];
     return bg[Math.floor(Math.random() * bg.length)];
-  }
+  };
 
   render() {
     return (
       <Host>
         <div class={`main ${this.getRandomBg()}`}>
-        <div class="w-full flex justify-between items-start">
-          <div class="inline-flex flex-col gap-3">
-            <div class="flex gap-2 items-start">
-              <d-avatar name={this.name} src={this.logoSrc} size="s"></d-avatar>
-              <d-text size="xl" class="not-italic font-normal leading-7">
-                {this.name}
-              </d-text>
+          <div class="w-full flex flex-col gap-2">
+            <div class="w-full flex justify-between items-start">
+              <div class="inline-flex flex-col gap-3">
+                <div class="flex gap-2 items-start">
+                  <d-avatar name={this.name} src={this.logoSrc} size="s"></d-avatar>
+                  <d-text size="xl" class="not-italic font-normal leading-7">
+                    {this.name}
+                  </d-text>
+                </div>
+              </div>
+              {this.verified && verifiedUser}
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <slot></slot>
             </div>
           </div>
-          {this.verified && verifiedUser}
-        </div>
-        <div class="w-full flex justify-between items-start ">
-          <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px]">
-            <span>{this.issuedByLabel}</span>
-            <span>{this.issuer}</span>
+          <div class="w-full flex justify-between items-start">
+            <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px]">
+              <span>{this.issuedByLabel}</span>
+              <span>{this.issuer}</span>
+            </div>
+            <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px] items-end">
+              <span>{this.expirationLabel}</span>
+              <span>{this.expirationDate}</span>
+            </div>
           </div>
-          <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px] items-end">
-            <span>{this.expirationLabel}</span>
-            <span>{this.expirationDate}</span>
-          </div>
-        </div>
         </div>
       </Host>
     );
