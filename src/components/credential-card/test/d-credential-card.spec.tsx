@@ -10,27 +10,29 @@ describe('d-credential-card', () => {
     expect(page.root).toEqualHtml(`
       <d-credential-card>
         <mock:shadow-root>
-          <div class="between">
-            <div class="info">
-              <div class="heading">
-                <d-avatar></d-avatar>
-                <d-heading class="line-clamp-2 name"></d-heading>
+          <div class="bg6 main">
+            <div class="flex flex-col gap-2 w-full">
+              <div class="flex items-start justify-between w-full">
+                <div class="flex-col gap-3 inline-flex">
+                  <div class="flex gap-2 items-start">
+                    <d-avatar size="s"></d-avatar>
+                    <d-text class="font-normal leading-7 not-italic" size="xl"></d-text>
+                  </div>
+                </div>
               </div>
-              <span class="description"></span>
+              <div class="flex flex-wrap gap-2">
+                <slot></slot>
+              </div>
             </div>
-          </div>
-          <div class="between">
-            <div class="labeled-text">
-              <span class="label">
-                Issued by
-              </span>
-              <span></span>
-            </div>
-            <div class="items-end labeled-text">
-              <span class="label">
-                Exp
-              </span>
-              <span></span>
+            <div class="flex items-start justify-between w-full">
+              <div class="flex flex-col font-normal gap-0.5 leading-[130%] not-italic text-xs tracking-[-0.5px] whitespace-nowrap">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="flex flex-col font-normal gap-0.5 items-end leading-[130%] not-italic text-xs tracking-[-0.5px] whitespace-nowrap">
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
         </mock:shadow-root>
