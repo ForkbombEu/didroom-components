@@ -57,7 +57,7 @@ export class DCredentialCard {
             <div class="w-full flex justify-between items-start">
               <div class="inline-flex flex-col gap-3">
                 <div class="flex gap-2 items-start">
-                  <d-avatar name={this.name} src={this.logoSrc} size="s"></d-avatar>
+                  <d-avatar name={this.name} src={this.logoSrc} size="s" shape="square"></d-avatar>
                   <d-text size="xl" class="not-italic font-normal leading-7">
                     {this.name}
                   </d-text>
