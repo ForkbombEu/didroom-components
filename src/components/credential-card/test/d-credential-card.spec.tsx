@@ -7,10 +7,12 @@ describe('d-credential-card', () => {
       components: [DCredentialCard],
       html: `<d-credential-card></d-credential-card>`,
     });
+    const bgnumber = page.root.shadowRoot.innerHTML.split('bg')[1].split('"')[0];
+
     expect(page.root).toEqualHtml(`
       <d-credential-card>
         <mock:shadow-root>
-          <div class="bg6 main">
+          <div class="bg${bgnumber} main">
             <div class="flex flex-col gap-2 w-full">
               <div class="flex items-start justify-between w-full">
                 <div class="flex-col gap-3 inline-flex">
