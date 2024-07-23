@@ -26,6 +26,8 @@ export namespace Components {
         "size"?: Size;
         "src"?: string;
     }
+    interface DBadge {
+    }
     interface DButton {
         "buttonType": string;
         "clear"?: boolean;
@@ -40,8 +42,9 @@ export namespace Components {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel": string;
+        "issuedByLabel": string;
         "issuer": string;
         "logoSrc"?: string;
         "name": string;
@@ -181,6 +184,12 @@ declare global {
     var HTMLDAvatarElement: {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
+    };
+    interface HTMLDBadgeElement extends Components.DBadge, HTMLStencilElement {
+    }
+    var HTMLDBadgeElement: {
+        prototype: HTMLDBadgeElement;
+        new (): HTMLDBadgeElement;
     };
     interface HTMLDButtonElementEventMap {
         "dFocus": void;
@@ -370,6 +379,7 @@ declare global {
         "d-activity-card": HTMLDActivityCardElement;
         "d-app-details": HTMLDAppDetailsElement;
         "d-avatar": HTMLDAvatarElement;
+        "d-badge": HTMLDBadgeElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
         "d-credential-card": HTMLDCredentialCardElement;
@@ -414,6 +424,8 @@ declare namespace LocalJSX {
         "size"?: Size;
         "src"?: string;
     }
+    interface DBadge {
+    }
     interface DButton {
         "buttonType"?: string;
         "clear"?: boolean;
@@ -430,8 +442,9 @@ declare namespace LocalJSX {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel"?: string;
+        "issuedByLabel"?: string;
         "issuer"?: string;
         "logoSrc"?: string;
         "name"?: string;
@@ -544,6 +557,7 @@ declare namespace LocalJSX {
         "d-activity-card": DActivityCard;
         "d-app-details": DAppDetails;
         "d-avatar": DAvatar;
+        "d-badge": DBadge;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
         "d-credential-card": DCredentialCard;
@@ -576,6 +590,7 @@ declare module "@stencil/core" {
             "d-activity-card": LocalJSX.DActivityCard & JSXBase.HTMLAttributes<HTMLDActivityCardElement>;
             "d-app-details": LocalJSX.DAppDetails & JSXBase.HTMLAttributes<HTMLDAppDetailsElement>;
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-badge": LocalJSX.DBadge & JSXBase.HTMLAttributes<HTMLDBadgeElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
