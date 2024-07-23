@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.26.1](https://github.com/ForkbombEu/didroom-components/compare/v1.26.0...v1.26.1) (2024-07-23)
+
+
+### Bug Fixes
+
+* add click event on empty state component ([#119](https://github.com/ForkbombEu/didroom-components/issues/119)) ([fe2dc1f](https://github.com/ForkbombEu/didroom-components/commit/fe2dc1f4240271e853040d7b3fcf11d17824264f))
+* border space under page description ([#122](https://github.com/ForkbombEu/didroom-components/issues/122)) ([6a519e7](https://github.com/ForkbombEu/didroom-components/commit/6a519e73346de9c5934e23ebde98cf8675457d95))
+* credential-service restyle ([#121](https://github.com/ForkbombEu/didroom-components/issues/121)) ([c1cf8c7](https://github.com/ForkbombEu/didroom-components/commit/c1cf8c7857ec381ee37b9848321b0f853b65f4f2))
+* give some space under feedback component ([#123](https://github.com/ForkbombEu/didroom-components/issues/123)) ([90eaad1](https://github.com/ForkbombEu/didroom-components/commit/90eaad1b17a45ab649c0862e7bce9a62d2a6a8ae))
+* update credential card style ([#124](https://github.com/ForkbombEu/didroom-components/issues/124)) ([73c0cb9](https://github.com/ForkbombEu/didroom-components/commit/73c0cb9e764e5ccf1a9afa5ff17c0046fbb5f7ac))
+
+## [1.26.0](https://github.com/ForkbombEu/didroom-components/compare/v1.25.0...v1.26.0) (2024-07-16)
+
+
+### Features
+
+* add loading page component ([#117](https://github.com/ForkbombEu/didroom-components/issues/117)) ([f8847e8](https://github.com/ForkbombEu/didroom-components/commit/f8847e8c7880e226fcca0b7ff4446e455d04e00a))
+* app details ([#116](https://github.com/ForkbombEu/didroom-components/issues/116)) ([3f55893](https://github.com/ForkbombEu/didroom-components/commit/3f558939096ebb503b2c1cc9efc451b45a901d2e))
+
 ## [1.25.0](https://github.com/ForkbombEu/didroom-components/compare/v1.24.1...v1.25.0) (2024-07-10)
 
 

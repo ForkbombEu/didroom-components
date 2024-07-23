@@ -3,11 +3,13 @@ import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
   title: 'Design System/Molecule/EmptyState',
-  render: args =>
+  render: (args, parameters) =>
     `<d-empty-state 
     heading="${args.heading}" 
     text="${args.text}"
-    button-text="${args.buttonText}"
+	${args.buttonText && `button-text="${args.buttonText}"`}	
+	${args.href && `href="${args.href}"`}
+	${parameters.onClick ? `onButtonClick="${parameters.onClick}"` : ''}
     >
     <svg
 						width="255"
@@ -57,13 +59,27 @@ export const Default: Story = {
   args: {
     heading: 'Nothing in your wallet',
     text: 'Start getting your first credential',
-    buttonText: 'Go to Home',
-    href: '#',
   },
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/Uxc5APvp9BsY9r71rF8HhQ/DIDWallet-UI-Trial?node-id=100%3A1839&mode=dev',
     },
+  },
+};
+
+export const WithButton: Story = {
+  args: {
+    heading: 'Nothing in your wallet',
+    text: 'Start getting your first credential',
+    buttonText: 'Go to home',
+    href: '#',
+  },
+};
+
+export const WithButtonEvent: Story = {
+  args: { ...WithButton.args, href: undefined },
+  parameters: {
+    onClick: () => console.log('Click'),
   },
 };

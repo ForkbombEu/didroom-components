@@ -11,9 +11,9 @@ export class DPageDescription {
 
   render() {
     return (
-      <Host>
-        <d-heading size="s">{this.title}</d-heading>
-        <d-text size="l">
+      <Host class="pb-4">
+        <d-heading size="xs" class="font-semibold">{this.title}</d-heading>
+        <d-text size="m">
           <p>{this.description}</p>
         </d-text>
       </Host>

@@ -16,11 +16,17 @@ export namespace Components {
         "name": string;
         "read": boolean;
     }
+    interface DAppDetails {
+        "developedBy": string;
+        "version": string;
+    }
     interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DBadge {
     }
     interface DButton {
         "buttonType": string;
@@ -36,8 +42,9 @@ export namespace Components {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel": string;
+        "issuedByLabel": string;
         "issuer": string;
         "logoSrc"?: string;
         "name": string;
@@ -53,6 +60,7 @@ export namespace Components {
         "description"?: string;
         "href"?: string;
         "issuer": string;
+        "issuerLabel": string;
         "logoSrc"?: string;
         "name": string;
     }
@@ -101,6 +109,10 @@ export namespace Components {
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
+    interface DLoading {
+        "loading": boolean;
+        "message": string;
+    }
     interface DLogo {
     }
     interface DOrganizations {
@@ -142,6 +154,10 @@ export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
 }
+export interface DEmptyStateCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDEmptyStateElement;
+}
 export interface DFeedbackCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDFeedbackElement;
@@ -157,11 +173,23 @@ declare global {
         prototype: HTMLDActivityCardElement;
         new (): HTMLDActivityCardElement;
     };
+    interface HTMLDAppDetailsElement extends Components.DAppDetails, HTMLStencilElement {
+    }
+    var HTMLDAppDetailsElement: {
+        prototype: HTMLDAppDetailsElement;
+        new (): HTMLDAppDetailsElement;
+    };
     interface HTMLDAvatarElement extends Components.DAvatar, HTMLStencilElement {
     }
     var HTMLDAvatarElement: {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
+    };
+    interface HTMLDBadgeElement extends Components.DBadge, HTMLStencilElement {
+    }
+    var HTMLDBadgeElement: {
+        prototype: HTMLDBadgeElement;
+        new (): HTMLDBadgeElement;
     };
     interface HTMLDButtonElementEventMap {
         "dFocus": void;
@@ -217,7 +245,18 @@ declare global {
         prototype: HTMLDDidBoxElement;
         new (): HTMLDDidBoxElement;
     };
+    interface HTMLDEmptyStateElementEventMap {
+        "buttonClick": void;
+    }
     interface HTMLDEmptyStateElement extends Components.DEmptyState, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDEmptyStateElementEventMap>(type: K, listener: (this: HTMLDEmptyStateElement, ev: DEmptyStateCustomEvent<HTMLDEmptyStateElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDEmptyStateElementEventMap>(type: K, listener: (this: HTMLDEmptyStateElement, ev: DEmptyStateCustomEvent<HTMLDEmptyStateElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDEmptyStateElement: {
         prototype: HTMLDEmptyStateElement;
@@ -276,6 +315,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
+    }
+    var HTMLDLoadingElement: {
+        prototype: HTMLDLoadingElement;
+        new (): HTMLDLoadingElement;
+    };
     interface HTMLDLogoElement extends Components.DLogo, HTMLStencilElement {
     }
     var HTMLDLogoElement: {
@@ -332,7 +377,9 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "d-activity-card": HTMLDActivityCardElement;
+        "d-app-details": HTMLDAppDetailsElement;
         "d-avatar": HTMLDAvatarElement;
+        "d-badge": HTMLDBadgeElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
         "d-credential-card": HTMLDCredentialCardElement;
@@ -346,6 +393,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
         "d-page-description": HTMLDPageDescriptionElement;
@@ -366,11 +414,17 @@ declare namespace LocalJSX {
         "name"?: string;
         "read"?: boolean;
     }
+    interface DAppDetails {
+        "developedBy"?: string;
+        "version"?: string;
+    }
     interface DAvatar {
         "name"?: string;
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DBadge {
     }
     interface DButton {
         "buttonType"?: string;
@@ -388,8 +442,9 @@ declare namespace LocalJSX {
     interface DButtonsGroup {
     }
     interface DCredentialCard {
-        "description"?: string;
         "expirationDate"?: string;
+        "expirationLabel"?: string;
+        "issuedByLabel"?: string;
         "issuer"?: string;
         "logoSrc"?: string;
         "name"?: string;
@@ -405,6 +460,7 @@ declare namespace LocalJSX {
         "description"?: string;
         "href"?: string;
         "issuer"?: string;
+        "issuerLabel"?: string;
         "logoSrc"?: string;
         "name"?: string;
     }
@@ -420,6 +476,7 @@ declare namespace LocalJSX {
         "buttonText"?: string | undefined;
         "heading"?: string;
         "href"?: string | undefined;
+        "onButtonClick"?: (event: DEmptyStateCustomEvent<void>) => void;
         "text"?: string;
     }
     interface DFeedback {
@@ -455,6 +512,10 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
+    }
+    interface DLoading {
+        "loading"?: boolean;
+        "message"?: string;
     }
     interface DLogo {
     }
@@ -494,7 +555,9 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "d-activity-card": DActivityCard;
+        "d-app-details": DAppDetails;
         "d-avatar": DAvatar;
+        "d-badge": DBadge;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
         "d-credential-card": DCredentialCard;
@@ -508,6 +571,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
         "d-page-description": DPageDescription;
@@ -524,7 +588,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "d-activity-card": LocalJSX.DActivityCard & JSXBase.HTMLAttributes<HTMLDActivityCardElement>;
+            "d-app-details": LocalJSX.DAppDetails & JSXBase.HTMLAttributes<HTMLDAppDetailsElement>;
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-badge": LocalJSX.DBadge & JSXBase.HTMLAttributes<HTMLDBadgeElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
@@ -538,6 +604,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;

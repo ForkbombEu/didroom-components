@@ -18,6 +18,8 @@
 ### Used by
 
  - [d-activity-card](../activity-card)
+ - [d-app-details](../app-details)
+ - [d-credential-card](../credential-card)
  - [d-credential-service](../credential-service)
  - [d-did-box](../d-did-box)
  - [d-empty-state](../empty-state)
@@ -31,6 +33,8 @@
 ```mermaid
 graph TD;
   d-activity-card --> d-text
+  d-app-details --> d-text
+  d-credential-card --> d-text
   d-credential-service --> d-text
   d-did-box --> d-text
   d-empty-state --> d-text

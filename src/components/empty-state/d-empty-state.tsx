@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, EventEmitter, Host, Prop, h, Event } from '@stencil/core';
 
 @Component({
   tag: 'd-empty-state',
@@ -10,6 +10,11 @@ export class DEmptyState {
   @Prop() text: string;
   @Prop() buttonText: string | undefined = undefined;
   @Prop() href: string | undefined = undefined;
+  @Event() buttonClick: EventEmitter<void>;
+
+  private onClick = () => {
+    this.buttonClick.emit();
+  };
 
   render() {
     return (
@@ -25,8 +30,8 @@ export class DEmptyState {
             </d-text>
           </div>
           {this.buttonText && (
-            <d-button expand color="outline" href={this.href} class="w-full">
-              {this.buttonText}{' '}
+            <d-button expand color="outline" href={this.href} onClick={this.onClick} class="w-full">
+              {this.buttonText}
               <div slot="end">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" class="w-6 h-6" fill="none"></path>
