@@ -18,7 +18,7 @@ export class DDidBox {
     return (
       <Host>
         <d-text size="s" class="text-gray">
-          <a class="flex" href={`https://explorer.did.dyne.org/details/did:${fullId}`}>
+          <a class="flex" href={`https://explorer.did.dyne.org/details/did:dyne:${fullId}`}>
             <d-text size="s" class="w-full flex justify-center flex-wrap space-y-0.5">
               <span class="w-5 h-5 flex mr-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

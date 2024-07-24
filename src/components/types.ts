@@ -1,4 +1,4 @@
-const SizeOptions = 'xs s m l xl'.split(' ');
+const SizeOptions = 'xs s m l xl 2xl'.split(' ');
 export const SizeArgTypes = {
   defaultValue: 'm',
   options: SizeOptions,

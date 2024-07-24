@@ -17,7 +17,7 @@ describe('d-credential-card', () => {
               <div class="flex items-start justify-between w-full">
                 <div class="flex-col gap-3 inline-flex">
                   <div class="flex gap-2 items-start">
-                    <d-avatar size="s"></d-avatar>
+                    <d-avatar shape="square" size="s"></d-avatar>
                     <d-text class="font-normal leading-7 not-italic" size="xl"></d-text>
                   </div>
                 </div>
