@@ -18,7 +18,7 @@ export class DOrganizations {
         <d-heading size="xs" class="w-full block text-center">
           {this.heading}
         </d-heading>
-        <div class="mx-auto mt-8 flex w-11/12 flex-wrap items-center justify-between gap-2">
+        <div class="mx-auto mt-8 flex w-11/12 flex-wrap items-center gap-4 space-x-6">
           <slot />
         </div>
       </Host>
