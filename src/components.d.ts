@@ -60,7 +60,6 @@ export namespace Components {
         "description"?: string;
         "href"?: string;
         "issuer": string;
-        "issuerLabel": string;
         "logoSrc"?: string;
         "name": string;
     }
@@ -460,7 +459,6 @@ declare namespace LocalJSX {
         "description"?: string;
         "href"?: string;
         "issuer"?: string;
-        "issuerLabel"?: string;
         "logoSrc"?: string;
         "name"?: string;
     }
