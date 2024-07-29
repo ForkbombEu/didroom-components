@@ -9,8 +9,9 @@ const meta = {
       logo="${args.logo}" 
       description="${args.description}" 
       date="${args.date}" 
-      type="${args.type}" 
-    ${args.message && `message="${args.message}"`}>
+    ${args.message && `message="${args.message}"`}
+    ${args.read && `read="${args.read}"`}
+    >
       <d-button size="small" color="accent">
         action 1
       </d-button>
@@ -30,6 +31,16 @@ export const Default: Story = {
     message: 'Proof of humanity is expired',
     description: 'Your proof of humanity has expired. Please renew it if you need it.',
     date: '1 day ago',
-    type: 'error',
+  },
+};
+
+export const Read: Story = {
+  args: {
+    name: 'Proof of humanity is expired',
+    logo: 'https://via.placeholder.com/150',
+    message: 'Proof of humanity is expired',
+    description: 'Your proof of humanity has expired. Please renew it if you need it.',
+    date: '1 day ago',
+    read: true,
   },
 };

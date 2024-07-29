@@ -14,7 +14,7 @@ export namespace Components {
         "logo": string;
         "message": string;
         "name": string;
-        "type": 'error' | 'warning' | 'success';
+        "read": boolean;
     }
     interface DAppDetails {
         "developedBy": string;
@@ -411,7 +411,7 @@ declare namespace LocalJSX {
         "logo"?: string;
         "message"?: string;
         "name"?: string;
-        "type"?: 'error' | 'warning' | 'success';
+        "read"?: boolean;
     }
     interface DAppDetails {
         "developedBy"?: string;
