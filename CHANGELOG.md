@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.26.3](https://github.com/ForkbombEu/didroom-components/compare/v1.26.2...v1.26.3) (2024-07-29)
+
+
+### Bug Fixes
+
+* readed activity cards ([#104](https://github.com/ForkbombEu/didroom-components/issues/104)) ([0e3bb42](https://github.com/ForkbombEu/didroom-components/commit/0e3bb4278f1d2bc0db4fdb3a57bed37650c5075b))
+* remove in credential service pointless label ([#127](https://github.com/ForkbombEu/didroom-components/issues/127)) ([895144c](https://github.com/ForkbombEu/didroom-components/commit/895144cc08d423681fd985d60e0a15c17cfd2b45))
+
 ## [1.26.2](https://github.com/ForkbombEu/didroom-components/compare/v1.26.1...v1.26.2) (2024-07-24)
 
 
