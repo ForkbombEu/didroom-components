@@ -16,7 +16,6 @@ describe('d-credential-service', () => {
               <div class="flex flex-col grow h-full justify-between min-h-[60px]">
                 <d-text size="l"></d-text>
                 <d-text class="!text-on-alt">
-                  Issuer_L:
                 </d-text>
               </div>
             </div>
