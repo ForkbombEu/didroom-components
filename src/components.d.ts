@@ -110,6 +110,7 @@ export namespace Components {
         "value": string;
     }
     interface DList {
+        "gap": 2 | 4 | 8;
     }
     interface DLoading {
         "loading": boolean;
@@ -523,6 +524,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface DList {
+        "gap"?: 2 | 4 | 8;
     }
     interface DLoading {
         "loading"?: boolean;
