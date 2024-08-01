@@ -62,6 +62,7 @@ export namespace Components {
         "issuer": string;
         "logoSrc"?: string;
         "name": string;
+        "organization"?: string;
     }
     interface DDefinition {
         "definition": string;
@@ -461,6 +462,7 @@ declare namespace LocalJSX {
         "issuer"?: string;
         "logoSrc"?: string;
         "name"?: string;
+        "organization"?: string;
     }
     interface DDefinition {
         "definition"?: string;

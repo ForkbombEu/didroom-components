@@ -1,5 +1,5 @@
 :host {
-  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-surface rounded-full shrink-0;
+  @apply inline-flex items-center justify-center relative overflow-hidden h-10 w-10 bg-accent rounded-full shrink-0;
 }
 
 :host span {
