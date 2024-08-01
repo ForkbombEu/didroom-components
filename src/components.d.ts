@@ -109,6 +109,8 @@ export namespace Components {
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
+    interface DList {
+    }
     interface DLoading {
         "loading": boolean;
         "message": string;
@@ -315,6 +317,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDListElement extends Components.DList, HTMLStencilElement {
+    }
+    var HTMLDListElement: {
+        prototype: HTMLDListElement;
+        new (): HTMLDListElement;
+    };
     interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
     }
     var HTMLDLoadingElement: {
@@ -393,6 +401,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-list": HTMLDListElement;
         "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
@@ -513,6 +522,8 @@ declare namespace LocalJSX {
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
     }
+    interface DList {
+    }
     interface DLoading {
         "loading"?: boolean;
         "message"?: string;
@@ -571,6 +582,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-list": DList;
         "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
@@ -604,6 +616,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
             "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;

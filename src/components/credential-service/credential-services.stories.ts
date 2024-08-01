@@ -3,7 +3,7 @@ import type { Components } from '../../components.js';
 
 const meta = {
   title: 'Design System/Molecule/CredentialService',
-  render: args => `<d-credential-service name="${args.name}" issuer="${args.issuer}" description="${args.description}" href="${args.href}"></didroom-avatar>`,
+  render: args => `<d-credential-service name="${args.name}" issuer="${args.issuer}" description="${args.description}" href="${args.href}"></d-credential-service>`,
 } satisfies Meta<Components.DCredentialService>;
 
 export default meta;
