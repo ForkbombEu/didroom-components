@@ -10,7 +10,9 @@ describe('d-list', () => {
     expect(page.root).toEqualHtml(`
       <d-list>
         <mock:shadow-root>
-          <slot></slot>
+          <div class="flex flex-col gap-2">
+            <slot></slot>
+          </div>
         </mock:shadow-root>
       </d-list>
     `);
