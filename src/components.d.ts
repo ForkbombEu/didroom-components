@@ -62,6 +62,7 @@ export namespace Components {
         "issuer": string;
         "logoSrc"?: string;
         "name": string;
+        "organization"?: string;
     }
     interface DDefinition {
         "definition": string;
@@ -107,6 +108,9 @@ export namespace Components {
         "placeholder": string;
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
+    }
+    interface DList {
+        "gap": 2 | 4 | 8;
     }
     interface DLoading {
         "loading": boolean;
@@ -314,6 +318,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDListElement extends Components.DList, HTMLStencilElement {
+    }
+    var HTMLDListElement: {
+        prototype: HTMLDListElement;
+        new (): HTMLDListElement;
+    };
     interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
     }
     var HTMLDLoadingElement: {
@@ -392,6 +402,7 @@ declare global {
         "d-heading": HTMLDHeadingElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-list": HTMLDListElement;
         "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
@@ -461,6 +472,7 @@ declare namespace LocalJSX {
         "issuer"?: string;
         "logoSrc"?: string;
         "name"?: string;
+        "organization"?: string;
     }
     interface DDefinition {
         "definition"?: string;
@@ -510,6 +522,9 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
+    }
+    interface DList {
+        "gap"?: 2 | 4 | 8;
     }
     interface DLoading {
         "loading"?: boolean;
@@ -569,6 +584,7 @@ declare namespace LocalJSX {
         "d-heading": DHeading;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-list": DList;
         "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
@@ -602,6 +618,7 @@ declare module "@stencil/core" {
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
             "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;

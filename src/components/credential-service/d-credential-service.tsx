@@ -9,6 +9,7 @@ export class DCredentialService {
   @Prop() name: string;
   @Prop() issuer: string;
   @Prop() logoSrc?: string;
+  @Prop() organization?: string;
   @Prop() description?: string;
   @Prop({ reflect: true }) href?: string;
 
@@ -19,6 +20,7 @@ export class DCredentialService {
           <d-avatar name={this.name} src={this.logoSrc} size="l" shape="square"></d-avatar>
           <div class="h-full min-h-[60px] flex flex-col grow justify-between">
             <d-text size="l">{this.name}</d-text>
+            <d-text size="s"  class="!text-on-alt">{this.organization}</d-text>
             <d-text class="!text-on-alt">{this.issuer}</d-text>
           </div>
         </div>

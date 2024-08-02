@@ -11,7 +11,6 @@ export class Avatar {
   @Prop({ reflect: true }) size?: Size = 'm';
   @Prop({ reflect: true }) shape?: Shape = 'round';
   @Prop({ reflect: true }) src?: string;
-
   @State() error: boolean = false;
 
   render() {
