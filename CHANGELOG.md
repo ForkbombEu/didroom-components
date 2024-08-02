@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.4](https://github.com/ForkbombEu/didroom-components/compare/v1.26.3...v1.26.4) (2024-08-02)
+
+
+### Bug Fixes
+
+* several ui fixies ([#129](https://github.com/ForkbombEu/didroom-components/issues/129)) ([43f37dc](https://github.com/ForkbombEu/didroom-components/commit/43f37dc1453f3991efc5b34420820ba344af4896))
+
 ## [1.26.3](https://github.com/ForkbombEu/didroom-components/compare/v1.26.2...v1.26.3) (2024-07-29)
 
 
