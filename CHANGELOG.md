@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.5](https://github.com/ForkbombEu/didroom-components/compare/v1.26.4...v1.26.5) (2024-08-05)
+
+
+### Bug Fixes
+
+* header allignment ([#131](https://github.com/ForkbombEu/didroom-components/issues/131)) ([3061e0d](https://github.com/ForkbombEu/didroom-components/commit/3061e0dcb692db846a5f7aac28fe0b45db975452))
+
 ## [1.26.4](https://github.com/ForkbombEu/didroom-components/compare/v1.26.3...v1.26.4) (2024-08-02)
 
 
