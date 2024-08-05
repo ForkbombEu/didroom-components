@@ -22,6 +22,16 @@ jobs:
         with:
           node-version: 20
           pnpm-version: 8
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer/chrome
+          key: ${{ runner.os }}-puppeteer-chromium-${{ pnpm ls puppeteer --json | jq '.[0].version' -r }}
+          restore-keys: ${{ runner.os }}-puppeteer-chromium-
+      - name: install chromium
+        run: |
+          # very bad, but I do not found any other way to run
+          # a postinstall script of an already installed package
+          pnpm -C node_modules/.pnpm/puppeteer@*_typescript@*/node_modules/puppeteer postinstall
       - name: 🧪 Run the tests
         run: pnpm run test
 
