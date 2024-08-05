@@ -14,7 +14,9 @@ describe('d-header', () => {
            <ion-header class="shadow-none" translucent="">
              <ion-toolbar>
                <ion-title class="text-center uppercase">
-                 <slot></slot>
+                <span>
+                  <slot></slot>
+                </span>
                </ion-title>
              </ion-toolbar>
            </ion-header>

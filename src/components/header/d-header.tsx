@@ -57,7 +57,14 @@ export class DHeader {
                 </ion-buttons>
               )}
               <ion-title class="text-center uppercase">
-                <slot />
+                <span
+                  class={{
+                    'pl-12': this.settings,
+                    'pr-14': this.backButton
+                  }}
+                >
+                  <slot />
+                </span>
               </ion-title>
               {this.settings && (
                 <ion-buttons slot="end">
