@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
           pnpm-version: 8
-      - run: echo "PUPPETEER_VERSION=$(pnpm ls puppeteer --json | jq '.[0].version' -r)" >> $GITHUB_ENV
+      - run: echo "PUPPETEER_VERSION=$(pnpm ls puppeteer --json | jq '.[0].devDependencies.puppeteer.version' -r)" >> $GITHUB_ENV
         shell: bash
       - uses: actions/cache@v4
         with:
