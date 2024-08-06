@@ -9,7 +9,7 @@
 <p align="center">
    <img src="https://github.com/ForkbombEu/DIDroom/raw/main/images/DIDroom_logo.png" width="370">
 </p>
-Standard web components with efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser and mobile supporting the Custom Elements v1 spec
+Standard web components with efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser and mobile supporting the Custom Elements v1 spec.
 
 
 ---
@@ -66,7 +66,7 @@ please refer to [./docs/CHANGE_THEME.md](./docs/CHANGE_THEME.md)
 
 **[🌱 Ecosystem](https://forkbomb.solutions/solution/didroom/)** - W3C-DID Dyne, Signroom, Zenroom, Didroom
 
-**[🚩 Issues](../../issues)** - Bugs end errors you encounter using {project_name}.
+**[🚩 Issues](../../issues)** - Bugs end errors you encounter using didroom-components.
 
 **[[] Matrix](https://socials.dyne.org/matrix)** - Hanging out with the community.
 
