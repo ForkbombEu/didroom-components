@@ -82,7 +82,7 @@ please refer to [./docs/CHANGE_THEME.md](./docs/CHANGE_THEME.md)
 
 Copyleft 🄯 2024 by [Forkbomb](https://www.forkbomb.eu) BV, Amsterdam
 
-Designed by Micol Salomone and Ayse Mete coded by Puria Nafisi Azizi
+Designed by Micol Salomone and Ayse Mete coded by Ennio Donato, Puria Nafisi Azizi and Matteo Cristino
 
 **[🔝 back to top](#toc)**
 
