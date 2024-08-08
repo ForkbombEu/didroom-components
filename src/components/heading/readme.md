@@ -18,9 +18,9 @@
 ### Used by
 
  - [d-empty-state](../empty-state)
- - [d-loading](../d-loading)
+ - [d-loading](../loading)
  - [d-logo](../logo)
- - [d-organizations](../d-organizations)
+ - [d-organizations](../organizations)
  - [d-page-description](../page-description)
  - [d-session-card](../session-card)
 

@@ -93,6 +93,9 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DIllustration {
+        "background": string;
+    }
     interface DInfoLed {
         "type": 'success' | 'warning' | 'error';
     }
@@ -294,6 +297,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDIllustrationElement extends Components.DIllustration, HTMLStencilElement {
+    }
+    var HTMLDIllustrationElement: {
+        prototype: HTMLDIllustrationElement;
+        new (): HTMLDIllustrationElement;
+    };
     interface HTMLDInfoLedElement extends Components.DInfoLed, HTMLStencilElement {
     }
     var HTMLDInfoLedElement: {
@@ -400,6 +409,7 @@ declare global {
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
+        "d-illustration": HTMLDIllustrationElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-list": HTMLDListElement;
@@ -505,6 +515,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DIllustration {
+        "background"?: string;
+    }
     interface DInfoLed {
         "type"?: 'success' | 'warning' | 'error';
     }
@@ -582,6 +595,7 @@ declare namespace LocalJSX {
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
+        "d-illustration": DIllustration;
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-list": DList;
@@ -616,6 +630,7 @@ declare module "@stencil/core" {
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-illustration": LocalJSX.DIllustration & JSXBase.HTMLAttributes<HTMLDIllustrationElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
