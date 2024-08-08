@@ -93,6 +93,9 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DIllustration {
+        "background": string;
+    }
     interface DInfoLed {
         "type": 'success' | 'warning' | 'error';
     }
@@ -133,6 +136,12 @@ export namespace Components {
         "date": string;
         "sid": string;
         "success": boolean;
+    }
+    interface DSwipablePage {
+        "background": string;
+        "description": string;
+        "subtitle"?: string;
+        "title": string;
     }
     interface DTabButton {
         "active": boolean;
@@ -294,6 +303,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDIllustrationElement extends Components.DIllustration, HTMLStencilElement {
+    }
+    var HTMLDIllustrationElement: {
+        prototype: HTMLDIllustrationElement;
+        new (): HTMLDIllustrationElement;
+    };
     interface HTMLDInfoLedElement extends Components.DInfoLed, HTMLStencilElement {
     }
     var HTMLDInfoLedElement: {
@@ -360,6 +375,12 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDSwipablePageElement extends Components.DSwipablePage, HTMLStencilElement {
+    }
+    var HTMLDSwipablePageElement: {
+        prototype: HTMLDSwipablePageElement;
+        new (): HTMLDSwipablePageElement;
+    };
     interface HTMLDTabButtonElement extends Components.DTabButton, HTMLStencilElement {
     }
     var HTMLDTabButtonElement: {
@@ -400,6 +421,7 @@ declare global {
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
+        "d-illustration": HTMLDIllustrationElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-list": HTMLDListElement;
@@ -409,6 +431,7 @@ declare global {
         "d-page-description": HTMLDPageDescriptionElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
+        "d-swipable-page": HTMLDSwipablePageElement;
         "d-tab-button": HTMLDTabButtonElement;
         "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
@@ -505,6 +528,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DIllustration {
+        "background"?: string;
+    }
     interface DInfoLed {
         "type"?: 'success' | 'warning' | 'error';
     }
@@ -548,6 +574,12 @@ declare namespace LocalJSX {
         "sid"?: string;
         "success"?: boolean;
     }
+    interface DSwipablePage {
+        "background"?: string;
+        "description"?: string;
+        "subtitle"?: string;
+        "title"?: string;
+    }
     interface DTabButton {
         "active"?: boolean;
         "hasAlert"?: boolean;
@@ -582,6 +614,7 @@ declare namespace LocalJSX {
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
+        "d-illustration": DIllustration;
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-list": DList;
@@ -591,6 +624,7 @@ declare namespace LocalJSX {
         "d-page-description": DPageDescription;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
+        "d-swipable-page": DSwipablePage;
         "d-tab-button": DTabButton;
         "d-tab-page": DTabPage;
         "d-text": DText;
@@ -616,6 +650,7 @@ declare module "@stencil/core" {
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-illustration": LocalJSX.DIllustration & JSXBase.HTMLAttributes<HTMLDIllustrationElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
@@ -625,6 +660,7 @@ declare module "@stencil/core" {
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
+            "d-swipable-page": LocalJSX.DSwipablePage & JSXBase.HTMLAttributes<HTMLDSwipablePageElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
