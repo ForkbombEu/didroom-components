@@ -137,6 +137,12 @@ export namespace Components {
         "sid": string;
         "success": boolean;
     }
+    interface DSwipablePage {
+        "background": string;
+        "description": string;
+        "subtitle"?: string;
+        "title": string;
+    }
     interface DTabButton {
         "active": boolean;
         "hasAlert": boolean;
@@ -369,6 +375,12 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDSwipablePageElement extends Components.DSwipablePage, HTMLStencilElement {
+    }
+    var HTMLDSwipablePageElement: {
+        prototype: HTMLDSwipablePageElement;
+        new (): HTMLDSwipablePageElement;
+    };
     interface HTMLDTabButtonElement extends Components.DTabButton, HTMLStencilElement {
     }
     var HTMLDTabButtonElement: {
@@ -419,6 +431,7 @@ declare global {
         "d-page-description": HTMLDPageDescriptionElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
+        "d-swipable-page": HTMLDSwipablePageElement;
         "d-tab-button": HTMLDTabButtonElement;
         "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
@@ -561,6 +574,12 @@ declare namespace LocalJSX {
         "sid"?: string;
         "success"?: boolean;
     }
+    interface DSwipablePage {
+        "background"?: string;
+        "description"?: string;
+        "subtitle"?: string;
+        "title"?: string;
+    }
     interface DTabButton {
         "active"?: boolean;
         "hasAlert"?: boolean;
@@ -605,6 +624,7 @@ declare namespace LocalJSX {
         "d-page-description": DPageDescription;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
+        "d-swipable-page": DSwipablePage;
         "d-tab-button": DTabButton;
         "d-tab-page": DTabPage;
         "d-text": DText;
@@ -640,6 +660,7 @@ declare module "@stencil/core" {
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
+            "d-swipable-page": LocalJSX.DSwipablePage & JSXBase.HTMLAttributes<HTMLDSwipablePageElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
