@@ -3,12 +3,11 @@ import { getAssetPath } from '@stencil/core';
 const iconCache = {};
 const requestCache = {};
 
-export async function fetchIcon({ icon }): Promise<string[]> {
+export async function fetchIcon({ icon }): Promise<{ d: string; fill?: string; stroke?: string }[]> {
   console.log(`Fetching icon: ${icon}`);
   if (iconCache[icon]) {
     return iconCache[icon];
   }
-  console.log(getAssetPath(`./assets/${icon}.json`))
   if (!requestCache[icon]) {
     requestCache[icon] = fetch(getAssetPath(`./assets/${icon}.json`))
       .then(resp => resp.json())

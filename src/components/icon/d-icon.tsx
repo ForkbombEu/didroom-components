@@ -11,7 +11,7 @@ export class LibraryNameIcon {
   @Element() el: HTMLElement;
   @Prop() icon: string = null;
   @Prop() outline: boolean = false;
-  @State() private pathData: string[];
+  @State() private pathData: { d: string; fill?: string; stroke?: string }[];
   @State() private pathList: HTMLElement[];
   @State() private visible = false;
   private intersectionObserver: IntersectionObserver;
@@ -63,7 +63,8 @@ export class LibraryNameIcon {
 
   @Watch('pathData') private generatePathList(): void {
     this.pathList = this.pathData?.map(data => {
-      return <path d={data}/>;
+      const parsedData = data;
+      return <path {...parsedData} />;
     });
     console.log(this.pathList);
   }
