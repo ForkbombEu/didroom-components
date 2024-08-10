@@ -30,6 +30,7 @@
 graph TD;
   d-credential-card --> d-avatar
   d-credential-card --> d-text
+  d-avatar --> d-icon
   style d-credential-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

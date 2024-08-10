@@ -17,11 +17,13 @@
 ### Depends on
 
 - [d-text](../text)
+- [d-icon](../icon)
 
 ### Graph
 ```mermaid
 graph TD;
   d-did-box --> d-text
+  d-did-box --> d-icon
   style d-did-box fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
