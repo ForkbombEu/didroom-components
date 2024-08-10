@@ -11,6 +11,7 @@ export class LibraryNameIcon {
   @Element() el: HTMLElement;
   @Prop() icon: string = null;
   @Prop() outline: boolean = false;
+  @Prop() size: number = 24;
   @State() private pathData: { d: string; fill?: string; stroke?: string }[];
   @State() private pathList: HTMLElement[];
   @State() private visible = false;
@@ -38,7 +39,7 @@ export class LibraryNameIcon {
   render() {
     const fill = this.outline ? 'none' : 'currentColor';
     const stroke = this.outline ? 'currentColor' : 'none';
-    const size = 24;
+    const { size } = this;
     return (
       <Host>
         <svg xmlns="http://www.w3.org/2000/svg" fill={fill} stroke={stroke} height={size} width={size} viewBox="0 0 24 24">
@@ -50,15 +51,12 @@ export class LibraryNameIcon {
 
   @Watch('icon') private async loadIconPathData(): Promise<void> {
     const { icon, visible } = this;
-    console.log(`Loading icon: ${icon}`);
-
     if (!Build.isBrowser || !icon || !visible) {
       return;
     }
 
     this.pathData = await fetchIcon({ icon: this.outline ? `${icon}-outline` : icon });
     this.pathData = this.pathData;
-    console.log(this.pathData);
   }
 
   @Watch('pathData') private generatePathList(): void {
@@ -66,7 +64,6 @@ export class LibraryNameIcon {
       const parsedData = data;
       return <path {...parsedData} />;
     });
-    console.log(this.pathList);
   }
   private waitUntilVisible(callback: () => void): void {
     if (!Build.isBrowser || typeof window === 'undefined' || !(window as any).IntersectionObserver) {

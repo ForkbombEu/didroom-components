@@ -96,6 +96,7 @@ export namespace Components {
     interface DIcon {
         "icon": string;
         "outline": boolean;
+        "size": number;
     }
     interface DIllustration {
         "background": string;
@@ -560,6 +561,7 @@ declare namespace LocalJSX {
     interface DIcon {
         "icon"?: string;
         "outline"?: boolean;
+        "size"?: number;
     }
     interface DIllustration {
         "background"?: string;

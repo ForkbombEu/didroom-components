@@ -4,7 +4,6 @@ const iconCache = {};
 const requestCache = {};
 
 export async function fetchIcon({ icon }): Promise<{ d: string; fill?: string; stroke?: string }[]> {
-  console.log(`Fetching icon: ${icon}`);
   if (iconCache[icon]) {
     return iconCache[icon];
   }
