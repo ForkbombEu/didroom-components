@@ -19,6 +19,7 @@
 ### Used by
 
  - [d-avatar](../avatar)
+ - [d-credential-card](../credential-card)
  - [d-definition](../definition)
  - [d-did-box](../d-did-box)
  - [d-settings-menu](../d-settings-menu)
@@ -27,6 +28,7 @@
 ```mermaid
 graph TD;
   d-avatar --> d-icon
+  d-credential-card --> d-icon
   d-definition --> d-icon
   d-did-box --> d-icon
   d-settings-menu --> d-icon

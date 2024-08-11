@@ -43,7 +43,7 @@ export class LibraryNameIcon {
     return (
       <Host>
         <svg xmlns="http://www.w3.org/2000/svg" fill={fill} stroke={stroke} height={size} width={size} viewBox="0 0 24 24">
-          <g clip-path="url(#clip0_24_4048)">{this.pathList}</g>
+          {this.pathList}
         </svg>
       </Host>
     );
@@ -60,10 +60,7 @@ export class LibraryNameIcon {
   }
 
   @Watch('pathData') private generatePathList(): void {
-    this.pathList = this.pathData?.map(data => {
-      const parsedData = data;
-      return <path {...parsedData} />;
-    });
+    this.pathList = this.pathData?.map(data => <path {...data} />);
   }
   private waitUntilVisible(callback: () => void): void {
     if (!Build.isBrowser || typeof window === 'undefined' || !(window as any).IntersectionObserver) {

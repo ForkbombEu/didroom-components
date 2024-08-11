@@ -24,12 +24,14 @@
 
 - [d-avatar](../avatar)
 - [d-text](../text)
+- [d-icon](../icon)
 
 ### Graph
 ```mermaid
 graph TD;
   d-credential-card --> d-avatar
   d-credential-card --> d-text
+  d-credential-card --> d-icon
   d-avatar --> d-icon
   style d-credential-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
