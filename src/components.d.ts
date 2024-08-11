@@ -145,9 +145,12 @@ export namespace Components {
     interface DSettingsMenu {
         "accountSettings": string;
         "developedBy": string;
+        "gotoLanguageSettings": () => void;
         "languages": string;
         "logOut": string;
+        "logoutCB": () => void;
         "notificationsSettings": string;
+        "openAppSettings": () => void;
         "privacyPolicy": string;
         "securityAndAuthentication": string;
         "support": string;
@@ -612,9 +615,12 @@ declare namespace LocalJSX {
     interface DSettingsMenu {
         "accountSettings"?: string;
         "developedBy"?: string;
+        "gotoLanguageSettings"?: () => void;
         "languages"?: string;
         "logOut"?: string;
+        "logoutCB"?: () => void;
         "notificationsSettings"?: string;
+        "openAppSettings"?: () => void;
         "privacyPolicy"?: string;
         "securityAndAuthentication"?: string;
         "support"?: string;

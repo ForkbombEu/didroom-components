@@ -15,6 +15,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [d-settings-menu](../d-settings-menu)
+
 ### Depends on
 
 - [d-text](../text)
@@ -23,6 +27,7 @@
 ```mermaid
 graph TD;
   d-app-details --> d-text
+  d-settings-menu --> d-app-details
   style d-app-details fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

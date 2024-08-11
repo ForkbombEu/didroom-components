@@ -15,49 +15,52 @@ export class DSettingsMenu {
   @Prop() logOut: string;
   @Prop() version: string;
   @Prop() developedBy: string;
+  @Prop() logoutCB: () => void;
+  @Prop() gotoLanguageSettings: () => void;
+  @Prop() openAppSettings: () => void;
 
   render() {
     return (
       <Host>
-        {/* <div class="flex flex-col justify-between">
+        <div class="flex flex-col justify-between">
           <div class="flex flex-col gap-4">
             <d-buttons-group>
               <d-button aria-hidden size="large" disabled>
                 {this.accountSettings}
-                <ion-icon icon={personOutline} slot="start" />
+                <d-icon icon="profile" slot="start" outline />
               </d-button>
               <d-button href="/" size="large" disabled>
                 {this.securityAndAuthentication}
-                <ion-icon icon={lockClosedOutline} slot="start" />
+                <d-icon icon="lock" slot="start" outline />
               </d-button>
-              <d-button onClick={openAppSettings} aria-hidden size="large">
+              <d-button onClick={this.openAppSettings} aria-hidden size="large">
                 {this.notificationsSettings}
-                <ion-icon icon={notificationsOutline} slot="start" />
+                <d-icon icon="notification" slot="start" outline />
               </d-button>
-              <d-button onClick={gotoLanguageSettings} aria-hidden size="large">
+              <d-button onClick={this.gotoLanguageSettings} aria-hidden size="large">
                 {this.languages}
-                <ion-icon icon={globeOutline} slot="start" />
+                <d-icon icon="language" slot="start" outline />
               </d-button>
             </d-buttons-group>
             <d-buttons-group>
               <d-button href="https://didroom.com/guides/1_orgadmin/support.html" size="large">
                 {this.support}
-                <ion-icon icon={helpCircleOutline} slot="start" />
+                <d-icon icon="help" slot="start" outline />
               </d-button>
               <d-button href="https://didroom.com/guides/2_wallet/5_privacy-policy.html" size="large">
                 {this.privacyPolicy}
-                <ion-icon icon={shieldOutline} slot="start" />
+                <d-icon icon="shield" slot="start" outline />
               </d-button>
             </d-buttons-group>
             <d-buttons-group>
-              <d-button onClick={logout} aria-hidden size="large">
+              <d-button onClick={this.logoutCB} aria-hidden size="large">
                 {this.logOut}
-                <ion-icon icon={logOutOutline} slot="start" />
+                <d-icon icon="logout" outline slot="start" />
               </d-button>
             </d-buttons-group>
           </div>
           <d-app-details developedBy={this.developedBy} version={this.version} />
-        </div> */}
+        </div>
       </Host>
     );
   }
