@@ -24,6 +24,7 @@
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
+    "icons": "node generateSvgData.mjs",
     "build-storybook": "storybook build --docs -s dist",
     "dev": "NODE_ENV=development npm-run-all -p dev:*",
     "dev:start": "stencil build --watch --serve",
@@ -32,12 +33,13 @@
   "dependencies": {
     "@stencil/core": "^4.11.0",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "did-resolver": "^4.1.0",
-    "fs-extra": "^11.2.0",
-    "glob-promise": "^6.0.7",
-    "svgson": "^5.3.1"
+    "did-resolver": "^4.1.0"
+    
   },
   "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "glob-promise": "^6.0.7",
+    "svgson": "^5.3.1",
     "@ionic/core": "^7.6.6",
     "@stencil/sass": "^3.0.8",
     "@storybook/addon-a11y": "^7.6.10",
