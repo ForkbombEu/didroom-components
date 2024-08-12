@@ -165,7 +165,7 @@ export namespace Components {
     interface DTabButton {
         "active": boolean;
         "hasAlert": boolean;
-        "tab": 'home' | 'profile' | 'activity' | 'wallet';
+        "tab": Tab;
     }
     interface DTabPage {
         "scanButtonHref": string | undefined;
@@ -635,7 +635,7 @@ declare namespace LocalJSX {
     interface DTabButton {
         "active"?: boolean;
         "hasAlert"?: boolean;
-        "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
+        "tab"?: Tab;
     }
     interface DTabPage {
         "scanButtonHref"?: string | undefined;
