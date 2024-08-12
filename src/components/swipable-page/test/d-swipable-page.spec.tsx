@@ -11,9 +11,9 @@ describe('d-swipable-page', () => {
       <d-swipable-page>
         <mock:shadow-root>
         <div class="flex flex-col justify-between">
-           <d-illustration>
+           <d-background-illustration>
              <slot></slot>
-           </d-illustration>
+           </d-background-illustration>
            <div class="flex flex-col gap-4 px-4">
              <d-heading size="s">
                ,

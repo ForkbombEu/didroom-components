@@ -10,7 +10,6 @@ describe('d-illustration', () => {
     expect(page.root).toEqualHtml(`
       <d-illustration>
         <mock:shadow-root>
-          <slot></slot>
         </mock:shadow-root>
       </d-illustration>
     `);
