@@ -12,7 +12,6 @@ export class DTabButton {
   @Prop() hasAlert: boolean = false;
 
   render() {
-
     const svg = (): JSX.Element | null => {
       const icons: Record<string, Tab> = {
         home: 'home',
@@ -22,11 +21,10 @@ export class DTabButton {
       };
 
       const icon = icons[this.tab];
-      if (!icon) return null; 
+      if (!icon) return null;
 
-      return <d-icon icon={icon} {...(this.active ? {} : { outline: true })} />;
+      return <d-icon icon={icon} size={28} {...(this.active ? {} : { outline: true })} />;
     };
-
 
     return (
       <Host>

@@ -7,7 +7,7 @@ import { fetchIcon } from './utils';
   styleUrl: 'd-icon.css',
   shadow: true,
 })
-export class LibraryNameIcon {
+export class DIcon {
   @Element() el: HTMLElement;
   @Prop() icon: string = null;
   @Prop() outline: boolean = false;

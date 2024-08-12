@@ -10,7 +10,17 @@ describe('d-swipable-page', () => {
     expect(page.root).toEqualHtml(`
       <d-swipable-page>
         <mock:shadow-root>
-          <slot></slot>
+        <div class="flex flex-col justify-between">
+           <d-illustration>
+             <slot></slot>
+           </d-illustration>
+           <div class="flex flex-col gap-4 px-4">
+             <d-heading size="s">
+               ,
+             </d-heading>
+             <d-text size="m"></d-text>
+           </div>
+         </div>
         </mock:shadow-root>
       </d-swipable-page>
     `);

@@ -30,7 +30,7 @@ export class Avatar {
       const initials = this.generateInitials();
       return (
         <Host aria-label={this.name} role="figure">
-          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="person" size={28} />}
+          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="profile" size={28} />}
         </Host>
       );
     }
