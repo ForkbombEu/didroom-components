@@ -26,7 +26,9 @@
  - [d-empty-state](../empty-state)
  - [d-header](../header)
  - [d-input](../input)
+ - [d-session-card](../session-card)
  - [d-settings-menu](../d-settings-menu)
+ - [d-tab-button](../tab-button)
 
 ### Graph
 ```mermaid
@@ -39,7 +41,9 @@ graph TD;
   d-empty-state --> d-icon
   d-header --> d-icon
   d-input --> d-icon
+  d-session-card --> d-icon
   d-settings-menu --> d-icon
+  d-tab-button --> d-icon
   style d-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

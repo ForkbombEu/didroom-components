@@ -18,6 +18,7 @@
 
 ### Depends on
 
+- [d-icon](../icon)
 - ion-tab-button
 - [d-info-led](../info-led)
 - ion-label
@@ -26,6 +27,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  d-tab-button --> d-icon
   d-tab-button --> ion-tab-button
   d-tab-button --> d-info-led
   d-tab-button --> ion-label

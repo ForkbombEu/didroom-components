@@ -14,6 +14,9 @@ export class Avatar {
   @State() error: boolean = false;
 
   render() {
+    const sizes = { s: 20, m: 28, l: 48 };
+    const iconSize:number = sizes[this.size] || 28;
+
     if (this.src && !this.error) {
       return (
         <Host>
@@ -30,7 +33,7 @@ export class Avatar {
       const initials = this.generateInitials();
       return (
         <Host aria-label={this.name} role="figure">
-          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="profile" size={28} />}
+          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="profile" size={iconSize} />}
         </Host>
       );
     }

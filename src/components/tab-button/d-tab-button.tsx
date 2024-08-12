@@ -1,5 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
-type Tab = 'home' | 'profile' | 'notification' | 'wallet';
+export type Tab = 'home' | 'profile' | 'activity' | 'wallet';
 
 @Component({
   tag: 'd-tab-button',
@@ -13,7 +13,7 @@ export class DTabButton {
 
   render() {
     const svg = (): JSX.Element | null => {
-      const icons: Record<string, Tab> = {
+      const icons: Record<string, string> = {
         home: 'home',
         profile: 'profile',
         activity: 'notification',

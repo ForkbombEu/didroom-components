@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Color, Shape, Size } from "./components/types";
+import { Tab } from "./components/tab-button/d-tab-button";
 export { Color, Shape, Size } from "./components/types";
+export { Tab } from "./components/tab-button/d-tab-button";
 export namespace Components {
     interface DActivityCard {
         "date": string;
