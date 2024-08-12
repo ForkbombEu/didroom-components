@@ -1,5 +1,5 @@
 import { Build, Component, Element, h, Host, Prop, State, Watch } from '@stencil/core';
-import { fetchIcon } from './utils';
+import { fetchAsset } from '../utils';
 
 @Component({
   assetsDirs: ['assets'],
@@ -55,7 +55,7 @@ export class DIcon {
       return;
     }
 
-    this.pathData = await fetchIcon({ icon: this.outline ? `${icon}-outline` : icon });
+    this.pathData = await fetchAsset({ asset: this.outline ? `${icon}-outline` : icon });
     this.pathData = this.pathData;
   }
 

@@ -7,23 +7,12 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type     | Default     |
-| ------------ | ------------ | ----------- | -------- | ----------- |
-| `background` | `background` |             | `string` | `undefined` |
+| Property       | Attribute      | Description | Type     | Default |
+| -------------- | -------------- | ----------- | -------- | ------- |
+| `height`       | `height`       |             | `number` | `24`    |
+| `illustration` | `illustration` |             | `string` | `null`  |
+| `width`        | `width`        |             | `number` | `24`    |
 
-
-## Dependencies
-
-### Used by
-
- - [d-swipable-page](../swipable-page)
-
-### Graph
-```mermaid
-graph TD;
-  d-swipable-page --> d-illustration
-  style d-illustration fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

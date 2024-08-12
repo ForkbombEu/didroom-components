@@ -28,6 +28,9 @@ export namespace Components {
         "size"?: Size;
         "src"?: string;
     }
+    interface DBackgroundIllustration {
+        "background": string;
+    }
     interface DBadge {
     }
     interface DButton {
@@ -101,7 +104,9 @@ export namespace Components {
         "size": number;
     }
     interface DIllustration {
-        "background": string;
+        "height": number;
+        "illustration": string;
+        "width": number;
     }
     interface DInfoLed {
         "type": 'success' | 'warning' | 'error';
@@ -217,6 +222,12 @@ declare global {
     var HTMLDAvatarElement: {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
+    };
+    interface HTMLDBackgroundIllustrationElement extends Components.DBackgroundIllustration, HTMLStencilElement {
+    }
+    var HTMLDBackgroundIllustrationElement: {
+        prototype: HTMLDBackgroundIllustrationElement;
+        new (): HTMLDBackgroundIllustrationElement;
     };
     interface HTMLDBadgeElement extends Components.DBadge, HTMLStencilElement {
     }
@@ -442,6 +453,7 @@ declare global {
         "d-activity-card": HTMLDActivityCardElement;
         "d-app-details": HTMLDAppDetailsElement;
         "d-avatar": HTMLDAvatarElement;
+        "d-background-illustration": HTMLDBackgroundIllustrationElement;
         "d-badge": HTMLDBadgeElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
@@ -491,6 +503,9 @@ declare namespace LocalJSX {
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DBackgroundIllustration {
+        "background"?: string;
     }
     interface DBadge {
     }
@@ -569,7 +584,9 @@ declare namespace LocalJSX {
         "size"?: number;
     }
     interface DIllustration {
-        "background"?: string;
+        "height"?: number;
+        "illustration"?: string;
+        "width"?: number;
     }
     interface DInfoLed {
         "type"?: 'success' | 'warning' | 'error';
@@ -656,6 +673,7 @@ declare namespace LocalJSX {
         "d-activity-card": DActivityCard;
         "d-app-details": DAppDetails;
         "d-avatar": DAvatar;
+        "d-background-illustration": DBackgroundIllustration;
         "d-badge": DBadge;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
@@ -694,6 +712,7 @@ declare module "@stencil/core" {
             "d-activity-card": LocalJSX.DActivityCard & JSXBase.HTMLAttributes<HTMLDActivityCardElement>;
             "d-app-details": LocalJSX.DAppDetails & JSXBase.HTMLAttributes<HTMLDAppDetailsElement>;
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-background-illustration": LocalJSX.DBackgroundIllustration & JSXBase.HTMLAttributes<HTMLDBackgroundIllustrationElement>;
             "d-badge": LocalJSX.DBadge & JSXBase.HTMLAttributes<HTMLDBadgeElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;

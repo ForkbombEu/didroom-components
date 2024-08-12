@@ -19,14 +19,14 @@
 
 ### Depends on
 
-- [d-illustration](../illustration)
+- [d-background-illustration](../background-illustration)
 - [d-heading](../heading)
 - [d-text](../text)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-swipable-page --> d-illustration
+  d-swipable-page --> d-background-illustration
   d-swipable-page --> d-heading
   d-swipable-page --> d-text
   style d-swipable-page fill:#f9f,stroke:#333,stroke-width:4px
