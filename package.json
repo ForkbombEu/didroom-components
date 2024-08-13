@@ -21,7 +21,7 @@
   "scripts": {
     "clean": "rm -rf .stencil/ dist/ loader www",
     "build": "stencil build",
-    "test": "stencil test --spec --e2e",
+    "test": "stencil test --runInBand --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "assets:icons": "node generateSvgData.mjs icons",
@@ -35,7 +35,6 @@
     "@stencil/core": "^4.11.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "did-resolver": "^4.1.0"
-    
   },
   "devDependencies": {
     "fs-extra": "^11.2.0",
