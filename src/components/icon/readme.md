@@ -27,7 +27,7 @@
  - [d-header](../header)
  - [d-input](../input)
  - [d-session-card](../session-card)
- - [d-settings-menu](../d-settings-menu)
+ - [d-settings-menu](../settings-menu)
  - [d-tab-button](../tab-button)
 
 ### Graph

@@ -35,7 +35,7 @@
  - [d-empty-state](../empty-state)
  - [d-input](../input)
  - [d-scan-button](../scan-button)
- - [d-settings-menu](../d-settings-menu)
+ - [d-settings-menu](../settings-menu)
 
 ### Graph
 ```mermaid

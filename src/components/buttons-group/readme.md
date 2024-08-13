@@ -9,7 +9,7 @@
 
 ### Used by
 
- - [d-settings-menu](../d-settings-menu)
+ - [d-settings-menu](../settings-menu)
 
 ### Graph
 ```mermaid
