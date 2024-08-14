@@ -27,6 +27,7 @@
  - [d-input](../input)
  - [d-page-description](../page-description)
  - [d-session-card](../session-card)
+ - [d-swipable-page](../swipable-page)
  - [d-tab-button](../tab-button)
 
 ### Graph
@@ -42,6 +43,7 @@ graph TD;
   d-input --> d-text
   d-page-description --> d-text
   d-session-card --> d-text
+  d-swipable-page --> d-text
   d-tab-button --> d-text
   style d-text fill:#f9f,stroke:#333,stroke-width:4px
 ```

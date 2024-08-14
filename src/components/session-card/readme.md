@@ -18,12 +18,14 @@
 
 ### Depends on
 
+- [d-icon](../icon)
 - [d-heading](../heading)
 - [d-text](../text)
 
 ### Graph
 ```mermaid
 graph TD;
+  d-session-card --> d-icon
   d-session-card --> d-heading
   d-session-card --> d-text
   style d-session-card fill:#f9f,stroke:#333,stroke-width:4px

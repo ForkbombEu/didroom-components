@@ -24,7 +24,9 @@ export class DEmptyState {
             <slot />
           </div>
           <div class="flex flex-col gap-1 items-center">
-            <d-heading size="s" class="text-center">{this.heading}</d-heading>
+            <d-heading size="s" class="text-center">
+              {this.heading}
+            </d-heading>
             <d-text size="l" class="text-center">
               {this.text}
             </d-text>
@@ -33,9 +35,7 @@ export class DEmptyState {
             <d-button expand color="outline" href={this.href} onClick={this.onClick} class="w-full">
               {this.buttonText}
               <div slot="end">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" class="w-6 h-6" fill="none"></path>
-                </svg>
+                <d-icon icon="arrow-forward" outline />
               </div>
             </d-button>
           )}

@@ -34,6 +34,7 @@ graph TD;
   d-header --> ion-toolbar
   d-header --> ion-buttons
   d-header --> ion-button
+  d-header --> d-icon
   d-header --> ion-title
   d-header --> ion-menu-toggle
   d-header --> ion-menu

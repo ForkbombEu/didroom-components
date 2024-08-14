@@ -21,9 +21,11 @@
   "scripts": {
     "clean": "rm -rf .stencil/ dist/ loader www",
     "build": "stencil build",
-    "test": "stencil test --spec --e2e",
+    "test": "stencil test --runInBand --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
+    "assets:icons": "node generateSvgData.mjs icons",
+    "assets:illustrations": "node generateSvgData.mjs illustrations",
     "build-storybook": "storybook build --docs -s dist",
     "dev": "NODE_ENV=development npm-run-all -p dev:*",
     "dev:start": "stencil build --watch --serve",
@@ -35,6 +37,9 @@
     "did-resolver": "^4.1.0"
   },
   "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "glob-promise": "^6.0.7",
+    "svgson": "^5.3.1",
     "@ionic/core": "^7.6.6",
     "@stencil/sass": "^3.0.8",
     "@storybook/addon-a11y": "^7.6.10",

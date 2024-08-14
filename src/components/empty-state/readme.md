@@ -29,6 +29,7 @@
 - [d-heading](../heading)
 - [d-text](../text)
 - [d-button](../button)
+- [d-icon](../icon)
 
 ### Graph
 ```mermaid
@@ -36,6 +37,7 @@ graph TD;
   d-empty-state --> d-heading
   d-empty-state --> d-text
   d-empty-state --> d-button
+  d-empty-state --> d-icon
   style d-empty-state fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

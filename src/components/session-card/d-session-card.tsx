@@ -11,22 +11,6 @@ export class DSessionCard {
   @Prop() success: boolean = false;
 
   render() {
-    const successIcon = (
-      <svg width="89" height="89" viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="simple-line-icons:check" clip-path="url(#clip0_3537_19585)">
-          <path
-            id="Vector"
-            d="M44.5 0.5C20.1996 0.5 0.5 20.1996 0.5 44.5C0.5 68.8018 20.1996 88.5 44.5 88.5C68.8018 88.5 88.5 68.8018 88.5 44.5C88.5 20.1996 68.8018 0.5 44.5 0.5ZM44.5 83.0866C23.2714 83.0866 6 65.7286 6 44.4998C6 23.2712 23.2714 5.99983 44.5 5.99983C65.7286 5.99983 83 23.2713 83 44.4998C83 65.7284 65.7286 83.0866 44.5 83.0866ZM62.0601 28.4001L36.2444 54.378L24.6188 42.7524C23.5449 41.6785 21.8042 41.6785 20.7289 42.7524C19.655 43.8263 19.655 45.567 20.7289 46.6409L34.34 60.2534C35.4139 61.3259 37.1547 61.3259 38.2299 60.2534C38.3537 60.1296 38.4596 59.9948 38.5559 59.8546L65.9514 32.2899C67.0239 31.216 67.0239 29.4753 65.9514 28.4001C64.8761 27.3263 63.1354 27.3263 62.0601 28.4001Z"
-            fill="currentColor"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_3537_19585">
-            <rect width="88" height="88" fill="white" transform="translate(0.5 0.5)" />
-          </clipPath>
-        </defs>
-      </svg>
-    );
 
     const failureIcon = (
       <svg width="89" height="88" viewBox="0 0 89 88" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +48,7 @@ export class DSessionCard {
     return (
       <Host>
         <div class="flex flex-col items-center align-middle gap-8 w-52">
-          <span class={{ 'text-success': this.success, 'text-error': !this.success }}>{this.success ? successIcon : failureIcon}</span>
+          <span class={{ 'text-success': this.success, 'text-error': !this.success }}>{this.success ? <d-icon icon="done" outline /> : failureIcon}</span>
           <d-heading size="xs" class="text-on">
             {this.success ? 'Verified.' : 'Failure.'}
           </d-heading>

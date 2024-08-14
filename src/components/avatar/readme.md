@@ -23,9 +23,14 @@
  - [d-credential-card](../credential-card)
  - [d-credential-service](../credential-service)
 
+### Depends on
+
+- [d-icon](../icon)
+
 ### Graph
 ```mermaid
 graph TD;
+  d-avatar --> d-icon
   d-activity-card --> d-avatar
   d-credential-card --> d-avatar
   d-credential-service --> d-avatar

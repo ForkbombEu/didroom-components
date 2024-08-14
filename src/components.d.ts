@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Color, Shape, Size } from "./components/types";
+import { Tab } from "./components/tab-button/d-tab-button";
 export { Color, Shape, Size } from "./components/types";
+export { Tab } from "./components/tab-button/d-tab-button";
 export namespace Components {
     interface DActivityCard {
         "date": string;
@@ -25,6 +27,9 @@ export namespace Components {
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DBackgroundIllustration {
+        "background": string;
     }
     interface DBadge {
     }
@@ -93,6 +98,16 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DIcon {
+        "icon": string;
+        "outline": boolean;
+        "size": number;
+    }
+    interface DIllustration {
+        "height": number;
+        "illustration": string;
+        "width": number;
+    }
     interface DInfoLed {
         "type": 'success' | 'warning' | 'error';
     }
@@ -134,10 +149,30 @@ export namespace Components {
         "sid": string;
         "success": boolean;
     }
+    interface DSettingsMenu {
+        "accountSettings": string;
+        "developedBy": string;
+        "gotoLanguageSettings": () => void;
+        "languages": string;
+        "logOut": string;
+        "logoutCB": () => void;
+        "notificationsSettings": string;
+        "openAppSettings": () => void;
+        "privacyPolicy": string;
+        "securityAndAuthentication": string;
+        "support": string;
+        "version": string;
+    }
+    interface DSwipablePage {
+        "background": string;
+        "description": string;
+        "subtitle"?: string;
+        "title": string;
+    }
     interface DTabButton {
         "active": boolean;
         "hasAlert": boolean;
-        "tab": 'home' | 'profile' | 'activity' | 'wallet';
+        "tab": Tab;
     }
     interface DTabPage {
         "scanButtonHref": string | undefined;
@@ -187,6 +222,12 @@ declare global {
     var HTMLDAvatarElement: {
         prototype: HTMLDAvatarElement;
         new (): HTMLDAvatarElement;
+    };
+    interface HTMLDBackgroundIllustrationElement extends Components.DBackgroundIllustration, HTMLStencilElement {
+    }
+    var HTMLDBackgroundIllustrationElement: {
+        prototype: HTMLDBackgroundIllustrationElement;
+        new (): HTMLDBackgroundIllustrationElement;
     };
     interface HTMLDBadgeElement extends Components.DBadge, HTMLStencilElement {
     }
@@ -294,6 +335,18 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDIconElement extends Components.DIcon, HTMLStencilElement {
+    }
+    var HTMLDIconElement: {
+        prototype: HTMLDIconElement;
+        new (): HTMLDIconElement;
+    };
+    interface HTMLDIllustrationElement extends Components.DIllustration, HTMLStencilElement {
+    }
+    var HTMLDIllustrationElement: {
+        prototype: HTMLDIllustrationElement;
+        new (): HTMLDIllustrationElement;
+    };
     interface HTMLDInfoLedElement extends Components.DInfoLed, HTMLStencilElement {
     }
     var HTMLDInfoLedElement: {
@@ -360,6 +413,18 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDSettingsMenuElement extends Components.DSettingsMenu, HTMLStencilElement {
+    }
+    var HTMLDSettingsMenuElement: {
+        prototype: HTMLDSettingsMenuElement;
+        new (): HTMLDSettingsMenuElement;
+    };
+    interface HTMLDSwipablePageElement extends Components.DSwipablePage, HTMLStencilElement {
+    }
+    var HTMLDSwipablePageElement: {
+        prototype: HTMLDSwipablePageElement;
+        new (): HTMLDSwipablePageElement;
+    };
     interface HTMLDTabButtonElement extends Components.DTabButton, HTMLStencilElement {
     }
     var HTMLDTabButtonElement: {
@@ -388,6 +453,7 @@ declare global {
         "d-activity-card": HTMLDActivityCardElement;
         "d-app-details": HTMLDAppDetailsElement;
         "d-avatar": HTMLDAvatarElement;
+        "d-background-illustration": HTMLDBackgroundIllustrationElement;
         "d-badge": HTMLDBadgeElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
@@ -400,6 +466,8 @@ declare global {
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
+        "d-icon": HTMLDIconElement;
+        "d-illustration": HTMLDIllustrationElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
         "d-list": HTMLDListElement;
@@ -409,6 +477,8 @@ declare global {
         "d-page-description": HTMLDPageDescriptionElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
+        "d-settings-menu": HTMLDSettingsMenuElement;
+        "d-swipable-page": HTMLDSwipablePageElement;
         "d-tab-button": HTMLDTabButtonElement;
         "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
@@ -433,6 +503,9 @@ declare namespace LocalJSX {
         "shape"?: Shape;
         "size"?: Size;
         "src"?: string;
+    }
+    interface DBackgroundIllustration {
+        "background"?: string;
     }
     interface DBadge {
     }
@@ -505,6 +578,16 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DIcon {
+        "icon"?: string;
+        "outline"?: boolean;
+        "size"?: number;
+    }
+    interface DIllustration {
+        "height"?: number;
+        "illustration"?: string;
+        "width"?: number;
+    }
     interface DInfoLed {
         "type"?: 'success' | 'warning' | 'error';
     }
@@ -548,10 +631,30 @@ declare namespace LocalJSX {
         "sid"?: string;
         "success"?: boolean;
     }
+    interface DSettingsMenu {
+        "accountSettings"?: string;
+        "developedBy"?: string;
+        "gotoLanguageSettings"?: () => void;
+        "languages"?: string;
+        "logOut"?: string;
+        "logoutCB"?: () => void;
+        "notificationsSettings"?: string;
+        "openAppSettings"?: () => void;
+        "privacyPolicy"?: string;
+        "securityAndAuthentication"?: string;
+        "support"?: string;
+        "version"?: string;
+    }
+    interface DSwipablePage {
+        "background"?: string;
+        "description"?: string;
+        "subtitle"?: string;
+        "title"?: string;
+    }
     interface DTabButton {
         "active"?: boolean;
         "hasAlert"?: boolean;
-        "tab"?: 'home' | 'profile' | 'activity' | 'wallet';
+        "tab"?: Tab;
     }
     interface DTabPage {
         "scanButtonHref"?: string | undefined;
@@ -570,6 +673,7 @@ declare namespace LocalJSX {
         "d-activity-card": DActivityCard;
         "d-app-details": DAppDetails;
         "d-avatar": DAvatar;
+        "d-background-illustration": DBackgroundIllustration;
         "d-badge": DBadge;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
@@ -582,6 +686,8 @@ declare namespace LocalJSX {
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
+        "d-icon": DIcon;
+        "d-illustration": DIllustration;
         "d-info-led": DInfoLed;
         "d-input": DInput;
         "d-list": DList;
@@ -591,6 +697,8 @@ declare namespace LocalJSX {
         "d-page-description": DPageDescription;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
+        "d-settings-menu": DSettingsMenu;
+        "d-swipable-page": DSwipablePage;
         "d-tab-button": DTabButton;
         "d-tab-page": DTabPage;
         "d-text": DText;
@@ -604,6 +712,7 @@ declare module "@stencil/core" {
             "d-activity-card": LocalJSX.DActivityCard & JSXBase.HTMLAttributes<HTMLDActivityCardElement>;
             "d-app-details": LocalJSX.DAppDetails & JSXBase.HTMLAttributes<HTMLDAppDetailsElement>;
             "d-avatar": LocalJSX.DAvatar & JSXBase.HTMLAttributes<HTMLDAvatarElement>;
+            "d-background-illustration": LocalJSX.DBackgroundIllustration & JSXBase.HTMLAttributes<HTMLDBackgroundIllustrationElement>;
             "d-badge": LocalJSX.DBadge & JSXBase.HTMLAttributes<HTMLDBadgeElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
@@ -616,6 +725,8 @@ declare module "@stencil/core" {
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-icon": LocalJSX.DIcon & JSXBase.HTMLAttributes<HTMLDIconElement>;
+            "d-illustration": LocalJSX.DIllustration & JSXBase.HTMLAttributes<HTMLDIllustrationElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
             "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
@@ -625,6 +736,8 @@ declare module "@stencil/core" {
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
+            "d-settings-menu": LocalJSX.DSettingsMenu & JSXBase.HTMLAttributes<HTMLDSettingsMenuElement>;
+            "d-swipable-page": LocalJSX.DSwipablePage & JSXBase.HTMLAttributes<HTMLDSwipablePageElement>;
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;

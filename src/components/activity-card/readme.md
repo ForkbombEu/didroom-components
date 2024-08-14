@@ -31,6 +31,7 @@ graph TD;
   d-activity-card --> d-avatar
   d-activity-card --> d-text
   d-activity-card --> d-info-led
+  d-avatar --> d-icon
   style d-activity-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
