@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/ForkbombEu/didroom-components/compare/v1.27.0...v1.28.0) (2024-08-14)
+
+
+### Features
+
+* new compoents and asstets handling ([#137](https://github.com/ForkbombEu/didroom-components/issues/137)) ([dbb3043](https://github.com/ForkbombEu/didroom-components/commit/dbb30432937f1f4df500f7c878a73d3da0b4310c))
+
 ## [1.27.0](https://github.com/ForkbombEu/didroom-components/compare/v1.26.5...v1.27.0) (2024-08-07)
 
 
