@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/Header',
+  title: 'Design System/LAYOUT/Header',
   render: args =>
     `<d-header back-button='${args.backButton}'  settings='${args.settings}'>
       title

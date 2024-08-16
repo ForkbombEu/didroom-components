@@ -2,7 +2,7 @@ import { DInput } from './d-input';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/Input',
+  title: 'Design System/FORMS/Input',
   render: args =>
     `<d-input 
       name="${args.name}" 

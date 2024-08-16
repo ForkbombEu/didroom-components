@@ -2,7 +2,7 @@ import { DCredentialCard } from './d-credential-card';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/CredentialCard',
+  title: 'Design System/DATA DISPLAY/CredentialCard',
   render: args =>
     `<d-credential-card 
     name="${args.name}" 
@@ -26,7 +26,7 @@ export const Default: Story = {
     issuedByLabel: 'issued by',
     expirationLabel: 'exp',
     expirationDate: '2017-01-01',
-    verified: false
+    verified: false,
   },
   parameters: {
     design: {
@@ -42,5 +42,3 @@ export const Verified: Story = {
     verified: true,
   },
 };
-
-

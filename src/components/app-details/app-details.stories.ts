@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Atoms/AppDetails',
+  title: 'Design System/DATA DISPLAY/AppDetails',
   render: args => `<d-app-details version="${args.version}"></d-app-details>`,
 } satisfies Meta<Components.DAppDetails>;
 
@@ -12,6 +12,6 @@ type Story = StoryObj<Components.DAppDetails>;
 
 export const Default: Story = {
   args: {
-    version: "1.0.9",
-  }
+    version: '1.0.9',
+  },
 };

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/SessionCard',
+  title: 'Design System/DATA DISPLAY/SessionCard',
   render: args => `<d-session-card sid='${args.sid}' date='${args.date}' success=${args.success}></d-session-card>`,
 } satisfies Meta<Components.DSessionCard>;
 

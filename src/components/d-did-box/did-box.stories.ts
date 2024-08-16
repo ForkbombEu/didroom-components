@@ -2,7 +2,7 @@ import { DDidBox } from './d-did-box';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/DidBox',
+  title: 'Design System/DATA DISPLAY/DidBox',
   render: args =>
     `<d-did-box 
     did="${args.did}" 
@@ -17,4 +17,3 @@ export const Default: Story = {
     did: 'did:dyne:sandbox.signroom:JAomV7KF3NjjagBEnTrRNG28DjepXM9XHEyGNYwJS7ke',
   },
 };
-

@@ -2,7 +2,7 @@ import { DFeedback } from './d-feedback';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Feedback',
+  title: 'Design System/FEEDBACK & STATUS/Feedback',
   render: args =>
     `<d-feedback 
     feedback="${args.feedback}"

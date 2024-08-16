@@ -2,7 +2,7 @@ import { DActivityCard } from './d-activity-card';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Activity',
+  title: 'Design System/FEEDBACK & STATUS/Activity',
   render: args =>
     `<d-activity-card
       name="${args.name}" 

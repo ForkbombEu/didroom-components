@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/TabPage',
+  title: 'Design System/NAVIGATION/TabPage',
   render: args => `
   <ion-tabs>
   <d-tab-page

@@ -2,8 +2,8 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Atoms/ScanButton',
-  render: ()=> `<d-scan-button href="#">Scan</d-scan-button>`,
+  title: 'Design System/NAVIGATION/ScanButton',
+  render: () => `<d-scan-button href="#">Scan</d-scan-button>`,
 } satisfies Meta<Components.DScanButton>;
 
 export default meta;

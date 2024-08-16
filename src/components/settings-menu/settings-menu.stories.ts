@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/SettingsMenu',
+  title: 'Design System/NAVIGATION/SettingsMenu',
   render: args => `<d-settings-menu 
   account-settings="${args.accountSettings}"
     security-and-authentication="${args.securityAndAuthentication}"

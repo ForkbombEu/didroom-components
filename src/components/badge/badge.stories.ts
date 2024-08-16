@@ -2,7 +2,7 @@ import { DBadge } from './d-badge';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/Badge',
+  title: 'Design System/DATA DISPLAY/Badge',
   render: () =>
     `<d-badge>
       Address
@@ -20,4 +20,3 @@ export const Default: Story = {
     },
   },
 };
-

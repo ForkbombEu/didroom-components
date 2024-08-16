@@ -3,7 +3,7 @@ const createIconStory = (args: { iconName: string; size: number; outline: boolea
 `;
 
 const meta = {
-  title: 'Design System/Icons',
+  title: 'Design System/MEDIA & ICONS/Icons',
 };
 
 export default meta;
@@ -223,4 +223,3 @@ export const Wallet = {
   },
   render: createIconStory,
 };
-

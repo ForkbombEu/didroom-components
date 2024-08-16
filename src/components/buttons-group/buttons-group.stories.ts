@@ -3,7 +3,7 @@ import type { Components } from '../../components.js';
 import { ColorArgTypes } from '../types.js';
 
 const meta = {
-  title: 'Design System/Atoms/Buttons-group',
+  title: 'Design System/FORMS/Buttons-group',
   render: () => `<d-buttons-group>
   <d-button href='/' size="large">
     button 1

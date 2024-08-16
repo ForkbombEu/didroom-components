@@ -2,7 +2,7 @@ import { DOrganizations } from './d-organizations';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Organizations',
+  title: 'Design System/DATA DISPLAY/Organizations',
   render: args =>
     `<d-organizations 
     heading="${args.heading}">

@@ -2,7 +2,7 @@ import { DHorizontalStack } from './d-horizontal-stack';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/List',
+  title: 'Design System/LAYOUT/horizontal-stack',
   render: args =>
     `<d-horizontal-stack ${args.gap && `gap=${args.gap}`}>
     <d-credential-service name="credential 1" issuer="issuer 1"  organization="org 1"></d-credential-service>
