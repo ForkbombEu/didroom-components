@@ -1,9 +1,6 @@
-# d-list
-
-
+# d-vertical-stack
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -11,7 +8,6 @@
 | -------- | --------- | ----------- | ------------- | ------- |
 | `gap`    | `gap`     |             | `2 \| 4 \| 8` | `2`     |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

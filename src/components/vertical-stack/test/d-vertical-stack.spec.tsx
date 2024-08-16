@@ -1,20 +1,20 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { DList } from '../d-list';
+import { DVerticalStack } from '../d-vertical-stack';
 
-describe('d-list', () => {
+describe('d-vertical-stack', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [DList],
-      html: `<d-list></d-list>`,
+      components: [DVerticalStack],
+      html: `<d-vertical-stack></d-vertical-stack>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-list>
+      <d-vertical-stack>
         <mock:shadow-root>
           <div class="flex flex-col gap-2">
             <slot></slot>
           </div>
         </mock:shadow-root>
-      </d-list>
+      </d-vertical-stack>
     `);
   });
 });
