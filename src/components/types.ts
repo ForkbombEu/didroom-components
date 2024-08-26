@@ -1,4 +1,4 @@
-const SizeOptions = 'xs s m l xl 2xl'.split(' ');
+const SizeOptions = ['xs', 's', 'm', 'l', 'xl', '2xl'] as const;
 export const SizeArgTypes = {
   defaultValue: 'm',
   options: SizeOptions,

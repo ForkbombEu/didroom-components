@@ -14,8 +14,7 @@ export class Avatar {
   @State() error: boolean = false;
 
   render() {
-    const sizes = { s: 20, m: 28, l: 48 };
-    const iconSize:number = sizes[this.size] || 28;
+    const iconSizes: Record<Size, number> = { 'xs': 16, 's': 24, 'm': 28, 'l': 40, 'xl': 48, '2xl': 56 };
 
     if (this.src && !this.error) {
       return (
@@ -33,7 +32,7 @@ export class Avatar {
       const initials = this.generateInitials();
       return (
         <Host aria-label={this.name} role="figure">
-          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="profile" size={iconSize} />}
+          {initials ? <span class="font-medium uppercase">{initials}</span> : <d-icon icon="profile" size={iconSizes[this.size]} />}
         </Host>
       );
     }
