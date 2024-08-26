@@ -58,7 +58,7 @@ export class DLogo {
             />
           </svg>
           <d-heading size="s" class="text-accent">
-            DidroomWallet
+            <slot/>
           </d-heading>
         </div>
       </Host>
