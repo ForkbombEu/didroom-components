@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/SwipablePage',
+  title: 'Design System/LAYOUT/SwipablePage',
   render: args => `<d-swipable-page 
     background="${args.background}"
     title="${args.title}"

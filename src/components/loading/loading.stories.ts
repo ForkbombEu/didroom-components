@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Atoms/Loading',
+  title: 'Design System/FEEDBACK & STATUS/Loading',
   render: args => `<div class="ion-page h-screen">
     <d-loading 
         ${args.loading && `loading=${args.loading}`} 

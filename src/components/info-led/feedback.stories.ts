@@ -2,7 +2,7 @@ import { DInfoLed } from './d-info-led';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/InfoLed',
+  title: 'Design System/FEEDBACK & STATUS/InfoLed',
   render: args =>
     `<d-info-led 
     type="${args.type}"

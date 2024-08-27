@@ -98,6 +98,9 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DHorizontalStack {
+        "gap": 2 | 4 | 8;
+    }
     interface DIcon {
         "icon": string;
         "outline": boolean;
@@ -123,9 +126,6 @@ export namespace Components {
         "placeholder": string;
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
-    }
-    interface DList {
-        "gap": 2 | 4 | 8;
     }
     interface DLoading {
         "loading": boolean;
@@ -184,6 +184,9 @@ export namespace Components {
     interface DText {
         "color": Color;
         "size": Size;
+    }
+    interface DVerticalStack {
+        "gap": 2 | 4 | 8;
     }
     interface DidroomLogo {
     }
@@ -335,6 +338,12 @@ declare global {
         prototype: HTMLDHeadingElement;
         new (): HTMLDHeadingElement;
     };
+    interface HTMLDHorizontalStackElement extends Components.DHorizontalStack, HTMLStencilElement {
+    }
+    var HTMLDHorizontalStackElement: {
+        prototype: HTMLDHorizontalStackElement;
+        new (): HTMLDHorizontalStackElement;
+    };
     interface HTMLDIconElement extends Components.DIcon, HTMLStencilElement {
     }
     var HTMLDIconElement: {
@@ -370,12 +379,6 @@ declare global {
     var HTMLDInputElement: {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
-    };
-    interface HTMLDListElement extends Components.DList, HTMLStencilElement {
-    }
-    var HTMLDListElement: {
-        prototype: HTMLDListElement;
-        new (): HTMLDListElement;
     };
     interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
     }
@@ -443,6 +446,12 @@ declare global {
         prototype: HTMLDTextElement;
         new (): HTMLDTextElement;
     };
+    interface HTMLDVerticalStackElement extends Components.DVerticalStack, HTMLStencilElement {
+    }
+    var HTMLDVerticalStackElement: {
+        prototype: HTMLDVerticalStackElement;
+        new (): HTMLDVerticalStackElement;
+    };
     interface HTMLDidroomLogoElement extends Components.DidroomLogo, HTMLStencilElement {
     }
     var HTMLDidroomLogoElement: {
@@ -466,11 +475,11 @@ declare global {
         "d-feedback": HTMLDFeedbackElement;
         "d-header": HTMLDHeaderElement;
         "d-heading": HTMLDHeadingElement;
+        "d-horizontal-stack": HTMLDHorizontalStackElement;
         "d-icon": HTMLDIconElement;
         "d-illustration": HTMLDIllustrationElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
-        "d-list": HTMLDListElement;
         "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
@@ -482,6 +491,7 @@ declare global {
         "d-tab-button": HTMLDTabButtonElement;
         "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
+        "d-vertical-stack": HTMLDVerticalStackElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
 }
@@ -578,6 +588,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DHorizontalStack {
+        "gap"?: 2 | 4 | 8;
+    }
     interface DIcon {
         "icon"?: string;
         "outline"?: boolean;
@@ -605,9 +618,6 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
-    }
-    interface DList {
-        "gap"?: 2 | 4 | 8;
     }
     interface DLoading {
         "loading"?: boolean;
@@ -667,6 +677,9 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DVerticalStack {
+        "gap"?: 2 | 4 | 8;
+    }
     interface DidroomLogo {
     }
     interface IntrinsicElements {
@@ -686,11 +699,11 @@ declare namespace LocalJSX {
         "d-feedback": DFeedback;
         "d-header": DHeader;
         "d-heading": DHeading;
+        "d-horizontal-stack": DHorizontalStack;
         "d-icon": DIcon;
         "d-illustration": DIllustration;
         "d-info-led": DInfoLed;
         "d-input": DInput;
-        "d-list": DList;
         "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
@@ -702,6 +715,7 @@ declare namespace LocalJSX {
         "d-tab-button": DTabButton;
         "d-tab-page": DTabPage;
         "d-text": DText;
+        "d-vertical-stack": DVerticalStack;
         "didroom-logo": DidroomLogo;
     }
 }
@@ -725,11 +739,11 @@ declare module "@stencil/core" {
             "d-feedback": LocalJSX.DFeedback & JSXBase.HTMLAttributes<HTMLDFeedbackElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
             "d-heading": LocalJSX.DHeading & JSXBase.HTMLAttributes<HTMLDHeadingElement>;
+            "d-horizontal-stack": LocalJSX.DHorizontalStack & JSXBase.HTMLAttributes<HTMLDHorizontalStackElement>;
             "d-icon": LocalJSX.DIcon & JSXBase.HTMLAttributes<HTMLDIconElement>;
             "d-illustration": LocalJSX.DIllustration & JSXBase.HTMLAttributes<HTMLDIllustrationElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
-            "d-list": LocalJSX.DList & JSXBase.HTMLAttributes<HTMLDListElement>;
             "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
@@ -741,6 +755,7 @@ declare module "@stencil/core" {
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
+            "d-vertical-stack": LocalJSX.DVerticalStack & JSXBase.HTMLAttributes<HTMLDVerticalStackElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }
     }

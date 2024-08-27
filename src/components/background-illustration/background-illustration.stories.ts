@@ -2,7 +2,7 @@ import { DBackgroundIllustration } from './d-background-illustration';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/Background-illustration',
+  title: 'Design System/MEDIA & ICONS/Background-illustration',
   render: args => {
     console.log(args);
     return `<d-background-illustration background="${args.background}">

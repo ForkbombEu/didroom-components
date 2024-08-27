@@ -2,7 +2,7 @@ import { DTabButton } from './d-tab-button';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/TabButton',
+  title: 'Design System/NAVIGATION/TabButton',
   render: args =>
     `<d-tab-button 
     tab="${args.tab}"

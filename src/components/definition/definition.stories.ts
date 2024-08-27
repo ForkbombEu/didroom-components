@@ -2,7 +2,7 @@ import { DDefinition } from './d-definition';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/Definition',
+  title: 'Design System/DATA DISPLAY/Definition',
   render: args =>
     `<d-definition 
     title="${args.title}" 

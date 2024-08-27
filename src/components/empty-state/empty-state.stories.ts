@@ -2,7 +2,7 @@ import { DEmptyState } from './d-empty-state';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Molecule/EmptyState',
+  title: 'Design System/FEEDBACK & STATUS/EmptyState',
   render: (args, parameters) =>
     `<d-empty-state 
     heading="${args.heading}" 

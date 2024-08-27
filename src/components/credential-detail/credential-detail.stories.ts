@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/Molecule/CredentialDetail',
+  title: 'Design System/DATA DISPLAY/CredentialDetail',
   render: (args, story) =>
     Boolean(story.parameters.slot)
       ? `<d-credential-detail name="${args.name}" issuer="${args.issuer}" description="${args.description}" ${

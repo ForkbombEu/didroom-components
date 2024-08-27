@@ -3,7 +3,7 @@ import type { Components } from '../../components.js';
 import { ColorArgTypes } from '../types.js';
 
 const meta = {
-  title: 'Design System/Atoms/Button',
+  title: 'Design System/FORMS/Button',
   render: (args, story) => `<d-button color=${args.color} clear=${args.clear ? "true" : "false"} disabled=${args.disabled} ${args.href ? `href=${args.href}` : ''} size=${args.size} ${args.expand ? 'expand' : ''}>
   ${Boolean(story.parameters.slot) ? `<div slot="${story.parameters.slot.position}">${story.parameters.slot.icon}</div>` : ''}
   ${Boolean(story.parameters.slot?.position == 'icon-only') ? '' : 'BUTTON'}</d-button>`,

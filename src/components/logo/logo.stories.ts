@@ -2,9 +2,8 @@ import type { Components } from '../../components.js';
 import { Meta, StoryObj } from '@storybook/html';
 
 const meta = {
-  title: 'Design System/Atoms/Logo',
-  render: () =>
-    `<d-logo></d-logo>`,
+  title: 'Design System/MEDIA & ICONS/Logo',
+  render: () => `<d-logo></d-logo>`,
 } satisfies Meta<Components.DLogo>;
 
 export default meta;

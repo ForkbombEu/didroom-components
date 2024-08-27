@@ -1,11 +1,11 @@
 import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'd-list',
-  styleUrl: 'd-list.css',
+  tag: 'd-vertical-stack',
+  styleUrl: 'd-vertical-stack.css',
   shadow: true,
 })
-export class DList {
+export class DVerticalStack {
   @Prop() gap: 2 | 4 | 8 = 2;
 
   render() {

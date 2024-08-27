@@ -3,7 +3,7 @@ const createIllustrationStory = (args: { illustrationName: string; size: number;
 `;
 
 const meta = {
-  title: 'Design System/Illustrations',
+  title: 'Design System/MEDIA & ICONS/Illustrations',
 };
 
 export default meta;
@@ -70,4 +70,3 @@ export const Pidgeon = {
   },
   render: createIllustrationStory,
 };
-

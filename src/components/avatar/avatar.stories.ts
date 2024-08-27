@@ -3,7 +3,7 @@ import type { Components } from '../../components.js';
 import { ShapeArgTypes, SizeArgTypes } from '../types.js';
 
 const meta = {
-  title: 'Design System/Atoms/Avatar',
+  title: 'Design System/MEDIA & ICONS/Avatar',
   render: args => `<d-avatar name="${args.name}" src="${args.src}" size="${args.size}" shape="${args.shape}"></d-avatar>`,
   argTypes: {
     size: SizeArgTypes,
