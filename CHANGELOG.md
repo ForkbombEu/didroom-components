@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.28.1](https://github.com/ForkbombEu/didroom-components/compare/v1.28.0...v1.28.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* avatar void icon size ([#141](https://github.com/ForkbombEu/didroom-components/issues/141)) ([c58a19f](https://github.com/ForkbombEu/didroom-components/commit/c58a19fcefc6400f126d994b5f99532b09be7bef))
+* not harcoded title for logo component ([#144](https://github.com/ForkbombEu/didroom-components/issues/144)) ([1ec87aa](https://github.com/ForkbombEu/didroom-components/commit/1ec87aa0a9918b75972f56484c33c0bb675994e4))
+
 ## [1.28.0](https://github.com/ForkbombEu/didroom-components/compare/v1.27.0...v1.28.0) (2024-08-14)
 
 
