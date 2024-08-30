@@ -48,6 +48,7 @@ export namespace Components {
     }
     interface DCheckbox {
         "checked": boolean;
+        "error": string | undefined;
     }
     interface DCredentialCard {
         "expirationDate"?: string;
@@ -561,6 +562,7 @@ declare namespace LocalJSX {
     }
     interface DCheckbox {
         "checked"?: boolean;
+        "error"?: string | undefined;
         "onDChange"?: (event: DCheckboxCustomEvent<boolean>) => void;
     }
     interface DCredentialCard {
