@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `name`   | `name`    |             | `string` | `undefined` |
-| `shape`  | `shape`   |             | `string` | `'round'`   |
-| `size`   | `size`    |             | `string` | `'m'`       |
-| `src`    | `src`     |             | `string` | `undefined` |
+| Property | Attribute | Description | Type                                         | Default     |
+| -------- | --------- | ----------- | -------------------------------------------- | ----------- |
+| `name`   | `name`    |             | `string`                                     | `undefined` |
+| `shape`  | `shape`   |             | `string`                                     | `'round'`   |
+| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"` | `'m'`       |
+| `src`    | `src`     |             | `string`                                     | `undefined` |
 
 
 ## Dependencies
