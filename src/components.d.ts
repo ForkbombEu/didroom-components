@@ -46,6 +46,10 @@ export namespace Components {
     }
     interface DButtonsGroup {
     }
+    interface DCheckbox {
+        "checked": boolean;
+        "error": string | undefined;
+    }
     interface DCredentialCard {
         "expirationDate"?: string;
         "expirationLabel": string;
@@ -195,6 +199,10 @@ export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
 }
+export interface DCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDCheckboxElement;
+}
 export interface DEmptyStateCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDEmptyStateElement;
@@ -261,6 +269,23 @@ declare global {
     var HTMLDButtonsGroupElement: {
         prototype: HTMLDButtonsGroupElement;
         new (): HTMLDButtonsGroupElement;
+    };
+    interface HTMLDCheckboxElementEventMap {
+        "dChange": boolean;
+    }
+    interface HTMLDCheckboxElement extends Components.DCheckbox, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDCheckboxElementEventMap>(type: K, listener: (this: HTMLDCheckboxElement, ev: DCheckboxCustomEvent<HTMLDCheckboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDCheckboxElementEventMap>(type: K, listener: (this: HTMLDCheckboxElement, ev: DCheckboxCustomEvent<HTMLDCheckboxElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLDCheckboxElement: {
+        prototype: HTMLDCheckboxElement;
+        new (): HTMLDCheckboxElement;
     };
     interface HTMLDCredentialCardElement extends Components.DCredentialCard, HTMLStencilElement {
     }
@@ -466,6 +491,7 @@ declare global {
         "d-badge": HTMLDBadgeElement;
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
+        "d-checkbox": HTMLDCheckboxElement;
         "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
@@ -533,6 +559,11 @@ declare namespace LocalJSX {
         "type"?: 'submit' | 'reset' | 'button';
     }
     interface DButtonsGroup {
+    }
+    interface DCheckbox {
+        "checked"?: boolean;
+        "error"?: string | undefined;
+        "onDChange"?: (event: DCheckboxCustomEvent<boolean>) => void;
     }
     interface DCredentialCard {
         "expirationDate"?: string;
@@ -690,6 +721,7 @@ declare namespace LocalJSX {
         "d-badge": DBadge;
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
+        "d-checkbox": DCheckbox;
         "d-credential-card": DCredentialCard;
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
@@ -730,6 +762,7 @@ declare module "@stencil/core" {
             "d-badge": LocalJSX.DBadge & JSXBase.HTMLAttributes<HTMLDBadgeElement>;
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
+            "d-checkbox": LocalJSX.DCheckbox & JSXBase.HTMLAttributes<HTMLDCheckboxElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;

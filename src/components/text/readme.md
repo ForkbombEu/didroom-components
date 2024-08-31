@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `color`  | `color`   |             | `string` | `'primary'` |
-| `size`   | `size`    |             | `string` | `'m'`       |
+| Property | Attribute | Description | Type                                         | Default     |
+| -------- | --------- | ----------- | -------------------------------------------- | ----------- |
+| `color`  | `color`   |             | `string`                                     | `'primary'` |
+| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"` | `'m'`       |
 
 
 ## Dependencies
@@ -19,6 +19,7 @@
 
  - [d-activity-card](../activity-card)
  - [d-app-details](../app-details)
+ - [d-checkbox](../checkbox)
  - [d-credential-card](../credential-card)
  - [d-credential-service](../credential-service)
  - [d-did-box](../d-did-box)
@@ -35,6 +36,7 @@
 graph TD;
   d-activity-card --> d-text
   d-app-details --> d-text
+  d-checkbox --> d-text
   d-credential-card --> d-text
   d-credential-service --> d-text
   d-did-box --> d-text
