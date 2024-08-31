@@ -47,7 +47,7 @@ export class DSettingsMenu {
                 {this.support}
                 <d-icon icon="help" slot="start" outline />
               </d-button>
-              <d-button href="https://didroom.com/guides/2_wallet/5_privacy-policy.html" size="large">
+              <d-button href="https://didroom.com/guides/7_terms-and-conditions/privacy-policy.html" size="large">
                 {this.privacyPolicy}
                 <d-icon icon="shield" slot="start" outline />
               </d-button>
