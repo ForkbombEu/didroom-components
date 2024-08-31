@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/ForkbombEu/didroom-components/compare/v1.28.1...v1.29.0) (2024-08-31)
+
+
+### Features
+
+* add d-checkbox component ([#146](https://github.com/ForkbombEu/didroom-components/issues/146)) ([aff0b3c](https://github.com/ForkbombEu/didroom-components/commit/aff0b3c7ae7c2e6958ce3075d08364183f4bf392))
+
 ## [1.28.1](https://github.com/ForkbombEu/didroom-components/compare/v1.28.0...v1.28.1) (2024-08-27)
 
 
