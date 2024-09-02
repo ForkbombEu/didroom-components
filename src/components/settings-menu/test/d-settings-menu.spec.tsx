@@ -13,7 +13,7 @@ describe('d-settings-menu', () => {
           <div class="flex flex-col justify-between">
            <div class="flex flex-col gap-4">
              <d-buttons-group>
-               <d-button aria-hidden="" disabled="" size="large">
+               <d-button aria-hidden="" size="large">
                  <d-icon icon="profile" outline="" slot="start"></d-icon>
                </d-button>
                <d-button disabled="" href="/" size="large">
