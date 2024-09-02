@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.1](https://github.com/ForkbombEu/didroom-components/compare/v1.29.0...v1.29.1) (2024-09-02)
+
+
+### Bug Fixes
+
+* account settings link no more disabled in settings menu ([#148](https://github.com/ForkbombEu/didroom-components/issues/148)) ([8d82839](https://github.com/ForkbombEu/didroom-components/commit/8d82839d0178db9c8f94c276f7128d48c7715ae1))
+
 ## [1.29.0](https://github.com/ForkbombEu/didroom-components/compare/v1.28.1...v1.29.0) (2024-08-31)
 
 
