@@ -16,6 +16,7 @@ export class DSettingsMenu {
   @Prop() version: string;
   @Prop() developedBy: string;
   @Prop() logoutCB: () => void;
+  @Prop() gotoAccountSettings: () => void;
   @Prop() gotoLanguageSettings: () => void;
   @Prop() openAppSettings: () => void;
 
@@ -25,7 +26,7 @@ export class DSettingsMenu {
         <div class="flex flex-col justify-between">
           <div class="flex flex-col gap-4">
             <d-buttons-group>
-              <d-button aria-hidden size="large" disabled>
+              <d-button aria-hidden size="large" onClick={this.gotoAccountSettings}>
                 {this.accountSettings}
                 <d-icon icon="profile" slot="start" outline />
               </d-button>
