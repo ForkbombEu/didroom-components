@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'd-settings-menu',
@@ -6,19 +6,19 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class DSettingsMenu {
-  @Prop() accountSettings: string;
-  @Prop() securityAndAuthentication: string;
-  @Prop() notificationsSettings: string;
+  @Prop({ attribute: 'account-settings' }) accountSettings: string;
+  @Prop({ attribute: 'security-and-authentication' }) securityAndAuthentication: string;
+  @Prop({ attribute: 'notifications-settings' }) notificationsSettings: string;
   @Prop() languages: string;
   @Prop() support: string;
-  @Prop() privacyPolicy: string;
-  @Prop() logOut: string;
+  @Prop({ attribute: 'privacy-policy' }) privacyPolicy: string;
+  @Prop({ attribute: 'log-out' }) logOut: string;
   @Prop() version: string;
-  @Prop() developedBy: string;
-  @Prop() logoutCB: () => void;
-  @Prop() gotoAccountSettings: () => void;
-  @Prop() gotoLanguageSettings: () => void;
-  @Prop() openAppSettings: () => void;
+  @Prop({ attribute: 'developed-by' }) developedBy: string;
+  @Event() accountSettingsClick: EventEmitter<void>;
+  @Event() languageSettingsClick: EventEmitter<void>;
+  @Event() appSettingsClick: EventEmitter<void>;
+  @Event() logoutClick: EventEmitter<void>;
 
   render() {
     return (
@@ -26,7 +26,7 @@ export class DSettingsMenu {
         <div class="flex flex-col justify-between">
           <div class="flex flex-col gap-4">
             <d-buttons-group>
-              <d-button aria-hidden size="large" onClick={this.gotoAccountSettings}>
+              <d-button aria-hidden size="large" onClick={()=>this.accountSettingsClick.emit()}>
                 {this.accountSettings}
                 <d-icon icon="profile" slot="start" outline />
               </d-button>
@@ -34,11 +34,11 @@ export class DSettingsMenu {
                 {this.securityAndAuthentication}
                 <d-icon icon="lock" slot="start" outline />
               </d-button>
-              <d-button onClick={this.openAppSettings} aria-hidden size="large">
+              <d-button onClick={()=>this.appSettingsClick.emit()} aria-hidden size="large">
                 {this.notificationsSettings}
                 <d-icon icon="notification" slot="start" outline />
               </d-button>
-              <d-button onClick={this.gotoLanguageSettings} aria-hidden size="large">
+              <d-button onClick={()=>this.languageSettingsClick.emit()} aria-hidden size="large">
                 {this.languages}
                 <d-icon icon="language" slot="start" outline />
               </d-button>
@@ -54,7 +54,7 @@ export class DSettingsMenu {
               </d-button>
             </d-buttons-group>
             <d-buttons-group>
-              <d-button onClick={this.logoutCB} aria-hidden size="large">
+              <d-button onClick={()=>this.logoutClick.emit()} aria-hidden size="large">
                 {this.logOut}
                 <d-icon icon="logout" outline slot="start" />
               </d-button>

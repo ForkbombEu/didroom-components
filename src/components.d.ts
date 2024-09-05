@@ -94,7 +94,7 @@ export namespace Components {
     }
     interface DHeader {
         "backButton": boolean;
-        "backFunction": () => void;
+        "backFunction": () => void | undefined;
         "settings": boolean;
         "settingsTitle": string;
     }
@@ -156,12 +156,9 @@ export namespace Components {
     interface DSettingsMenu {
         "accountSettings": string;
         "developedBy": string;
-        "gotoLanguageSettings": () => void;
         "languages": string;
         "logOut": string;
-        "logoutCB": () => void;
         "notificationsSettings": string;
-        "openAppSettings": () => void;
         "privacyPolicy": string;
         "securityAndAuthentication": string;
         "support": string;
@@ -214,6 +211,10 @@ export interface DFeedbackCustomEvent<T> extends CustomEvent<T> {
 export interface DInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDInputElement;
+}
+export interface DSettingsMenuCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDSettingsMenuElement;
 }
 declare global {
     interface HTMLDActivityCardElement extends Components.DActivityCard, HTMLStencilElement {
@@ -441,7 +442,21 @@ declare global {
         prototype: HTMLDSessionCardElement;
         new (): HTMLDSessionCardElement;
     };
+    interface HTMLDSettingsMenuElementEventMap {
+        "accountSettingsClick": void;
+        "languageSettingsClick": void;
+        "appSettingsClick": void;
+        "logoutClick": void;
+    }
     interface HTMLDSettingsMenuElement extends Components.DSettingsMenu, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDSettingsMenuElementEventMap>(type: K, listener: (this: HTMLDSettingsMenuElement, ev: DSettingsMenuCustomEvent<HTMLDSettingsMenuElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDSettingsMenuElementEventMap>(type: K, listener: (this: HTMLDSettingsMenuElement, ev: DSettingsMenuCustomEvent<HTMLDSettingsMenuElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDSettingsMenuElement: {
         prototype: HTMLDSettingsMenuElement;
@@ -611,7 +626,7 @@ declare namespace LocalJSX {
     }
     interface DHeader {
         "backButton"?: boolean;
-        "backFunction"?: () => void;
+        "backFunction"?: () => void | undefined;
         "settings"?: boolean;
         "settingsTitle"?: string;
     }
@@ -675,12 +690,13 @@ declare namespace LocalJSX {
     interface DSettingsMenu {
         "accountSettings"?: string;
         "developedBy"?: string;
-        "gotoLanguageSettings"?: () => void;
         "languages"?: string;
         "logOut"?: string;
-        "logoutCB"?: () => void;
         "notificationsSettings"?: string;
-        "openAppSettings"?: () => void;
+        "onAccountSettingsClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
+        "onAppSettingsClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
+        "onLanguageSettingsClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
+        "onLogoutClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
         "privacyPolicy"?: string;
         "securityAndAuthentication"?: string;
         "support"?: string;
