@@ -9,8 +9,17 @@ export class DHeader {
   @Prop() backButton: boolean = false;
   @Prop() settings: boolean = false;
   @Prop() settingsTitle: string = 'Settings';
-  @Prop() backFunction: () => void = window.history.back;
+  @Prop() backFunction: () => void | undefined = undefined;
   @State() isSettingsOpen: boolean = false;
+
+  private back(): void {
+    if (this.backFunction) {
+      this.backFunction();
+    } else {
+      window.history.back();
+    }
+  }
+
 
   render() {
     return (
@@ -20,7 +29,7 @@ export class DHeader {
             <ion-toolbar>
               {this.backButton && (
                 <ion-buttons slot="start">
-                  <ion-button onClick={this.backFunction} aria-hidden>
+                  <ion-button onClick={this.back}>
                     <div class="w-6 h-6 text-on" slot="icon-only">
                       <d-icon icon="arrow-back" outline />
                     </div>
