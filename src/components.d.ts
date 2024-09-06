@@ -94,7 +94,6 @@ export namespace Components {
     }
     interface DHeader {
         "backButton": boolean;
-        "backFunction": () => void | undefined;
         "settings": boolean;
         "settingsTitle": string;
     }
@@ -207,6 +206,10 @@ export interface DEmptyStateCustomEvent<T> extends CustomEvent<T> {
 export interface DFeedbackCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDFeedbackElement;
+}
+export interface DHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDHeaderElement;
 }
 export interface DInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -352,7 +355,18 @@ declare global {
         prototype: HTMLDFeedbackElement;
         new (): HTMLDFeedbackElement;
     };
+    interface HTMLDHeaderElementEventMap {
+        "backButtonClick": void;
+    }
     interface HTMLDHeaderElement extends Components.DHeader, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDHeaderElementEventMap>(type: K, listener: (this: HTMLDHeaderElement, ev: DHeaderCustomEvent<HTMLDHeaderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDHeaderElementEventMap>(type: K, listener: (this: HTMLDHeaderElement, ev: DHeaderCustomEvent<HTMLDHeaderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDHeaderElement: {
         prototype: HTMLDHeaderElement;
@@ -626,7 +640,7 @@ declare namespace LocalJSX {
     }
     interface DHeader {
         "backButton"?: boolean;
-        "backFunction"?: () => void | undefined;
+        "onBackButtonClick"?: (event: DHeaderCustomEvent<void>) => void;
         "settings"?: boolean;
         "settingsTitle"?: string;
     }
