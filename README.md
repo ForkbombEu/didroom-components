@@ -43,7 +43,7 @@ It's super easy starting template as follows:
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@didroom/components/dist/didroom-components/didroom-components.css"/>
   </head>
 
-  <body style="padding: 20px">
+  <body style="padding: 25px">
     <didroom-avatar size="xl" src="https://api.dicebear.com/7.x/open-peeps/svg" />
   </body>
 </html>
