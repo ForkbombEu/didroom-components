@@ -1,4 +1,4 @@
-import { Component, Host, Prop, State, h } from '@stencil/core';
+import { Component, Host, Prop, State, h, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'd-header',
@@ -9,8 +9,9 @@ export class DHeader {
   @Prop() backButton: boolean = false;
   @Prop() settings: boolean = false;
   @Prop() settingsTitle: string = 'Settings';
-  @Prop() backFunction: () => void = window.history.back;
   @State() isSettingsOpen: boolean = false;
+  @Event() backButtonClick: EventEmitter<void>;
+
 
   render() {
     return (
@@ -20,7 +21,7 @@ export class DHeader {
             <ion-toolbar>
               {this.backButton && (
                 <ion-buttons slot="start">
-                  <ion-button onClick={this.backFunction} aria-hidden>
+                  <ion-button onClick={() => this.backButtonClick.emit()}>
                     <div class="w-6 h-6 text-on" slot="icon-only">
                       <d-icon icon="arrow-back" outline />
                     </div>

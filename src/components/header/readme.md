@@ -7,12 +7,18 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type         | Default               |
-| --------------- | ---------------- | ----------- | ------------ | --------------------- |
-| `backButton`    | `back-button`    |             | `boolean`    | `false`               |
-| `backFunction`  | --               |             | `() => void` | `window.history.back` |
-| `settings`      | `settings`       |             | `boolean`    | `false`               |
-| `settingsTitle` | `settings-title` |             | `string`     | `'Settings'`          |
+| Property        | Attribute        | Description | Type      | Default      |
+| --------------- | ---------------- | ----------- | --------- | ------------ |
+| `backButton`    | `back-button`    |             | `boolean` | `false`      |
+| `settings`      | `settings`       |             | `boolean` | `false`      |
+| `settingsTitle` | `settings-title` |             | `string`  | `'Settings'` |
+
+
+## Events
+
+| Event             | Description | Type                |
+| ----------------- | ----------- | ------------------- |
+| `backButtonClick` |             | `CustomEvent<void>` |
 
 
 ## Dependencies

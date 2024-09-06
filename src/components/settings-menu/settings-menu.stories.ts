@@ -13,9 +13,6 @@ const meta = {
     log-out="${args.logOut}"
     version="${args.version}"
     developed-by="${args.developedBy}"
-    logoutCB="${args.logoutCB}"
-    gotoLanguageSettings="${args.gotoLanguageSettings}"
-    openAppSettings="${args.openAppSettings}"
   ></d-settings-menu>`,
 } satisfies Meta<Components.DSettingsMenu>;
 
@@ -33,8 +30,5 @@ export const Default: Story = {
     logOut: 'Log out',
     version: 'Version',
     developedBy: 'Developed by',
-    logoutCB: () => {},
-    gotoLanguageSettings: () => {},
-    openAppSettings: () => {},
   },
 };
