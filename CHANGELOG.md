@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.2](https://github.com/ForkbombEu/didroom-components/compare/v1.29.1...v1.29.2) (2024-09-06)
+
+
+### Bug Fixes
+
+* d-header back button and d-setting-menu props handling" ([#150](https://github.com/ForkbombEu/didroom-components/issues/150)) ([e9fb028](https://github.com/ForkbombEu/didroom-components/commit/e9fb028a46a7c4529b4f223467466922116e76d3))
+
 ## [1.29.1](https://github.com/ForkbombEu/didroom-components/compare/v1.29.0...v1.29.1) (2024-09-02)
 
 
