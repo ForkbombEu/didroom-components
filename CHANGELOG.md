@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.3](https://github.com/ForkbombEu/didroom-components/compare/v1.29.2...v1.29.3) (2024-09-06)
+
+
+### Bug Fixes
+
+* trigger please-release ([#152](https://github.com/ForkbombEu/didroom-components/issues/152)) ([64fdd88](https://github.com/ForkbombEu/didroom-components/commit/64fdd88f3a4806be3e948b26a1cb55bec3284ef7))
+
 ## [1.29.2](https://github.com/ForkbombEu/didroom-components/compare/v1.29.1...v1.29.2) (2024-09-06)
 
 
