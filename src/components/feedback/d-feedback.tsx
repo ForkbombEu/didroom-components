@@ -62,7 +62,7 @@ export class DFeedback {
   render() {
     const onClick = () => (this.hide = !this.hide);
     return (
-      <Host>
+      <Host class="sticky top-0 z-50">
         <div
           class={{
             'flex flex-col gap-3  bg-primary p-4 rounded-md !border-[3px] !border-solid mb-4': this.feedback !== '',
