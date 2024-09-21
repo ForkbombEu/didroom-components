@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.4](https://github.com/ForkbombEu/didroom-components/compare/v1.29.3...v1.29.4) (2024-09-20)
+
+
+### Bug Fixes
+
+* sticky feedbacks ([#155](https://github.com/ForkbombEu/didroom-components/issues/155)) ([f88a3e1](https://github.com/ForkbombEu/didroom-components/commit/f88a3e18d46327c6155f6bfbc387f243d2e62434))
+
 ## [1.29.3](https://github.com/ForkbombEu/didroom-components/compare/v1.29.2...v1.29.3) (2024-09-06)
 
 
