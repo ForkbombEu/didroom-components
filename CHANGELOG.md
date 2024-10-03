@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.6](https://github.com/ForkbombEu/didroom-components/compare/v1.29.5...v1.29.6) (2024-10-03)
+
+
+### Bug Fixes
+
+* change native input id for autamated Q&A testing ([#159](https://github.com/ForkbombEu/didroom-components/issues/159)) ([cd680be](https://github.com/ForkbombEu/didroom-components/commit/cd680bee7df3d07b9ff382e44913048209d6ca14))
+
 ## [1.29.5](https://github.com/ForkbombEu/didroom-components/compare/v1.29.4...v1.29.5) (2024-10-03)
 
 
