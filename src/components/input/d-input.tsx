@@ -1,4 +1,4 @@
-import { Component, Host, Prop, Event, h, EventEmitter } from '@stencil/core';
+import { Component, Host, Prop, Event, h, EventEmitter, Element } from '@stencil/core';
 
 @Component({
   tag: 'd-input',
@@ -20,6 +20,8 @@ export class DInput {
   @Event() dInput!: EventEmitter<string>;
   @Event() dChange!: EventEmitter<string>;
 
+  @Element() el: HTMLElement;
+
   private updateValue = (value: string) => {
     this.dInput.emit(value);
   };
@@ -29,9 +31,18 @@ export class DInput {
   private changePasswordVisibility = () => {
     this.type = this.type === 'password' ? 'text' : 'password';
   };
+  
+  componentDidLoad() {
+    const ionInputEl = this.el.shadowRoot.querySelector('ion-input');
+    if (ionInputEl && this.name) {
+      const nativeInput = ionInputEl.querySelector('input.native-input');
+      if (nativeInput) {
+        nativeInput.id = this.name;
+      }
+    }
+  }
 
   render() {
-
     return (
       <Host>
         <d-text class="label" size="m">
