@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.5](https://github.com/ForkbombEu/didroom-components/compare/v1.29.4...v1.29.5) (2024-10-03)
+
+
+### Bug Fixes
+
+* input touch target ([#157](https://github.com/ForkbombEu/didroom-components/issues/157)) ([4e3abae](https://github.com/ForkbombEu/didroom-components/commit/4e3abae4816884936f663338a57f52da985550cb))
+
 ## [1.29.4](https://github.com/ForkbombEu/didroom-components/compare/v1.29.3...v1.29.4) (2024-09-20)
 
 
