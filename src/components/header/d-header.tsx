@@ -40,10 +40,10 @@ export class DHeader {
               </ion-title>
               {this.settings && (
                 <ion-buttons slot="end">
-                  <ion-menu-toggle>
-                    <ion-button>
-                      <div class="w-6 h-6 text-on">
-                        <d-icon icon="settings" outline />;
+                  <ion-menu-toggle class="h-12 w-12">
+                    <ion-button class="h-full w-full">
+                      <div class="w-8 h-8 text-on flex justify-center items-center">
+                        <d-icon icon="settings" outline />
                       </div>
                     </ion-button>
                   </ion-menu-toggle>
