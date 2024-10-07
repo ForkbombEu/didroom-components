@@ -127,7 +127,7 @@ export class DButton implements ComponentInterface {
       >
         <TagType
           {...attrs}
-          class={{ 'button-native': true, [color]: true, 'accent': inButtonsGroup || color === 'accent', 'uppercase': !inButtonsGroup }}
+          class={{ 'h-full': true, 'button-native': true, [color]: true, 'accent': inButtonsGroup || color === 'accent', 'uppercase': !inButtonsGroup }}
           part="native"
           disabled={disabled}
           onFocus={this.onFocus}
