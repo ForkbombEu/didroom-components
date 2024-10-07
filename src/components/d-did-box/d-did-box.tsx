@@ -18,7 +18,7 @@ export class DDidBox {
     return (
       <Host>
         <d-text size="s" class="text-gray">
-          <a class="flex" href={`https://explorer.did.dyne.org/details/did:dyne:${fullId}`}>
+          <a class="flex h-12" href={`https://explorer.did.dyne.org/details/did:dyne:${fullId}`}>
             <d-text size="s" class="w-full flex justify-center flex-wrap space-y-0.5">
               <span class="w-4 h-4 mr-2">
                 <d-icon icon="key" outline/>

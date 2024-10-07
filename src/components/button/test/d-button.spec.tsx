@@ -10,7 +10,7 @@ describe('d-button', () => {
     expect(page.root).toEqualHtml(`
      <d-button class="button button-default primary" color="primary">
        <mock:shadow-root>
-         <button class="button-native primary uppercase" part="native" type="button">
+         <button class="button-native h-full primary uppercase" part="native" type="button">
            <span class="button-inner justify-center">
              <slot name="icon-only"></slot>
              <slot name="start"></slot>
