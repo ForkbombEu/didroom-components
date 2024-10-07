@@ -10,6 +10,7 @@
 | Property       | Attribute       | Description | Type      | Default     |
 | -------------- | --------------- | ----------- | --------- | ----------- |
 | `flow`         | `flow`          |             | `string`  | `undefined` |
+| `logo`         | `logo`          |             | `string`  | `undefined` |
 | `relyingParty` | `relying-party` |             | `string`  | `undefined` |
 | `selected`     | `selected`      |             | `boolean` | `false`     |
 | `verifier`     | `verifier`      |             | `string`  | `undefined` |

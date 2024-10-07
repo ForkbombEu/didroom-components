@@ -8,6 +8,7 @@ const meta = {
   relying-party="${args.relyingParty}"
   verifier="${args.verifier}"
   flow="${args.flow}"
+  logo="${args.logo}"
   >
     <d-definition title="Date of Birth:" definition="24/05/1986" dotted></d-definition>
     <d-definition title="Address" definition="Via Da Milano, 23" dotted ></d-definition>
@@ -24,6 +25,7 @@ export const Default: Story = {
     relyingParty: 'dyne.org',
     verifier: 'John Doe',
     flow: 'Age verification',
+    logo: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
   },
   parameters: {
     design: {

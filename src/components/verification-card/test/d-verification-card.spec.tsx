@@ -13,7 +13,7 @@ describe('d-verification-card', () => {
          <div class="bg-primary flex gap-3 items-start no-underline p-5 rounded-lg w-full">
            <d-vertical-stack class="w-full">
              <d-horizontal-stack class="items-start justify-between w-full">
-               <d-avatar name="John Doe" shape="square" size="l"></d-avatar>
+               <d-avatar name="" shape="square" size="l"></d-avatar>
                <div class="border border-accent h-6 rounded-full w-6"></div>
              </d-horizontal-stack>
              <d-vertical-stack class="w-full" gap="0">
