@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.30.0](https://github.com/ForkbombEu/didroom-components/compare/v1.29.6...v1.30.0) (2024-10-07)
+
+
+### Features
+
+* verification card ([#162](https://github.com/ForkbombEu/didroom-components/issues/162)) ([fe91edd](https://github.com/ForkbombEu/didroom-components/commit/fe91edd5d88ba3de997cd6a234e7815f255c200d))
+
+
+### Bug Fixes
+
+* touch target issues ([#161](https://github.com/ForkbombEu/didroom-components/issues/161)) ([0dd2d77](https://github.com/ForkbombEu/didroom-components/commit/0dd2d77b5b669dab1eb25e70541779d2ad0860c2))
+
 ## [1.29.6](https://github.com/ForkbombEu/didroom-components/compare/v1.29.5...v1.29.6) (2024-10-03)
 
 
