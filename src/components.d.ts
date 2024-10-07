@@ -75,6 +75,7 @@ export namespace Components {
     }
     interface DDefinition {
         "definition": string;
+        "dotted": boolean;
         "hidable": boolean;
         "title": string;
     }
@@ -185,8 +186,14 @@ export namespace Components {
         "color": Color;
         "size": Size;
     }
+    interface DVerificationCard {
+        "flow": string;
+        "relyingParty": string;
+        "selected": boolean;
+        "verifier": string;
+    }
     interface DVerticalStack {
-        "gap": 2 | 4 | 8;
+        "gap": 0 | 2 | 4 | 8;
     }
     interface DidroomLogo {
     }
@@ -500,6 +507,12 @@ declare global {
         prototype: HTMLDTextElement;
         new (): HTMLDTextElement;
     };
+    interface HTMLDVerificationCardElement extends Components.DVerificationCard, HTMLStencilElement {
+    }
+    var HTMLDVerificationCardElement: {
+        prototype: HTMLDVerificationCardElement;
+        new (): HTMLDVerificationCardElement;
+    };
     interface HTMLDVerticalStackElement extends Components.DVerticalStack, HTMLStencilElement {
     }
     var HTMLDVerticalStackElement: {
@@ -546,6 +559,7 @@ declare global {
         "d-tab-button": HTMLDTabButtonElement;
         "d-tab-page": HTMLDTabPageElement;
         "d-text": HTMLDTextElement;
+        "d-verification-card": HTMLDVerificationCardElement;
         "d-vertical-stack": HTMLDVerticalStackElement;
         "didroom-logo": HTMLDidroomLogoElement;
     }
@@ -619,6 +633,7 @@ declare namespace LocalJSX {
     }
     interface DDefinition {
         "definition"?: string;
+        "dotted"?: boolean;
         "hidable"?: boolean;
         "title"?: string;
     }
@@ -738,8 +753,14 @@ declare namespace LocalJSX {
         "color"?: Color;
         "size"?: Size;
     }
+    interface DVerificationCard {
+        "flow"?: string;
+        "relyingParty"?: string;
+        "selected"?: boolean;
+        "verifier"?: string;
+    }
     interface DVerticalStack {
-        "gap"?: 2 | 4 | 8;
+        "gap"?: 0 | 2 | 4 | 8;
     }
     interface DidroomLogo {
     }
@@ -777,6 +798,7 @@ declare namespace LocalJSX {
         "d-tab-button": DTabButton;
         "d-tab-page": DTabPage;
         "d-text": DText;
+        "d-verification-card": DVerificationCard;
         "d-vertical-stack": DVerticalStack;
         "didroom-logo": DidroomLogo;
     }
@@ -818,6 +840,7 @@ declare module "@stencil/core" {
             "d-tab-button": LocalJSX.DTabButton & JSXBase.HTMLAttributes<HTMLDTabButtonElement>;
             "d-tab-page": LocalJSX.DTabPage & JSXBase.HTMLAttributes<HTMLDTabPageElement>;
             "d-text": LocalJSX.DText & JSXBase.HTMLAttributes<HTMLDTextElement>;
+            "d-verification-card": LocalJSX.DVerificationCard & JSXBase.HTMLAttributes<HTMLDVerificationCardElement>;
             "d-vertical-stack": LocalJSX.DVerticalStack & JSXBase.HTMLAttributes<HTMLDVerticalStackElement>;
             "didroom-logo": LocalJSX.DidroomLogo & JSXBase.HTMLAttributes<HTMLDidroomLogoElement>;
         }

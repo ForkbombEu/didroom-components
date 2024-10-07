@@ -22,6 +22,7 @@
  - [d-checkbox](../checkbox)
  - [d-credential-card](../credential-card)
  - [d-credential-service](../credential-service)
+ - [d-definition](../definition)
  - [d-did-box](../d-did-box)
  - [d-empty-state](../empty-state)
  - [d-feedback](../feedback)
@@ -30,6 +31,7 @@
  - [d-session-card](../session-card)
  - [d-swipable-page](../swipable-page)
  - [d-tab-button](../tab-button)
+ - [d-verification-card](../verification-card)
 
 ### Graph
 ```mermaid
@@ -39,6 +41,7 @@ graph TD;
   d-checkbox --> d-text
   d-credential-card --> d-text
   d-credential-service --> d-text
+  d-definition --> d-text
   d-did-box --> d-text
   d-empty-state --> d-text
   d-feedback --> d-text
@@ -47,6 +50,7 @@ graph TD;
   d-session-card --> d-text
   d-swipable-page --> d-text
   d-tab-button --> d-text
+  d-verification-card --> d-text
   style d-text fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
