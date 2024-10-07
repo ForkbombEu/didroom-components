@@ -10,10 +10,8 @@ export class DHorizontalStack {
 
   render() {
     return (
-      <Host>
-        <div class={{ 'flex flex-row': true, 'gap-2': this.gap == 2, 'gap-4': this.gap == 4, 'gap-8': this.gap == 8 }}>
-          <slot></slot>
-        </div>
+      <Host class={{ 'flex flex-row': true, 'gap-2': this.gap == 2, 'gap-4': this.gap == 4, 'gap-8': this.gap == 8 }}>
+        <slot></slot>
       </Host>
     );
   }

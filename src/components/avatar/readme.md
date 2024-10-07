@@ -22,6 +22,7 @@
  - [d-activity-card](../activity-card)
  - [d-credential-card](../credential-card)
  - [d-credential-service](../credential-service)
+ - [d-verification-card](../verification-card)
 
 ### Depends on
 
@@ -34,6 +35,7 @@ graph TD;
   d-activity-card --> d-avatar
   d-credential-card --> d-avatar
   d-credential-service --> d-avatar
+  d-verification-card --> d-avatar
   style d-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

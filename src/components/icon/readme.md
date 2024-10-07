@@ -29,6 +29,7 @@
  - [d-session-card](../session-card)
  - [d-settings-menu](../settings-menu)
  - [d-tab-button](../tab-button)
+ - [d-verification-card](../verification-card)
 
 ### Graph
 ```mermaid
@@ -44,6 +45,7 @@ graph TD;
   d-session-card --> d-icon
   d-settings-menu --> d-icon
   d-tab-button --> d-icon
+  d-verification-card --> d-icon
   style d-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

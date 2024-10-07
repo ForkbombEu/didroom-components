@@ -5,9 +5,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type          | Default |
-| -------- | --------- | ----------- | ------------- | ------- |
-| `gap`    | `gap`     |             | `2 \| 4 \| 8` | `2`     |
+| Property | Attribute | Description | Type               | Default |
+| -------- | --------- | ----------- | ------------------ | ------- |
+| `gap`    | `gap`     |             | `0 \| 2 \| 4 \| 8` | `2`     |
 
 
 ## Dependencies
@@ -15,11 +15,13 @@
 ### Used by
 
  - [d-checkbox](../checkbox)
+ - [d-verification-card](../verification-card)
 
 ### Graph
 ```mermaid
 graph TD;
   d-checkbox --> d-vertical-stack
+  d-verification-card --> d-vertical-stack
   style d-vertical-stack fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -6,7 +6,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class DVerticalStack {
-  @Prop() gap: 2 | 4 | 8 = 2;
+  @Prop() gap: 0 | 2 | 4 | 8 = 2;
 
   render() {
     return (

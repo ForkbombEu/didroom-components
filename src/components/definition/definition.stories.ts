@@ -8,18 +8,22 @@ const meta = {
     title="${args.title}" 
     definition="${args.definition}"
     ${args.hidable && 'hidable'}
+    ${args.dotted && 'dotted'}
     >
     </d-definition>
     <d-definition 
     title="${args.title}" 
     definition="${args.definition}"
     ${args.hidable && 'hidable'}
+    ${args.dotted && 'dotted'}
+
     >
     </d-definition>
     <d-definition 
     title="${args.title}" 
     definition="${args.definition}"
     ${args.hidable && 'hidable'}
+    ${args.dotted && 'dotted'}
     >
     </d-definition>
     `,
@@ -45,5 +49,12 @@ export const Hidable: Story = {
   args: {
     ...Default.args,
     hidable: true,
+  },
+};
+
+export const Dotted: Story = {
+  args: {
+    ...Default.args,
+    dotted: true,
   },
 };
