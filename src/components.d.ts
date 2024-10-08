@@ -188,6 +188,7 @@ export namespace Components {
     }
     interface DVerificationCard {
         "flow": string;
+        "logo": string;
         "relyingParty": string;
         "selected": boolean;
         "verifier": string;
@@ -755,6 +756,7 @@ declare namespace LocalJSX {
     }
     interface DVerificationCard {
         "flow"?: string;
+        "logo"?: string;
         "relyingParty"?: string;
         "selected"?: boolean;
         "verifier"?: string;
