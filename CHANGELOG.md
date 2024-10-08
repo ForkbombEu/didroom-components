@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.1](https://github.com/ForkbombEu/didroom-components/compare/v1.30.0...v1.30.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* add logo to verification card ([#164](https://github.com/ForkbombEu/didroom-components/issues/164)) ([c82f8a5](https://github.com/ForkbombEu/didroom-components/commit/c82f8a5248ec5218ee9aeb90cd08c60164a17f25))
+
 ## [1.30.0](https://github.com/ForkbombEu/didroom-components/compare/v1.29.6...v1.30.0) (2024-10-07)
 
 
