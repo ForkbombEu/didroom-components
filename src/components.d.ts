@@ -150,8 +150,13 @@ export namespace Components {
     }
     interface DSessionCard {
         "date": string;
+        "failureMessage": string;
+        "inProgress": boolean;
+        "inProgressMessage": string;
+        "sessionMessage": string;
         "sid": string;
         "success": boolean;
+        "verifiedMessage": string;
     }
     interface DSettingsMenu {
         "accountSettings": string;
@@ -714,8 +719,13 @@ declare namespace LocalJSX {
     }
     interface DSessionCard {
         "date"?: string;
+        "failureMessage"?: string;
+        "inProgress"?: boolean;
+        "inProgressMessage"?: string;
+        "sessionMessage"?: string;
         "sid"?: string;
         "success"?: boolean;
+        "verifiedMessage"?: string;
     }
     interface DSettingsMenu {
         "accountSettings"?: string;

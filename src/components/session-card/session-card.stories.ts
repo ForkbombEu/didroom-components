@@ -3,7 +3,16 @@ import type { Components } from '../../components.js';
 
 const meta = {
   title: 'Design System/DATA DISPLAY/SessionCard',
-  render: args => `<d-session-card sid='${args.sid}' date='${args.date}' success=${args.success}></d-session-card>`,
+  render: args => `<d-session-card 
+  sid='${args.sid}' 
+  date='${args.date}' 
+  success=${args.success}
+  ${args.sessionMessage ? `session-message='${args.sessionMessage}'` : ''}
+  ${args.verifiedMessage ? `verified-message='${args.verifiedMessage}'` : ''}
+  ${args.failureMessage ? `failure-message='${args.failureMessage}'` : ''}
+  ${args.inProgressMessage ? `in-progress-message='${args.inProgressMessage}'` : ''}
+  ${args.inProgress ? `in-progress` : ''}
+  ></d-session-card>`,
 } satisfies Meta<Components.DSessionCard>;
 
 export default meta;
@@ -27,5 +36,22 @@ export const Success: Story = {
   args: {
     ...Default.args,
     success: true,
+  },
+};
+
+export const Translated: Story = {
+  args: {
+    ...Success.args,
+    sessionMessage: 'セッションID:',
+    verifiedMessage: '検証済み。',
+    failureMessage: '失敗。',
+  },
+};
+
+export const InProgress: Story = {
+  args: {
+    ...Default.args,
+    success: false,
+    inProgress: true,
   },
 };
