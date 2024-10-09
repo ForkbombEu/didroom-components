@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.30.2](https://github.com/ForkbombEu/didroom-components/compare/v1.30.1...v1.30.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* break-all on feedbacks message ([#167](https://github.com/ForkbombEu/didroom-components/issues/167)) ([cc7d63c](https://github.com/ForkbombEu/didroom-components/commit/cc7d63c1034ba172e8440d8bb3fce2435b0b4506))
+* verification results card ([#166](https://github.com/ForkbombEu/didroom-components/issues/166)) ([30f2261](https://github.com/ForkbombEu/didroom-components/commit/30f22612f39e366b7dc3e4838f9927499d2e0c89))
+
 ## [1.30.1](https://github.com/ForkbombEu/didroom-components/compare/v1.30.0...v1.30.1) (2024-10-08)
 
 
