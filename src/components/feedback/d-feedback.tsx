@@ -81,7 +81,7 @@ export class DFeedback {
             </button>
           </div>
           {this.message && (
-            <div class="flex flex-col gap-2 items-start">
+            <div class="flex flex-col gap-2 items-start break-all">
               {!this.hide && (
                 <d-text size="s" class="text-on-alt">
                   {this.message}
