@@ -3,7 +3,13 @@ import type { Components } from '../../components.js';
 
 const meta = {
   title: 'Design System/DATA DISPLAY/CredentialService',
-  render: args => `<d-credential-service name="${args.name}" issuer="${args.issuer}" description="${args.description}" href="${args.href}"></d-credential-service>`,
+  render: args => `<d-credential-service 
+  name="${args.name}" 
+  issuer="${args.issuer}" 
+  description="${args.description}" 
+  href="${args.href}" 
+  logo-src="${args.logoSrc}"
+  ></d-credential-service>`,
 } satisfies Meta<Components.DCredentialService>;
 
 export default meta;
@@ -14,6 +20,7 @@ export const Default: Story = {
     name: 'Over 18',
     description: 'Age Validation',
     issuer: 'Italian Government',
+    logoSrc: 'https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg',
   },
   parameters: {
     design: {
