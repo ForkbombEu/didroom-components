@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.3](https://github.com/ForkbombEu/didroom-components/compare/v1.30.2...v1.30.3) (2024-10-10)
+
+
+### Bug Fixes
+
+* tab buttons touch target ([#170](https://github.com/ForkbombEu/didroom-components/issues/170)) ([27ff6ad](https://github.com/ForkbombEu/didroom-components/commit/27ff6ad07255953b5d7e0ccbd6107d86237ed231))
+
 ## [1.30.2](https://github.com/ForkbombEu/didroom-components/compare/v1.30.1...v1.30.2) (2024-10-09)
 
 
