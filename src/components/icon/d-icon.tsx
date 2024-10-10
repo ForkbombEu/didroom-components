@@ -13,6 +13,7 @@ export class DIcon {
   @Prop() outline: boolean = false;
   @Prop() size: number = 24;
   @State() private pathData: { d: string; fill?: string; stroke?: string }[];
+  @State() private fillAndStroke: { fill: string; stroke: string };
   @State() private pathList: HTMLElement[];
   @State() private visible = false;
   private intersectionObserver: IntersectionObserver;
@@ -22,6 +23,7 @@ export class DIcon {
       this.visible = true;
       await this.loadIconPathData();
       this.generatePathList();
+      this.getFillAndStroke();
     });
   }
 
@@ -37,16 +39,18 @@ export class DIcon {
   }
 
   render() {
-    const fill = this.outline ? 'none' : 'currentColor';
-    const stroke = this.outline ? 'currentColor' : 'none';
     const { size } = this;
     return (
       <Host>
-        <svg xmlns="http://www.w3.org/2000/svg" fill={fill} stroke={stroke} height={size} width={size} viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" height={size} width={size} viewBox="0 0 24 24" {...this.fillAndStroke}>
           {this.pathList}
         </svg>
       </Host>
     );
+  }
+
+  @Watch('outline') private getFillAndStroke(): void {
+    this.fillAndStroke = this.outline ? { fill: 'none', stroke: 'currentColor' } : { fill: 'currentColor', stroke: 'none' };
   }
 
   @Watch('icon') private async loadIconPathData(): Promise<void> {
