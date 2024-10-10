@@ -29,7 +29,7 @@ export const Default: Story = {
     expirationLabel: 'exp',
     expirationDate: '2017-01-01',
     verified: false,
-    logoSrc: 'https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg',
+    logoSrc: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
   },
   parameters: {
     design: {

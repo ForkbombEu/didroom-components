@@ -27,7 +27,7 @@ type Story = StoryObj<DActivityCard>;
 export const Default: Story = {
   args: {
     name: 'Proof of humanity is expired',
-    logo: 'https://via.placeholder.com/150',
+    logo: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
     message: 'Proof of humanity is expired',
     description: 'Your proof of humanity has expired. Please renew it if you need it.',
     date: '1 day ago',
@@ -36,11 +36,7 @@ export const Default: Story = {
 
 export const Read: Story = {
   args: {
-    name: 'Proof of humanity is expired',
-    logo: 'https://via.placeholder.com/150',
-    message: 'Proof of humanity is expired',
-    description: 'Your proof of humanity has expired. Please renew it if you need it.',
-    date: '1 day ago',
+    ...Default.args,
     read: true,
   },
 };
