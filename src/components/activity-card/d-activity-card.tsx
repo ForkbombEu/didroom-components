@@ -18,7 +18,7 @@ export class DActivityCard {
       <Host>
         <div class="items-start border-stroke flex gap-4 border-b p-2 rounded-lg w-full max-w-screen-sm">
           <d-avatar src={this.logo} name={this.name} shape="square" />
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 self-stretch w-full">
             <h2>{this.message}</h2>
             <d-text size="s" class="text-on-alt">
               {this.description}
