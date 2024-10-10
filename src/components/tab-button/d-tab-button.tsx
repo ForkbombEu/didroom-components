@@ -23,7 +23,7 @@ export class DTabButton {
       const icon = icons[this.tab];
       if (!icon) return null;
 
-      return <d-icon icon={icon} size={28} {...(this.active ? {} : { outline: true })} />;
+      return <d-icon icon={icon} size={28} outline={!this.active} />;
     };
 
     return (
@@ -32,6 +32,7 @@ export class DTabButton {
           tab={this.tab}
           href={`/${this.tab}`}
           class={{
+            'h-12 w-12 block': true,
             'text-on-alt': !this.active,
             'text-on': this.active,
           }}
