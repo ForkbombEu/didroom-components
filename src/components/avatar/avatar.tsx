@@ -15,7 +15,7 @@ export class Avatar {
 
   render() {
     const iconSizes: Record<Size, number> = { 'xs': 16, 's': 24, 'm': 28, 'l': 40, 'xl': 48, '2xl': 56 };
-
+    console.log('error rendering avatar', this.error);
     if (this.src && !this.error) {
       return (
         <Host>

@@ -8,7 +8,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class DCredentialService {
   @Prop() name: string;
   @Prop() issuer: string;
-  @Prop() logoSrc?: string;
+  @Prop({attribute:"logo-src"}) logoSrc?: string;
   @Prop() organization?: string;
   @Prop() description?: string;
   @Prop({ reflect: true }) href?: string;

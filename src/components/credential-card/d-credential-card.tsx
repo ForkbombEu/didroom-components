@@ -37,7 +37,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class DCredentialCard {
   @Prop() name: string;
   @Prop() issuer: string;
-  @Prop() logoSrc?: string;
+  @Prop({ attribute: 'logo-src' }) logoSrc?: string;
   @Prop() verified?: boolean = false;
   @Prop() expirationDate?: string;
   @Prop() issuedByLabel: string;
