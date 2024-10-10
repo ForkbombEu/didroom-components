@@ -76,8 +76,8 @@ export class DFeedback {
               <div class="w-6 h-6">{this.type === 'success' ? successIcon : errorIcon}</div>
               <d-text>{this.feedback}</d-text>
             </div>
-            <button onClick={this.onClose} class="w-12 h-12 flex items-center justify-end">
-              <div class="w-5 h-5">{closeIcon}</div>
+            <button onClick={this.onClose}>
+              <div class="w-12 h-12 flex items-center justify-end">{closeIcon}</div>
             </button>
           </div>
           {this.message && (
