@@ -8,7 +8,7 @@ describe('d-feedback', () => {
       html: `<d-feedback></d-feedback>`,
     });
     expect(page.root).toEqualHtml(`
-      <d-feedback class="sticky top-0 z-50">
+      <d-feedback>
         <mock:shadow-root>
           <div class="border-success hidden">
            <div class="flex items-center justify-between self-stretch w-full">
