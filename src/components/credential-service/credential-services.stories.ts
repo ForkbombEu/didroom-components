@@ -20,7 +20,7 @@ export const Default: Story = {
     name: 'Over 18',
     description: 'Age Validation',
     issuer: 'Italian Government',
-    logoSrc: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
+    logoSrc: `https://api.dicebear.com/9.x/icons/svg?seed=${new Date()}`,
   },
   parameters: {
     design: {
