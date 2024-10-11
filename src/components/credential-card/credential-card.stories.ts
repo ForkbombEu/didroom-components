@@ -29,7 +29,7 @@ export const Default: Story = {
     expirationLabel: 'exp',
     expirationDate: '2017-01-01',
     verified: false,
-    logoSrc: `https://api.dicebear.com/9.x/icons/svg?seed=${new Date()}`,
+    logoSrc: `https://api.dicebear.com/9.x/shapes/svg?seed=${new Date()}`,
   },
   parameters: {
     design: {
