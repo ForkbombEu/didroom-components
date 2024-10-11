@@ -32,7 +32,7 @@ export class DTabButton {
           tab={this.tab}
           href={`/${this.tab}`}
           class={{
-            'h-12 w-12 block': true,
+            'min-h-12 min-w-12 block': true,
             'text-on-alt': !this.active,
             'text-on': this.active,
           }}
