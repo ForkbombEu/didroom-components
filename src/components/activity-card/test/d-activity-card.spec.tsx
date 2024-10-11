@@ -12,7 +12,7 @@ describe('d-activity-card', () => {
         <mock:shadow-root>
           <div class="border-b border-stroke flex gap-4 items-start max-w-screen-sm p-2 rounded-lg w-full">
             <d-avatar shape="square"></d-avatar>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 self-stretch w-full">
               <h2></h2>
               <d-text class="text-on-alt" size="s"></d-text>
               <div class="flex gap-2.5 items-center">
