@@ -28,6 +28,7 @@
  - [d-feedback](../feedback)
  - [d-input](../input)
  - [d-page-description](../page-description)
+ - [d-qr-code](../qr-code)
  - [d-session-card](../session-card)
  - [d-swipable-page](../swipable-page)
  - [d-tab-button](../tab-button)
@@ -47,6 +48,7 @@ graph TD;
   d-feedback --> d-text
   d-input --> d-text
   d-page-description --> d-text
+  d-qr-code --> d-text
   d-session-card --> d-text
   d-swipable-page --> d-text
   d-tab-button --> d-text
