@@ -10,7 +10,9 @@ const meta = {
     expiration-date="${args.expirationDate}" 
     issued-by-label="${args.issuedByLabel}"
     expiration-label="${args.expirationLabel}"
-    verified="${args.verified}">
+    verified="${args.verified}"
+    logo-src="${args.logoSrc}"
+    >
     <d-badge>address</d-badge>
     <d-badge>email</d-badge>
     </d-credential-card>`,
@@ -27,6 +29,7 @@ export const Default: Story = {
     expirationLabel: 'exp',
     expirationDate: '2017-01-01',
     verified: false,
+    logoSrc: `https://api.dicebear.com/9.x/shapes/svg?seed=${new Date()}`,
   },
   parameters: {
     design: {
