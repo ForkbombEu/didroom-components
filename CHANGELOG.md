@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.4](https://github.com/ForkbombEu/didroom-components/compare/v1.30.3...v1.30.4) (2024-10-11)
+
+
+### Bug Fixes
+
+* feedback padding ([#172](https://github.com/ForkbombEu/didroom-components/issues/172)) ([6323fb1](https://github.com/ForkbombEu/didroom-components/commit/6323fb1aabe2097606448547e12b5cbbf9c9b9f1))
+
 ## [1.30.3](https://github.com/ForkbombEu/didroom-components/compare/v1.30.2...v1.30.3) (2024-10-10)
 
 
