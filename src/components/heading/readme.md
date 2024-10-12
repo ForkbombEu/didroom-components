@@ -22,6 +22,7 @@
  - [d-logo](../logo)
  - [d-organizations](../organizations)
  - [d-page-description](../page-description)
+ - [d-qr-code](../qr-code)
  - [d-session-card](../session-card)
  - [d-swipable-page](../swipable-page)
 
@@ -33,6 +34,7 @@ graph TD;
   d-logo --> d-heading
   d-organizations --> d-heading
   d-page-description --> d-heading
+  d-qr-code --> d-heading
   d-session-card --> d-heading
   d-swipable-page --> d-heading
   style d-heading fill:#f9f,stroke:#333,stroke-width:4px

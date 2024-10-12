@@ -145,6 +145,13 @@ export namespace Components {
         "description"?: string;
         "title": string;
     }
+    interface DQrCode {
+        "generationDate": string;
+        "generationHour": string;
+        "qr": string;
+        "sessionId": string;
+        "sessionIdLabel": string;
+    }
     interface DScanButton {
         "href": string;
     }
@@ -457,6 +464,12 @@ declare global {
         prototype: HTMLDPageDescriptionElement;
         new (): HTMLDPageDescriptionElement;
     };
+    interface HTMLDQrCodeElement extends Components.DQrCode, HTMLStencilElement {
+    }
+    var HTMLDQrCodeElement: {
+        prototype: HTMLDQrCodeElement;
+        new (): HTMLDQrCodeElement;
+    };
     interface HTMLDScanButtonElement extends Components.DScanButton, HTMLStencilElement {
     }
     var HTMLDScanButtonElement: {
@@ -558,6 +571,7 @@ declare global {
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
         "d-page-description": HTMLDPageDescriptionElement;
+        "d-qr-code": HTMLDQrCodeElement;
         "d-scan-button": HTMLDScanButtonElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-settings-menu": HTMLDSettingsMenuElement;
@@ -714,6 +728,13 @@ declare namespace LocalJSX {
         "description"?: string;
         "title"?: string;
     }
+    interface DQrCode {
+        "generationDate"?: string;
+        "generationHour"?: string;
+        "qr"?: string;
+        "sessionId"?: string;
+        "sessionIdLabel"?: string;
+    }
     interface DScanButton {
         "href"?: string;
     }
@@ -803,6 +824,7 @@ declare namespace LocalJSX {
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
         "d-page-description": DPageDescription;
+        "d-qr-code": DQrCode;
         "d-scan-button": DScanButton;
         "d-session-card": DSessionCard;
         "d-settings-menu": DSettingsMenu;
@@ -845,6 +867,7 @@ declare module "@stencil/core" {
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
+            "d-qr-code": LocalJSX.DQrCode & JSXBase.HTMLAttributes<HTMLDQrCodeElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-settings-menu": LocalJSX.DSettingsMenu & JSXBase.HTMLAttributes<HTMLDSettingsMenuElement>;
