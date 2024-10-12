@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.31.0](https://github.com/ForkbombEu/didroom-components/compare/v1.30.4...v1.31.0) (2024-10-12)
+
+
+### Features
+
+* qr code card ([#174](https://github.com/ForkbombEu/didroom-components/issues/174)) ([b75f643](https://github.com/ForkbombEu/didroom-components/commit/b75f643af593e243293cde15dfacf144c8a3824f))
+
+
+### Bug Fixes
+
+* tab button label ([#175](https://github.com/ForkbombEu/didroom-components/issues/175)) ([d1c1398](https://github.com/ForkbombEu/didroom-components/commit/d1c13989789250ef59a882d76b9a6818b8e4c886))
+
 ## [1.30.4](https://github.com/ForkbombEu/didroom-components/compare/v1.30.3...v1.30.4) (2024-10-11)
 
 
