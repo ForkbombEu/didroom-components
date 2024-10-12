@@ -10,7 +10,7 @@ describe('d-tab-button', () => {
     expect(page.root).toEqualHtml(`
       <d-tab-button tab="home">
        <mock:shadow-root>
-         <ion-tab-button class="block h-12 text-on-alt w-12" href="/home" tab="home">
+         <ion-tab-button class="block min-h-12 text-on-alt min-w-12" href="/home" tab="home">
            <div class="relative w-fit">
               <d-icon icon="home" outline="" size="28"></d-icon>
             </div>
