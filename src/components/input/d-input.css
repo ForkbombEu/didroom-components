@@ -7,6 +7,7 @@
   --border-color: var(--stroke);
   --color: var(--on);
   --placeholder-color: var(--on-alt);
+  --placeholder-opacity: 1;
   --highlight-color-focused: var(--accent);
   --highlight-color-invalid: var(--error);
   --highlight-color-valid: var(--success);

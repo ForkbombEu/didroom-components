@@ -81,7 +81,7 @@ export class DInput {
           )}
           {this.hidable && (
             <d-button class="h-full" slot="end" clear onClick={this.changePasswordVisibility} aria-checked={this.type !== 'password' ? 'true' : 'false'} aria-label="show password" role="switch">
-              {this.type === 'password' ? <d-icon icon="visibility" outline /> : <d-icon icon="visibility-off" outline />}
+              {this.type === 'password' ? <d-icon icon="visibility" outline class="text-on" /> : <d-icon icon="visibility-off" outline class="text-on"/>}
             </d-button>
           )}
         </ion-input>
