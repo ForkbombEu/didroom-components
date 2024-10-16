@@ -172,7 +172,6 @@ export namespace Components {
         "logOut": string;
         "notificationsSettings": string;
         "privacyPolicy": string;
-        "securityAndAuthentication": string;
         "support": string;
         "version": string;
     }
@@ -759,7 +758,6 @@ declare namespace LocalJSX {
         "onLanguageSettingsClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
         "onLogoutClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
         "privacyPolicy"?: string;
-        "securityAndAuthentication"?: string;
         "support"?: string;
         "version"?: string;
     }

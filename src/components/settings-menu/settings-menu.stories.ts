@@ -5,7 +5,6 @@ const meta = {
   title: 'Design System/NAVIGATION/SettingsMenu',
   render: args => `<d-settings-menu 
   account-settings="${args.accountSettings}"
-    security-and-authentication="${args.securityAndAuthentication}"
     notifications-settings="${args.notificationsSettings}"
     languages="${args.languages}"
     support="${args.support}"
@@ -22,7 +21,6 @@ type Story = StoryObj<Components.DSettingsMenu>;
 export const Default: Story = {
   args: {
     accountSettings: 'Account settings',
-    securityAndAuthentication: 'Security and authentication',
     notificationsSettings: 'Notifications settings',
     languages: 'Languages',
     support: 'Support',
