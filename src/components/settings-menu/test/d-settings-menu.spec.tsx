@@ -16,9 +16,6 @@ describe('d-settings-menu', () => {
                <d-button aria-hidden="" size="large">
                  <d-icon icon="profile" outline="" slot="start"></d-icon>
                </d-button>
-               <d-button disabled="" href="/" size="large">
-                 <d-icon icon="lock" outline="" slot="start"></d-icon>
-               </d-button>
                <d-button aria-hidden="" size="large">
                  <d-icon icon="notification" outline="" slot="start"></d-icon>
                </d-button>
