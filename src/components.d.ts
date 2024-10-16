@@ -155,6 +155,10 @@ export namespace Components {
     interface DScanButton {
         "href": string;
     }
+    interface DScannerMask {
+        "description": string;
+        "heading": string;
+    }
     interface DSessionCard {
         "date": string;
         "failureMessage": string;
@@ -172,7 +176,6 @@ export namespace Components {
         "logOut": string;
         "notificationsSettings": string;
         "privacyPolicy": string;
-        "securityAndAuthentication": string;
         "support": string;
         "version": string;
     }
@@ -476,6 +479,12 @@ declare global {
         prototype: HTMLDScanButtonElement;
         new (): HTMLDScanButtonElement;
     };
+    interface HTMLDScannerMaskElement extends Components.DScannerMask, HTMLStencilElement {
+    }
+    var HTMLDScannerMaskElement: {
+        prototype: HTMLDScannerMaskElement;
+        new (): HTMLDScannerMaskElement;
+    };
     interface HTMLDSessionCardElement extends Components.DSessionCard, HTMLStencilElement {
     }
     var HTMLDSessionCardElement: {
@@ -573,6 +582,7 @@ declare global {
         "d-page-description": HTMLDPageDescriptionElement;
         "d-qr-code": HTMLDQrCodeElement;
         "d-scan-button": HTMLDScanButtonElement;
+        "d-scanner-mask": HTMLDScannerMaskElement;
         "d-session-card": HTMLDSessionCardElement;
         "d-settings-menu": HTMLDSettingsMenuElement;
         "d-swipable-page": HTMLDSwipablePageElement;
@@ -738,6 +748,10 @@ declare namespace LocalJSX {
     interface DScanButton {
         "href"?: string;
     }
+    interface DScannerMask {
+        "description"?: string;
+        "heading"?: string;
+    }
     interface DSessionCard {
         "date"?: string;
         "failureMessage"?: string;
@@ -759,7 +773,6 @@ declare namespace LocalJSX {
         "onLanguageSettingsClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
         "onLogoutClick"?: (event: DSettingsMenuCustomEvent<void>) => void;
         "privacyPolicy"?: string;
-        "securityAndAuthentication"?: string;
         "support"?: string;
         "version"?: string;
     }
@@ -826,6 +839,7 @@ declare namespace LocalJSX {
         "d-page-description": DPageDescription;
         "d-qr-code": DQrCode;
         "d-scan-button": DScanButton;
+        "d-scanner-mask": DScannerMask;
         "d-session-card": DSessionCard;
         "d-settings-menu": DSettingsMenu;
         "d-swipable-page": DSwipablePage;
@@ -869,6 +883,7 @@ declare module "@stencil/core" {
             "d-page-description": LocalJSX.DPageDescription & JSXBase.HTMLAttributes<HTMLDPageDescriptionElement>;
             "d-qr-code": LocalJSX.DQrCode & JSXBase.HTMLAttributes<HTMLDQrCodeElement>;
             "d-scan-button": LocalJSX.DScanButton & JSXBase.HTMLAttributes<HTMLDScanButtonElement>;
+            "d-scanner-mask": LocalJSX.DScannerMask & JSXBase.HTMLAttributes<HTMLDScannerMaskElement>;
             "d-session-card": LocalJSX.DSessionCard & JSXBase.HTMLAttributes<HTMLDSessionCardElement>;
             "d-settings-menu": LocalJSX.DSettingsMenu & JSXBase.HTMLAttributes<HTMLDSettingsMenuElement>;
             "d-swipable-page": LocalJSX.DSwipablePage & JSXBase.HTMLAttributes<HTMLDSwipablePageElement>;

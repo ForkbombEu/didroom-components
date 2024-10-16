@@ -7,7 +7,6 @@ import { Component, Host, Prop, h, Event, EventEmitter } from '@stencil/core';
 })
 export class DSettingsMenu {
   @Prop({ attribute: 'account-settings' }) accountSettings: string;
-  @Prop({ attribute: 'security-and-authentication' }) securityAndAuthentication: string;
   @Prop({ attribute: 'notifications-settings' }) notificationsSettings: string;
   @Prop() languages: string;
   @Prop() support: string;
@@ -29,10 +28,6 @@ export class DSettingsMenu {
               <d-button aria-hidden size="large" onClick={()=>this.accountSettingsClick.emit()}>
                 {this.accountSettings}
                 <d-icon icon="profile" slot="start" outline />
-              </d-button>
-              <d-button href="/" size="large" disabled>
-                {this.securityAndAuthentication}
-                <d-icon icon="lock" slot="start" outline />
               </d-button>
               <d-button onClick={()=>this.appSettingsClick.emit()} aria-hidden size="large">
                 {this.notificationsSettings}

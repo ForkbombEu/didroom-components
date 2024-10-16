@@ -32,15 +32,15 @@ export class DTabButton {
           tab={this.tab}
           href={`/${this.tab}`}
           class={{
-            'min-h-12 min-w-12 block': true,
+            'h-12 min-w-12 block': true,
             'text-on-alt': !this.active,
             'text-on': this.active,
           }}
         >
           <div class="relative w-fit">
             {this.hasAlert && (
-              <div class="absolute right-1 top-1">
-                <d-info-led type="warning" class={{ 'border rounded-full': true }}></d-info-led>
+              <div class="absolute right-1 top-1 border-surface">
+                <d-info-led type="warning" class={{ 'border rounded-full border-surface': true }}></d-info-led>
               </div>
             )}
             {svg()}
