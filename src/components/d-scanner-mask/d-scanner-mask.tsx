@@ -66,7 +66,7 @@ export class DScannerMask {
           </div>
 
           <div class="bg-surface bg-opacity-70 w-full flex-grow">
-            <div class="ion-padding text-center justify-center">
+            <div class="text-center justify-center">
               <d-page-description title={this.heading} description={this.description} />
             </div>
           </div>

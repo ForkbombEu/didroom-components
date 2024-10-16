@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import type { Components } from '../../components.js';
 
 const meta = {
-  title: 'Design System/DATA DISPLAY/ScannerMask',
+  title: 'Design System/MEDIA & ICONS/ScannerMask',
   render: args => `<d-scanner-mask
     ${args.heading ? `heading="${args.heading}"` : ''}
     ${args.description ? `description="${args.description}"` : ''} 

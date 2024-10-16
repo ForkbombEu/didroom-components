@@ -39,8 +39,8 @@ export class DTabButton {
         >
           <div class="relative w-fit">
             {this.hasAlert && (
-              <div class="absolute right-1 top-1">
-                <d-info-led type="warning" class={{ 'border rounded-full': true }}></d-info-led>
+              <div class="absolute right-1 top-1 border-surface">
+                <d-info-led type="warning" class={{ 'border rounded-full border-surface': true }}></d-info-led>
               </div>
             )}
             {svg()}
