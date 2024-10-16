@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.ion-padding {
+  --padding-start: var(--ion-padding, 16px);
+  --padding-end: var(--ion-padding, 16px);
+  --padding-top: var(--ion-padding, 16px);
+  --padding-bottom: var(--ion-padding, 16px);
+  padding-inline-start: var(--ion-padding, 16px);
+  padding-inline-end: var(--ion-padding, 16px);
+  padding-top: var(--ion-padding, 16px);
+  padding-bottom: var(--ion-padding, 16px);
+}
+
+.viewfinder {
+  --s: 50px;
+  --t: 8px;
+
+  padding: calc(var(--t));
+  outline-offset: calc(-1 * var(--t));
+  mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 / calc(100% - var(--s)) calc(100% - var(--s)), linear-gradient(#000 0 0) content-box;
+}
