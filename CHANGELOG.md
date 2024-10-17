@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.2](https://github.com/ForkbombEu/didroom-components/compare/v1.31.1...v1.31.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* other accessibility issues ([#180](https://github.com/ForkbombEu/didroom-components/issues/180)) ([9aebe50](https://github.com/ForkbombEu/didroom-components/commit/9aebe50a954c69aa026c1a991cb77c7e5cd31dc8))
+
 ## [1.31.1](https://github.com/ForkbombEu/didroom-components/compare/v1.31.0...v1.31.1) (2024-10-16)
 
 
