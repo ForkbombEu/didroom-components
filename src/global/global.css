@@ -14,7 +14,7 @@
     --highlight: #c9cedc;
     --success: #279b48;
     --warning: #e58600;
-    --error: #ee342b;
+    --error: #DD3026;
     --sans-font-family: 'Gantari Variable', 'sans-serif';
     --icon-font-family: 'Material Symbols Rounded';
     --ion-default-font: var(--sans-font-family);
@@ -46,7 +46,7 @@
     --highlight: #546080;
     --success: #4ecb71;
     --warning: #ff9601;
-    --error: #ff443b;
+    --error: #ff6681;
     --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
     --background-card-url-2: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/card-bg2-dark.png');
     --background-card-url-3: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/card-bg3-dark.png');
@@ -70,7 +70,7 @@
       --highlight: #546080;
       --success: #4ecb71;
       --warning: #ff9601;
-      --error: #ff443b;
+      --error: #ff6681;
       --background-card-url: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/rect-dark.png');
       --background-card-url-2: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/card-bg2-dark.png');
       --background-card-url-3: url('https://cdn.jsdelivr.net/npm/@didroom/components@latest/dist/didroom-components/assets/card-bg3-dark.png');

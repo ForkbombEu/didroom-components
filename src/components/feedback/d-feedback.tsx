@@ -76,8 +76,8 @@ export class DFeedback {
               <div class="w-6 h-6">{this.type === 'success' ? successIcon : errorIcon}</div>
               <d-text>{this.feedback}</d-text>
             </div>
-            <button onClick={this.onClose}>
-              <div class="w-12 h-12 flex items-center justify-end">{closeIcon}</div>
+            <button onClick={this.onClose} class="w-12 h-12">
+              <div class="w-full h-full flex items-center justify-end">{closeIcon}</div>
             </button>
           </div>
           {this.message && (
@@ -87,7 +87,7 @@ export class DFeedback {
                   {this.message}
                 </d-text>
               )}
-              <button onClick={onClick} class="text-on text-base font-bold leading-5 underline">
+              <button onClick={onClick} class="h-12 text-on text-base font-bold leading-5 underline">
                 {this.hide ? 'See more' : 'Show less'}
               </button>
             </div>
