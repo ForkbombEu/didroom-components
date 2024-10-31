@@ -31,7 +31,7 @@ export class DInput {
   private changePasswordVisibility = () => {
     this.type = this.type === 'password' ? 'text' : 'password';
   };
-  
+
   componentDidLoad() {
     const ionInputEl = this.el.shadowRoot.querySelector('ion-input');
     if (ionInputEl && this.name) {
@@ -80,8 +80,16 @@ export class DInput {
             </d-button>
           )}
           {this.hidable && (
-            <d-button class="h-full" slot="end" clear onClick={this.changePasswordVisibility} aria-checked={this.type !== 'password' ? 'true' : 'false'} aria-label="show password" role="switch">
-              {this.type === 'password' ? <d-icon icon="visibility" outline class="text-on" /> : <d-icon icon="visibility-off" outline class="text-on"/>}
+            <d-button
+              class="h-full"
+              slot="end"
+              clear
+              onClick={this.changePasswordVisibility}
+              aria-checked={this.type !== 'password' ? 'true' : 'false'}
+              aria-label="show password"
+              role="switch"
+            >
+              {this.type === 'password' ? <d-icon icon="visibility" outline class="text-on" /> : <d-icon icon="visibility-off" outline class="text-on" />}
             </d-button>
           )}
         </ion-input>
