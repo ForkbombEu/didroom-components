@@ -1,7 +1,7 @@
 import { Component, Host, Prop, h, State, EventEmitter, Event } from '@stencil/core';
-import { AnsiUp } from '../../../node_modules/ansi_up/ansi_up.js';
+import AnsiToHtml from 'ansi-to-html';
 
-const ansiUp = new AnsiUp();
+const converter = new AnsiToHtml();
 
 const successIcon = (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -87,7 +87,7 @@ export class DFeedback {
             <div class="flex flex-col gap-2 items-start break-all">
               {!this.hide && (
                 <d-text size="s" class="text-on-alt">
-                  <div innerHTML={ansiUp.ansi_to_html(this.message)} />
+                  <div innerHTML={converter.toHtml(this.message)} />
                 </d-text>
               )}
               <button onClick={onClick} class="h-12 text-on text-base font-bold leading-5 underline">

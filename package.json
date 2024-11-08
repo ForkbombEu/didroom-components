@@ -34,7 +34,7 @@
   "dependencies": {
     "@stencil/core": "^4.11.0",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "ansi_up": "^6.0.2",
+    "ansi-to-html": "^0.7.2",
     "did-resolver": "^4.1.0"
   },
   "devDependencies": {
