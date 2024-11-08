@@ -21,11 +21,11 @@ export class DDidBox {
           <a class="flex h-12" href={`https://explorer.did.dyne.org/details/did:dyne:${fullId}`}>
             <d-text size="s" class="w-full flex justify-center flex-wrap space-y-0.5">
               <span class="w-4 h-4 mr-2">
-                <d-icon icon="key" outline/>
+                <d-icon icon="key" outline />
               </span>
-              <span>{'did'}</span>
+              <span class="text-on-alt">{'did'}</span>
               <span class="text-gray-400">:</span>
-              <span class="text-warning">{method}</span>
+              <span class="text-on">{method}</span>
               <span class="text-gray-400">:</span>
               <span class="text-on-alt">{submethod}</span>
               <span class="text-gray-400">:</span>

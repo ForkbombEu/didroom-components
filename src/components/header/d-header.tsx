@@ -23,7 +23,7 @@ export class DHeader {
                 <ion-buttons slot="start">
                   <ion-button onClick={() => this.backButtonClick.emit()}>
                     <div class="w-6 h-6 text-on" slot="icon-only">
-                      <d-icon icon="arrow-back" outline />
+                      <d-icon icon="arrow-back" outline aria-label="back" />
                     </div>
                   </ion-button>
                 </ion-buttons>
@@ -43,7 +43,7 @@ export class DHeader {
                   <ion-menu-toggle class="h-12 w-12">
                     <ion-button class="h-full w-full">
                       <div class="w-8 h-8 text-on flex justify-center items-center">
-                        <d-icon icon="settings" outline />
+                        <d-icon icon="settings" outline aria-label="settings"/>
                       </div>
                     </ion-button>
                   </ion-menu-toggle>
