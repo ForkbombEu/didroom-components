@@ -55,3 +55,10 @@ export const ErrorWithMessage: Story = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis ac libero tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum. Nullam nec tortor nec ante tincidunt fermentum.',
   },
 };
+
+export const WithAnsiEscapeCharacters: Story = {
+  args: {
+    ...Error.args,
+    message: '\u001b[1;31mThis is red text\u001b[0m',
+  },
+};
