@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.31.3](https://github.com/ForkbombEu/didroom-components/compare/v1.31.2...v1.31.3) (2024-11-08)
+
+
+### Bug Fixes
+
+* parse ansi escape charaters to html ([#183](https://github.com/ForkbombEu/didroom-components/issues/183)) ([a91ca73](https://github.com/ForkbombEu/didroom-components/commit/a91ca73ce161596493e5513ba362f7cad019b1ba))
+* some accessibility issues ([#182](https://github.com/ForkbombEu/didroom-components/issues/182)) ([7ba0a06](https://github.com/ForkbombEu/didroom-components/commit/7ba0a06e9718c057ea44ce45a14a16143a68136d))
+
 ## [1.31.2](https://github.com/ForkbombEu/didroom-components/compare/v1.31.1...v1.31.2) (2024-10-17)
 
 
