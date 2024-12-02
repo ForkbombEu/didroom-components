@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.4](https://github.com/ForkbombEu/didroom-components/compare/v1.31.3...v1.31.4) (2024-12-02)
+
+
+### Bug Fixes
+
+* replace drawer menu ([#185](https://github.com/ForkbombEu/didroom-components/issues/185)) ([6a7c234](https://github.com/ForkbombEu/didroom-components/commit/6a7c234071bcd3f2622ccce2ec3b52cdbcd212c2))
+
 ## [1.31.3](https://github.com/ForkbombEu/didroom-components/compare/v1.31.2...v1.31.3) (2024-11-08)
 
 
