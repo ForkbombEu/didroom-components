@@ -20,20 +20,6 @@ describe('d-header', () => {
                </ion-title>
              </ion-toolbar>
            </ion-header>
-           <ion-menu content-id="main-content">
-             <ion-header>
-               <ion-toolbar>
-                 <ion-title>
-                   Settings
-                 </ion-title>
-               </ion-toolbar>
-             </ion-header>
-             <ion-content>
-               <div class="px-4 py-2">
-                 <slot name="settings"></slot>
-               </div>
-             </ion-content>
-           </ion-menu>
          </div>
        </mock:shadow-root>
       </d-header>
