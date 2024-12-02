@@ -12,7 +12,6 @@ export class DHeader {
   @State() isSettingsOpen: boolean = false;
   @Event() backButtonClick: EventEmitter<void>;
 
-
   render() {
     return (
       <Host>
@@ -51,18 +50,20 @@ export class DHeader {
               )}
             </ion-toolbar>
           </ion-header>
-          <ion-menu content-id="main-content">
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>{this.settingsTitle}</ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content>
-              <div class="px-4 py-2">
-                <slot name="settings"></slot>
-              </div>
-            </ion-content>
-          </ion-menu>
+          {this.settings && (
+            <ion-menu content-id="main-content">
+              <ion-header>
+                <ion-toolbar>
+                  <ion-title>{this.settingsTitle}</ion-title>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content>
+                <div class="px-4 py-2">
+                  <slot name="settings"></slot>
+                </div>
+              </ion-content>
+            </ion-menu>
+          )}
         </div>
       </Host>
     );
