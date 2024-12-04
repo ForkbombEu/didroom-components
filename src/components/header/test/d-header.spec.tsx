@@ -13,7 +13,7 @@ describe('d-header', () => {
          <div>
            <ion-header class="shadow-none" translucent="">
              <ion-toolbar>
-               <ion-title class="text-center uppercase">
+               <ion-title class="text-center uppercase bg-surface">
                 <span>
                   <slot></slot>
                 </span>
