@@ -27,7 +27,7 @@ export class DHeader {
                   </ion-button>
                 </ion-buttons>
               )}
-              <ion-title class="text-center uppercase">
+              <ion-title class="text-center uppercase bg-surface">
                 <span
                   class={{
                     'pl-12': this.settings,
