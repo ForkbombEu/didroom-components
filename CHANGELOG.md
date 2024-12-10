@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.5](https://github.com/ForkbombEu/didroom-components/compare/v1.31.4...v1.31.5) (2024-12-10)
+
+
+### Bug Fixes
+
+* force background in header title ([#187](https://github.com/ForkbombEu/didroom-components/issues/187)) ([ccf01fd](https://github.com/ForkbombEu/didroom-components/commit/ccf01fd3ecf591ac56c0ce951fd512893ce9b0c6))
+
 ## [1.31.4](https://github.com/ForkbombEu/didroom-components/compare/v1.31.3...v1.31.4) (2024-12-02)
 
 
