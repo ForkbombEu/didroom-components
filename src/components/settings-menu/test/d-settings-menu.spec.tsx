@@ -24,10 +24,10 @@ describe('d-settings-menu', () => {
                </d-button>
              </d-buttons-group>
              <d-buttons-group>
-               <d-button href="https://didroom.com/guides/1_orgadmin/support.html" size="large">
+               <d-button href="https://didroom.com/guides/Orgadmin/support.html" size="large">
                  <d-icon icon="help" outline="" slot="start"></d-icon>
                </d-button>
-               <d-button href="https://didroom.com/guides/7_terms-and-conditions/privacy-policy.html" size="large">
+               <d-button href="https://didroom.com/guides/Terms-and-conditions/privacy-policy.html" size="large">
                  <d-icon icon="shield" outline="" slot="start"></d-icon>
                </d-button>
              </d-buttons-group>
