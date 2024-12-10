@@ -39,11 +39,11 @@ export class DSettingsMenu {
               </d-button>
             </d-buttons-group>
             <d-buttons-group>
-              <d-button href="https://didroom.com/guides/1_orgadmin/support.html" size="large">
+              <d-button href="https://didroom.com/guides/Orgadmin/support.html" size="large">
                 {this.support}
                 <d-icon icon="help" slot="start" outline />
               </d-button>
-              <d-button href="https://didroom.com/guides/7_terms-and-conditions/privacy-policy.html" size="large">
+              <d-button href="https://didroom.com/guides/Terms-and-conditions/privacy-policy.html" size="large">
                 {this.privacyPolicy}
                 <d-icon icon="shield" slot="start" outline />
               </d-button>
