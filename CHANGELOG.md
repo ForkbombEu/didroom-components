@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.6](https://github.com/ForkbombEu/didroom-components/compare/v1.31.5...v1.31.6) (2024-12-12)
+
+
+### Bug Fixes
+
+* improve activity items ([#191](https://github.com/ForkbombEu/didroom-components/issues/191)) ([ce32daa](https://github.com/ForkbombEu/didroom-components/commit/ce32daaa230ffb8c982f9bf9336e87c3d6d09821))
+
 ## [1.31.5](https://github.com/ForkbombEu/didroom-components/compare/v1.31.4...v1.31.5) (2024-12-10)
 
 
