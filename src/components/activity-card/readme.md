@@ -13,7 +13,6 @@
 | `description` | `description` |             | `string`  | `undefined` |
 | `logo`        | `logo`        |             | `string`  | `undefined` |
 | `message`     | `message`     |             | `string`  | `undefined` |
-| `name`        | `name`        |             | `string`  | `undefined` |
 | `read`        | `read`        |             | `boolean` | `false`     |
 
 
@@ -21,16 +20,19 @@
 
 ### Depends on
 
-- [d-avatar](../avatar)
-- [d-text](../text)
+- [d-list-item](../d-list-item)
 - [d-info-led](../info-led)
+- [d-text](../text)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-activity-card --> d-avatar
-  d-activity-card --> d-text
+  d-activity-card --> d-list-item
   d-activity-card --> d-info-led
+  d-activity-card --> d-text
+  d-list-item --> d-avatar
+  d-list-item --> d-text
+  d-list-item --> d-icon
   d-avatar --> d-icon
   style d-activity-card fill:#f9f,stroke:#333,stroke-width:4px
 ```

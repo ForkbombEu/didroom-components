@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                         | Default     |
-| -------- | --------- | ----------- | -------------------------------------------- | ----------- |
-| `color`  | `color`   |             | `string`                                     | `'primary'` |
-| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"` | `'m'`       |
+| Property | Attribute | Description | Type                                                         | Default     |
+| -------- | --------- | ----------- | ------------------------------------------------------------ | ----------- |
+| `color`  | `color`   |             | `"accent" \| "error" \| "primary" \| "success" \| "warning"` | `'primary'` |
+| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"`                 | `'m'`       |
 
 
 ## Dependencies

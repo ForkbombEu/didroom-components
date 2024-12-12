@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type               | Default |
-| -------- | --------- | ----------- | ------------------ | ------- |
-| `gap`    | `gap`     |             | `0 \| 2 \| 4 \| 8` | `2`     |
+| Property    | Attribute   | Description | Type               | Default |
+| ----------- | ----------- | ----------- | ------------------ | ------- |
+| `gap`       | `gap`       |             | `0 \| 2 \| 4 \| 8` | `2`     |
+| `separator` | `separator` |             | `boolean`          | `false` |
 
 
 ## Dependencies

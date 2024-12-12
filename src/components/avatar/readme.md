@@ -10,7 +10,7 @@
 | Property | Attribute | Description | Type                                         | Default     |
 | -------- | --------- | ----------- | -------------------------------------------- | ----------- |
 | `name`   | `name`    |             | `string`                                     | `undefined` |
-| `shape`  | `shape`   |             | `string`                                     | `'round'`   |
+| `shape`  | `shape`   |             | `"round" \| "square"`                        | `'round'`   |
 | `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"` | `'m'`       |
 | `src`    | `src`     |             | `string`                                     | `undefined` |
 
@@ -19,9 +19,8 @@
 
 ### Used by
 
- - [d-activity-card](../activity-card)
  - [d-credential-card](../credential-card)
- - [d-credential-service](../credential-service)
+ - [d-list-item](../d-list-item)
  - [d-verification-card](../verification-card)
 
 ### Depends on
@@ -32,9 +31,8 @@
 ```mermaid
 graph TD;
   d-avatar --> d-icon
-  d-activity-card --> d-avatar
   d-credential-card --> d-avatar
-  d-credential-service --> d-avatar
+  d-list-item --> d-avatar
   d-verification-card --> d-avatar
   style d-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```

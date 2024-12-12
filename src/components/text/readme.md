@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                         | Default     |
-| -------- | --------- | ----------- | -------------------------------------------- | ----------- |
-| `color`  | `color`   |             | `string`                                     | `'primary'` |
-| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"` | `'m'`       |
+| Property | Attribute | Description | Type                                                         | Default     |
+| -------- | --------- | ----------- | ------------------------------------------------------------ | ----------- |
+| `color`  | `color`   |             | `"accent" \| "error" \| "primary" \| "success" \| "warning"` | `'primary'` |
+| `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"`                 | `'m'`       |
 
 
 ## Dependencies
@@ -27,6 +27,7 @@
  - [d-empty-state](../empty-state)
  - [d-feedback](../feedback)
  - [d-input](../input)
+ - [d-list-item](../d-list-item)
  - [d-page-description](../page-description)
  - [d-qr-code](../qr-code)
  - [d-session-card](../session-card)
@@ -47,6 +48,7 @@ graph TD;
   d-empty-state --> d-text
   d-feedback --> d-text
   d-input --> d-text
+  d-list-item --> d-text
   d-page-description --> d-text
   d-qr-code --> d-text
   d-session-card --> d-text
