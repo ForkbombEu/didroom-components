@@ -20,12 +20,12 @@
 
  - [d-avatar](../avatar)
  - [d-credential-card](../credential-card)
- - [d-credential-service](../credential-service)
  - [d-definition](../definition)
  - [d-did-box](../d-did-box)
  - [d-empty-state](../empty-state)
  - [d-header](../header)
  - [d-input](../input)
+ - [d-list-item](../d-list-item)
  - [d-session-card](../session-card)
  - [d-settings-menu](../settings-menu)
  - [d-tab-button](../tab-button)
@@ -36,12 +36,12 @@
 graph TD;
   d-avatar --> d-icon
   d-credential-card --> d-icon
-  d-credential-service --> d-icon
   d-definition --> d-icon
   d-did-box --> d-icon
   d-empty-state --> d-icon
   d-header --> d-icon
   d-input --> d-icon
+  d-list-item --> d-icon
   d-session-card --> d-icon
   d-settings-menu --> d-icon
   d-tab-button --> d-icon

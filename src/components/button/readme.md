@@ -7,17 +7,17 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type                              | Default     |
-| ------------ | ------------- | ----------- | --------------------------------- | ----------- |
-| `buttonType` | `button-type` |             | `string`                          | `'button'`  |
-| `clear`      | `clear`       |             | `boolean`                         | `undefined` |
-| `color`      | `color`       |             | `string`                          | `'primary'` |
-| `disabled`   | `disabled`    |             | `boolean`                         | `false`     |
-| `expand`     | `expand`      |             | `boolean`                         | `undefined` |
-| `form`       | `form`        |             | `HTMLFormElement \| string`       | `undefined` |
-| `href`       | `href`        |             | `string`                          | `undefined` |
-| `size`       | `size`        |             | `"default" \| "large" \| "small"` | `undefined` |
-| `type`       | `type`        |             | `"button" \| "reset" \| "submit"` | `'button'`  |
+| Property     | Attribute     | Description | Type                                                                      | Default     |
+| ------------ | ------------- | ----------- | ------------------------------------------------------------------------- | ----------- |
+| `buttonType` | `button-type` |             | `string`                                                                  | `'button'`  |
+| `clear`      | `clear`       |             | `boolean`                                                                 | `undefined` |
+| `color`      | `color`       |             | `"accent" \| "error" \| "outline" \| "primary" \| "success" \| "warning"` | `'primary'` |
+| `disabled`   | `disabled`    |             | `boolean`                                                                 | `false`     |
+| `expand`     | `expand`      |             | `boolean`                                                                 | `undefined` |
+| `form`       | `form`        |             | `HTMLFormElement \| string`                                               | `undefined` |
+| `href`       | `href`        |             | `string`                                                                  | `undefined` |
+| `size`       | `size`        |             | `"default" \| "large" \| "small"`                                         | `undefined` |
+| `type`       | `type`        |             | `"button" \| "reset" \| "submit"`                                         | `'button'`  |
 
 
 ## Events

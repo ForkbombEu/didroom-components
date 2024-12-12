@@ -6,14 +6,14 @@ export const SizeArgTypes = {
 };
 export type Size = (typeof SizeOptions)[number];
 
-const ShapeOptions = 'round square'.split(' ');
+const ShapeOptions = ['round', 'square'] as const;
 export const ShapeArgTypes = {
   options: ShapeOptions,
   control: { type: 'inline-radio' },
 };
 export type Shape = (typeof ShapeOptions)[number];
 
-const ColorOptions = 'primary accent success warning error'.split(' ');
+const ColorOptions = ['primary', 'accent', 'success', 'warning', 'error'] as const;
 export const ColorArgTypes = {
   options: ColorOptions,
   description: 'Color of the button',
@@ -22,3 +22,7 @@ export const ColorArgTypes = {
   control: { type: 'inline-radio' },
 };
 export type Color = (typeof ColorOptions)[number];
+
+const GapOptions = [0, 2, 4, 8] as const;
+
+export type Gap = (typeof GapOptions)[number];

@@ -5,9 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Color, Shape, Size } from "./components/types";
+import { Color, Gap, Shape, Size } from "./components/types";
 import { Tab } from "./components/tab-button/d-tab-button";
-export { Color, Shape, Size } from "./components/types";
+export { Color, Gap, Shape, Size } from "./components/types";
 export { Tab } from "./components/tab-button/d-tab-button";
 export namespace Components {
     interface DActivityCard {
@@ -15,7 +15,6 @@ export namespace Components {
         "description": string;
         "logo": string;
         "message": string;
-        "name": string;
         "read": boolean;
     }
     interface DAppDetails {
@@ -131,6 +130,14 @@ export namespace Components {
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
+    interface DListItem {
+        "background"?: boolean;
+        "description"?: string;
+        "href"?: string;
+        "issuer"?: string;
+        "logoSrc"?: string;
+        "name": string;
+    }
     interface DLoading {
         "loading": boolean;
         "message": string;
@@ -209,7 +216,8 @@ export namespace Components {
         "verifier": string;
     }
     interface DVerticalStack {
-        "gap": 0 | 2 | 4 | 8;
+        "gap": Gap;
+        "separator"?: boolean;
     }
     interface DidroomLogo {
     }
@@ -443,6 +451,12 @@ declare global {
         prototype: HTMLDInputElement;
         new (): HTMLDInputElement;
     };
+    interface HTMLDListItemElement extends Components.DListItem, HTMLStencilElement {
+    }
+    var HTMLDListItemElement: {
+        prototype: HTMLDListItemElement;
+        new (): HTMLDListItemElement;
+    };
     interface HTMLDLoadingElement extends Components.DLoading, HTMLStencilElement {
     }
     var HTMLDLoadingElement: {
@@ -576,6 +590,7 @@ declare global {
         "d-illustration": HTMLDIllustrationElement;
         "d-info-led": HTMLDInfoLedElement;
         "d-input": HTMLDInputElement;
+        "d-list-item": HTMLDListItemElement;
         "d-loading": HTMLDLoadingElement;
         "d-logo": HTMLDLogoElement;
         "d-organizations": HTMLDOrganizationsElement;
@@ -600,7 +615,6 @@ declare namespace LocalJSX {
         "description"?: string;
         "logo"?: string;
         "message"?: string;
-        "name"?: string;
         "read"?: boolean;
     }
     interface DAppDetails {
@@ -724,6 +738,14 @@ declare namespace LocalJSX {
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
     }
+    interface DListItem {
+        "background"?: boolean;
+        "description"?: string;
+        "href"?: string;
+        "issuer"?: string;
+        "logoSrc"?: string;
+        "name"?: string;
+    }
     interface DLoading {
         "loading"?: boolean;
         "message"?: string;
@@ -806,7 +828,8 @@ declare namespace LocalJSX {
         "verifier"?: string;
     }
     interface DVerticalStack {
-        "gap"?: 0 | 2 | 4 | 8;
+        "gap"?: Gap;
+        "separator"?: boolean;
     }
     interface DidroomLogo {
     }
@@ -833,6 +856,7 @@ declare namespace LocalJSX {
         "d-illustration": DIllustration;
         "d-info-led": DInfoLed;
         "d-input": DInput;
+        "d-list-item": DListItem;
         "d-loading": DLoading;
         "d-logo": DLogo;
         "d-organizations": DOrganizations;
@@ -877,6 +901,7 @@ declare module "@stencil/core" {
             "d-illustration": LocalJSX.DIllustration & JSXBase.HTMLAttributes<HTMLDIllustrationElement>;
             "d-info-led": LocalJSX.DInfoLed & JSXBase.HTMLAttributes<HTMLDInfoLedElement>;
             "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-list-item": LocalJSX.DListItem & JSXBase.HTMLAttributes<HTMLDListItemElement>;
             "d-loading": LocalJSX.DLoading & JSXBase.HTMLAttributes<HTMLDLoadingElement>;
             "d-logo": LocalJSX.DLogo & JSXBase.HTMLAttributes<HTMLDLogoElement>;
             "d-organizations": LocalJSX.DOrganizations & JSXBase.HTMLAttributes<HTMLDOrganizationsElement>;

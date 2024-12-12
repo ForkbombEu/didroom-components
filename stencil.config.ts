@@ -44,7 +44,7 @@ export const config: Config = {
     },
     {
       type: 'docs-vscode',
-      file: 'vscode-data.json',
+      file: 'dist/vscode-data.json',
     },
     {
       type: 'www',
