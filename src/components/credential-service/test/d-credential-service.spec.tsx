@@ -9,7 +9,7 @@ describe('d-credential-service', () => {
     });
     expect(page.root).toEqualHtml(`
       <d-credential-service>
-        <mock:shadow-root>
+       <mock:shadow-root>
          <d-list-item background="">
            <div slot="organization">
              <d-text class="!text-on-alt" size="s"></d-text>
