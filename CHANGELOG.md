@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.7](https://github.com/ForkbombEu/didroom-components/compare/v1.31.6...v1.31.7) (2024-12-13)
+
+
+### Bug Fixes
+
+* activity href ([#193](https://github.com/ForkbombEu/didroom-components/issues/193)) ([3d49481](https://github.com/ForkbombEu/didroom-components/commit/3d49481c7c891d53b604551e800dd2f9c8b9f030))
+
 ## [1.31.6](https://github.com/ForkbombEu/didroom-components/compare/v1.31.5...v1.31.6) (2024-12-12)
 
 
