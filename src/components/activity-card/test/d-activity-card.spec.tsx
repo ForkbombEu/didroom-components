@@ -10,7 +10,7 @@ describe('d-activity-card', () => {
     expect(page.root).toEqualHtml(`
       <d-activity-card>
         <mock:shadow-root>
-         <d-list-item href="#">
+         <d-list-item>
             <div slot="date">
               <div class="flex gap-2.5 items-center">
                 <d-info-led type="warning"></d-info-led>
