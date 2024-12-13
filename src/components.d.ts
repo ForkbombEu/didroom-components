@@ -13,6 +13,7 @@ export namespace Components {
     interface DActivityCard {
         "date": string;
         "description": string;
+        "href"?: string;
         "logo": string;
         "message": string;
         "read": boolean;
@@ -613,6 +614,7 @@ declare namespace LocalJSX {
     interface DActivityCard {
         "date"?: string;
         "description"?: string;
+        "href"?: string;
         "logo"?: string;
         "message"?: string;
         "read"?: boolean;
