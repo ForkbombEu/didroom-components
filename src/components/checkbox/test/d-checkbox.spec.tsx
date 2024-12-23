@@ -13,7 +13,7 @@ describe('d-checkbox', () => {
           <d-vertical-stack>
            <d-horizontal-stack class="items-center" gap="0">
              <ion-checkbox></ion-checkbox>
-             <div>
+             <div class="-ml-3">
                <slot></slot>
              </div>
            </d-horizontal-stack>
