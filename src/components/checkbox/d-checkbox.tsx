@@ -20,7 +20,7 @@ export class DCheckbox {
         <d-vertical-stack>
           <d-horizontal-stack class="items-center" gap={0}>
             <ion-checkbox onIonChange={e => this.updateValue(e.detail.checked)} checked={this.checked}></ion-checkbox>
-            <div>
+            <div class="-ml-3">
               <slot />
             </div>
           </d-horizontal-stack>

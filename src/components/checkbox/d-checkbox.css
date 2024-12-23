@@ -6,12 +6,9 @@ ion-checkbox {
   --checkbox-background-checked: var(--accent);
   width: 48px;
   height: 48px;
-  justify-items: center;
-  margin-left: -12px;
-  
 }
 ion-checkbox::part(container) {
-  border-radius: 1px;
+  border-radius: 2px;
   border: 2px solid;
   border-color: var(--on-alt);
   --checkmark-color: var(--stroke);
