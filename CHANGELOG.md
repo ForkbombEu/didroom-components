@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.8](https://github.com/ForkbombEu/didroom-components/compare/v1.31.7...v1.31.8) (2024-12-23)
+
+
+### Bug Fixes
+
+* checkbox accessibility ([#195](https://github.com/ForkbombEu/didroom-components/issues/195)) ([0a14396](https://github.com/ForkbombEu/didroom-components/commit/0a14396dbe270659a005b4bac01dce7fa1948353))
+
 ## [1.31.7](https://github.com/ForkbombEu/didroom-components/compare/v1.31.6...v1.31.7) (2024-12-13)
 
 
