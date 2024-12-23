@@ -2,6 +2,56 @@
   "version": 1.1,
   "tags": [
     {
+      "name": "d-activity-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "date",
+          "description": ""
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "logo",
+          "description": ""
+        },
+        {
+          "name": "message",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "read",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-app-details",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "developed-by",
+          "description": ""
+        },
+        {
+          "name": "version",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-avatar",
       "description": {
         "kind": "markdown",
@@ -18,13 +68,54 @@
         },
         {
           "name": "size",
-          "description": ""
+          "description": "",
+          "values": [
+            {
+              "name": "2xl"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "s"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xs"
+            }
+          ]
         },
         {
           "name": "src",
           "description": ""
         }
       ]
+    },
+    {
+      "name": "d-background-illustration",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "background",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-badge",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
     },
     {
       "name": "d-button",
@@ -94,6 +185,31 @@
       ]
     },
     {
+      "name": "d-buttons-group",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "d-checkbox",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "checked",
+          "description": ""
+        },
+        {
+          "name": "error",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-credential-card",
       "description": {
         "kind": "markdown",
@@ -101,11 +217,15 @@
       },
       "attributes": [
         {
-          "name": "description",
+          "name": "expiration-date",
           "description": ""
         },
         {
-          "name": "expiration-date",
+          "name": "expiration-label",
+          "description": ""
+        },
+        {
+          "name": "issued-by-label",
           "description": ""
         },
         {
@@ -139,10 +259,6 @@
         },
         {
           "name": "issuer",
-          "description": ""
-        },
-        {
-          "name": "logo-src",
           "description": ""
         },
         {
@@ -181,6 +297,10 @@
         {
           "name": "name",
           "description": ""
+        },
+        {
+          "name": "organization",
+          "description": ""
         }
       ]
     },
@@ -196,11 +316,103 @@
           "description": ""
         },
         {
+          "name": "dotted",
+          "description": ""
+        },
+        {
           "name": "hidable",
           "description": ""
         },
         {
           "name": "title",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-did-box",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "did",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-empty-state",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "button-text",
+          "description": ""
+        },
+        {
+          "name": "heading",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "text",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-feedback",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "feedback",
+          "description": ""
+        },
+        {
+          "name": "message",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "error"
+            },
+            {
+              "name": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "d-header",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "back-button",
+          "description": ""
+        },
+        {
+          "name": "settings",
+          "description": ""
+        },
+        {
+          "name": "settings-title",
           "description": ""
         }
       ]
@@ -218,7 +430,106 @@
         },
         {
           "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "2xl"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "s"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "d-horizontal-stack",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "gap",
           "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-icon",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "outline",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-illustration",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "illustration",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-info-led",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "error"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "warning"
+            }
+          ]
         }
       ]
     },
@@ -243,6 +554,10 @@
         },
         {
           "name": "helper-text",
+          "description": ""
+        },
+        {
+          "name": "hidable",
           "description": ""
         },
         {
@@ -286,12 +601,293 @@
       ]
     },
     {
+      "name": "d-loading",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "loading",
+          "description": ""
+        },
+        {
+          "name": "message",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "d-logo",
       "description": {
         "kind": "markdown",
         "value": ""
       },
       "attributes": []
+    },
+    {
+      "name": "d-organizations",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "empty",
+          "description": ""
+        },
+        {
+          "name": "heading",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-page-description",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "title",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-qr-code",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "generation-date",
+          "description": ""
+        },
+        {
+          "name": "generation-hour",
+          "description": ""
+        },
+        {
+          "name": "qr",
+          "description": ""
+        },
+        {
+          "name": "session-id",
+          "description": ""
+        },
+        {
+          "name": "session-id-label",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-scan-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "href",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-scanner-mask",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "heading",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-session-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "date",
+          "description": ""
+        },
+        {
+          "name": "failure-message",
+          "description": ""
+        },
+        {
+          "name": "in-progress",
+          "description": ""
+        },
+        {
+          "name": "in-progress-message",
+          "description": ""
+        },
+        {
+          "name": "session-message",
+          "description": ""
+        },
+        {
+          "name": "sid",
+          "description": ""
+        },
+        {
+          "name": "success",
+          "description": ""
+        },
+        {
+          "name": "verified-message",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-settings-menu",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "account-settings",
+          "description": ""
+        },
+        {
+          "name": "developed-by",
+          "description": ""
+        },
+        {
+          "name": "languages",
+          "description": ""
+        },
+        {
+          "name": "log-out",
+          "description": ""
+        },
+        {
+          "name": "notifications-settings",
+          "description": ""
+        },
+        {
+          "name": "privacy-policy",
+          "description": ""
+        },
+        {
+          "name": "support",
+          "description": ""
+        },
+        {
+          "name": "version",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-swipable-page",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "background",
+          "description": ""
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "subtitle",
+          "description": ""
+        },
+        {
+          "name": "title",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "d-tab-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "has-alert",
+          "description": ""
+        },
+        {
+          "name": "tab",
+          "description": "",
+          "values": [
+            {
+              "name": "activity"
+            },
+            {
+              "name": "home"
+            },
+            {
+              "name": "profile"
+            },
+            {
+              "name": "wallet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "d-tab-page",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "scan-button-href",
+          "description": ""
+        },
+        {
+          "name": "scan-button-text",
+          "description": ""
+        },
+        {
+          "name": "settings",
+          "description": ""
+        },
+        {
+          "name": "tab",
+          "description": ""
+        },
+        {
+          "name": "title",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "d-text",
@@ -306,9 +902,79 @@
         },
         {
           "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "2xl"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "s"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "d-verification-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "flow",
+          "description": ""
+        },
+        {
+          "name": "logo",
+          "description": ""
+        },
+        {
+          "name": "relying-party",
+          "description": ""
+        },
+        {
+          "name": "selected",
+          "description": ""
+        },
+        {
+          "name": "verifier",
           "description": ""
         }
       ]
+    },
+    {
+      "name": "d-vertical-stack",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "gap",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "didroom-logo",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
     }
   ]
 }

@@ -103,7 +103,7 @@ export namespace Components {
         "size": Size;
     }
     interface DHorizontalStack {
-        "gap": 2 | 4 | 8;
+        "gap": Gap;
     }
     interface DIcon {
         "icon": string;
@@ -710,7 +710,7 @@ declare namespace LocalJSX {
         "size"?: Size;
     }
     interface DHorizontalStack {
-        "gap"?: 2 | 4 | 8;
+        "gap"?: Gap;
     }
     interface DIcon {
         "icon"?: string;

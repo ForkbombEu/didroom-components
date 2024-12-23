@@ -11,6 +11,7 @@
 | ------------- | ------------- | ----------- | --------- | ----------- |
 | `date`        | `date`        |             | `string`  | `undefined` |
 | `description` | `description` |             | `string`  | `undefined` |
+| `href`        | `href`        |             | `string`  | `undefined` |
 | `logo`        | `logo`        |             | `string`  | `undefined` |
 | `message`     | `message`     |             | `string`  | `undefined` |
 | `read`        | `read`        |             | `boolean` | `false`     |

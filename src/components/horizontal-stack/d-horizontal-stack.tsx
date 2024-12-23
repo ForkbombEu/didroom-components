@@ -1,4 +1,5 @@
 import { Component, Host, Prop, h } from '@stencil/core';
+import { Gap } from '../types';
 
 @Component({
   tag: 'd-horizontal-stack',
@@ -6,7 +7,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class DHorizontalStack {
-  @Prop() gap: 2 | 4 | 8 = 2;
+  @Prop() gap: Gap = 2;
 
   render() {
     return (
