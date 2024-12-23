@@ -11,7 +11,7 @@ describe('d-checkbox', () => {
       <d-checkbox>
         <mock:shadow-root>
           <d-vertical-stack>
-           <d-horizontal-stack>
+           <d-horizontal-stack class="items-center">
              <ion-checkbox></ion-checkbox>
              <div>
                <slot></slot>

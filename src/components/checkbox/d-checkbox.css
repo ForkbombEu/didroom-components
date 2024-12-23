@@ -1,3 +1,15 @@
 :host {
   display: block;
+  
+}
+ion-checkbox {
+  --checkbox-background: var(--on-alt);
+  --size: 48px;
+  --checkbox-background-checked: var(--accent)
+}
+ion-checkbox::part(container) {
+  border-radius: 0;
+  border: 2px solid;
+  border-color: var(--highlight);
+  --checkmark-color: var(--stroke);
 }
