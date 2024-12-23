@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.9](https://github.com/ForkbombEu/didroom-components/compare/v1.31.8...v1.31.9) (2024-12-23)
+
+
+### Bug Fixes
+
+* checkbox alignment in ios ([#197](https://github.com/ForkbombEu/didroom-components/issues/197)) ([e1a51d5](https://github.com/ForkbombEu/didroom-components/commit/e1a51d51fefb3efe00965fe967aa259cac7ea353))
+
 ## [1.31.8](https://github.com/ForkbombEu/didroom-components/compare/v1.31.7...v1.31.8) (2024-12-23)
 
 
