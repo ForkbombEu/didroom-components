@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.1](https://github.com/ForkbombEu/didroom-components/compare/v1.32.0...v1.32.1) (2025-01-21)
+
+
+### Bug Fixes
+
+* tune react types version for storybook ([#202](https://github.com/ForkbombEu/didroom-components/issues/202)) ([7799168](https://github.com/ForkbombEu/didroom-components/commit/7799168f45b2534a44de34b38c3039e5809b2435))
+
 ## [1.32.0](https://github.com/ForkbombEu/didroom-components/compare/v1.31.9...v1.32.0) (2025-01-21)
 
 
