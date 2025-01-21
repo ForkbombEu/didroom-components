@@ -26,11 +26,14 @@
 ### Depends on
 
 - [d-text](../text)
+- [d-copy-button](../copy-button)
 
 ### Graph
 ```mermaid
 graph TD;
   d-feedback --> d-text
+  d-feedback --> d-copy-button
+  d-copy-button --> d-button
   style d-feedback fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

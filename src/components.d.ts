@@ -50,6 +50,10 @@ export namespace Components {
         "checked": boolean;
         "error": string | undefined;
     }
+    interface DCopyButton {
+        "delay": number;
+        "textToCopy": string;
+    }
     interface DCredentialCard {
         "expirationDate"?: string;
         "expirationLabel": string;
@@ -323,6 +327,12 @@ declare global {
         prototype: HTMLDCheckboxElement;
         new (): HTMLDCheckboxElement;
     };
+    interface HTMLDCopyButtonElement extends Components.DCopyButton, HTMLStencilElement {
+    }
+    var HTMLDCopyButtonElement: {
+        prototype: HTMLDCopyButtonElement;
+        new (): HTMLDCopyButtonElement;
+    };
     interface HTMLDCredentialCardElement extends Components.DCredentialCard, HTMLStencilElement {
     }
     var HTMLDCredentialCardElement: {
@@ -577,6 +587,7 @@ declare global {
         "d-button": HTMLDButtonElement;
         "d-buttons-group": HTMLDButtonsGroupElement;
         "d-checkbox": HTMLDCheckboxElement;
+        "d-copy-button": HTMLDCopyButtonElement;
         "d-credential-card": HTMLDCredentialCardElement;
         "d-credential-detail": HTMLDCredentialDetailElement;
         "d-credential-service": HTMLDCredentialServiceElement;
@@ -653,6 +664,10 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "error"?: string | undefined;
         "onDChange"?: (event: DCheckboxCustomEvent<boolean>) => void;
+    }
+    interface DCopyButton {
+        "delay"?: number;
+        "textToCopy"?: string;
     }
     interface DCredentialCard {
         "expirationDate"?: string;
@@ -844,6 +859,7 @@ declare namespace LocalJSX {
         "d-button": DButton;
         "d-buttons-group": DButtonsGroup;
         "d-checkbox": DCheckbox;
+        "d-copy-button": DCopyButton;
         "d-credential-card": DCredentialCard;
         "d-credential-detail": DCredentialDetail;
         "d-credential-service": DCredentialService;
@@ -889,6 +905,7 @@ declare module "@stencil/core" {
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-buttons-group": LocalJSX.DButtonsGroup & JSXBase.HTMLAttributes<HTMLDButtonsGroupElement>;
             "d-checkbox": LocalJSX.DCheckbox & JSXBase.HTMLAttributes<HTMLDCheckboxElement>;
+            "d-copy-button": LocalJSX.DCopyButton & JSXBase.HTMLAttributes<HTMLDCopyButtonElement>;
             "d-credential-card": LocalJSX.DCredentialCard & JSXBase.HTMLAttributes<HTMLDCredentialCardElement>;
             "d-credential-detail": LocalJSX.DCredentialDetail & JSXBase.HTMLAttributes<HTMLDCredentialDetailElement>;
             "d-credential-service": LocalJSX.DCredentialService & JSXBase.HTMLAttributes<HTMLDCredentialServiceElement>;
