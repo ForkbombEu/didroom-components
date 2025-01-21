@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.0](https://github.com/ForkbombEu/didroom-components/compare/v1.31.9...v1.32.0) (2025-01-21)
+
+
+### Features
+
+* copy button ([#199](https://github.com/ForkbombEu/didroom-components/issues/199)) ([0b14f35](https://github.com/ForkbombEu/didroom-components/commit/0b14f3529f25f157dcbed57f270b71022f2dbe25))
+
 ## [1.31.9](https://github.com/ForkbombEu/didroom-components/compare/v1.31.8...v1.31.9) (2024-12-23)
 
 
