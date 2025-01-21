@@ -32,6 +32,7 @@
 
 ### Used by
 
+ - [d-copy-button](../copy-button)
  - [d-empty-state](../empty-state)
  - [d-input](../input)
  - [d-scan-button](../scan-button)
@@ -40,6 +41,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  d-copy-button --> d-button
   d-empty-state --> d-button
   d-input --> d-button
   d-scan-button --> d-button
