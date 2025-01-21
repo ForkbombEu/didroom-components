@@ -10,7 +10,9 @@ describe('d-copy-button', () => {
     expect(page.root).toEqualHtml(`
       <d-copy-button>
         <mock:shadow-root>
-          <slot></slot>
+          <d-button class="text-on" color="outline" expand="" role="button">
+            Copy
+          </d-button>
         </mock:shadow-root>
       </d-copy-button>
     `);
