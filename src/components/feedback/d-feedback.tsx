@@ -86,10 +86,12 @@ export class DFeedback {
           {this.message && (
             <div class="flex flex-col gap-2 items-start break-all">
               {!this.hide && (
-                <d-text size="s" class="text-on-alt">
-                  <div class="break-words" innerHTML={converter.toHtml(this.message)} />
-                  <d-copy-button textToCopy={this.message} >Copy</d-copy-button>
-                </d-text>
+                <d-vertical-stack gap={2}>
+                  <d-text size="s" class="text-on-alt">
+                    <div class="break-words" innerHTML={converter.toHtml(this.message)} />
+                  </d-text>
+                  <d-copy-button textToCopy={this.message} />
+                </d-vertical-stack>
               )}
               <button onClick={onClick} class="h-12 text-on text-base font-bold leading-5 underline">
                 {this.hide ? 'See more' : 'Show less'}
