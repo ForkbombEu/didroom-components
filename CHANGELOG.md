@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.2](https://github.com/ForkbombEu/didroom-components/compare/v1.32.1...v1.32.2) (2025-01-23)
+
+
+### Bug Fixes
+
+* remove redundant string in feedback component ([#204](https://github.com/ForkbombEu/didroom-components/issues/204)) ([1ab4602](https://github.com/ForkbombEu/didroom-components/commit/1ab460267b739e3d6567a3c3fcfa05bd293b609a))
+
 ## [1.32.1](https://github.com/ForkbombEu/didroom-components/compare/v1.32.0...v1.32.1) (2025-01-21)
 
 
