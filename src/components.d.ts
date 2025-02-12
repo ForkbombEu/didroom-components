@@ -161,8 +161,10 @@ export namespace Components {
         "generationDate": string;
         "generationHour": string;
         "qr": string;
+        "relyingParty": string;
         "sessionId": string;
         "sessionIdLabel": string;
+        "verifierLabel": string;
     }
     interface DScanButton {
         "href": string;
@@ -781,8 +783,10 @@ declare namespace LocalJSX {
         "generationDate"?: string;
         "generationHour"?: string;
         "qr"?: string;
+        "relyingParty"?: string;
         "sessionId"?: string;
         "sessionIdLabel"?: string;
+        "verifierLabel"?: string;
     }
     interface DScanButton {
         "href"?: string;
