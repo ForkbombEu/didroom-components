@@ -12,7 +12,6 @@ export { Tab } from "./components/tab-button/d-tab-button";
 export namespace Components {
     interface DActivityCard {
         "date": string;
-        "description": string;
         "href"?: string;
         "logo": string;
         "message": string;
@@ -137,7 +136,6 @@ export namespace Components {
     }
     interface DListItem {
         "background"?: boolean;
-        "description"?: string;
         "href"?: string;
         "issuer"?: string;
         "logoSrc"?: string;
@@ -624,7 +622,6 @@ declare global {
 declare namespace LocalJSX {
     interface DActivityCard {
         "date"?: string;
-        "description"?: string;
         "href"?: string;
         "logo"?: string;
         "message"?: string;
@@ -757,7 +754,6 @@ declare namespace LocalJSX {
     }
     interface DListItem {
         "background"?: boolean;
-        "description"?: string;
         "href"?: string;
         "issuer"?: string;
         "logoSrc"?: string;

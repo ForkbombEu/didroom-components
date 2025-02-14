@@ -10,7 +10,6 @@ export class DCredentialService {
   @Prop() issuer: string;
   @Prop({ attribute: 'logo-src' }) logoSrc?: string;
   @Prop() organization?: string;
-  @Prop() description?: string;
   @Prop({ reflect: true }) href?: string;
 
 
@@ -21,7 +20,6 @@ export class DCredentialService {
           name={this.name}
           issuer={this.issuer}
           logo-src={this.logoSrc}
-          description={this.description}
           href={this.href}
           background
         >
