@@ -12,8 +12,10 @@
 | `generationDate` | `generation-date`  |             | `string` | `undefined`     |
 | `generationHour` | `generation-hour`  |             | `string` | `undefined`     |
 | `qr`             | `qr`               |             | `string` | `undefined`     |
+| `relyingParty`   | `relying-party`    |             | `string` | `undefined`     |
 | `sessionId`      | `session-id`       |             | `string` | `undefined`     |
 | `sessionIdLabel` | `session-id-label` |             | `string` | `'Session ID:'` |
+| `verifierLabel`  | `verifier-label`   |             | `string` | `'Verifier'`    |
 
 
 ## Dependencies

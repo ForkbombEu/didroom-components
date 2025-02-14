@@ -11,11 +11,16 @@ export class DQrCode {
   @Prop() sessionId: string;
   @Prop() generationDate: string;
   @Prop() generationHour: string;
+  @Prop() relyingParty: string;
+  @Prop() verifierLabel: string = 'Verifier';
 
   render() {
     return (
       <Host>
         <div class="flex flex-col items-center justify-center rounded-lg bg-primary p-4">
+          <d-text size="l" class="w-max mb-2 line-clamp-1">
+            {this.verifierLabel}: {this.relyingParty}
+          </d-text>
           <div class="w-full pb-2">
             <img src={this.qr} alt="qrCode" class="w-full" />
           </div>
@@ -24,8 +29,9 @@ export class DQrCode {
             {this.sessionIdLabel}
           </d-text>
           <d-heading size="s">{this.sessionId}</d-heading>
-          <d-text size="m">{this.generationDate}</d-text>
-          <d-text size="m">{this.generationHour}</d-text>
+          <d-text size="m">
+            {this.generationDate} {this.generationHour}
+          </d-text>
         </div>
       </Host>
     );

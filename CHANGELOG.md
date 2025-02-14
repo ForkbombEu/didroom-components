@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.3](https://github.com/ForkbombEu/didroom-components/compare/v1.32.2...v1.32.3) (2025-02-12)
+
+
+### Bug Fixes
+
+* qr code card layout ([#206](https://github.com/ForkbombEu/didroom-components/issues/206)) ([f689cda](https://github.com/ForkbombEu/didroom-components/commit/f689cdaef399f98d7c0ce8e5e84c9ec4aa56511d))
+
 ## [1.32.2](https://github.com/ForkbombEu/didroom-components/compare/v1.32.1...v1.32.2) (2025-01-23)
 
 
