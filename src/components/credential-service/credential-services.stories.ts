@@ -6,7 +6,6 @@ const meta = {
   render: args => `<d-credential-service 
   name="${args.name}" 
   issuer="${args.issuer}" 
-  description="${args.description}" 
   href="${args.href}" 
   logo-src="${args.logoSrc}"
   ></d-credential-service>`,
@@ -18,7 +17,6 @@ type Story = StoryObj<Components.DCredentialService>;
 export const Default: Story = {
   args: {
     name: 'Over 18',
-    description: 'Age Validation',
     issuer: 'Italian Government',
     logoSrc: `https://api.dicebear.com/9.x/icons/svg?seed=${new Date()}`,
   },

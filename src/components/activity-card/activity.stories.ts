@@ -7,7 +7,6 @@ const meta = {
     `<d-vertical-stack separator> <d-activity-card
       message="${args.message}" 
       logo="${args.logo}" 
-      description="${args.description}" 
       date="${args.date}" 
     ${args.message && `message="${args.message}"`}
     ${args.read && `read="${args.read}"`}
@@ -22,7 +21,6 @@ const meta = {
     <d-activity-card
       message="${args.message}"
       logo="${args.logo}" 
-      description="${args.description}" 
       date="${args.date}" 
     ${args.message && `message="${args.message}"`}
     ${args.read && `read="${args.read}"`}
@@ -44,7 +42,6 @@ export const Default: Story = {
   args: {
     logo: `https://api.dicebear.com/7.x/open-peeps/svg?seed=${new Date()}`,
     message: 'Proof of humanity is expired',
-    description: 'Your proof of humanity has expired. Please renew it if you need it.',
     date: '1 day ago',
   },
 };

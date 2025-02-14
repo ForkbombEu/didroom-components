@@ -9,7 +9,6 @@ export class DListItem {
   @Prop() name: string;
   @Prop() issuer?: string;
   @Prop({ attribute: 'logo-src' }) logoSrc?: string;
-  @Prop() description?: string;
   @Prop({ reflect: true }) href?: string;
   @Prop() background?: boolean;
 
