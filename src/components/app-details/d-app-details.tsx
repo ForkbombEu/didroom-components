@@ -7,7 +7,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 })
 export class DAppDetails {
   @Prop() version: string;
-  @Prop() developedBy: string = 'Develepoded by Forkbomb BV';
+  @Prop() developedBy: string = 'Developed by Forkbomb BV';
 
   render() {
     return (
