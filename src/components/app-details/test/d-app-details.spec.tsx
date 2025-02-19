@@ -12,7 +12,7 @@ describe('d-app-details', () => {
         <mock:shadow-root>
           <div class="flex flex-col gap-2 items-center p-6">
             <d-text size="l">
-              Develepoded by Forkbomb BV
+              Developed by Forkbomb BV
             </d-text>
             <d-text size="m">
               v
