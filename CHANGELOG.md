@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.32.4](https://github.com/ForkbombEu/didroom-components/compare/v1.32.3...v1.32.4) (2025-02-19)
+
+
+### Bug Fixes
+
+* default app details value ([#210](https://github.com/ForkbombEu/didroom-components/issues/210)) ([0286bb4](https://github.com/ForkbombEu/didroom-components/commit/0286bb4951376fd553b8b0d71efe3e4c93e97484))
+* remove unused description prop in list-item ([#208](https://github.com/ForkbombEu/didroom-components/issues/208)) ([7b191ca](https://github.com/ForkbombEu/didroom-components/commit/7b191cae4d10e21081423f9b1d5a88b6b5fd0ab7))
+
 ## [1.32.3](https://github.com/ForkbombEu/didroom-components/compare/v1.32.2...v1.32.3) (2025-02-12)
 
 
