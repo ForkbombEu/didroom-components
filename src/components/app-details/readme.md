@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default                        |
-| ------------- | -------------- | ----------- | -------- | ------------------------------ |
-| `developedBy` | `developed-by` |             | `string` | `'Develepoded by Forkbomb BV'` |
-| `version`     | `version`      |             | `string` | `undefined`                    |
+| Property      | Attribute      | Description | Type     | Default                      |
+| ------------- | -------------- | ----------- | -------- | ---------------------------- |
+| `developedBy` | `developed-by` |             | `string` | `'Developed by Forkbomb BV'` |
+| `version`     | `version`      |             | `string` | `undefined`                  |
 
 
 ## Dependencies

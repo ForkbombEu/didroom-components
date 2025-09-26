@@ -9,7 +9,6 @@
 
 | Property       | Attribute      | Description | Type     | Default     |
 | -------------- | -------------- | ----------- | -------- | ----------- |
-| `description`  | `description`  |             | `string` | `undefined` |
 | `href`         | `href`         |             | `string` | `undefined` |
 | `issuer`       | `issuer`       |             | `string` | `undefined` |
 | `logoSrc`      | `logo-src`     |             | `string` | `undefined` |
