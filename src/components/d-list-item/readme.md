@@ -7,14 +7,13 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type      | Default     |
-| ------------- | ------------- | ----------- | --------- | ----------- |
-| `background`  | `background`  |             | `boolean` | `undefined` |
-| `description` | `description` |             | `string`  | `undefined` |
-| `href`        | `href`        |             | `string`  | `undefined` |
-| `issuer`      | `issuer`      |             | `string`  | `undefined` |
-| `logoSrc`     | `logo-src`    |             | `string`  | `undefined` |
-| `name`        | `name`        |             | `string`  | `undefined` |
+| Property     | Attribute    | Description | Type      | Default     |
+| ------------ | ------------ | ----------- | --------- | ----------- |
+| `background` | `background` |             | `boolean` | `undefined` |
+| `href`       | `href`       |             | `string`  | `undefined` |
+| `issuer`     | `issuer`     |             | `string`  | `undefined` |
+| `logoSrc`    | `logo-src`   |             | `string`  | `undefined` |
+| `name`       | `name`       |             | `string`  | `undefined` |
 
 
 ## Dependencies

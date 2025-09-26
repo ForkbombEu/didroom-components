@@ -69,7 +69,6 @@ export namespace Components {
         "name": string;
     }
     interface DCredentialService {
-        "description"?: string;
         "href"?: string;
         "issuer": string;
         "logoSrc"?: string;
@@ -168,6 +167,7 @@ export namespace Components {
         "href": string;
     }
     interface DScannerMask {
+        "cancelLabel": string;
         "description": string;
         "heading": string;
     }
@@ -250,6 +250,10 @@ export interface DHeaderCustomEvent<T> extends CustomEvent<T> {
 export interface DInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDInputElement;
+}
+export interface DScannerMaskCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDScannerMaskElement;
 }
 export interface DSettingsMenuCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -504,7 +508,18 @@ declare global {
         prototype: HTMLDScanButtonElement;
         new (): HTMLDScanButtonElement;
     };
+    interface HTMLDScannerMaskElementEventMap {
+        "cancelClick": void;
+    }
     interface HTMLDScannerMaskElement extends Components.DScannerMask, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLDScannerMaskElementEventMap>(type: K, listener: (this: HTMLDScannerMaskElement, ev: DScannerMaskCustomEvent<HTMLDScannerMaskElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLDScannerMaskElementEventMap>(type: K, listener: (this: HTMLDScannerMaskElement, ev: DScannerMaskCustomEvent<HTMLDScannerMaskElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLDScannerMaskElement: {
         prototype: HTMLDScannerMaskElement;
@@ -684,7 +699,6 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface DCredentialService {
-        "description"?: string;
         "href"?: string;
         "issuer"?: string;
         "logoSrc"?: string;
@@ -788,8 +802,10 @@ declare namespace LocalJSX {
         "href"?: string;
     }
     interface DScannerMask {
+        "cancelLabel"?: string;
         "description"?: string;
         "heading"?: string;
+        "onCancelClick"?: (event: DScannerMaskCustomEvent<void>) => void;
     }
     interface DSessionCard {
         "date"?: string;

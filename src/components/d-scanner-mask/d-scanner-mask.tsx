@@ -1,4 +1,4 @@
-import { Component, Host, h, State, Prop } from '@stencil/core';
+import { Component, Host, h, State, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'd-scanner-mask',
@@ -8,7 +8,13 @@ import { Component, Host, h, State, Prop } from '@stencil/core';
 export class DScannerMask {
   @Prop() heading: string;
   @Prop() description: string;
+  @Prop() cancelLabel: string = 'Cancel';
   @State() translateY: number = -138;
+  @Event() cancelClick: EventEmitter<void>;
+
+  private onClick = () => {
+    this.cancelClick.emit();
+  };
   animationDuration = 2000;
 
   componentDidLoad() {
@@ -55,18 +61,23 @@ export class DScannerMask {
     return (
       <Host>
         <div class="visible fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-center justify-center">
-          <div class="dark:bg-[#253151] bg-[#e9ebef] bg-opacity-70 min-h-24 w-full flex-grow" />
+          <div class="bg-on-alt !bg-opacity-70 min-h-24 w-full flex-grow" />
           <div class="flex h-72 w-full">
-            <div class="max-w-1/4 dark:bg-[#253151] bg-[#e9ebef] bg-opacity-70 h-full flex-grow" />
+            <div class="max-w-1/4 bg-on-alt !bg-opacity-70 h-full flex-grow" />
             <div class="viewfinder relative z-50 h-72 w-72 overflow-hidden rounded-md bg-transparent">
               <div class="absolute left-0 top-0 h-full w-full border-8 border-accent"></div>
               <div class="absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 transform bg-accent" style={style}></div>
             </div>
-            <div class="dark:bg-[#253151] bg-[#e9ebef] bg-opacity-70 h-full flex-grow" />
+            <div class="bg-on-alt !bg-opacity-70 h-full flex-grow" />
           </div>
-          <div class="dark:bg-[#253151] bg-[#e9ebef] bg-opacity-70 w-full flex-grow">
+          <div class="bg-on-alt !bg-opacity-70 w-full flex-grow flex flex-col space-y-2">
             <div class="text-center justify-center">
               <d-page-description title={this.heading} description={this.description} />
+            </div>
+            <div class="flex text-center justify-center w-full">
+              <d-button onClick={this.onClick} onKeyDown={this.onClick} aria-hidden color="primary">
+                {this.cancelLabel}
+              </d-button>
             </div>
           </div>
         </div>
