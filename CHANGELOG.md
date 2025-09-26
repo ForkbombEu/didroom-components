@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.5](https://github.com/ForkbombEu/didroom-components/compare/v1.32.4...v1.32.5) (2025-09-26)
+
+
+### Bug Fixes
+
+* d-scanner-mask ([#211](https://github.com/ForkbombEu/didroom-components/issues/211)) ([c27d563](https://github.com/ForkbombEu/didroom-components/commit/c27d563de836c8f260a60a5a8b46c698ea6fc3e3))
+
 ## [1.32.4](https://github.com/ForkbombEu/didroom-components/compare/v1.32.3...v1.32.4) (2025-02-19)
 
 
