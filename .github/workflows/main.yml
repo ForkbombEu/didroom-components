@@ -22,20 +22,6 @@ jobs:
         with:
           node-version: 20
           pnpm-version: 8
-      # - run: echo "PUPPETEER_VERSION=$(pnpm ls puppeteer --json | jq '.[0].devDependencies.puppeteer.version' -r)" >> $GITHUB_ENV
-      #   shell: bash
-      # - uses: actions/cache@v4
-      #   with:
-      #     path: ~/.cache/puppeteer/chrome
-      #     key: ${{ runner.os }}-puppeteer-chromium-${{ env.PUPPETEER_VERSION }}
-      #     restore-keys: ${{ runner.os }}-puppeteer-chromium-
-      # - name: install chromium
-      #   run: |
-      #     # very bad, but I do not found any other way to run
-      #     # a postinstall script of an already installed package
-      #     pnpm -C node_modules/puppeteer run postinstall
-      #   env:
-      #     PUPPETEER_DOWNLOAD_BASE_URL: https://storage.googleapis.com/chrome-for-testing-public
       - name: Chrome browser for testing
         id: setup-chrome
         uses: browser-actions/setup-chrome@v2
