@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.0](https://github.com/ForkbombEu/didroom-components/compare/v1.32.5...v1.33.0) (2025-11-24)
+
+
+### Features
+
+* **definition:** render images ([#214](https://github.com/ForkbombEu/didroom-components/issues/214)) ([c275149](https://github.com/ForkbombEu/didroom-components/commit/c2751496dda85f247e8b526796e46840e0a29ace))
+
 ## [1.32.5](https://github.com/ForkbombEu/didroom-components/compare/v1.32.4...v1.32.5) (2025-09-26)
 
 
