@@ -36,9 +36,15 @@ export class DDefinition {
     const notDotted = () => (
       <Host class="flex justify-between w-full border-b-on-alt border-b border-solid">
         <div class="flex justify-between w-full border-b-on-alt border-b border-solid">
-          <dl class="flex flex-col w-full h-11">
+          <dl class="flex flex-col w-full min-h-11">
             <dt class="text-on-alt text-xs not-italic font-normal leading-[150%] tracking-[-0.5px]">{this.title}</dt>
-            <dd class="text-on not-italic text-xs font-medium leading-[150%] tracking-[-0.5px]">{!this.hide ? this.definition : '*'.repeat(this.definition.length)}</dd>
+            <dd class="text-on not-italic text-xs font-medium leading-[150%] tracking-[-0.5px]">
+              {this.hide
+                ? '*'.repeat(String(this.definition).length)
+                : (typeof this.definition === 'string' && this.definition.startsWith('data:image')
+                    ? <img src={this.definition} alt={this.title} class="max-h-32 object-contain" />
+                    : this.definition)}
+            </dd>
           </dl>
           {this.hidable && (
             <button onClick={onClick}>
