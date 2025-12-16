@@ -58,3 +58,12 @@ export const Dotted: Story = {
     dotted: true,
   },
 };
+
+export const DottedLongText: Story = {
+  args: {
+    title: 'Extremely long label that should stay on one line and truncate:',
+    definition:
+      'This is a longer description that can wrap onto multiple lines below, while keeping alignment starting from the description column rather than under the dot.',
+    dotted: true,
+  },
+};
