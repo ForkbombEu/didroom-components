@@ -18,15 +18,15 @@ export class DDefinition {
     const dotted = () => (
       <Host class="w-full">
         <dl>
-          <d-horizontal-stack class="items-center">
+          <d-horizontal-stack class="items-start w-full">
             <d-info-led type="warning" class="h-fit" />
-            <dt>
-              <d-text size="s" class="font-bold">
+            <dt class="min-w-0">
+              <d-text size="s" class="font-bold block truncate">
                 {this.title}
               </d-text>
             </dt>
-            <dd>
-              <d-text size="s">{this.definition}</d-text>
+            <dd class="min-w-0 flex-1">
+              <d-text size="s" class="block">{this.definition}</d-text>
             </dd>
           </d-horizontal-stack>
         </dl>
