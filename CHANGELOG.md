@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.3](https://github.com/ForkbombEu/didroom-components/compare/v1.33.2...v1.33.3) (2025-12-16)
+
+
+### Bug Fixes
+
+* github action with new npmjs auth policy ([#220](https://github.com/ForkbombEu/didroom-components/issues/220)) ([0fb853a](https://github.com/ForkbombEu/didroom-components/commit/0fb853a21386b2e080e2600d7b9a5f17c9641f9c))
+
 ## [1.33.2](https://github.com/ForkbombEu/didroom-components/compare/v1.33.1...v1.33.2) (2025-12-16)
 
 
