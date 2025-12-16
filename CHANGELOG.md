@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.4](https://github.com/ForkbombEu/didroom-components/compare/v1.33.3...v1.33.4) (2025-12-16)
+
+
+### Bug Fixes
+
+* repo url in package json ([#222](https://github.com/ForkbombEu/didroom-components/issues/222)) ([8fa2e0b](https://github.com/ForkbombEu/didroom-components/commit/8fa2e0b113f2f18b4a2bbcd120f1dc5dfe507378))
+
 ## [1.33.3](https://github.com/ForkbombEu/didroom-components/compare/v1.33.2...v1.33.3) (2025-12-16)
 
 
