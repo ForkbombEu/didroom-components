@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.1](https://github.com/ForkbombEu/didroom-components/compare/v1.33.0...v1.33.1) (2025-12-16)
+
+
+### Bug Fixes
+
+* dotted definitions ([#216](https://github.com/ForkbombEu/didroom-components/issues/216)) ([61160d3](https://github.com/ForkbombEu/didroom-components/commit/61160d3f1b3205a776e1dd67119117f5b2789d58))
+
 ## [1.33.0](https://github.com/ForkbombEu/didroom-components/compare/v1.32.5...v1.33.0) (2025-11-24)
 
 
