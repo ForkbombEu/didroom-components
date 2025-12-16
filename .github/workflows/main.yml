@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: 20
           pnpm-version: 8
-      - run: npm -v
       - name: Chrome browser for testing
         id: setup-chrome
         uses: browser-actions/setup-chrome@v2
@@ -67,6 +66,10 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+      
+      - name: Update npm
+        run: npm install -g npm@latest
         if: ${{ steps.release.outputs.release_created }}
 
       - uses: pnpm/action-setup@v2
