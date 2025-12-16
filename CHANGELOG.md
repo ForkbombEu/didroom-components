@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.2](https://github.com/ForkbombEu/didroom-components/compare/v1.33.1...v1.33.2) (2025-12-16)
+
+
+### Bug Fixes
+
+* github action with new mpmjs auth policy ([#218](https://github.com/ForkbombEu/didroom-components/issues/218)) ([b1612e0](https://github.com/ForkbombEu/didroom-components/commit/b1612e0a0b676cd929faefb2f3d1c7016fa538a2))
+
 ## [1.33.1](https://github.com/ForkbombEu/didroom-components/compare/v1.33.0...v1.33.1) (2025-12-16)
 
 
