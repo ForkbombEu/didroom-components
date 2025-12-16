@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: 20
           pnpm-version: 8
+      - run: npm -v
       - name: Chrome browser for testing
         id: setup-chrome
         uses: browser-actions/setup-chrome@v2
@@ -78,5 +79,5 @@ jobs:
           pnpm build
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: npm publish --provenance
+      - run: npm publish --provenance --access public
         if: ${{ steps.release.outputs.release_created }}
