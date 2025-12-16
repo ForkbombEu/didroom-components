@@ -12,7 +12,7 @@
   "unpkg": "dist/didroom-components/didroom-components.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/forkbombeu/didroom-components.git"
+    "url": "https://github.com/ForkbombEu/didroom-components"
   },
   "files": [
     "dist/",
