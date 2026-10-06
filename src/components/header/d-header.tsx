@@ -9,6 +9,7 @@ export class DHeader {
   @Prop() backButton: boolean = false;
   @Prop() settings: boolean = false;
   @Prop() settingsTitle: string = 'Settings';
+  @Prop() backButtonLabel: string = 'Back';
   @State() isSettingsOpen: boolean = false;
   @Event() backButtonClick: EventEmitter<void>;
 
@@ -20,9 +21,9 @@ export class DHeader {
             <ion-toolbar>
               {this.backButton && (
                 <ion-buttons slot="start">
-                  <ion-button onClick={() => this.backButtonClick.emit()}>
+                  <ion-button aria-label={this.backButtonLabel} onClick={() => this.backButtonClick.emit()}>
                     <div class="w-6 h-6 text-on" slot="icon-only">
-                      <d-icon icon="arrow-back" outline aria-label="back" />
+                      <d-icon icon="arrow-back" outline aria-hidden="true" />
                     </div>
                   </ion-button>
                 </ion-buttons>
@@ -40,9 +41,9 @@ export class DHeader {
               {this.settings && (
                 <ion-buttons slot="end">
                   <ion-menu-toggle class="h-12 w-12">
-                    <ion-button class="h-full w-full">
+                    <ion-button class="h-full w-full" aria-label={this.settingsTitle}>
                       <div class="w-8 h-8 text-on flex justify-center items-center">
-                        <d-icon icon="settings" outline aria-label="settings"/>
+                        <d-icon icon="settings" outline aria-hidden="true" />
                       </div>
                     </ion-button>
                   </ion-menu-toggle>

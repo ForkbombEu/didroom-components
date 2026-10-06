@@ -15,11 +15,11 @@ export class DSwipablePage {
     return (
       <Host>
         <div class="flex flex-col justify-between">
-          <d-background-illustration background={this.background}>
+          <d-background-illustration background={this.background} compact aria-hidden="true">
             <slot />
           </d-background-illustration>
           <div class="flex flex-col gap-4 px-4">
-            <d-heading size="s">{this.title},</d-heading>
+            <d-heading size="s" level={1}>{this.title}</d-heading>
             {this.subtitle && (
               <d-text size="xl" class="pb-4">
                 {this.subtitle}

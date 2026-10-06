@@ -9,10 +9,11 @@ import { Color, Size } from '../types';
 export class DHeading {
   @Prop() size: Size = 'm';
   @Prop() color: Color = 'primary';
+  @Prop() level: 1 | 2 | 3 | 4 | 5 | 6 = 2;
 
   render() {
     return (
-      <Host size={this.size} color={this.color}>
+      <Host size={this.size} color={this.color} role="heading" aria-level={String(this.level)}>
         <slot></slot>
       </Host>
     );

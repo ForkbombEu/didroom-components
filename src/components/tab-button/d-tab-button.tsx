@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, Method, h } from '@stencil/core';
 export type Tab = 'home' | 'profile' | 'activity' | 'wallet';
 
 @Component({
@@ -8,49 +8,55 @@ export type Tab = 'home' | 'profile' | 'activity' | 'wallet';
 })
 export class DTabButton {
   @Prop() tab: Tab;
-  @Prop() active: boolean = false;
-  @Prop() hasAlert: boolean = false;
+  @Prop() active = false;
+  @Prop() hasAlert = false;
+  @Prop() href?: string;
+  @Prop() accessibleLabel?: string;
+  @Prop() focusIndex = 0;
+  private link: HTMLAnchorElement;
+
+  @Method()
+  async focusTab() {
+    this.link?.focus();
+  }
 
   render() {
-    const svg = (): JSX.Element | null => {
-      const icons: Record<string, string> = {
-        home: 'home',
-        profile: 'profile',
-        activity: 'notification',
-        wallet: 'wallet',
-      };
-
-      const icon = icons[this.tab];
-      if (!icon) return null;
-
-      return <d-icon icon={icon} size={28} outline={!this.active} />;
+    const icons: Record<Tab, string> = {
+      home: 'home',
+      profile: 'profile',
+      activity: 'notification',
+      wallet: 'wallet',
     };
 
     return (
       <Host>
-        <ion-tab-button
-          tab={this.tab}
-          href={`/${this.tab}`}
-          class={{
-            'h-12 min-w-12 block': true,
-            'text-on-alt': !this.active,
-            'text-on': this.active,
+        <a
+          ref={el => (this.link = el)}
+          href={this.href || `/${this.tab}`}
+          role="tab"
+          aria-selected={String(this.active)}
+          aria-label={this.accessibleLabel}
+          tabIndex={this.focusIndex}
+          class={{ 'tab-native': true, 'text-on-alt': !this.active, 'text-on': this.active }}
+          onKeyDown={event => {
+            if (event.key === ' ') {
+              event.preventDefault();
+              this.link.click();
+            }
           }}
         >
-          <div class="relative w-fit">
+          <div class="relative w-fit" aria-hidden="true">
             {this.hasAlert && (
               <div class="absolute right-1 top-1 border-surface">
-                <d-info-led type="warning" class={{ 'border rounded-full border-surface': true }}></d-info-led>
+                <d-info-led type="warning" class="border rounded-full border-surface" />
               </div>
             )}
-            {svg()}
+            {icons[this.tab] && <d-icon icon={icons[this.tab]} size={28} outline={!this.active} />}
           </div>
-          <ion-label>
-            <d-text size="s" class={{ 'text-center text-xs font-medium leading-[normal] capitalize': true, 'text-on-alt': !this.active, 'text-on': this.active }}>
-              <slot></slot>
-            </d-text>
-          </ion-label>
-        </ion-tab-button>
+          <d-text size="s" class="text-center font-medium">
+            <slot />
+          </d-text>
+        </a>
       </Host>
     );
   }

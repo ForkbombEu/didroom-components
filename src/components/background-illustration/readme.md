@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type     | Default     |
-| ------------ | ------------ | ----------- | -------- | ----------- |
-| `background` | `background` |             | `string` | `undefined` |
+| Property     | Attribute    | Description | Type      | Default     |
+| ------------ | ------------ | ----------- | --------- | ----------- |
+| `background` | `background` |             | `string`  | `undefined` |
+| `compact`    | `compact`    |             | `boolean` | `false`     |
 
 
 ## Dependencies

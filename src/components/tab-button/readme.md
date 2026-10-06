@@ -7,32 +7,43 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                            | Default     |
-| ---------- | ----------- | ----------- | ----------------------------------------------- | ----------- |
-| `active`   | `active`    |             | `boolean`                                       | `false`     |
-| `hasAlert` | `has-alert` |             | `boolean`                                       | `false`     |
-| `tab`      | `tab`       |             | `"activity" \| "home" \| "profile" \| "wallet"` | `undefined` |
+| Property          | Attribute          | Description | Type                                            | Default     |
+| ----------------- | ------------------ | ----------- | ----------------------------------------------- | ----------- |
+| `accessibleLabel` | `accessible-label` |             | `string`                                        | `undefined` |
+| `active`          | `active`           |             | `boolean`                                       | `false`     |
+| `focusIndex`      | `focus-index`      |             | `number`                                        | `0`         |
+| `hasAlert`        | `has-alert`        |             | `boolean`                                       | `false`     |
+| `href`            | `href`             |             | `string`                                        | `undefined` |
+| `tab`             | `tab`              |             | `"activity" \| "home" \| "profile" \| "wallet"` | `undefined` |
+
+
+## Methods
+
+### `focusTab() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies
 
 ### Depends on
 
-- [d-icon](../icon)
-- ion-tab-button
 - [d-info-led](../info-led)
-- ion-label
+- [d-icon](../icon)
 - [d-text](../text)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-tab-button --> d-icon
-  d-tab-button --> ion-tab-button
   d-tab-button --> d-info-led
-  d-tab-button --> ion-label
+  d-tab-button --> d-icon
   d-tab-button --> d-text
-  ion-tab-button --> ion-ripple-effect
   style d-tab-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

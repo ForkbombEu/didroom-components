@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `buttonText` | `button-text` |             | `string` | `undefined` |
-| `heading`    | `heading`     |             | `string` | `undefined` |
-| `href`       | `href`        |             | `string` | `undefined` |
-| `text`       | `text`        |             | `string` | `undefined` |
+| Property      | Attribute      | Description | Type                    | Default     |
+| ------------- | -------------- | ----------- | ----------------------- | ----------- |
+| `buttonColor` | `button-color` |             | `"accent" \| "outline"` | `'outline'` |
+| `buttonText`  | `button-text`  |             | `string`                | `undefined` |
+| `heading`     | `heading`      |             | `string`                | `undefined` |
+| `href`        | `href`         |             | `string`                | `undefined` |
+| `text`        | `text`         |             | `string`                | `undefined` |
 
 
 ## Events

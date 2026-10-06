@@ -1,4 +1,7 @@
-import { Component, Host, Prop, Event, h, EventEmitter, Element } from '@stencil/core';
+import { Component, Host, Prop, State, Event, h, EventEmitter, Element } from '@stencil/core';
+import type { AutocompleteTypes } from '@ionic/core';
+
+let inputIds = 0;
 
 @Component({
   tag: 'd-input',
@@ -17,92 +20,102 @@ export class DInput {
   @Prop({ reflect: true }) personIcon: boolean;
   @Prop({ reflect: true }) autoFocus: boolean;
   @Prop({ reflect: true }) hidable: boolean;
+  @Prop() disabled = false;
+  @Prop() autocomplete: AutocompleteTypes = 'off';
+  @Prop() autocapitalize = 'none';
+  @Prop() spellcheck = false;
+  @Prop() showPasswordLabel = 'Show password';
+  @Prop() hidePasswordLabel = 'Hide password';
+  @Prop() clearLabel = 'Clear input';
+  @State() private passwordVisible = false;
   @Event() dInput!: EventEmitter<string>;
   @Event() dChange!: EventEmitter<string>;
-
   @Element() el: HTMLElement;
+  private readonly inputId = `d-input-${inputIds++}`;
 
   private updateValue = (value: string) => {
-    this.dInput.emit(value);
+    this.dInput.emit(value ?? '');
   };
-  private clearValue = () => {
-    this.value = undefined;
-  };
-  private changePasswordVisibility = () => {
-    this.type = this.type === 'password' ? 'text' : 'password';
+
+  private syncInputAccessibility = async () => {
+    const ionInput = this.el.shadowRoot?.querySelector('ion-input');
+    if (!ionInput?.getInputElement) return;
+    const input = await ionInput.getInputElement();
+    input.id = this.inputId;
+    const wrapper = input.closest('label');
+    if (wrapper) wrapper.htmlFor = this.inputId;
+    const descriptions = [
+      this.errorText && `${this.inputId}-error`,
+      this.helperText && `${this.inputId}-hint`,
+    ].filter(Boolean).join(' ');
+    if (descriptions) input.setAttribute('aria-describedby', descriptions);
+    else input.removeAttribute('aria-describedby');
+    input.setAttribute('aria-invalid', String(Boolean(this.errorText)));
   };
 
   componentDidLoad() {
-    const ionInputEl = this.el.shadowRoot.querySelector('ion-input');
-    if (ionInputEl && this.name) {
-      const nativeInput = ionInputEl.querySelector('input.native-input');
-      if (nativeInput) {
-        nativeInput.id = this.name;
-      }
-    }
+    void this.syncInputAccessibility();
+  }
+
+  componentDidRender() {
+    void this.syncInputAccessibility();
   }
 
   render() {
+    const inputType = this.type === 'password' && this.passwordVisible ? 'text' : this.type;
     return (
       <Host>
-        <d-text class="label" size="m">
-          {this.label}
-        </d-text>
+        {this.label && (
+          <label class="label" htmlFor={this.inputId}>
+            <d-text size="m">{this.label}</d-text>
+          </label>
+        )}
         <ion-input
-          class={{
-            'input': true,
-            'ion-invalid': Boolean(this.errorText),
-            'ion-touched': this.value && this.value.length > 0,
-          }}
-          type={this.type}
+          class={{ 'input': true, 'ion-invalid': Boolean(this.errorText), 'ion-touched': Boolean(this.errorText) }}
+          aria-label={this.label || this.name}
+          type={inputType}
           name={this.name}
           fill="outline"
           placeholder={this.placeholder}
           autofocus={this.autoFocus}
-          class:ion-invalid={this.errorText}
-          class:ion-touched={this.errorText}
+          disabled={this.disabled}
+          autocomplete={this.autocomplete}
+          autocapitalize={this.autocapitalize}
+          spellcheck={this.spellcheck}
           value={this.value}
-          onIonInput={e => {
-            this.updateValue(e.detail.value);
-          }}
-          onIonChange={e => {
-            this.updateValue(e.detail.value);
+          onIonInput={event => this.updateValue(event.detail.value)}
+          onIonChange={event => {
+            this.updateValue(event.detail.value);
+            this.dChange.emit(event.detail.value ?? '');
           }}
         >
-          {this.personIcon && (
-            <div slot="start">
-              <d-icon icon="profile" size={20} outline />;
-            </div>
-          )}
+          {this.personIcon && <d-icon slot="start" icon="profile" size={20} outline aria-hidden="true" />}
           {this.clearButton && (
-            <d-button slot="end" clear onClick={this.clearValue}>
-              x
+            <d-button slot="end" clear disabled={this.disabled} accessibleLabel={this.clearLabel} onClick={() => this.updateValue('')}>
+              <d-icon icon="close" outline aria-hidden="true" />
             </d-button>
           )}
-          {this.hidable && (
+          {this.hidable && this.type === 'password' && (
             <d-button
-              class="h-full"
               slot="end"
               clear
-              onClick={this.changePasswordVisibility}
-              aria-checked={this.type !== 'password' ? 'true' : 'false'}
-              aria-label="show password"
-              role="switch"
+              disabled={this.disabled}
+              pressed={this.passwordVisible}
+              accessibleLabel={this.passwordVisible ? this.hidePasswordLabel : this.showPasswordLabel}
+              onClick={() => (this.passwordVisible = !this.passwordVisible)}
             >
-              {this.type === 'password' ? <d-icon icon="visibility" outline class="text-on" /> : <d-icon icon="visibility-off" outline class="text-on" />}
+              <d-icon icon={this.passwordVisible ? 'visibility-off' : 'visibility'} outline class="text-on" aria-hidden="true" />
             </d-button>
           )}
         </ion-input>
-        {this.errorText && (
-          <d-text class="error-text" size="s">
-            {this.errorText}
-          </d-text>
-        )}
+        <div id={`${this.inputId}-error`} role="alert" aria-atomic="true">
+          {this.errorText && <d-text class="error-text" size="s">{this.errorText}</d-text>}
+        </div>
         <slot />
         {this.helperText && (
-          <d-text class="helper-text" size="s">
-            {this.helperText}
-          </d-text>
+          <div id={`${this.inputId}-hint`}>
+            <d-text class="helper-text" size="s">{this.helperText}</d-text>
+          </div>
         )}
       </Host>
     );

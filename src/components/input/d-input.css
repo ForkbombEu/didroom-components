@@ -18,7 +18,8 @@
 }
 
 .error-text {
-  @apply text-error leading-3;
+  @apply text-error;
+  line-height: 1.4;
 }
 
 .helper-text {
@@ -27,4 +28,6 @@
 
 ion-input .native-input {
   height: 100%;
+  font-size: 1rem;
+  caret-color: var(--accent);
 }

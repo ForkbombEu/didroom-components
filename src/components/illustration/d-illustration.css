@@ -1,3 +1,9 @@
 :host {
   display: block;
 }
+
+svg {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}

@@ -17,14 +17,15 @@ export class DListItem {
       <div class={{ 'w-full rounded-lg p-5 flex gap-3 no-underline items-center': true, 'bg-primary': this.background }}>
         <div class="flex flex-grow items-start gap-3">
           <d-avatar name={this.name} src={this.logoSrc} size="l" shape="square"></d-avatar>
-          <div class="h-full min-h-[60px] flex flex-col grow justify-between">
+          <div class="h-full min-h-[60px] min-w-0 flex flex-col grow justify-between">
+            <slot name="organization"></slot>
             <d-text size="l">{this.name}</d-text>
             <d-text class="!text-on-alt">{this.issuer}</d-text>
             <slot name="date"></slot>
           </div>
         </div>
         {this.href && (
-          <div class="shrink-0">
+          <div class="shrink-0" aria-hidden="true">
             <d-icon icon="arrow-forward" outline />
           </div>
         )}

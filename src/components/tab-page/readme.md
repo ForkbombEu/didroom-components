@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type      | Default     |
-| ---------------- | ------------------ | ----------- | --------- | ----------- |
-| `scanButtonHref` | `scan-button-href` |             | `string`  | `undefined` |
-| `scanButtonText` | `scan-button-text` |             | `string`  | `undefined` |
-| `settings`       | `settings`         |             | `boolean` | `false`     |
-| `tab`            | `tab`              |             | `string`  | `undefined` |
-| `title`          | `title`            |             | `string`  | `undefined` |
+| Property         | Attribute          | Description | Type      | Default      |
+| ---------------- | ------------------ | ----------- | --------- | ------------ |
+| `scanButtonHref` | `scan-button-href` |             | `string`  | `undefined`  |
+| `scanButtonText` | `scan-button-text` |             | `string`  | `undefined`  |
+| `settings`       | `settings`         |             | `boolean` | `false`      |
+| `settingsTitle`  | `settings-title`   |             | `string`  | `'Settings'` |
+| `tab`            | `tab`              |             | `string`  | `undefined`  |
+| `title`          | `title`            |             | `string`  | `undefined`  |
 
 
 ## Dependencies

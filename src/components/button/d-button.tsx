@@ -32,6 +32,14 @@ export class DButton implements ComponentInterface {
   @Prop({ reflect: true }) size?: 'small' | 'default' | 'large';
   @Prop() type: 'submit' | 'reset' | 'button' = 'button';
   @Prop() form?: string | HTMLFormElement;
+  @Prop() accessibleLabel?: string;
+  @Prop() pressed?: boolean;
+
+  disconnectedCallback() {
+    this.formButtonEl?.remove();
+    this.formButtonEl = null;
+    this.formEl = null;
+  }
   @Event() dFocus!: EventEmitter<void>;
   @Event() dBlur!: EventEmitter<void>;
 
@@ -69,6 +77,7 @@ export class DButton implements ComponentInterface {
       if (formButtonEl !== null && formEl.contains(formButtonEl)) {
         return;
       }
+      this.formButtonEl?.remove();
       const newFormButtonEl = (this.formButtonEl = document.createElement('button'));
       newFormButtonEl.type = this.type;
       newFormButtonEl.style.display = 'none';
@@ -85,8 +94,13 @@ export class DButton implements ComponentInterface {
   }
 
   private handleClick = (ev: Event) => {
+    if (this.disabled) {
+      ev.preventDefault();
+      ev.stopImmediatePropagation();
+      return;
+    }
     const { el } = this;
-    if (hasShadowDom(el)) {
+    if (!this.href && this.type !== 'button' && hasShadowDom(el)) {
       this.submitForm(ev);
     }
   };
@@ -106,7 +120,7 @@ export class DButton implements ComponentInterface {
     const attrs = TagType === 'button' ? { type } : { href };
 
     {
-      type !== 'button' && this.renderHiddenButton();
+      !href && type !== 'button' && this.renderHiddenButton();
     }
 
     const inButtonsGroup = this.el.closest('d-buttons-group') !== null;
@@ -129,7 +143,11 @@ export class DButton implements ComponentInterface {
           {...attrs}
           class={{ 'h-full': true, 'button-native': true, [color]: true, 'accent': inButtonsGroup || color === 'accent', 'uppercase': !inButtonsGroup }}
           part="native"
-          disabled={disabled}
+          disabled={TagType === 'button' ? disabled : undefined}
+          aria-disabled={disabled ? 'true' : undefined}
+          aria-label={this.accessibleLabel || this.el.getAttribute('aria-label') || undefined}
+          aria-pressed={this.pressed === undefined ? undefined : String(this.pressed)}
+          tabIndex={href && disabled ? -1 : undefined}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         >

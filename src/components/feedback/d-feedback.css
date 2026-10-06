@@ -1,0 +1,8 @@
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+d-text {
+  overflow-wrap: anywhere;
+}

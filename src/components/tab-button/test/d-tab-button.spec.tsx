@@ -1,27 +1,24 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { DTabButton } from '../d-tab-button';
 
-describe('d-tab-button', () => {
-  it('renders', async () => {
-    const page = await newSpecPage({
-      components: [DTabButton],
-      html: `<d-tab-button tab="home"></d-tab-button>`,
-    });
-    expect(page.root).toEqualHtml(`
-      <d-tab-button tab="home">
-       <mock:shadow-root>
-         <ion-tab-button class="block h-12 text-on-alt min-w-12" href="/home" tab="home">
-           <div class="relative w-fit">
-              <d-icon icon="home" outline="" size="28"></d-icon>
-            </div>
-           <ion-label>
-             <d-text class="capitalize font-medium leading-[normal] text-center text-on-alt text-xs" size="s">
-               <slot></slot>
-             </d-text>
-           </ion-label>
-         </ion-tab-button>
-        </mock:shadow-root>
-      </d-tab-button>
-    `);
+describe('tab-button', () => {
+  it('exposes the active route, translated name and keyboard target', async () => {
+    const page = await newSpecPage({ components: [DTabButton], html: '<d-tab-button tab="wallet" href="/it/wallet" active accessible-label="Wallet" focus-index="0">Wallet</d-tab-button>' });
+    const link = page.root.shadowRoot.querySelector('a');
+    expect(link.getAttribute('role')).toBe('tab');
+    expect(link.getAttribute('aria-selected')).toBe('true');
+    expect(link.getAttribute('aria-label')).toBe('Wallet');
+    expect(link.getAttribute('href')).toBe('/it/wallet');
+    expect(link.getAttribute('tabindex')).toBe('0');
+  });
+  it('activates with Space but not arbitrary keys', async () => {
+    const page = await newSpecPage({ components: [DTabButton], html: '<d-tab-button tab="home">Home</d-tab-button>' });
+    const link = page.root.shadowRoot.querySelector('a');
+    const click = jest.fn();
+    link.addEventListener('click', click);
+    link.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    expect(click).not.toHaveBeenCalled();
+    link.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
+    expect(click).toHaveBeenCalledTimes(1);
   });
 });

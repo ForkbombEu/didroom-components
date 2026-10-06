@@ -1,9 +1,9 @@
 import { Component, Host, Prop, h, State, EventEmitter, Event } from '@stencil/core';
 import AnsiToHtml from 'ansi-to-html';
 
-const converter = new AnsiToHtml();
+const converter = new AnsiToHtml({ escapeXML: true });
 
-const successIcon = (
+const successIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
     <g id="check-circle">
       <path
@@ -17,7 +17,7 @@ const successIcon = (
   </svg>
 );
 
-const closeIcon = (
+const closeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
     <g id="x">
       <path
@@ -31,7 +31,7 @@ const closeIcon = (
   </svg>
 );
 
-const errorIcon = (
+const errorIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
     <g id="exclamation">
       <path
@@ -54,6 +54,9 @@ export class DFeedback {
   @Prop() type: 'success' | 'error' = 'success';
   @Prop() feedback: string = '';
   @Prop() message: string | undefined = undefined;
+  @Prop() closeLabel = 'Dismiss message';
+  @Prop() showMoreLabel = 'Technical details';
+  @Prop() showLessLabel = 'Hide details';
   @Event() dClose!: EventEmitter<void>;
   @State() hide: boolean = true;
 
@@ -75,12 +78,14 @@ export class DFeedback {
           }}
         >
           <div class="flex justify-between items-center self-stretch w-full">
+            <div role={this.type === 'error' ? 'alert' : 'status'} aria-atomic="true" class="min-w-0">
             <div class="flex gap-2 items-center self-stretch">
-              <div class="w-6 h-6">{this.type === 'success' ? successIcon : errorIcon}</div>
+              <div class="w-6 h-6" aria-hidden="true">{this.type === 'success' ? successIcon() : errorIcon()}</div>
               <d-text>{this.feedback}</d-text>
             </div>
-            <button onClick={this.onClose} class="w-12 h-12">
-              <div class="w-full h-full flex items-center justify-end">{closeIcon}</div>
+            </div>
+            <button type="button" aria-label={this.closeLabel} onClick={this.onClose} class="w-12 h-12 shrink-0">
+              <div class="w-full h-full flex items-center justify-end" aria-hidden="true">{closeIcon()}</div>
             </button>
           </div>
           {this.message && (
@@ -93,8 +98,8 @@ export class DFeedback {
                   <d-copy-button textToCopy={this.message} />
                 </d-vertical-stack>
               )}
-              <button onClick={onClick} class="h-12 text-on text-base font-bold leading-5 underline">
-                {this.hide ? 'See more' : 'Show less'}
+              <button type="button" aria-expanded={String(!this.hide)} onClick={onClick} class="min-h-12 text-on text-base font-bold leading-5 underline">
+                {this.hide ? this.showMoreLabel : this.showLessLabel}
               </button>
             </div>
           )}

@@ -7,6 +7,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
 })
 export class DBackgroundIllustration {
   @Prop() background: string;
+  @Prop({ reflect: true }) compact = false;
 
   render() {
     const style = {
@@ -15,9 +16,9 @@ export class DBackgroundIllustration {
       backgroundPosition: 'center',
     };
     return (
-      <Host style={style} class="block relative max-h-[50vh] w-full h-fit shrink-0 fill-highlight opacity-50">
+      <Host style={style} class={{ 'illustration-background block relative w-full h-fit shrink-0 fill-highlight opacity-50': true, 'illustration-compact': this.compact }}>
         <div class="w-full">
-          <div class="mx-auto w-fit max-w-96">
+          <div class={{ 'mx-auto max-w-96': true, 'w-fit': !this.compact, 'w-full': this.compact }}>
             <slot />
           </div>
         </div>

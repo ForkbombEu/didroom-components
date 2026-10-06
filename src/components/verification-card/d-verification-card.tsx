@@ -11,15 +11,16 @@ export class DVerificationCard {
   @Prop({ reflect: true }) verifier: string;
   @Prop({ reflect: true }) flow: string;
   @Prop({ reflect: true }) logo: string;
+  @Prop() disabled = false;
 
   render() {
     return (
       <Host>
-        <div class={{ 'w-full rounded-lg p-5 flex gap-3 bg-primary no-underline items-start': true, 'border border-success': this.selected }}>
+        <button type="button" disabled={this.disabled} aria-pressed={String(this.selected)} class={{ 'card-native w-full rounded-lg p-5 flex gap-3 bg-primary no-underline items-start': true, 'border border-success': this.selected }}>
           <d-vertical-stack class="w-full">
             <d-horizontal-stack class="justify-between items-start w-full">
               <d-avatar name={this.verifier} size="l" shape="square" src={this.logo}></d-avatar>
-              <div class={{ 'rounded-full h-6 w-6': true, 'bg-success': this.selected, 'border border-accent': !this.selected }}>
+              <div aria-hidden="true" class={{ 'rounded-full h-6 w-6': true, 'bg-success': this.selected, 'border border-accent': !this.selected }}>
                 {this.selected && <d-icon icon="check" outline size={22} />}
               </div>
             </d-horizontal-stack>
@@ -36,7 +37,7 @@ export class DVerificationCard {
               <slot></slot>
             </d-vertical-stack>
           </d-vertical-stack>
-        </div>
+        </button>
       </Host>
     );
   }

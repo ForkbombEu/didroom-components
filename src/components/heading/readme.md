@@ -10,6 +10,7 @@
 | Property | Attribute | Description | Type                                                         | Default     |
 | -------- | --------- | ----------- | ------------------------------------------------------------ | ----------- |
 | `color`  | `color`   |             | `"accent" \| "error" \| "primary" \| "success" \| "warning"` | `'primary'` |
+| `level`  | `level`   |             | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                                 | `2`         |
 | `size`   | `size`    |             | `"2xl" \| "l" \| "m" \| "s" \| "xl" \| "xs"`                 | `'m'`       |
 
 

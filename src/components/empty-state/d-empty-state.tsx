@@ -10,6 +10,7 @@ export class DEmptyState {
   @Prop() text: string;
   @Prop() buttonText: string | undefined = undefined;
   @Prop() href: string | undefined = undefined;
+  @Prop() buttonColor: 'accent' | 'outline' = 'outline';
   @Event() buttonClick: EventEmitter<void>;
 
   private onClick = () => {
@@ -32,9 +33,9 @@ export class DEmptyState {
             </d-text>
           </div>
           {this.buttonText && (
-            <d-button expand color="outline" href={this.href} onClick={this.onClick} class="w-full">
+            <d-button expand color={this.buttonColor} href={this.href} onClick={this.onClick} class="w-full">
               {this.buttonText}
-              <div slot="end">
+              <div slot="end" aria-hidden="true">
                 <d-icon icon="arrow-forward" outline />
               </div>
             </d-button>

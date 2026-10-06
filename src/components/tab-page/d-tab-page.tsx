@@ -9,6 +9,7 @@ export class DTabPage {
   @Prop() tab: string;
   @Prop() title: string;
   @Prop() settings: boolean = false;
+  @Prop() settingsTitle = 'Settings';
   @Prop() scanButtonText: string | undefined = undefined;
   @Prop() scanButtonHref: string | undefined = undefined;
 
@@ -16,14 +17,14 @@ export class DTabPage {
     return (
       <Host>
         <div class="ion-page">
-          <d-header backButton={false} settings={this.settings}>
+          <d-header backButton={false} settings={this.settings} settingsTitle={this.settingsTitle}>
             {this.title}
             <slot name="settings" slot="settings"></slot>
           </d-header>
           <ion-content fullscreen class="ion-padding" id="main-content">
             <slot />
             {this.scanButtonText && <d-scan-button href={this.scanButtonHref}>{this.scanButtonText}</d-scan-button>}
-            <div class="pb-24" />
+            {this.scanButtonText && <div class="pb-24" aria-hidden="true" />}
           </ion-content>
         </div>
       </Host>

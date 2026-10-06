@@ -6,8 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Color, Gap, Shape, Size } from "./components/types";
+import { AutocompleteTypes } from "@ionic/core";
 import { Tab } from "./components/tab-button/d-tab-button";
 export { Color, Gap, Shape, Size } from "./components/types";
+export { AutocompleteTypes } from "@ionic/core";
 export { Tab } from "./components/tab-button/d-tab-button";
 export namespace Components {
     interface DActivityCard {
@@ -29,10 +31,12 @@ export namespace Components {
     }
     interface DBackgroundIllustration {
         "background": string;
+        "compact": boolean;
     }
     interface DBadge {
     }
     interface DButton {
+        "accessibleLabel"?: string;
         "buttonType": string;
         "clear"?: boolean;
         "color"?: Color | 'outline';
@@ -40,6 +44,7 @@ export namespace Components {
         "expand"?: boolean;
         "form"?: string | HTMLFormElement;
         "href": string | undefined;
+        "pressed"?: boolean;
         "size"?: 'small' | 'default' | 'large';
         "type": 'submit' | 'reset' | 'button';
     }
@@ -85,23 +90,29 @@ export namespace Components {
         "did": string;
     }
     interface DEmptyState {
+        "buttonColor": 'accent' | 'outline';
         "buttonText": string | undefined;
         "heading": string;
         "href": string | undefined;
         "text": string;
     }
     interface DFeedback {
+        "closeLabel": string;
         "feedback": string;
         "message": string | undefined;
+        "showLessLabel": string;
+        "showMoreLabel": string;
         "type": 'success' | 'error';
     }
     interface DHeader {
         "backButton": boolean;
+        "backButtonLabel": string;
         "settings": boolean;
         "settingsTitle": string;
     }
     interface DHeading {
         "color": Color;
+        "level": 1 | 2 | 3 | 4 | 5 | 6;
         "size": Size;
     }
     interface DHorizontalStack {
@@ -122,14 +133,21 @@ export namespace Components {
     }
     interface DInput {
         "autoFocus": boolean;
+        "autocapitalize": string;
+        "autocomplete": AutocompleteTypes;
         "clearButton": boolean;
+        "clearLabel": string;
+        "disabled": boolean;
         "errorText": string;
         "helperText": string;
         "hidable": boolean;
+        "hidePasswordLabel": string;
         "label": string;
         "name": string;
         "personIcon": boolean;
         "placeholder": string;
+        "showPasswordLabel": string;
+        "spellcheck": boolean;
         "type": 'text' | 'password' | 'email' | 'number';
         "value": string;
     }
@@ -198,14 +216,19 @@ export namespace Components {
         "title": string;
     }
     interface DTabButton {
+        "accessibleLabel"?: string;
         "active": boolean;
+        "focusIndex": number;
+        "focusTab": () => Promise<void>;
         "hasAlert": boolean;
+        "href"?: string;
         "tab": Tab;
     }
     interface DTabPage {
         "scanButtonHref": string | undefined;
         "scanButtonText": string | undefined;
         "settings": boolean;
+        "settingsTitle": string;
         "tab": string;
         "title": string;
     }
@@ -214,6 +237,7 @@ export namespace Components {
         "size": Size;
     }
     interface DVerificationCard {
+        "disabled": boolean;
         "flow": string;
         "logo": string;
         "relyingParty": string;
@@ -656,10 +680,12 @@ declare namespace LocalJSX {
     }
     interface DBackgroundIllustration {
         "background"?: string;
+        "compact"?: boolean;
     }
     interface DBadge {
     }
     interface DButton {
+        "accessibleLabel"?: string;
         "buttonType"?: string;
         "clear"?: boolean;
         "color"?: Color | 'outline';
@@ -669,6 +695,7 @@ declare namespace LocalJSX {
         "href"?: string | undefined;
         "onDBlur"?: (event: DButtonCustomEvent<void>) => void;
         "onDFocus"?: (event: DButtonCustomEvent<void>) => void;
+        "pressed"?: boolean;
         "size"?: 'small' | 'default' | 'large';
         "type"?: 'submit' | 'reset' | 'button';
     }
@@ -715,6 +742,7 @@ declare namespace LocalJSX {
         "did"?: string;
     }
     interface DEmptyState {
+        "buttonColor"?: 'accent' | 'outline';
         "buttonText"?: string | undefined;
         "heading"?: string;
         "href"?: string | undefined;
@@ -722,19 +750,24 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface DFeedback {
+        "closeLabel"?: string;
         "feedback"?: string;
         "message"?: string | undefined;
         "onDClose"?: (event: DFeedbackCustomEvent<void>) => void;
+        "showLessLabel"?: string;
+        "showMoreLabel"?: string;
         "type"?: 'success' | 'error';
     }
     interface DHeader {
         "backButton"?: boolean;
+        "backButtonLabel"?: string;
         "onBackButtonClick"?: (event: DHeaderCustomEvent<void>) => void;
         "settings"?: boolean;
         "settingsTitle"?: string;
     }
     interface DHeading {
         "color"?: Color;
+        "level"?: 1 | 2 | 3 | 4 | 5 | 6;
         "size"?: Size;
     }
     interface DHorizontalStack {
@@ -755,16 +788,23 @@ declare namespace LocalJSX {
     }
     interface DInput {
         "autoFocus"?: boolean;
+        "autocapitalize"?: string;
+        "autocomplete"?: AutocompleteTypes;
         "clearButton"?: boolean;
+        "clearLabel"?: string;
+        "disabled"?: boolean;
         "errorText"?: string;
         "helperText"?: string;
         "hidable"?: boolean;
+        "hidePasswordLabel"?: string;
         "label"?: string;
         "name"?: string;
         "onDChange"?: (event: DInputCustomEvent<string>) => void;
         "onDInput"?: (event: DInputCustomEvent<string>) => void;
         "personIcon"?: boolean;
         "placeholder"?: string;
+        "showPasswordLabel"?: string;
+        "spellcheck"?: boolean;
         "type"?: 'text' | 'password' | 'email' | 'number';
         "value"?: string;
     }
@@ -838,14 +878,18 @@ declare namespace LocalJSX {
         "title"?: string;
     }
     interface DTabButton {
+        "accessibleLabel"?: string;
         "active"?: boolean;
+        "focusIndex"?: number;
         "hasAlert"?: boolean;
+        "href"?: string;
         "tab"?: Tab;
     }
     interface DTabPage {
         "scanButtonHref"?: string | undefined;
         "scanButtonText"?: string | undefined;
         "settings"?: boolean;
+        "settingsTitle"?: string;
         "tab"?: string;
         "title"?: string;
     }
@@ -854,6 +898,7 @@ declare namespace LocalJSX {
         "size"?: Size;
     }
     interface DVerificationCard {
+        "disabled"?: boolean;
         "flow"?: string;
         "logo"?: string;
         "relyingParty"?: string;

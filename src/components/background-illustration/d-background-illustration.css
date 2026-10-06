@@ -1,3 +1,20 @@
-:host {
+d-background-illustration.illustration-background {
   display: block;
+  max-block-size: 50vh;
+}
+
+d-background-illustration.illustration-compact {
+  overflow: hidden;
+  margin-block-end: 1rem;
+}
+
+d-background-illustration.illustration-compact > div {
+  max-inline-size: min(32vw, 9rem);
+  margin-inline: auto;
+}
+
+@media (max-height: 650px) {
+  d-background-illustration.illustration-compact > div {
+    max-inline-size: 5rem;
+  }
 }

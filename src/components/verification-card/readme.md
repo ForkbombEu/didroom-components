@@ -9,6 +9,7 @@
 
 | Property       | Attribute       | Description | Type      | Default     |
 | -------------- | --------------- | ----------- | --------- | ----------- |
+| `disabled`     | `disabled`      |             | `boolean` | `false`     |
 | `flow`         | `flow`          |             | `string`  | `undefined` |
 | `logo`         | `logo`          |             | `string`  | `undefined` |
 | `relyingParty` | `relying-party` |             | `string`  | `undefined` |

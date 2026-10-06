@@ -43,7 +43,13 @@ export class DCredentialCard {
   @Prop() issuedByLabel: string;
   @Prop() expirationLabel: string;
 
-  //random background
+  private background: string;
+
+  componentWillLoad() {
+    this.background = this.getRandomBg();
+  }
+
+  // Choose once so reactive updates do not change the card's appearance.
   private getRandomBg = () => {
     const bg = ['bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7', 'bg8'];
     return bg[Math.floor(Math.random() * bg.length)];
@@ -52,10 +58,10 @@ export class DCredentialCard {
   render() {
     return (
       <Host>
-        <div class={`main ${this.getRandomBg()}`}>
+        <div class={`main ${this.background}`}>
           <div class="w-full flex flex-col gap-2">
             <div class="w-full flex justify-between items-start">
-              <div class="inline-flex flex-col gap-3">
+              <div class="inline-flex min-w-0 flex-col gap-3">
                 <div class="flex gap-2 items-start">
                   <d-avatar name={this.name} src={this.logoSrc} size="s" shape="square"></d-avatar>
                   <d-text size="xl" class="not-italic font-normal leading-7">
@@ -69,12 +75,12 @@ export class DCredentialCard {
               <slot></slot>
             </div>
           </div>
-          <div class="w-full flex justify-between items-start">
-            <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px]">
+          <div class="w-full flex flex-wrap justify-between items-start gap-3">
+            <div class="min-w-0 flex flex-col gap-0.5 text-sm font-normal not-italic leading-[140%]">
               <span>{this.issuedByLabel}</span>
               <span>{this.issuer}</span>
             </div>
-            <div class="flex flex-col gap-0.5 whitespace-nowrap text-xs font-normal not-italic leading-[130%] tracking-[-0.5px] items-end">
+            <div class="min-w-0 flex flex-col gap-0.5 text-sm font-normal not-italic leading-[140%]">
               <span>{this.expirationLabel}</span>
               <span>{this.expirationDate}</span>
             </div>

@@ -1,3 +1,26 @@
 :host {
   display: block;
+  min-inline-size: 0;
+}
+
+.card-native {
+  color: var(--on);
+  text-align: start;
+  font: inherit;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  border: 2px solid transparent;
+}
+
+.card-native[aria-pressed='true'] {
+  border-color: var(--accent);
+}
+
+.card-native:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.card-native:disabled {
+  cursor: not-allowed;
 }

@@ -7,11 +7,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                   | Default     |
-| ---------- | ---------- | ----------- | ---------------------- | ----------- |
-| `feedback` | `feedback` |             | `string`               | `''`        |
-| `message`  | `message`  |             | `string`               | `undefined` |
-| `type`     | `type`     |             | `"error" \| "success"` | `'success'` |
+| Property        | Attribute         | Description | Type                   | Default               |
+| --------------- | ----------------- | ----------- | ---------------------- | --------------------- |
+| `closeLabel`    | `close-label`     |             | `string`               | `'Dismiss message'`   |
+| `feedback`      | `feedback`        |             | `string`               | `''`                  |
+| `message`       | `message`         |             | `string`               | `undefined`           |
+| `showLessLabel` | `show-less-label` |             | `string`               | `'Hide details'`      |
+| `showMoreLabel` | `show-more-label` |             | `string`               | `'Technical details'` |
+| `type`          | `type`            |             | `"error" \| "success"` | `'success'`           |
 
 
 ## Events
